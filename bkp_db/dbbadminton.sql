@@ -4,7 +4,7 @@ DROP USER IF EXISTS 'dbbadminton'@'localhost';
  
 -- Criar o usuário dbbadminton se ele não existir
 CREATE USER IF NOT EXISTS 'dbbadminton'@'localhost'
-    IDENTIFIED BY 'senacti19';
+    IDENTIFIED BY 'badmintonitape';
 GRANT ALL PRIVILEGES ON *.* TO 'dbbadminton'@'localhost'
     WITH GRANT OPTION;
     FLUSH PRIVILEGES;
