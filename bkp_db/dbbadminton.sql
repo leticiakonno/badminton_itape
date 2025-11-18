@@ -59,7 +59,7 @@ CREATE TABLE tbatletas(
     destaque_atleta enum('Sim','Não') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
  
--- Extraindo dados da tabela `tbprodutos`
+-- Extraindo dados da tabela `tbatletas`
 INSERT INTO tbatletas (id_atleta, id_categoria_atleta, nome_atleta, data_nas_atleta, data_cad_atleta, descri_atleta, img_atleta, destaque_atleta) VALUES
 (1, 2, 'Catarina Takashi','02/05/2015', '17/11/2025', 'Catarina é uma atleta da categoria Sub11, treina desde os 9 anos de idade e tem muita energia.', 'catarina.jpeg', 'Não'),
 (2, 2, 'Tiago Matiazzo', '05/03/2016', '17/11/2025', 'Tiaguinho é um atleta muito talentoso e dedicado. Brilha na categoria Sub11 e promete ser a estrela da temporada.', 'tiago.jpeg', 'Sim'),
@@ -76,7 +76,7 @@ INSERT INTO tbatletas (id_atleta, id_categoria_atleta, nome_atleta, data_nas_atl
 (13, 7, 'Douglas Oliveira', '21/06/1997', '17/11/2025', 'Douglas é o destaque das fintas, joga muito e sempre ajuda todos ao seu redor!', 'douglas.jpeg', 'Sim'),
 (14, 7, 'Letícia Konno', '22/08/1997', '17/11/2025', 'Leticia é a atleta pioneira do esporte em Itapetininga, destaque de nível internacional!', 'leticia.jpeg', 'Sim'),
 (15, 7, 'Eduardo Takahagui', '06/12/1990', '17/11/2025', 'Eduardo é dedicado e enérgico. Sempre dando o seu melhor nos torneios.', 'eduardo.jpeg', 'Não'),
-(16, 7, 'Cristiane Matiazzo', '20/12/1985', '17/11/2025', 'Cris é a aventureira e adora se arriscar no meio das crianças, e nos torneios estaduais. Além de ser a fisioterapeuta.', 'cristiane.jpeg', 'Não'),
+(16, 10, 'Cristiane Matiazzo', '20/12/1985', '17/11/2025', 'Cris é a aventureira e adora se arriscar no meio das crianças, e nos torneios estaduais. Além de ser a fisioterapeuta.', 'cristiane.jpeg', 'Não'),
 (17, 11, 'Pedro Lanas', '24/03/1979', '17/11/2025', 'Pedro é um dos atletas mais experientes no esporte, ', 'pedrolanas.jpeg', 'Não');
 
 -- Estrutura da tabela tbtorneios
@@ -104,52 +104,61 @@ CREATE TABLE tbusuarios (
  
 -- Extraindo dados da tabela `tbusuarios`
 INSERT INTO tbusuarios (id_usuario,login_usuario,senha_usuario,nivel_usuario) VALUES
-(1,'senac','1234','sup'),
-(2,'joao','456','com'),
-(3,'maria','789','com'),
+(1,'eduarda','1234','sup'),
+(2,'mari','456','sup'),
+(3,'mav','789','sup'),
 (4,'iwanezuk','1234','sup');
  
 -- ------ CHAVES ------
-ALTER TABLE tbprodutos
-    ADD PRIMARY KEY (id_produto),
-    ADD KEY id_tipo_produto_fk(id_tipo_produto);
+ALTER TABLE tbatletas
+    ADD PRIMARY KEY (id_atleta),
+    ADD KEY id_categoria_atleta_fk(id_categoria_atleta);
  
-ALTER TABLE tbtipos
-    ADD PRIMARY KEY (id_tipo);
+ALTER TABLE tbcategorias
+    ADD PRIMARY KEY (id_categoria);
  
 ALTER TABLE tbusuarios
     ADD PRIMARY KEY (id_usuario),
     ADD UNIQUE KEY login_usuario_uniq(login_usuario);
+
+ALTER TABLE tbtorneios
+    ADD PRIMARY KEY (id_torneio);
+
+
  
 -- ----- AUTO INCREMENTS -----
-ALTER TABLE tbprodutos
-    MODIFY id_produto INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+ALTER TABLE tbatletas
+    MODIFY id_atleta INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
  
-ALTER TABLE tbtipos
-    MODIFY id_tipo INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE tbcategorias
+    MODIFY id_categorias INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
  
 ALTER TABLE tbusuarios
     MODIFY id_usuario INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+ALTER TABLE tbtorneios
+    MODIFY id_torneio INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+
  
 -- Limitadores e referências da Chave Estrangeira
-ALTER TABLE tbprodutos
-    ADD CONSTRAINT id_tipo_produto_fk FOREIGN KEY(id_tipo_produto)
-        REFERENCES tbtipos(id_tipo)
+ALTER TABLE tbatletas
+    ADD CONSTRAINT id_categoria_atleta_fk FOREIGN KEY(id_categoria_atleta)
+        REFERENCES tbcategoria(id_categoria)
         ON DELETE NO ACTION
         ON UPDATE NO ACTION;
  
 -- -------------- VIEW -------------
--- Criando a view vw_tbprodutos
-CREATE VIEW vw_tbprodutos as
+-- Criando a view vw_tbatletas
+CREATE VIEW vw_tbatletas as
  
-    SELECT  p.id_produto,
-            p.id_tipo_produto,
-            t.sigla_tipo,
-            t.rotulo_tipo,
-            p.descri_produto,
-            p.resumo_produto,
-            p.valor_produto,
-            p.imagem_produto,
-            p.destaque_produto
-    FROM    tbprodutos p JOIN tbtipos t
-    WHERE   p.id_tipo_produto=t.id_tipo
+    SELECT  p.id_atleta,
+            p.id_categoria_atleta,
+            t.data_nas_atleta,
+            t.data_cad_atleta,
+            p.nome_atleta,
+            p.descri_atleta,
+            p.img_atleta,
+            p.destaque_atleta
+    FROM    tbatletas a JOIN tbcategorias c
+    WHERE   p.id_categoria_atleta=t.id_categoria
