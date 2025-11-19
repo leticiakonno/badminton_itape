@@ -51,7 +51,7 @@ CREATE TABLE tbatletas(
     id_atleta INT(11) NOT NULL,
     id_categoria_atleta INT(11) NOT NULL,
     nome_atleta VARCHAR(30) NOT NULL,
-    data_nas_atleta DATE NOT NULL,
+    data_nas_atleta DATE NOT NULL, 
     data_cad_atleta DATE NOT NULL,
     descri_atleta VARCHAR(500) NOT NULL,
     img_atleta VARCHAR(50) NOT NULL,
@@ -90,10 +90,10 @@ CREATE TABLE tbtorneios(
  
 -- Extraindo dados da tabela tbtorneios
 INSERT INTO tbtorneios(id_torneio,tipo_torneio,descri_torneio,img_torneio) VALUES
-    (1,'reg','Regional','regional.jpeg'),
-    (2,'est','Estadual','estadual.jpeg'),
-    (3,'nac','Nacional','nacional.jpeg'),
-    (4,'int','Internacional','internacional.jpeg');
+    (1,'Regional', 'Torneios realizados na 8ª região, que abrange itapetininga e muitas outras cidades.', 'regional.jpeg'),
+    (2,'Estadual', 'Torneio que abrenge os melhores atletas do estado de São Paulo.', 'estadual.jpeg'),
+    (3,'Nacional', 'Torneio para os melhores atletas em território brasileiro na categoria.', 'nacional.jpeg'),
+    (4,'Internacional', 'Torneios de nível, Sulamericano, Panamericano e Mundial, abrange os melhores atletas do mundo.', 'internacional.jpeg');
 
 -- Estrutura da tabela tbusuario
 CREATE TABLE tbusuarios (
