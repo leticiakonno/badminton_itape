@@ -43,7 +43,8 @@ INSERT INTO tbcategorias (id_categoria, nome_categoria, descri_categoria) VALUES
 (12, 'Master I', 'Atletas nascidos em 1974 ou antes'),
 (13, 'Master II', 'Atletas nascidos em 1969 ou antes'),
 (14, 'Master III', 'Atletas nascidos em 1964 ou antes'),
-(15, 'Master IV', 'Atletas nascidos em 1959 ou antes');
+(15, 'Master IV', 'Atletas nascidos em 1959 ou antes'),
+(16, 'Técnicos', 'Professores que conduzem os treinamentos');
 
 -- Estrutura da tabela tbatletas
 CREATE TABLE tbatletas(
@@ -59,23 +60,25 @@ CREATE TABLE tbatletas(
  
 -- Extraindo dados da tabela `tbatletas`
 INSERT INTO tbatletas (id_atleta, id_categoria_atleta, nome_atleta, data_nas_atleta, data_cad_atleta, descri_atleta, img_atleta, destaque_atleta) VALUES
-(1, 2, 'Letícia Konno', '1997/08/22', '2025/11/17', 'Leticia é a atleta pioneira do esporte em Itapetininga, destaque de nível internacional!', 'leticia.jpeg', 'Sim' ),
-(2, 2, 'Isabela Galvão', '2004/04/19', '2025/11/17', 'Isinha é uma atleta super talentosa, todos se encantam ao ver ela jogar. Joga na categoria aberta e brilha em quadra!', 'isabela.jpeg','Sim'),
-(3, 3, 'Douglas Oliveira', '1997/06/21', '2025/11/17', 'Douglas é o destaque das fintas, joga muito e sempre ajuda todos ao seu redor!', 'douglas.jpeg', 'Sim'),
-(4, 3, 'Cristiane Matiazzo', '1985/12/20', '2025/11/17', 'Cris gosta de se aventurar e se arriscar no meio das crianças, e nos torneios estaduais. Além de ser a fisioterapeuta.', 'cristiane.jpeg', 'Não'),
-(5, 4, 'Pedro Lima', '2011/03/14', '2025/11/17', 'Pedro joga na categoria Sub15, é quieto e reservado, mas sempre muito esforçado e dedicado!', 'pedro.jpeg', 'Não'),
+(1, 16, 'Leiko Konno', '1957/03/20', '2025/11/17', 'Técnica de badminton pioneira na cidade de itapetininga. Acredita que o esporte vai muito além de vencer o tempo todo, mas sim de transformar atletas e pessoas para a vida!', 'leiko.jpeg', 'Sim'),
+(2, 16, 'Shogo konno', '1962/03/02', '2025/11/17', 'Técnico de badminton junto com sua esposa Leiko, adora fazer uma piada e sempre cheio de paciência para ajudar.', 'shogo.jpeg', 'Sim'),
+(3, 7, 'Letícia Konno', '1997/08/22', '2025/11/17', 'Leticia é a atleta pioneira do esporte em Itapetininga, destaque de nível internacional!', 'leticia.jpeg', 'Sim'),
+(4, 7, 'Isabela Galvão', '2004/04/19', '2025/11/17', 'Isinha é uma atleta super talentosa, todos se encantam ao ver ela jogar. Joga na categoria aberta e brilha em quadra!', 'isabela.jpeg','Sim'),
+(5, 7, 'Douglas Oliveira', '1997/06/21', '2025/11/17', 'Douglas é o destaque das fintas, joga muito e sempre ajuda todos ao seu redor!', 'douglas.jpeg', 'Sim'),
 (6, 5, 'Larissa Ueno', '2010/07/21', '2025/11/17', 'Larissa, Sub17, é a sincera do time, mas que brilha nas quadras brasileiras e internacionais também!', 'larissa.jpeg', 'Sim'),
 (7, 6, 'Julio Paiva', '2007/07/07', '2025/11/17', 'Julio é carismático, simpático e amigo de todos, joga muito e brilha na categoria Sub19.', 'julio.jpeg', 'Sim'),
 (8, 6, 'Milena Ueno', '2006/09/15', '2025/11/17', 'Milena é a criativa e dedicada do time, joga na Sub19 e adora as crianças.', 'milena.jpeg', 'Não'),
-(9, 7, 'Tiago Matiazzo', '2016/03/05', '2025/11/17', 'Tiaguinho é um atleta muito talentoso e dedicado. Brilha na categoria Sub11 e promete ser a estrela da temporada.', 'tiago.jpeg', 'Sim'),
+(9, 2, 'Tiago Matiazzo', '2016/03/05', '2025/11/17', 'Tiaguinho é um atleta muito talentoso e dedicado. Brilha na categoria Sub11 e promete ser a estrela da temporada.', 'tiago.jpeg', 'Sim'),
 (10, 1, 'Vinicius Lima', '2017/09/08', '2025/11/17', 'Vinicius tem energia de sobra e cansa seus adversários, brilha na categoria Sub9!', 'vinicius.jpeg', 'Não'),
 (11, 3, 'Aylla Maeseki', '2014/09/08', '2025/11/17', 'Aylla é engraçada e adora fazer uma gracinha, joga muito na categoris Sub13!', 'aylla.jpeg', 'Não'),
 (12, 4, 'Theo Maeseki', '2011/02/19', '2025/11/17', 'Theo é um menino esforçado e está brilhando cada vez mais nos torneios na categoria Sub15.', 'theo.jpeg', 'Não'),
-(13, 7, 'Vitor Takashi', '2003/02/23', '2025/11/17', 'Vitor é um menino muito inteligente e esforçado, o que o torna um grande atleta. Adora tirar uma selfie e brilha na categoria Sub13!', 'vitor.jpeg', 'Sim'),
-(14, 7, 'Catarina Takashi','2015/05/02', '2025/11/17', 'Catarina é uma atleta da categoria Sub11, treina desde os 9 anos de idade e tem muita energia.', 'catarina.jpeg', 'Não'),
+(13, 3, 'Vitor Takashi', '2003/02/23', '2025/11/17', 'Vitor é um menino muito inteligente e esforçado, o que o torna um grande atleta. Adora tirar uma selfie e brilha na categoria Sub13!', 'vitor.jpeg', 'Sim'),
+(14, 2, 'Catarina Takashi','2015/05/02', '2025/11/17', 'Catarina é uma atleta da categoria Sub11, treina desde os 9 anos de idade e tem muita energia.', 'catarina.jpeg', 'Não'),
 (15, 7, 'Eduardo Takahagui', '1990/12/06', '2025/11/17', 'Eduardo é dedicado e enérgico. Sempre dando o seu melhor nos torneios.', 'eduardo.jpeg', 'Não'),
-(16, 10, 'Marina Mori', '2014/08/20', '2025/11/17', 'Marina é ', 'marina.jpeg', 'Não'),
-(17, 11, 'Pedro Lanas', '1979/03/24', '2025/11/17', 'Pedro é um dos atletas mais experientes no esporte, ', 'pedrolanas.jpeg', 'Não');
+(16, 3, 'Marina Mori', '2014/08/20', '2025/11/17', 'Marina é reservada, mas adora brincar com as amigas e está cada dia melhor, surpreendendo na categoria Sub13!', 'marina.jpeg', 'Não'),
+(17, 4, 'Pedro Lima', '2011/03/14', '2025/11/17', 'Pedro joga na categoria Sub15, é quieto e reservado, mas sempre muito esforçado e dedicado!', 'pedro.jpeg', 'Não'),
+(18, 10,'Cristiane Matiazzo', '1985/12/20', '2025/11/17', 'Cris gosta de se aventurar e se arriscar no meio das crianças, e nos torneios estaduais. Além de ser a fisioterapeuta.', 'cristiane.jpeg', 'Não'),
+(19, 11, 'Pedro Lanas', '1979/03/24', '2025/11/17', 'Pedro é um dos atletas mais experientes no esporte, ', 'pedrolanas.jpeg', 'Não');
 
 -- Estrutura da tabela tbtorneios
 CREATE TABLE tbtorneios(
