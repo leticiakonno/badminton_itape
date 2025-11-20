@@ -2,12 +2,11 @@
 /* CSS Document */
 
 .fundofixo {
-    /*background-image: url("../imagens/bg_fogo.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;*/
-   /* background: url(../imagens/bg_fogo.jpg) no-repeat fixed;*/
-    background-size: cover;
-    -webkit-background-size: cover;
-
+    background-image: url("../imagens/fundofixo.png") !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    background-color: transparent !important;
 }
+
 .tbopacidade{background-color: rgba(255, 255, 255, 0.6);}
