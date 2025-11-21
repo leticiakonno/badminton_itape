@@ -1,6 +1,6 @@
 <?php 
 // Incluir o arquivo e fazer a conexão
-include("../Connections/conn_produtos.php");
+include("../Connections/conn_atletas.php");
 
 //selecionar os dados
 $consulta   = "

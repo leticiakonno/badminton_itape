@@ -1,10 +1,10 @@
 <?php
 // Incluir o arquivo e fazer a conexão
-include("../Connections/conn_produtos.php");
+include("../Connections/conn_atletas.php");
 
 if($_POST){
     // Selecionar o banco de dados (USE)
-    mysqli_select_db($conn_produtos,$database_conn);
+    mysqli_select_db($conn_atletas,$database_conn);
 
     // 
     // 1) UPLOAD DA FOTO
