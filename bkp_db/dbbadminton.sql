@@ -92,6 +92,21 @@ INSERT INTO tbtecnicos(id_tecnico,nome_tecnico,nivel_tecnico,descri_tecnico,img_
  (2, 'Shogo Konno', 'Técnico Assistente', 'Técnico voluntário de badminton junto com a sua esposa Leiko e também é árbitro de nível nacional. Adora fazer uma piada e sempre com muita paciência para ajudar e ensinar.', 'shogo.jpeg'),
  (3, 'Letícia Konno', 'Técnica Assitente', 'Assistente técnica, ajuda voluntariamente a ministrar os treinos com seus pais. Atleta, mas também sempre disposta a ensinar através da experiência.', 'leticia.jpeg');
 
+-- Estrutura da tabela tbparceiros
+CREATE TABLE tbparceiros(
+    id_parceiro INT(11) NOT NULL,
+    nome_parceiro VARCHAR(50) NOT NULL,
+    descri_parceiro VARCHAR(500) NOT NULL,
+    img_parceiro VARCHAR(50) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Extraindo dados da tabela tbparceiros
+INSERT INTO tbparceiros(id_parceiro,nome_parceiro,descri_parceiro,img_parceiro) VALUES
+    (1,'Prefeitura de Itapetininga', 'A Prefeitura de Itapetininga é a principal parceira do projeto Badminton Itapetininga, apoiando e incentivando o esporte na cidade.', 'prefeitura.jpeg'),
+    (2,'Colégio Dom Bosco de Itapetininga', 'Primeira e fiel patrocinadora do badminton na cidade, promovendo o esporte e oferecendo suporte aos atletas.', 'dombosco.jpeg'),
+    (3,'Universal Chemical', 'Uma das maiores empresas da região, são apoiadores do esporte, sempre prestando suporte à equipe.', 'chemical.jpeg'),
+    (4,'Ligia', 'Uma das maiores apoiadoras da equipe, faz por amor ao esporte e toda a equipe. Coração e alma enormes.', 'ligia.jpeg');
+
 -- Estrutura da tabela tbtorneios
 CREATE TABLE tbtorneios(
     id_torneio INT(11) NOT NULL,
