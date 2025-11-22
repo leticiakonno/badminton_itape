@@ -1,6 +1,6 @@
 <?php
 // Incluir o arquivo e fazer a conexão
-include("../Connections/conn_produtos.php");
+include("../Connections/conn_atletas.php");
 
 // Variáveis Globais
 $tabela         =   "tbusuarios";
@@ -9,21 +9,21 @@ $campo_filtro   =   "id_usuario";
 // Primeiro, precisamos carregar os dados do usuário ANTES do POST  
 // para recuperar nome da foto atual caso não seja trocada
 if (isset($_GET['id_usuario'])) {
-    mysqli_select_db($conn_produtos, $database_conn);
+    mysqli_select_db($conn_atletas, $database_conn);
     $filtro_select  =   $_GET['id_usuario'];
     $consulta       =   "
                         SELECT *
                         FROM    ".$tabela."
                         WHERE   ".$campo_filtro."=".$filtro_select.";
                         ";
-    $lista          =   $conn_produtos->query($consulta);
+    $lista          =   $conn_atletas->query($consulta);
     $row            =   $lista->fetch_assoc();
 }
 
 // Se o formulário foi enviado
 if($_POST){
 
-    mysqli_select_db($conn_produtos,$database_conn);
+    mysqli_select_db($conn_atletas,$database_conn);
 
     // Receber os dados do formulário
     $login_usuario    =   $_POST['login_usuario'];
@@ -58,7 +58,7 @@ if($_POST){
                             foto_usuario   = '".$foto_usuario."'
                     WHERE ".$campo_filtro."='".$filtro_update."';
                     ";
-    $resultado  =   $conn_produtos->query($updateSQL);
+    $resultado  =   $conn_atletas->query($updateSQL);
 
     // Redirecionamento
     $destino    =   "usuarios_lista.php";

@@ -66,7 +66,7 @@ if($_POST){
                     VALUES
                         (".$valores_insert.");
                     ";
-    $resultado  =   $conn_produtos->query($insertSQL);
+    $resultado  =   $conn_atletas->query($insertSQL);
 
     // Após a ação a página será redirecionada
     $destino    =   "usuarios_lista.php";

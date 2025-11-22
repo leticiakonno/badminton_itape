@@ -4,10 +4,10 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Incluir o arquivo e fazer a conexão
-include("../Connections/conn_produtos.php");
+include("../Connections/conn_atletas.php");
 
 // Definir banco
-mysqli_select_db($conn_produtos, $database_conn);
+mysqli_select_db($conn_atletas, $database_conn);
 
 // Verificar se o ID foi enviado
 if (!isset($_GET['id_usuario']) || !is_numeric($_GET['id_usuario'])) {
@@ -24,7 +24,7 @@ $deleteSQL = "
 ";
 
 // Executar
-$resultado = $conn_produtos->query($deleteSQL);
+$resultado = $conn_atletas->query($deleteSQL);
 
 // Redirecionar
 header("Location: usuarios_lista.php");

@@ -10,7 +10,7 @@ $consulta   = "
             "; 
 
 //Fazer a lista completa dos dados
-$lista  = $conn_produtos->query($consulta);
+$lista  = $conn_atletas->query($consulta);
 
 //Separar os dados em linhas (row)
 $row    = $lista->fetch_assoc();
