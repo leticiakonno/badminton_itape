@@ -36,14 +36,14 @@ INSERT INTO tbcategorias (id_categoria, nome_categoria, descri_categoria) VALUES
 (5, 'Sub17', 'Atletas nascidos em 2008 ou depois.'),
 (6, 'Sub19', 'Atletas nascidos em 2006 ou depois.'),
 (7, 'Aberto', 'Abrange atletas de todas as idades.'),
-(8, 'Sênior I', 'Atletas nascidos em 1994 ou antes'),
-(9, 'Sênior II', 'Atletas nascidos em 1989 ou antes'),
-(10, 'Veterano I', 'Atletas nascidos em 1984 ou antes'),
-(11, 'Veterano II', 'Atletas nascidos em 1979 ou antes'),
-(12, 'Master I', 'Atletas nascidos em 1974 ou antes'),
-(13, 'Master II', 'Atletas nascidos em 1969 ou antes'),
-(14, 'Master III', 'Atletas nascidos em 1964 ou antes'),
-(15, 'Master IV', 'Atletas nascidos em 1959 ou antes');
+(8, 'Sênior I', 'Atletas nascidos em 1994 ou antes.'),
+(9, 'Sênior II', 'Atletas nascidos em 1989 ou antes.'),
+(10, 'Veterano I', 'Atletas nascidos em 1984 ou antes.'),
+(11, 'Veterano II', 'Atletas nascidos em 1979 ou antes.'),
+(12, 'Master I', 'Atletas nascidos em 1974 ou antes.'),
+(13, 'Master II', 'Atletas nascidos em 1969 ou antes.'),
+(14, 'Master III', 'Atletas nascidos em 1964 ou antes.'),
+(15, 'Master IV', 'Atletas nascidos em 1959 ou antes.');
 
 -- Estrutura da tabela tbatletas
 CREATE TABLE tbatletas(
