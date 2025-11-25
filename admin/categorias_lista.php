@@ -25,56 +25,66 @@ $totalRows  = ($lista)->num_rows;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categorias</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"></head>
+<link rel="stylesheet" href="../css/meu_estilo.css">
 <body>
     <main class="container">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-12">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-12"> <!--div de dimensionamento-->
             <h1 class="alert alert-warning text-center">Lista de Categorias</h1>
-            <br>
-             <a 
+            <div class="btn btn-warning disabled">
+                Total de Categorias:
+                <small class="badge"><?php echo $totalRows; ?></small>
+            </div>
+            <!-- table -->
+        <table class="table table-hover table-condensed tbopacidade">
+            <thead> <!--cabeçalho da tabela-->
+                <tr> <!--linha da tabela-->
+                <th class="hidden">ID</th> <!--célula do cabeçalho-->
+                <th>NOME</th>
+                <th>DESCRIÇÃO</th>
+                 <th>
+                    <a 
                         href="categorias_insere.php"
-                        class="btn btn-warning btn-xs"
-                        role="group"
+                        class="btn btn-block btn-primary btn-xs"
                     >
                         <span class="hidden-xs">ADICIONAR <br></span>
                         <span class="glyphicon glyphicon-plus"></span>
-                        
-                </a>
-            <br>
-            <div class="row row-cols-1 row-cols-md-3 g-5"> <!--Inicio dos cards-->
-                <!--Abre estrutura de repetição -->
-                   <?php do { ?>
-                <div class="col"> 
-                    <div class="card text-center border-warning mb-3">
-                    <img src="../imagens/<?php echo $row['imagem_categoria']; ?>" class="card-img-top" 
-                        alt=""
-                        width="100px">
-                    <div class="card-body">
-                        <H6><?php echo $row['id_categoria']; ?></H6>
-                        <h5><?php echo $row['nome_categoria']; ?></h5>
-                        <p><?php echo $row['descri_categoria']; ?></p>
-                        <a href="#" class="btn btn-warning btn-block">Saiba mais sobre os atletas.</a>
-                    </div>
-                     <a 
-                        href="categoria_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>"
-                        target="_self"
-                        class="btn btn-info btn-xs "
-                        role="button"
-                    >
-                        <span class="hidden-xs">ALTERAR<br></span>
-                        <span class="glyphicon glyphicon-refresh"></span>
                     </a>
-                    <button
+                </th>
+                </tr>
+        </thead> 
+        <tbody>
+            <!--Abre estrutura de repetição-->
+            <?php do { ?>
+                 <tr>
+                    <td class="hidden"><?php echo $row['id_categoria']; ?></td>
+                    <td><?php echo $row['nome_categoria']; ?></td>
+                    <td><?php echo $row['descri_categoria']; ?></td>
+                    <td>
+                        <a 
+                            href="categorias_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>"
+                            class="btn btn-block btn-warning btn-xs"
+                            target="_self"
+                            role="button"
+                        >
+                            <span class="hidden-xs">ALTERAR<br></span>
+                            <span class="glyphicon glyphicon-refresh"></span>
+                        </a>
+                        <button
                         data-id="<?php echo $row['id_categoria']; ?>"
-                        data-nome="<?php echo $row['descri_categoria']; ?>"                        
-                        class="btn btn-danger btn-xs delete"
+                        data-nome="<?php echo $row['nome_categoria']; ?>"                        
+                        class="btn btn-danger btn-xs btn-block delete"
                     >
                         <span class="hidden-xs">EXCLUIR<br></span>
                         <span class="glyphicon glyphicon-trash"></span>
                     </button>
-                    </div>
-                </div>
-                  <?php } while($row = $lista->fetch_assoc()); ?>
-                </div> <!--fim dos cards-->
+                </td>
+            </tr>
+            <?php }while($row = $lista->fetch_assoc());  ?>
+            <!-- Fechar a estrutura de repetição -->
+        </tbody>
+        </table>
+
+           
         </div> <!--fecha div dimensionamento-->
     </main>
 

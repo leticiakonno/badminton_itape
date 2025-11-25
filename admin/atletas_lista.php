@@ -40,8 +40,6 @@ $totalRows  =   ($lista)->num_rows;
             <tr> <!--linha da tabela-->
                 <th class="hidden">ID</th> <!--célula do cabeçalho-->
                 <th>NOME</th>
-                <th>CATEGORIA</th>
-                <th>DESTAQUE</th>
                 <th>DESCRIÇÃO</th>
                 <th>DATA DE NASCIMENTO</th>
                 <th>DATA DE CADASTRO</th>
