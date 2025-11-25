@@ -4,12 +4,10 @@ include ("../Connections/conn_atletas.php");
 
 // Selecionar os dados (recomendo usar a VIEW depois, mas por enquanto deixei a tabela)
 $consulta = "
-    SELECT a.*, c.nome_categoria
-    FROM tbatletas AS a
-    LEFT JOIN tbcategorias AS c
-        ON a.id_categoria_atleta = c.id_categoria
-    ORDER BY a.id_atleta DESC;
-";
+                SELECT  *
+                FROM    vw_tbatletas
+                ORDER BY descri_atleta ASC;
+                ";
 
 
 $lista = $conn_atletas->query($consulta);
@@ -52,13 +50,13 @@ $totalRows = $lista->num_rows;
             <thead>
                 <tr>
                     <th class="hidden">ID</th>
-                    <th>Atleta</th>
-                    <th>Nome</th>
-                    <th>Categoria</th>
+                    <th>ATLETA</th>
+                    <th>NOME</th>
+                    <th>CATEGORIA</th>
                     <!-- <th >Destaque</th> -->
-                    <th>Data Nascimento</th>
-                    <th>Data Cadastro</th>
-                    <th>Descrição</th>
+                    <th>NASCIMENTO</th>
+                    <th>CADASTRO</th>
+                    <th>DESCRIÇÃO</th>
                     <th>
                     <a 
                         href="atletas_insere.php"
