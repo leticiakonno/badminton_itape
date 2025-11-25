@@ -6,7 +6,7 @@ include("../Connections/conn_atletas.php");
 $consulta   = "
             SELECT *
             FROM tbcategorias
-            ORDER BY descri_categoria ASC;  
+            ORDER BY descri_categoria DESC;  
             "; 
 
 //Fazer a lista completa dos dados
@@ -38,7 +38,7 @@ $totalRows  = ($lista)->num_rows;
                         <span class="hidden-xs">ADICIONAR <br></span>
                         <span class="glyphicon glyphicon-plus"></span>
                         
-                    </a>
+                </a>
             <br>
             <div class="row row-cols-1 row-cols-md-3 g-5"> <!--Inicio dos cards-->
                 <!--Abre estrutura de repetição -->
