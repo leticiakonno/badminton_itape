@@ -28,7 +28,7 @@ $totalRows  = ($lista)->num_rows;
 <link rel="stylesheet" href="../css/meu_estilo.css">
 <body>
     <main class="container">
-            <h1 class="breadcrumb alert-warning text-center">Lista de Categorias</h1>
+            <h1 class="alert alert-warning text-center">Lista de Categorias</h1>
             <div class="btn btn-warning disabled">
                 Total de Categorias:
                 <small class="badge"><?php echo $totalRows; ?></small>
@@ -49,7 +49,7 @@ $totalRows  = ($lista)->num_rows;
                         <span class="glyphicon glyphicon-plus"></span>
                      </a>
                     </th>
-                </tr>
+                    </tr>
             </thead> 
         <tbody>
             <!--Abre estrutura de repetição-->
