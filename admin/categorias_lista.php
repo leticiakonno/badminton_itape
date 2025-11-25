@@ -28,8 +28,7 @@ $totalRows  = ($lista)->num_rows;
 <link rel="stylesheet" href="../css/meu_estilo.css">
 <body>
     <main class="container">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-12"> <!--div de dimensionamento-->
-            <h1 class="alert alert-warning text-center">Lista de Categorias</h1>
+            <h1 class="breadcrumb alert-warning text-center">Lista de Categorias</h1>
             <div class="btn btn-warning disabled">
                 Total de Categorias:
                 <small class="badge"><?php echo $totalRows; ?></small>
@@ -38,20 +37,20 @@ $totalRows  = ($lista)->num_rows;
         <table class="table table-hover table-condensed tbopacidade">
             <thead> <!--cabeçalho da tabela-->
                 <tr> <!--linha da tabela-->
-                <th class="hidden">ID</th> <!--célula do cabeçalho-->
-                <th>NOME</th>
-                <th>DESCRIÇÃO</th>
-                 <th>
-                    <a 
+                    <th class="hidden">ID</th> <!--célula do cabeçalho-->
+                    <th>NOME</th>
+                    <th>DESCRIÇÃO</th>
+                     <th>
+                        <a 
                         href="categorias_insere.php"
                         class="btn btn-block btn-primary btn-xs"
-                    >
+                        >
                         <span class="hidden-xs">ADICIONAR <br></span>
                         <span class="glyphicon glyphicon-plus"></span>
-                    </a>
-                </th>
+                     </a>
+                    </th>
                 </tr>
-        </thead> 
+            </thead> 
         <tbody>
             <!--Abre estrutura de repetição-->
             <?php do { ?>
@@ -83,10 +82,7 @@ $totalRows  = ($lista)->num_rows;
             <!-- Fechar a estrutura de repetição -->
         </tbody>
         </table>
-
-           
-        </div> <!--fecha div dimensionamento-->
-    </main>
+</main>
 
     <!--modal-->
     <div id="myModal" class="modal fade" role="dialog" >
