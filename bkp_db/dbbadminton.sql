@@ -127,6 +127,7 @@ CREATE TABLE tbusuarios (
     id_usuario INT(11) NOT NULL,
     login_usuario VARCHAR(30) NOT NULL,
     senha_usuario VARCHAR(8) NOT NULL,
+    foto_usuario VARCHAR (255) NULL, 
     nivel_usuario ENUM('sup','com') NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
  
