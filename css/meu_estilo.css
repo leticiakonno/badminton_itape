@@ -2,7 +2,7 @@
 /* CSS Document */
 
 .fundofixo {
-    background-image: url("../imagens/fundofixo.png") !important;
+    background-image: url("../imagens/fundo.jpg") !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-size: cover !important;

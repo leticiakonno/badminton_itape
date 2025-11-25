@@ -85,7 +85,6 @@ if($_POST){
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo">
- 
 <main class="container">
     <div> <!-- abre row -->
         <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" > <!-- abre dimensionamento -->
