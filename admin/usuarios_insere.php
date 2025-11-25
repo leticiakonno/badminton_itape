@@ -30,9 +30,9 @@ if($_POST){
         // Move o arquivo enviado para a pasta de destino
         move_uploaded_file($_FILES['foto_usuario']['tmp_name'], $destino);
     }
-    // **********************
+    // 
     // FIM UPLOAD DA FOTO
-    // **********************
+    // 
 
     // Variáveis para acrescentar dados no banco
     $tabela_insert  =   "tbusuarios";

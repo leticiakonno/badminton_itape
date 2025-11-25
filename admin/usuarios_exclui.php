@@ -1,32 +1,28 @@
 <?php
-// Mostrar erros para depuração (opcional — remove em produção)
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_atletas.php");
 
-// Definir banco
-mysqli_select_db($conn_atletas, $database_conn);
+// Definindo o USE do banco de dados
+mysqli_select_db($conn_atletas,$database_conn);
 
-// Verificar se o ID foi enviado
-if (!isset($_GET['id_usuario']) || !is_numeric($_GET['id_usuario'])) {
-    die("ID de usuário inválido.");
-}
-
-$id = intval($_GET['id_usuario']); // proteção contra SQL Injection
+// Definindo e recebendo dados para consulta
+$tabela_delete  =   "tbusuarios";
+$id_tabela_del  =   "id_usuario";
+$id_filtro_del  =   $_GET['id_usuario'];
 
 // SQL para exclusão
-$deleteSQL = "
-    DELETE FROM tbusuarios 
-    WHERE id_usuario = $id 
-    LIMIT 1;
-";
+$deleteSQL  =   "
+                DELETE
+                FROM    ".$tabela_delete."
+                WHERE   ".$id_tabela_del."=".$id_filtro_del.";
+                ";
+$resultado  =   $conn_atletas->query($deleteSQL);
 
-// Executar
-$resultado = $conn_atletas->query($deleteSQL);
-
-// Redirecionar
-header("Location: usuarios_lista.php");
-exit;
+// Após a ação a página será redirecionada
+$destino    =   "usuarios_lista.php";
+if(mysqli_insert_id($conn_atletas)){
+    header("Location: $destino");
+}else{
+    header("Location: $destino");
+};
 ?>
