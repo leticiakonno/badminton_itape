@@ -36,7 +36,7 @@ $totalRows = $lista->num_rows;
 
 <body class="fundofixo">
 
-<main class="container">
+<main class="container-fluid">
 
 <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"> <!---dimensionamento-->
 
@@ -52,22 +52,21 @@ $totalRows = $lista->num_rows;
             <thead>
                 <tr>
                     <th class="hidden">ID</th>
-                    <th>Foto Atleta</th>
+                    <th>Atleta</th>
                     <th>Nome</th>
                     <th>Categoria</th>
+                    <!-- <th >Destaque</th> -->
                     <th>Data Nascimento</th>
-                    <th>Descrição</th>
                     <th>Data Cadastro</th>
-                    <th>Destaque</th>
-                    <th class="hidden">Ações</th>
+                    <th>Descrição</th>
                     <th>
-                        <a 
-                            href="atletas_insere.php"
-                            class="btn btn-block btn-primary btn-xs"
-                        >
-                            <span class="hidden-xs">ADICIONAR<br></span>
-                            <span class="glyphicon glyphicon-plus"></span>
-                        </a>
+                    <a 
+                        href="atletas_insere.php"
+                        class="btn btn-block btn-primary btn-xs"
+                    >
+                        <span class="hidden-xs">ADICIONAR <br></span>
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
                     </th>
                 </tr>
             </thead>
@@ -80,6 +79,7 @@ $totalRows = $lista->num_rows;
                     <!-- ID -->
                     <td class="hidden"><?php echo $row['id_atleta']; ?></td>
 
+
                     <!-- FOTO -->
                     <td>
                         <?php
@@ -91,22 +91,6 @@ $totalRows = $lista->num_rows;
                         <img src="<?php echo $foto; ?>" style="width:55px; height:55px; border-radius:50%;">
                     </td>
 
-                    <!-- NOME -->
-                    <td><?php echo $row['nome_atleta']; ?></td>
-
-                    <!-- CATEGORIA -->
-                    <td><?php echo $row['nome_categoria']; ?></td>
-
-                    <!-- DATA NASCIMENTO -->
-                    <td><?php echo date('d/m/Y', strtotime($row['data_nas_atleta'])); ?></td>
-
-                    <!-- DESCRIÇÃO -->
-                    <td style="max-width:250px;"><?php echo $row['descri_atleta']; ?></td>
-
-                    <!-- DATA CADASTRO -->
-                    <td><?php echo date('d/m/Y', strtotime($row['data_cad_atleta'])); ?></td>
-
-
                     <!-- DESTAQUE -->
                     <td>
                         <?php
@@ -116,13 +100,28 @@ $totalRows = $lista->num_rows;
                                 echo('<span class="glyphicon glyphicon-ok text-danger"></span>');
                             };
                         ?>
-                    </td>
+                    <!-- </td> -->
 
-                    <!-- teste -->
-                     
-        
+                    <!-- NOME -->
+                    <!-- <td> -->
+                        <?php echo $row['nome_atleta']; ?>
+                </td>
+                    
+    
 
-                    <!-- fecha teste -->
+                    <!-- CATEGORIA -->
+                    <td><?php echo $row['nome_categoria']; ?></td>
+
+                   
+
+                    <!-- DATA NASCIMENTO -->
+                    <td><?php echo date('d/m/Y', strtotime($row['data_nas_atleta'])); ?></td>
+                    
+                    <!-- DATA CADASTRO -->
+                    <td><?php echo date('d/m/Y', strtotime($row['data_cad_atleta'])); ?></td>
+
+                    <!-- DESCRIÇÃO -->
+                    <td style="max-width:250px;"><?php echo $row['descri_atleta']; ?></td>
 
                     <!-- AÇÕES -->
                     <td>
