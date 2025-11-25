@@ -61,10 +61,10 @@ $totalRows  =   ($lista)->num_rows;
             <!--Abre estrutura de repetição-->
             <?php do { ?>
             <tr>
-                <td class="hidden"><?php echo $row['id_atleta']; ?>></td>
-                <td><?php echo $row['nome_atleta']; ?>></td>
+                <td class="hidden"><?php echo $row['id_atleta']; ?></td>
+                <td><?php echo $row['nome_atleta']; ?></td>
                 <td>
-                    <span><?php echo $row['id_categoria_atleta']; ?>></span>
+                    <span><?php echo $row['id_categoria_atleta']; ?></span>
                 </td>
                 <td>
                      <?php
@@ -92,7 +92,7 @@ $totalRows  =   ($lista)->num_rows;
                         class="btn-warning btn-xs btn-block"
                         role="button"
                     >
-                        <span class="hidden-xs">ALTERAR<br></span>
+                        <span class="hidden-xs">ALTERAR <br></span>
                         <span class="glyphicon glyphicon-refresh"></span>
                     </a>
                     <button
