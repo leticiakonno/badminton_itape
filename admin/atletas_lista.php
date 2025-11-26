@@ -29,7 +29,7 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
 <!--main>h1-->
 <main class="container">
-    <h1 class="breadcrumb alert-danger">Lista de Atletas</h1>
+    <h1 class="breadcrumb alert-danger text-center"><strong>Lista de Atletas</strong></h1>
     <div class="btn btn-danger disabled">
         Total de Atletas:
         <small class="badge"><?php echo $totalRows; ?></small>
@@ -80,7 +80,7 @@ $totalRows  =   ($lista)->num_rows;
                 <td><?php echo $row['data_cad_atleta']; ?></td>
                 <td>
                     <img 
-                        src="../imagens/<?php echo $row['imagem_atleta']; ?>" 
+                        src="../imagens/<?php echo $row['img_atleta']; ?>" 
                         alt="<?php echo $row['nome_atleta']; ?>" 
                         class="img-responsive"
                         width="100px"
@@ -110,6 +110,41 @@ $totalRows  =   ($lista)->num_rows;
         </tbody>
     </table>
 </main>
+
+
+    <!--modal-->
+    <div id="myModal" class="modal fade" role="dialog" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                >
+                    &times;
+                </button>
+                <h4 class="modal-title text-danger">ATENÇÃO!</h4>
+            </div> <!-- fecha modal-header -->
+            <div class="modal-body">
+                Deseja mesmo EXCLUIR o item?
+                <h4><span class="nome text-danger"></span></h4>
+            </div> <!-- fecha modal-body -->
+            <div class="modal-footer">
+                <a 
+                    href="#" 
+                    type="button" 
+                    class="btn btn-danger delete-yes"
+                >
+                    Confirmar
+                </a>
+                <button class="btn btn-success" data-dismiss="modal">
+                    Cancelar
+                </button>
+            </div> <!-- fecha modal-footer -->
+        </div> <!-- fecha modal-content -->
+    </div> <!-- fecha modal-dialog -->
+</div> <!-- fecha modal -->
 
 
 <!-- Link arquivos Bootstrap js -->

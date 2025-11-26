@@ -26,7 +26,7 @@ $totalRows  = ($lista)->num_rows;
     <title>Categorias</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"></head>
 <link rel="stylesheet" href="../css/meu_estilo.css">
-<body>
+<body class="fundofixo">
     <main class="container">
             <h1 class="alert alert-warning text-center">Lista de Categorias</h1>
             <div class="btn btn-warning disabled">
