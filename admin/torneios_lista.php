@@ -66,16 +66,20 @@ $totalRows = ($lista) ? $lista->num_rows : 0;
                                     <?php echo htmlspecialchars($row['descri_torneio'], ENT_QUOTES, 'UTF-8'); ?>
                                 </td>
 
-                                 <!-- Imagem do torneio -->
-                                 <td>
-                                    <?php
-                                        $caminho_fotos = "../imagens/torneios/";
-                                        $img = (!empty($row['img_torneio'])) ? $caminho_fotos . $row['img_torneio'] : $caminho_fotos . "default.png";
-                                        // Evita XSS simples
-                                        $img_esc = htmlspecialchars($img, ENT_QUOTES, 'UTF-8');
-                                    ?>
-                                    <img src="<?php echo $img_esc; ?>" alt="img" class="foto-torneio">
-                                </td>
+                                <!-- Imagem do torneio -->
+                                <td>
+                                <!-- 
+                                    Para exibir uma imagem insira em 'src'
+                                    o diretório que ela está armazenada e
+                                    a variável com seu nome.
+                                -->
+                                <img 
+                                    src="../imagens/torneios/<?php echo $row['img_torneio']; ?>" 
+                                    alt="<?php echo $row['descri_torneio']; ?>"
+                                    width="100px"
+                                >
+                            </td>
+              
 
                                 <!-- Ações -->
                                 <td>
