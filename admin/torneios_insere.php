@@ -4,7 +4,7 @@ include("../Connections/conn_atletas.php");
 
 if($_POST){
     // Selecionar o banco de dados (USE)
-    mysqli_select_db($conn_produtos,$database_conn);
+    mysqli_select_db($conn_atletas,$database_conn);
 
     // Variáveis para acrescentar dados no banco
     $tabela_insert  =   "tbtorneios";
@@ -17,6 +17,15 @@ if($_POST){
     // Organizar os campos na mesma ordem
     $tipo_torneio    =   $_POST['tipo_torneio'];
     $descri_torneio    =   $_POST['descri_torneio'];
+
+    // Guardar o nome da imagem no banco e o arquivo no diretório
+    if(isset($_POST['enviar'])){
+        $nome_img   =   $_FILES['img_torneio']['name'];
+        $tmp_img    =   $_FILES['img_torneio']['tmp_name'];
+        $dir_img    =   "../imagens/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    };
+
 
     // Reunir os valores a serem inseridos
     $valores_insert =   "
@@ -31,11 +40,11 @@ if($_POST){
                     VALUES
                         (".$valores_insert.");
                     ";
-    $resultado  =   $conn_produtos->query($insertSQL);
+    $resultado  =   $conn_atletas->query($insertSQL);
 
     // Após a ação a página será redirecionada
     $destino    =   "torneios_lista.php";
-    if(mysqli_insert_id($conn_produtos)){
+    if(mysqli_insert_id($conn_atletas)){
         header("Location: $destino");
     }else{
         header("Location: $destino");
@@ -63,7 +72,7 @@ if($_POST){
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </button>
             </a>
-            Inserindo Torneios
+            Inserir Torneios
         </h2>
 
         <div class="thumbnail">
@@ -76,21 +85,6 @@ if($_POST){
                     id="form_torneios"
                 >
 
-                    <!-- FOTO DO TORNEIO -->
-                    <label for="img_torneio">Imagem do Torneio:</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-picture"></span>
-                        </span>
-                        <input 
-                            type="file"
-                            name="img_torneio"
-                            id="img_torneio"
-                            class="form-control"
-                            accept="image/*"
-                        >
-                    </div>
-                    <br>
 
                     <!-- TIPO DO TORNEIO -->
                     <label for="tipo_torneio">Tipo do Torneio:</label>
@@ -103,7 +97,7 @@ if($_POST){
                             name="tipo_torneio"
                             id="tipo_torneio"
                             class="form-control"
-                            placeholder="Ex: Municipal, Regional, Aberto..."
+                            placeholder="Ex: Municipal, Regional, Estadual..."
                             maxlength="50"
                             required
                         >
@@ -128,12 +122,31 @@ if($_POST){
                     </div>
                     <br>
 
-                    <!-- BOTÃO -->
+                     <!-- FOTO DO TORNEIO -->
+                     <label for="img_torneio">Imagem do Torneio:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-picture"></span>
+                        </span>
+                        <input 
+                            type="file"
+                            name="img_torneio"
+                            id="img_torneio"
+                            class="form-control"
+                            accept="image/*"
+                        >
+                    </div>
+                    <br>
+
+                    <!-- btn enviar -->
                     <input 
-                        type="submit"
-                        value="Cadastrar Torneio"
-                        class="btn btn-info btn-block"
-                    >
+                            type="submit" 
+                            value="Cadastrar"
+                            name="enviar"
+                            id="enviar"
+                            role="button"
+                            class="btn btn-info btn-block"
+                        >
 
                 </form>
 
