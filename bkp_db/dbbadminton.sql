@@ -75,7 +75,9 @@ INSERT INTO tbatletas (id_atleta, id_categoria_atleta, nome_atleta, data_nas_atl
 (14, 2, 'Catarina Takashi','2015/05/02', '2025/11/17', 'Catarina é uma atleta da categoria Sub11, treina desde os 9 anos de idade e tem muita energia.', 'catarina.jpeg', 'Não'),
 (15, 7, 'Eduardo Takahagui', '1990/12/06', '2025/11/17', 'Eduardo é dedicado e enérgico. Sempre dando o seu melhor nos torneios.', 'eduardo.jpeg', 'Não'),
 (16, 7, 'Cristiane Matiazzo', '1985/12/20', '2025/11/17', 'Cris gosta de se aventurar e se arriscar no meio das crianças, e nos torneios estaduais. Além de ser a fisioterapeuta.', 'cristiane.jpeg', 'Não'),
-(17, 11,'Pedro Lanas', '1979/03/24', '2025/11/17', 'Pedro é um dos atletas mais experientes no esporte, ', 'pedrolanas.jpeg', 'Não');
+(17, 1, 'Lucas Mendes', '2017/12/31', '2025/11/17', 'Lucas está começando agora na categoria Sub9 e promete ser um grande atleta no futuro.', 'lucas.jpeg', 'Não'),
+(18, 5, 'Emilly Mendes', '2011/06/17', '2025/11/17', 'Emilly é dedicada e esforçada, está na categoria Sub17 e tem um futuro brilhante pela frente.', 'emilly.jpeg', 'Não'),
+(19, 11,'Pedro Lanas', '1979/03/24', '2025/11/17', 'Pedro é um dos atletas mais experientes no esporte, ', 'pedrolanas.jpeg', 'Não');
 
 -- Estrutura da tabela técnicos
 CREATE TABLE tbtecnicos(
@@ -102,14 +104,14 @@ CREATE TABLE tbparceiros(
 
 -- Extraindo dados da tabela tbparceiros
 INSERT INTO tbparceiros(id_parceiro,nome_parceiro,descri_parceiro,img_parceiro) VALUES
-    (1,'Prefeitura de Itapetininga', 'A Prefeitura de Itapetininga é a principal parceira do projeto Badminton Itapetininga, apoiando e incentivando o esporte na cidade.', 'prefeitura.jpeg'),
+    (1,'Prefeitura de Itapetininga', 'A Prefeitura de Itapetininga é a principal parceira do projeto Badminton Itapetininga, apoiando e incentivando o esporte na cidade.', 'prefeitura.png'),
     (2,'Colégio Dom Bosco de Itapetininga', 'Primeira e fiel patrocinadora do badminton na cidade, promovendo o esporte e oferecendo suporte aos atletas.', 'dombosco.jpeg'),
-    (3,'Universal Chemical', 'Uma das maiores empresas da região, são apoiadores do esporte, sempre prestando suporte à equipe.', 'chemical.jpeg'),
+    (3,'Universal Chemical', 'Uma das maiores empresas da região, são apoiadores do esporte, sempre prestando suporte à equipe.', 'chemical.jpg'),
     (4,'Ligia', 'Uma das maiores apoiadoras da equipe, faz por amor ao esporte e toda a equipe. Coração e alma enormes.', 'ligia.jpeg'),
-    (5,'Cristina Mori', 'Psicóloga voluntária, mãe de atleta, proporciona acompanhamento da saúde mental dos nossos atletas.', 'cristinaethiago.jpeg'),
+    (5,'Cristina Mori', 'Psicóloga voluntária, mãe de atleta, proporciona acompanhamento da saúde mental dos nossos atletas.', 'crismori.jpeg'),
     (6, 'Dr,Thiago', 'Médico voluntário que cuida da saúde dos atletas, realizando exames e acompanhamentos regulares.', 'drthiago.jpeg'),
     (7,'Laura Takamori', 'Mãe de atletas e grande apoiadora do esporte, prestativa e sempre à disposição. Presta ajuda de forma voluntária em prol de toda a equipe.', 'laura.jpeg'),
-    (8, 'ROberto Ueno', 'Pai de atletas, sempre disposto a ajudar e a alavancar o time para outros patamares.', 'roberto.jpeg'),
+    (8, 'Roberto Ueno', 'Pai de atletas, sempre disposto a ajudar e a alavancar o time para outros patamares.', 'roberto.jpeg'),
     (9,'Cristiane Matiazzo', 'Fisioterapeuta voluntária que cuida dos atletas, prevenindo lesões e promovendo a recuperação física.', 'cristiane.jpeg');
 
 -- Estrutura da tabela tbtorneios
@@ -167,7 +169,7 @@ ALTER TABLE tbparceiros
  
 -- ----- AUTO INCREMENTS -----
 ALTER TABLE tbatletas
-    MODIFY id_atleta INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+    MODIFY id_atleta INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
  
 ALTER TABLE tbcategorias
     MODIFY id_categoria INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
