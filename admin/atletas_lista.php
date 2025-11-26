@@ -35,7 +35,7 @@ $totalRows  =   ($lista)->num_rows;
         <small class="badge"><?php echo $totalRows; ?></small>
     </div>
     <!--table-->
-    <table class="table table-hover table-condensed tbopacidade">
+    <table class="table table-hover table-condensed tabela-branca">
         <thead> <!--cabeçalho da tabela-->
             <tr> <!--linha da tabela-->
                 <th class="hidden">ID</th> <!--célula do cabeçalho-->
@@ -89,11 +89,11 @@ $totalRows  =   ($lista)->num_rows;
                 <td>
                     <a href="atletas_atualiza.php?id_produto=<?php echo $row['id_atleta']; ?>"
                         target="_self"
-                        class="btn-warning btn-xs btn-block"
+                        class="btn-warning btn-xs btn-block text-center"
                         role="button"
                     >
                         <span class="hidden-xs">ALTERAR <br></span>
-                        <span class="glyphicon glyphicon-refresh"></span>
+                        <span class="glyphicon glyphicon-wrench"></span>
                     </a>
                     <button
                         data-id="<?php echo $row['id_atleta']; ?>"

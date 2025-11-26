@@ -23,9 +23,13 @@ $totalRows  = ($lista)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorias</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"></head>
-<link rel="stylesheet" href="../css/meu_estilo.css">
+    <title>Atletas Insere</title>
+    <!-- Link CSS do Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Link para CSS Específico -->
+    <link rel="stylesheet" href="../css/meu_estilo.css">
+</head>
+
 <body class="fundofixo">
     <main class="container">
             <h1 class="alert alert-warning text-center">Lista de Categorias</h1>
@@ -34,7 +38,7 @@ $totalRows  = ($lista)->num_rows;
                 <small class="badge"><?php echo $totalRows; ?></small>
             </div>
             <!-- table -->
-        <table class="table table-hover table-condensed tbopacidade">
+        <table class="table table-hover table-condensed tabela-branca">
             <thead> <!--cabeçalho da tabela-->
                 <tr> <!--linha da tabela-->
                     <th class="hidden">ID</th> <!--célula do cabeçalho-->

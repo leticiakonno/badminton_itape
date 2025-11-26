@@ -35,7 +35,7 @@ $totalRows  =   ($lista)->num_rows;
                 <small class="badge"><?php echo $totalRows; ?></small>
             </div>
             <!-- table>thead>tr>th*8 -->
-            <table class="table table-hover table-condensed tbopacidade" >
+            <table class="table table-hover table-condensed tabela-branca" >
                 <thead>
                 <tr>
                     <th class="hidden">ID</th>
