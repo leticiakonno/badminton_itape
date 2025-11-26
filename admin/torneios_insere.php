@@ -122,21 +122,32 @@ if($_POST){
                     </div>
                     <br>
 
-                     <!-- FOTO DO TORNEIO -->
-                     <label for="img_torneio">Imagem do Torneio:</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-picture"></span>
-                        </span>
-                        <input 
-                            type="file"
-                            name="img_torneio"
-                            id="img_torneio"
-                            class="form-control"
-                            accept="image/*"
-                        >
-                    </div>
-                    <br>
+         <!-- file imagem_produto -->
+         <label for="img_torneio">Imagem:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-picture"></span>
+                            </span>
+                            <!-- Exibir a imagem a ser inserida -->
+                            <img 
+                                src="" 
+                                alt=""
+                                name="imagem"
+                                id="imagem"
+                                class="img-responsive"
+                                style="max-height: 150px;"
+                            >
+                            <input 
+                                type="file" 
+                                name="img_torneio" 
+                                id="img_torneio"
+                                class="form-control"
+                                accept="image/*"
+                            >
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha file imagem_produto -->
+                        <br>
+
 
                     <!-- btn enviar -->
                     <input 

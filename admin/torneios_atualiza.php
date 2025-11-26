@@ -122,7 +122,7 @@ if ($_POST) {
 
                     <!-- Foto -->
                     <label>Imagem do Torneio:</label><br>
-                    <img src="../imagens/torneios/<?php echo $row['img_torneio']; ?>" width="100"><br><br>
+                    <img src="../imagens/torneios/<?php echo $row['img_torneio']; ?>" width="50"><br><br>
 
                     <input type="file" name="img_torneio" class="form-control">
                     <br>
