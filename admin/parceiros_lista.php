@@ -1,40 +1,36 @@
-<?php 
+<?php
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_atletas.php");
 
-//selecionar os dados
-$consulta   = "
-            SELECT *
-            FROM tbcategorias
-            ORDER BY descri_categoria DESC;  
-            "; 
-
-//Fazer a lista completa dos dados
-$lista  = $conn_atletas->query($consulta);
-
-//Separar os dados em linhas (row)
-$row    = $lista->fetch_assoc();
-
-//Contar o total de linhas
-$totalRows  = ($lista)->num_rows;
+// Selecionar os dados
+$consulta   =   "
+                SELECT  *
+                FROM    tbparceiros
+                ORDER BY nome_parceiro ASC;
+                ";
+// Fazer uma lista completa dos dados
+$lista      =   $conn_atletas->query($consulta);
+// Separar os dados em linhas (row)
+$row        =   $lista->fetch_assoc();
+// Contar o total de linhas
+$totalRows  =   ($lista)->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorias Lista</title>
+    <title>Lista de Parceiros</title>
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
-
 <body class="fundofixo">
     <main class="container">
-            <h1 class="alert alert-warning text-center">Lista de Categorias</h1>
-            <div class="btn btn-warning bg-warning text-white">
-                Total de Categorias:
+            <h1 class="breadcrumb alert-secondary text-center">Lista de Parceiros</h1>
+            <div class="btn btn-secondary bg-secondary text-white">
+                Total de Parceiros:
                 <small class="badge"><?php echo $totalRows; ?></small>
             </div>
             <!-- table -->
@@ -44,9 +40,10 @@ $totalRows  = ($lista)->num_rows;
                     <th class="hidden">ID</th> <!--célula do cabeçalho-->
                     <th>NOME</th>
                     <th>DESCRIÇÃO</th>
+                    <th>IMAGEM</th>
                      <th>
                         <a 
-                        href="categorias_insere.php"
+                        href="parceiros_insere.php"
                         class="btn btn-block btn-primary btn-xs"
                         >
                         <span class="hidden-xs">ADICIONAR <br></span>
@@ -55,26 +52,33 @@ $totalRows  = ($lista)->num_rows;
                     </th>
                     </tr>
             </thead> 
-        <tbody>
+             <tbody>
             <!--Abre estrutura de repetição-->
             <?php do { ?>
-                 <tr>
-                    <td class="hidden"><?php echo $row['id_categoria']; ?></td>
-                    <td><?php echo $row['nome_categoria']; ?></td>
-                    <td><?php echo $row['descri_categoria']; ?></td>
-                    <td>
-                        <a 
-                            href="categorias_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>"
-                            class="btn btn-block btn-warning btn-xs"
-                            target="_self"
-                            role="button"
-                        >
-                            <span class="hidden-xs">ALTERAR<br></span>
-                            <span class="glyphicon glyphicon-wrench"></span>
-                        </a>
-                        <button
-                        data-id="<?php echo $row['id_categoria']; ?>"
-                        data-nome="<?php echo $row['nome_categoria']; ?>"                        
+            <tr>
+                <td class="hidden"><?php echo $row['id_parceiro']; ?></td>
+                <td><?php echo $row['nome_parceiro']; ?></td>
+                <td><?php echo $row['descri_parceiro']; ?></td>
+                 <td>
+                    <img 
+                        src="../imagens/<?php echo $row['img_parceiro']; ?>" 
+                        alt="<?php echo $row['nome_parceiro']; ?>" 
+                        class="img-responsive"
+                        width="100px"
+                    >
+                </td>
+                <td>
+                    <a href="parceiro_atualiza.php?id_parceiro=<?php echo $row['id_parceiro']; ?>"
+                        target="_self"
+                        class="btn-warning btn-xs btn-block text-center"
+                        role="button"
+                    >
+                        <span class="hidden-xs">ALTERAR <br></span>
+                        <span class="glyphicon glyphicon-wrench"></span>
+                    </a>
+                    <button
+                        data-id="<?php echo $row['id_parceiro']; ?>"
+                        data-nome="<?php echo $row['nome_parceiro']; ?>"
                         class="btn btn-danger btn-xs btn-block delete"
                     >
                         <span class="hidden-xs">EXCLUIR<br></span>
@@ -84,11 +88,11 @@ $totalRows  = ($lista)->num_rows;
             </tr>
             <?php }while($row = $lista->fetch_assoc());  ?>
             <!-- Fechar a estrutura de repetição -->
-        </tbody>
-        </table>
-</main>
+             </tbody>
+    </table>
+</main> 
 
-    <!--modal-->
+ <!--modal-->
     <div id="myModal" class="modal fade" role="dialog" >
     <div class="modal-dialog">
         <div class="modal-content">
@@ -122,24 +126,9 @@ $totalRows  = ($lista)->num_rows;
     </div> <!-- fecha modal-dialog -->
 </div> <!-- fecha modal -->
 
+
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>   
-
-<!-- Script para o Modal -->
-<script type="text/javascript">
-    $('.delete').on('click',function(){
-        var nome    =   $(this).data('nome');
-        // buscar o valor do atributo data-nome
-        var id      =   $(this).data('id');
-        // buscar o valor do atributo data-id
-        $('span.nome').text(nome);
-        // Inserir o nome do item na pergunta de confirmação
-        $('a.delete-yes').attr('href','categorias_exclui.php?id_categoria='+id);
-        // mudar dinamicamente o id do link no botão confirmar
-        $('#myModal').modal('show'); // abre modal
-    });
-</script>
+<script src="js/bootstrap.min.js"></script>    
 </body>
 </html>
-<?php mysqli_free_result($lista); ?>
