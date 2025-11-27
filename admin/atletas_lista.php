@@ -48,7 +48,7 @@ $totalRows  =   ($lista)->num_rows;
                 <th>IMAGEM</th>
                                 <th>
                     <a 
-                        href="produtos_insere.php"
+                        href="atletas_insere.php"
                         class="btn btn-block btn-primary btn-xs"
                     >
                         <span class="hidden-xs">ADICIONAR <br></span>
@@ -87,7 +87,7 @@ $totalRows  =   ($lista)->num_rows;
                     >
                 </td>
                 <td>
-                    <a href="atletas_atualiza.php?id_produto=<?php echo $row['id_atleta']; ?>"
+                    <a href="atletas_atualiza.php?id_atleta=<?php echo $row['id_atleta']; ?>"
                         target="_self"
                         class="btn-warning btn-xs btn-block text-center"
                         role="button"
@@ -152,3 +152,25 @@ $totalRows  =   ($lista)->num_rows;
 <script src="js/bootstrap.min.js"></script>    
 </body>
 </html>
+
+<!-- Link arquivos Bootstrap js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>   
+
+<!-- Script para o Modal -->
+<script type="text/javascript">
+    $('.delete').on('click',function(){
+        var nome    =   $(this).data('nome');
+        // buscar o valor do atributo data-nome
+        var id      =   $(this).data('id');
+        // buscar o valor do atributo data-id
+        $('span.nome').text(nome);
+        // Inserir o nome do item na pergunta de confirmação
+        $('a.delete-yes').attr('href','atletas_exclui.php?id_atleta='+id);
+        // mudar dinamicamente o id do link no botão confirmar
+        $('#myModal').modal('show'); // abre modal
+    });
+</script>
+</body>
+</html>
+<?php mysqli_free_result($lista); ?>

@@ -1,3 +1,55 @@
+<?php
+// Incluir o arquivo e fazer a conexão
+include("../Connections/conn_atletas.php");
+
+if($_POST){
+    // Selecionar o banco de dados (USE)
+    mysqli_select_db($conn_atletas,$database_conn);
+
+    // Variáveis para acrescentar dados no banco
+    $tabela_insert  =   "tbatletas";
+    $campos_insert  =   "
+                            nome_atleta,
+                            descri_atleta
+                        ";
+
+    // Receber os dados do formulário
+    // Organizar os campos na mesma ordem
+    $nome_atleta       =   $_POST['nome_atleta'];
+    $descri_atleta     =   $_POST['descri_atleta'];
+    $data_nas_atleta   =   $_POST['data_nas_atleta'];
+    $data_cad_atleta   =   $_POST['data_cad_atleta'];
+    $destaque_atleta   =   $_POST['destaque_atleta'];
+    $img_atleta        =   $_POST['img_atleta'];
+
+    // Reunir os valores a serem inseridos
+    $valores_insert =   "
+                        '$nome_atleta',
+                        '$descri_atleta',
+                        '$data_nas_atleta',
+                        '$data_cad_atleta',
+                        '$destaque_atleta',
+                        '$img_atleta'
+                        ";
+
+    // Consulta SQL para inserção dos dados
+    $insertSQL  =   "
+                    INSERT INTO ".$tabela_insert."
+                        (".$campos_insert.")
+                    VALUES
+                        (".$valores_insert.");
+                    ";
+    $resultado  =   $conn_atletas->query($insertSQL);
+
+    // Após a ação a página será redirecionada
+    $destino    =   "atletas_lista.php";
+    if(mysqli_insert_id($conn_atletas)){
+        header("Location: $destino");
+    }else{
+        header("Location: $destino");
+    };
+};
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
