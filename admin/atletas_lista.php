@@ -30,7 +30,7 @@ $totalRows  =   ($lista)->num_rows;
 <!--main>h1-->
 <main class="container">
     <h1 class="breadcrumb alert-danger text-center"><strong>Lista de Atletas</strong></h1>
-    <div class="btn btn-danger disabled">
+    <div class="btn btn-danger">
         Total de Atletas:
         <small class="badge"><?php echo $totalRows; ?></small>
     </div>
