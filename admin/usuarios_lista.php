@@ -133,7 +133,7 @@ $totalRows  =   ($lista)->num_rows;
                 >
                     Confirmar
                 </a>
-                <button class="btn btn-success" data-dismiss="modal">
+                <button class="btn btn-success " data-dismiss="modal">
                     Cancelar
                 </button>
             </div> <!-- fecha modal-footer -->

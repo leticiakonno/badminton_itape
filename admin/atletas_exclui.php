@@ -6,9 +6,9 @@ include("../Connections/conn_atletas.php");
 mysqli_select_db($conn_atletas,$database_conn);
 
 // Definindo e recebendo dados para consulta
-$tabela_delete  =   "tbtorneios";
-$id_tabela_del  =   "id_torneio";
-$id_filtro_del  =   $_GET['id_torneio'];
+$tabela_delete  =   "tbatletas";
+$id_tabela_del  =   "id_atleta";
+$id_filtro_del  =   $_GET['id_atleta'];
 
 // SQL para exclusão
 $deleteSQL  =   "
@@ -19,7 +19,7 @@ $deleteSQL  =   "
 $resultado  =   $conn_atletas->query($deleteSQL);
 
 // Após a ação a página será redirecionada
-$destino    =   "torneios_lista.php";
+$destino    =   "atletas_lista.php";
 if(mysqli_insert_id($conn_atletas)){
     header("Location: $destino");
 }else{
