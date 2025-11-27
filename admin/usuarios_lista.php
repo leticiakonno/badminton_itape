@@ -19,23 +19,22 @@ $totalRows  =   ($lista)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuários Lista</title>
+    <title>Lista de Usuários</title>
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo">
-
     <main class="container">
-        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"> <!---dimensionamento-->
-            <h1 class="breadcrumb alert-info ">Lista de Usuários</h1>
-            <div class="btn btn-info disabled">
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-8" > <!-- abre dimensionamento -->
+    <h1 class="fundoparceiro text-center"><strong><i>Lista de Usuários</i></strong></h1>
+                <div class="btn btntotal bg-primary text-white">
                 Total de Usuários:
                 <small class="badge"><?php echo $totalRows; ?></small>
             </div>
-            <!-- table>thead>tr>th*8 -->
-            <table class="table table-hover table-condensed tabela-branca" >
+            <!-- table -->
+        <table class="table table-hover table-condensed tabela-branca">
                 <thead>
                 <tr>
                     <th class="hidden">ID</th>
@@ -68,7 +67,7 @@ $totalRows  =   ($lista)->num_rows;
                                     ? $caminho_fotos . $row['foto_usuario']
                                     : "../imagens/usuarios/default.png";
                     ?>
-                    <img src="<?php echo $foto; ?>" class="foto-usuario" style="width:55px; height:55px; border-radius:50%;">
+                    <img src="<?php echo $foto; ?>" class="foto-usuario" style="width:90px; height:90px; border-radius:50%;">
                 </td>
 
                 <!-- LOGIN -->
@@ -80,7 +79,7 @@ $totalRows  =   ($lista)->num_rows;
                     if($row['nivel_usuario']=='com') {
                         echo('<span class="glyphicon glyphicon-user text-info"></span>');
                     } else if($row['nivel_usuario']=='sup') {
-                        echo('<span class="glyphicon glyphicon-sunglasses text-sup"></span>');
+                        echo('<span class="glyphicon glyphicon-star text-warning"></span>');
                     }
                     ?>
                     <?php echo $row['nivel_usuario']; ?>
