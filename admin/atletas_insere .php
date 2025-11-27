@@ -70,7 +70,7 @@
                         <!-- fecha text data_nas_atleta -->
                         <br>
 
-                                                <!-- text data_nas_atleta -->
+                        <!-- text data_nas_atleta -->
                         <label for="data_cad_atleta">Data de Cadastro:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
