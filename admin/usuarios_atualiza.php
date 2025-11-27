@@ -74,34 +74,33 @@ $totalRows = ($lista)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuarios Atualiza</title>
-      <!-- Link CSS do Bootstrap -->
-      <link rel="stylesheet" href="../css/bootstrap.min.css">
-      <!-- Link para CSS Específico -->
-      <link rel="stylesheet" href="../css/meu_estilo.css">
+    <title>Categoria Insere</title>
+    <!-- Link CSS do Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Link para CSS Específico -->
+    <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo">
-
-<main class="container">
-    <div>
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
-            <h2 class="breadcrumb text-info">
+    <main class="container">
+ <div class="row">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
+            <h2 class="fundocategoria text-center">
                 <a href="usuarios_lista.php">
-                    <button class="btn btn-info">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    <button class="btn btnseta">
+                        <span class="glyphicon glyphicon-chevron-left"></span>  
                     </button>
-                </a>
-                Atualiza Usuários
+                </a><strong><i>
+                Inserir Usuários </i></strong>
             </h2>
-            <div class="thumbnail">
-                <div class="alert alert-info" role="alert">
-
+            <br>
+            <div class="thumbnail"> <!--abrir thumbnail-->
+                <div class="alert alert">
                     <form 
-                        action="usuarios_atualiza.php?id_usuario=<?php echo $row['id_usuario']; ?>"
+                        action="usuarios_insere.php"
                         enctype="multipart/form-data"
                         method="post"
-                        id="form_usuario_atualiza"
-                        name="form_usuario.atualiza"
+                        id="form_insere_usuario"  
+                        name="form_insere_usuario"
                     >
 
                         <!-- id_usuario oculto -->
@@ -185,18 +184,19 @@ $totalRows = ($lista)->num_rows;
                         <br>
                         <img 
                             src="../imagens/usuarios/<?php echo $row['foto_usuario']; ?>" 
-                            width="80"
-                            style="border-radius:50%; object-fit:cover;"
+                            width="100"
+                            style="border-radius:100%; object-fit:cover;"
                         >
                         <br><br>
 
                         <!-- botão -->
                         <input 
                             type="submit" 
-                            value="Atualizar"
+                            value="Cadastrar"
                             name="enviar"
                             id="enviar"
-                            class="btn btn-info btn-block"
+                            role="button"
+                            class="btn btntotal btn-block"
                         >
                     </form>
 

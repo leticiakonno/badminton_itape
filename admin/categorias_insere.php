@@ -72,7 +72,7 @@ if($_POST){
                         action="categorias_insere.php"
                         enctype="multipart/form-data"
                         method="post"
-                        id="form_insere_categoria"
+                        id="form_insere_categoria"  
                         name="form_insere_categoria"
                     >
                         <!-- text nome_categoria -->

@@ -78,32 +78,33 @@ if($_POST){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tipos Usuarios</title>
+    <title>Categoria Insere</title>
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo">
-<main class="container">
-    <div> <!-- abre row -->
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" > <!-- abre dimensionamento -->
-            <h2 class="breadcrumb text-info">
+    <main class="container">
+ <div class="row">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
+            <h2 class="fundocategoria text-center">
                 <a href="usuarios_lista.php">
-                    <button class="btn btn-info">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    <button class="btn btnseta">
+                        <span class="glyphicon glyphicon-chevron-left"></span>  
                     </button>
-                </a>
-                Inserindo Usuários
+                </a><strong><i>
+                Inserir Usuários </i></strong>
             </h2>
-            <div class="thumbnail"> <!-- thumbnail -->
-                <div class="alert alert-info" role="alert"> <!-- alert -->
+            <br>
+            <div class="thumbnail"> <!--abrir thumbnail-->
+                <div class="alert alert">
                     <form 
                         action="usuarios_insere.php"
                         enctype="multipart/form-data"
                         method="post"
-                        id="form_usuario_tipo"
-                        name="form_usuario.tipo"
+                        id="form_insere_usuario"  
+                        name="form_insere_usuario"
                     >
                     
                         <!-- CAMPO PARA FOTO DO USUÁRIO -->
@@ -185,15 +186,16 @@ if($_POST){
                         </div>
                         <br>
 
-                        <!-- btn enviar -->
+                      
+                         <!-- btn enviar -->
                          <input 
                             type="submit" 
                             value="Cadastrar"
                             name="enviar"
                             id="enviar"
                             role="button"
-                            class="btn btn-info btn-block"
-                         >
+                            class="btn btntotal btn-block"
+                        >
                     </form>
 
                 </div>
