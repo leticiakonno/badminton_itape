@@ -195,7 +195,7 @@ if($_POST){
                             class="btn btn-danger btn-block"
                         >
                     </form>
-                </div> <!-- fecha alert alert-warning  -->
+                </div> <!-- fecha alert alert-danger  -->
             </div> <!-- thumbnail -->
         </div> <!-- dimensionamento -->
     </div> <!-- fecha row -->

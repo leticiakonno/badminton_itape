@@ -98,10 +98,10 @@ $totalRows      =   ($lista)->num_rows;
                             value="<?php echo $row['id_atleta']; ?>"
                         >
                     <!-- text nome_atleta -->
-                        <label for="nome_atleta">Nome:</label>
+                    <label for="nome_atleta">Nome:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-list"></span>
+                                <span class="glyphicon glyphicon-apple"></span>
                             </span>
                             <input 
                                 type="text" 
@@ -111,15 +111,53 @@ $totalRows      =   ($lista)->num_rows;
                                 autofocus
                                 maxlength="15"
                                 required
-                                placeholder="Digite o nome da atleta."
-                                value="<?php echo $row['nome_atleta']; ?>"
+                                placeholder="Digite o nome do atleta."
                             >
                         </div> <!-- fecha input-group -->
                         <!-- fecha text nome_atleta -->
                         <br>
 
+                        
+                        <!-- text data_nas_atleta -->
+                        <label for="data_nas_atleta">Data de Nascimento:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                            <input 
+                                type="date" 
+                                name="data_nas_atleta" 
+                                id="data_nas_atleta"
+                                class="form-control"
+                                autofocus
+                                maxlength="15"
+                                required
+                            >
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha text data_nas_atleta -->
+                        <br>
+
+                        <!-- text data_nas_atleta -->
+                        <label for="data_cad_atleta">Data de Cadastro:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                            <input 
+                                type="date" 
+                                name="data_cad_atleta" 
+                                id="data_cad_atleta"
+                                class="form-control"
+                                autofocus
+                                maxlength="15"
+                                required
+                            >
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha text data_cad_atleta -->
+                        <br>
+
                          <!-- textarea descri_atleta -->
-                        <label for="descri_atleta">Descrição da atleta:</label>
+                        <label for="descri_atleta">Resumo:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-list-alt"></span>
@@ -131,8 +169,46 @@ $totalRows      =   ($lista)->num_rows;
                                 placeholder="Digite a descrição da atleta."
                                 cols="30"
                                 rows="8"
-                                value="<?php echo $row['descri_atleta']; ?>"
                             ></textarea>
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha textarea descri_atleta -->
+                        <br>
+
+                         <!-- file img_atleta -->
+                        <label for="img_atleta">Imagem:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-picture"></span>
+                            </span>
+                            <!-- Exibir a imagem a ser inserida -->
+                            <img 
+                                src="" 
+                                alt=""
+                                name="imagem"
+                                id="imagem"
+                                class="img-responsive"
+                                style="max-height: 150px;"
+                            >
+                            <input 
+                                type="file" 
+                                name="img_atleta" 
+                                id="img_atleta"
+                                class="form-control"
+                                accept="image/*"
+                            >
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha file imagem_produto -->
+                        <br>
+
+                        <!-- btn enviar -->
+                        <input 
+                            type="submit" 
+                            value="Cadastrar"
+                            name="enviar"
+                            id="enviar"
+                            role="button"
+                            class="btn btn-danger btn-block"
+                        >
                         </div> <!-- fecha input-group -->
                         <!-- fecha textarea descri_atleta -->   
                         <br>
