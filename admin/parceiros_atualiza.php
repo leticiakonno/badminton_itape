@@ -10,7 +10,7 @@ $campo_filtro   =   "id_parceiro";
 // para recuperar nome da foto atual caso não seja trocada
 if (isset($_GET['id_parceiro'])) {
     mysqli_select_db($conn_atletas, $database_conn);
-    $filtro_select  =   $_GET['id_uparceiro'];
+    $filtro_select  =   $_GET['id_parceiro'];
     $consulta       =   "
                         SELECT *
                         FROM    ".$tabela."
