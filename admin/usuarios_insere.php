@@ -34,6 +34,7 @@ if($_POST){
     // FIM UPLOAD DA FOTO
     // 
 
+    //teste
     // Variáveis para acrescentar dados no banco
     $tabela_insert  =   "tbusuarios";
     $campos_insert  =   "
