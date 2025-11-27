@@ -60,7 +60,7 @@ if($_POST){
             <h2 class="fundocategoria text-center">
                 <a href="categorias_lista.php">
                     <button class="btn btnseta">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="glyphicon glyphicon-chevron-left"></span>  
                     </button>
                 </a><strong><i>
                 Inserir Categoria </i></strong>
@@ -99,7 +99,7 @@ if($_POST){
                         <label for="descri_categoria">Descrição da categoria:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-list-alt"></span>
+                                <span class="glyphicon glyphicon-align-justify"></span>
                             </span>
                             <textarea 
                                 name="descri_categoria" 
@@ -121,7 +121,7 @@ if($_POST){
                             name="enviar"
                             id="enviar"
                             role="button"
-                            class="btn btnseta btn-block"
+                            class="btn btntotal btn-block"
                         >
                     </form>
                 </div> <!-- fecha alert alert-warning  -->
