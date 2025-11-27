@@ -92,7 +92,7 @@ $totalRows  = ($lista)->num_rows;
 
     <!--modal-->
     <div id="myModal" class="modal fade" role="dialog" >
-    <div class="modal-dialog">
+    <div class="modal-dialog text-center">
         <div class="modal-content">
             <div class="modal-header">
                 <button
@@ -102,21 +102,22 @@ $totalRows  = ($lista)->num_rows;
                 >
                     &times;
                 </button>
-                <h4 class="modal-title text-danger">ATENÇÃO!</h4>
+                <h4 class="modal-title text-danger "><strong>ATENÇÃO!</strong></h4>
             </div> <!-- fecha modal-header -->
-            <div class="modal-body">
-                Deseja mesmo EXCLUIR o item?
+            <div class="modal-body text-center">
+                Deseja mesmo <strong>EXCLUIR</strong> o item?
                 <h4><span class="nome text-danger"></span></h4>
             </div> <!-- fecha modal-body -->
+
             <div class="modal-footer">
                 <a 
                     href="#" 
                     type="button" 
-                    class="btn btn-danger delete-yes"
+                    class="btn btntotal delete-yes"
                 >
                     Confirmar
                 </a>
-                <button class="btn btn-success" data-dismiss="modal">
+                <button class="btn btnmodal-cancelar" data-dismiss="modal">
                     Cancelar
                 </button>
             </div> <!-- fecha modal-footer -->

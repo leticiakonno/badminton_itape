@@ -115,7 +115,7 @@ $totalRows      =   ($lista)->num_rows;
                         <label for="descri_categoria">Descrição da categoria:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-list-alt"></span>
+                                <span class="glyphicon glyphicon-align-justify"></span>
                             </span>
                             <textarea 
                                 name="descri_categoria" 
@@ -125,7 +125,8 @@ $totalRows      =   ($lista)->num_rows;
                                 cols="30"
                                 rows="8"
                                 value="<?php echo $row['descri_categoria']; ?>"
-                            ></textarea>
+                            >
+                            </textarea>
                         </div> <!-- fecha input-group -->
                         <!-- fecha textarea descri_categoria -->   
                         <br>
@@ -136,7 +137,7 @@ $totalRows      =   ($lista)->num_rows;
                             name="enviar"
                             id="enviar"
                             role="button"
-                            class="btn btnseta btn-block"
+                            class="btn btntotal btn-block"
                         >
                     </form>
                 </div> <!-- fecha alert alert-warning  -->
