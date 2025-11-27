@@ -28,8 +28,8 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
     <main class="container">
-            <h1 class="breadcrumb alert-secondary text-center">Lista de Parceiros</h1>
-            <div class="btn btn-secondary bg-secondary text-white">
+    <h1 class="fundoparceiro text-center"><strong><i>Lista de Parceiros</i></strong></h1>
+                <div class="btn btntotal bg-primary text-white">
                 Total de Parceiros:
                 <small class="badge"><?php echo $totalRows; ?></small>
             </div>
@@ -68,7 +68,7 @@ $totalRows  =   ($lista)->num_rows;
                     >
                 </td>
                 <td>
-                    <a href="parceiro_atualiza.php?id_parceiro=<?php echo $row['id_parceiro']; ?>"
+                    <a href="parceiros_atualiza.php?id_parceiro=<?php echo $row['id_parceiro']; ?>"
                         target="_self"
                         class="btn-warning btn-xs btn-block text-center"
                         role="button"

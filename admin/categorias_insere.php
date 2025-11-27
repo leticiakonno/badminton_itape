@@ -47,7 +47,7 @@ if($_POST){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atletas Insere</title>
+    <title>Categoria Insere</title>
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
@@ -56,17 +56,18 @@ if($_POST){
 <body class="fundofixo">
     <main class="container">
  <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" > <!-- abre dimensionamento -->
-            <h2 class="breadcrumb text-warning">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
+            <h2 class="fundocategoria text-center">
                 <a href="categorias_lista.php">
-                    <button class="btn btn-warning">
+                    <button class="btn btnseta">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
-                </a>
-                Inserir Categorias
+                </a><strong><i>
+                Inserir Categoria </i></strong>
             </h2>
-            <div class="thumbnail">
-                <div class="alert alert-warning">
+            <br>
+            <div class="thumbnail"> <!--abrir thumbnail-->
+                <div class="alert alert">
                     <form 
                         action="categorias_insere.php"
                         enctype="multipart/form-data"
@@ -78,7 +79,7 @@ if($_POST){
                         <label for="nome_categoria">Nome:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-list"></span>
+                                <span class="glyphicon glyphicon-th-large"></span>
                             </span>
                             <input 
                                 type="text" 
@@ -120,7 +121,7 @@ if($_POST){
                             name="enviar"
                             id="enviar"
                             role="button"
-                            class="btn btn-warning btn-block"
+                            class="btn btnseta btn-block"
                         >
                     </form>
                 </div> <!-- fecha alert alert-warning  -->

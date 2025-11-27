@@ -32,8 +32,10 @@ $totalRows  = ($lista)->num_rows;
 
 <body class="fundofixo">
     <main class="container">
-            <h1 class="alert alert-warning text-center">Lista de Categorias</h1>
-            <div class="btn btn-warning bg-warning text-white">
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-8" > <!-- abre dimensionamento -->
+            <h1 class="fundocategoria text-center"><strong><i>Lista de Categorias</i></strong></h1>
+            <br>
+            <div class="btn btntotal bg-primary text-white">
                 Total de Categorias:
                 <small class="badge"><?php echo $totalRows; ?></small>
             </div>

@@ -64,17 +64,18 @@ $totalRows      =   ($lista)->num_rows;
 <body class="fundofixo">
     <main class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" > <!-- abre dimensionamento -->
-            <h2 class="breadcrumb text-warning">
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
+    <h2 class="fundocategoria text-center">
                 <a href="categorias_lista.php">
-                    <button class="btn btn-warning">
+                    <button class="btn btnseta">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
-                </a>
-                Atualiza Categoria
+                </a><strong><i>
+                Atualiza Categoria</i></strong>
             </h2>
+            <br>
              <div class="thumbnail">
-                <div class="alert alert-warning">
+                <div class="alert alert">
                     <form 
                         action="categorias_atualiza.php"
                         enctype="multipart/form-data"
@@ -93,7 +94,7 @@ $totalRows      =   ($lista)->num_rows;
                         <label for="nome_categoria">Nome:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-list"></span>
+                                <span class="glyphicon glyphicon-th-large"></span>
                             </span>
                             <input 
                                 type="text" 
@@ -135,7 +136,7 @@ $totalRows      =   ($lista)->num_rows;
                             name="enviar"
                             id="enviar"
                             role="button"
-                            class="btn btn-warning btn-block"
+                            class="btn btnseta btn-block"
                         >
                     </form>
                 </div> <!-- fecha alert alert-warning  -->
