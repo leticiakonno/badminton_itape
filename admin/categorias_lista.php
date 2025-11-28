@@ -37,7 +37,7 @@ $totalRows  = ($lista)->num_rows;
             <br>
             <div class="btn btntotal bg-primary text-white">
                 Total de Categorias:
-                <small class="badge"><?php echo $totalRows; ?></small>
+                <small><?php echo $totalRows; ?></small>
             </div>
             <!-- table -->
         <table class="table table-hover table-condensed tabela-branca">
