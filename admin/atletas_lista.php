@@ -82,7 +82,7 @@ $totalRows  =   ($lista)->num_rows;
                     <img 
                         src="../imagens/atletas/<?php echo $row['img_atleta']; ?>" 
                         alt="<?php echo $row['nome_atleta']; ?>" 
-                        class="img-responsive"
+                        class="img-circle"
                         width="100px"
                     >
                 </td>
