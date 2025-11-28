@@ -49,6 +49,21 @@ if($_POST){
         header("Location: $destino");
     };
 };
+
+// Selecionar o banco de dados (USE)
+mysqli_select_db($conn_atletas,$database_conn);
+
+// Selecionar os dados da chave estrangeira
+$tabela_fk      =   "tbcategorias";
+$ordenar_por    =   "nome_categoria ASC";
+$consulta_fk    =   "
+                    SELECT *
+                    FROM    ".$tabela_fk."
+                    ORDER BY ".$ordenar_por.";
+                    ";
+$lista_fk       =   $conn_atletas->query($consulta_fk);
+$row_fk         =   $lista_fk->fetch_assoc();
+$totalRows_fk   =   ($lista_fk)->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -82,11 +97,36 @@ if($_POST){
                         id="form_insere_atleta"
                         name="form_insere_atleta"
                     >
+                    <!-- Select id_tipo_produto -->
+                        <label for="id_categoria_atleta">Categoria:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-flag"></span>
+                            </span>
+                            <!-- select>option*2 -->
+                            <select 
+                                name="id_categoria_atleta" 
+                                id="id_categoria_atleta"
+                                class="form-control"
+                                required
+                            >
+                                <!-- Abre estrutura de repetição -->
+                                <?php do{ ?>
+                                    <option value="<?php echo $row_fk['id_categoria']; ?>">
+                                        <?php echo $row_fk['nome_categoria']; ?>
+                                    </option>
+                                <?php }while($row_fk=$lista_fk->fetch_assoc()); ?>
+                                <!-- Fecha estrutura de repetição -->
+                            </select>
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha Select id_tipo_produto -->
+                        <br>
+
                         <!-- text nome_atleta -->
                         <label for="nome_atleta">Nome:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-apple"></span>
+                                <span class="glyphicon glyphicon-user"></span>
                             </span>
                             <input 
                                 type="text" 
@@ -101,7 +141,6 @@ if($_POST){
                         </div> <!-- fecha input-group -->
                         <!-- fecha text nome_atleta -->
                         <br>
-
                         
                         <!-- text data_nas_atleta -->
                         <label for="data_nas_atleta">Data de Nascimento:</label>
@@ -141,8 +180,40 @@ if($_POST){
                         <!-- fecha text data_cad_atleta -->
                         <br>
 
-                         <!-- textarea descri_atleta -->
-                        <label for="descri_atleta">Resumo:</label>
+                        <!-- radio destaque_atleta -->
+                        <label for="destaque_atleta">Destaque?</label>
+                        <div class="input-group">
+                            <label 
+                                for="destaque_atleta_s"
+                                class="radio-inline"
+                            >
+                                <input 
+                                    type="radio"
+                                    name="destaque_atleta"
+                                    id="destaque_atleta"
+                                    value="Sim"
+                                >
+                                Sim
+                            </label>
+                            <label 
+                                for="destaque_atleta_n"
+                                class="radio-inline"
+                            >
+                                <input 
+                                    type="radio"
+                                    name="destaque_atleta"
+                                    id="destaque_atleta"
+                                    value="Não"
+                                    checked
+                                >
+                                Não
+                            </label>
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha radio destaque_atleta -->
+                        <br>
+
+                        <!-- textarea descri_atleta -->
+                        <label for="descri_atleta">Descrição:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-list-alt"></span>

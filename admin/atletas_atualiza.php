@@ -6,33 +6,44 @@ include("../Connections/conn_atletas.php");
 $tabela         =   "tbatletas";
 $campo_filtro   =   "id_atleta";
 
-
-if($_POST){
+if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
     // Selecionar o banco de dados (USE)
     mysqli_select_db($conn_atletas,$database_conn);
 
+    // Guardar o nome da imagem no banco e o arquivo no diretório
+    if($_FILES['img_atleta']['name']){
+        $nome_img   =   $_FILES['img_atleta']['name'];
+        $tmp_img    =   $_FILES['img_atleta']['tmp_name'];
+        $dir_img    =   "../imagens/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    }else{
+        $nome_img=$_POST['img_atleta_atual'];
+    };
+
     // Receber os dados do formulário
     // Organizar os campos na mesma ordem
-    $nome_atleta       =   $_POST['nome_atleta'];
-    $descri_atleta     =   $_POST['descri_atleta'];
-    $data_nas_atleta   =   $_POST['data_nas_atleta'];
-    $data_cad_atleta   =   $_POST['data_cad_atleta'];
-    $destaque_atleta   =   $_POST['destaque_atleta'];
-    $img_atleta        =   $_POST['img_atleta'];
+    $id_categoria_atleta    =   $_POST['id_categoria_atleta'];
+    $nome_atleta            =   $_POST['nome_atleta'];
+    $data_nas_atleta        =   $_POST['data_nas_atleta'];
+    $data_cad_atleta        =   $_POST['data_cad_atleta'];
+    $descri_atleta          =   $_POST['descri_produto'];
+    $img_atleta             =   $nome_img;
+    $destaque_atleta        =   $_POST['destaque_atleta'];
 
     // Campo para filtrar o registro (WHERE)
-    $filtro_update  =   $_POST['id_atleta'];
+    $filtro_update      =   $_POST['id_atleta'];
 
     // Consulta SQL para ATUALIZAÇÃO dos dados
     $updateSQL  =   "
                     UPDATE ".$tabela."
-                        SET nome_atleta     =   '".$nome_atleta."'   ,
-                            descri_atleta   =   '".$descri_atleta."',
-                            data_nas_atleta = '".$data_nas_atleta."',
-                            data_cad_atleta = '".$data_cad_atleta."',
-                            destaque_atleta = '".$destaque_atleta."',
-                            img_atleta      = '".$img_atleta."'
-                    WHERE ".$campo_filtro."='".$filtro_update."';
+                        SET id_categoria_atleta =   '".$id_categoria_atleta."',
+                            nome_atleta         =   '".$nome_atleta."',
+                            data_nas_atleta     =   '".$data_nas_atleta."',
+                            data_cad_atleta     =   '".$data_cad_atleta."',
+                            descri_atleta       =   '".$descri_atleta."',
+                            img_atleta          =   '".$img_atleta."',
+                            destaque_atleta     =   '".$destaque_atleta."'
+                    WHERE ".$campo_filtro." =   '".$filtro_update."';
                     ";
     $resultado  =   $conn_atletas->query($updateSQL);
 
@@ -46,18 +57,34 @@ if($_POST){
 };
 
 // Consulta para trazer e filtrar os dados
-// Definir o USE do banco de dados
+// Definir o USE do banco de dados;
 mysqli_select_db($conn_atletas,$database_conn);
-$filtro_select  =   $_GET['id_atleta'];
-$consulta       =   "
+$filtro_select    =   $_GET['id_atleta'];
+$consulta           =   "
                     SELECT *
                     FROM    ".$tabela."
-                    WHERE   ".$campo_filtro."=".$filtro_select.";
+                    WHERE ".$campo_filtro."=".$filtro_select.";
                     ";
 $lista          =   $conn_atletas->query($consulta);
 $row            =   $lista->fetch_assoc();
 $totalRows      =   ($lista)->num_rows;
+
+// Selecionar o banco de dados (USE)
+mysqli_select_db($conn_atletas,$database_conn);
+
+// Selecionar os dados da chave estrangeira
+$tabela_fk      =   "tbcategorias";
+$ordenar_por    =   "nome_categoria ASC";
+$consulta_fk    =   "
+                    SELECT *
+                    FROM    ".$tabela_fk."
+                    ORDER BY ".$ordenar_por.";
+                    ";
+$lista_fk       =   $conn_atletas->query($consulta_fk);
+$row_fk         =   $lista_fk->fetch_assoc();
+$totalRows_fk   =   ($lista_fk)->num_rows;
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -97,11 +124,41 @@ $totalRows      =   ($lista)->num_rows;
                             id="id_atleta"
                             value="<?php echo $row['id_atleta']; ?>"
                         >
+                         <!-- Select id_tipo_produto -->
+                        <label for="id_categoria_atleta">Categoria:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-flag"></span>
+                            </span>
+                            <!-- select>option*2 -->
+                            <select 
+                                name="id_tipo_produto" 
+                                id="id_tipo_produto"
+                                class="form-control"
+                                required
+                            >
+                        <!-- Abre estrutura de repetição -->
+                                <?php do{ ?>
+                                    <option value="<?php echo $row_fk['id_categoria']; ?>"
+                                        <?php 
+                                            if(!(strcmp($row_fk['id_categoria'],$row['id_categoria_atleta']))){
+                                                echo "selected=\"selected\"";
+                                            }
+                                        ?>
+                                    >
+                                        <?php echo $row_fk['nome_categoria']; ?> 
+                                    </option>
+                                <?php }while($row_fk=$lista_fk->fetch_assoc()); ?>
+                                <!-- Fecha estrutura de repetição -->
+                            </select>
+                        </div> <!-- fecha input-group -->
+                        <br>
+
                     <!-- text nome_atleta -->
                     <label for="nome_atleta">Nome:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-apple"></span>
+                                <span class="glyphicon glyphicon-user"></span>
                             </span>
                             <input 
                                 type="text" 
@@ -111,7 +168,7 @@ $totalRows      =   ($lista)->num_rows;
                                 autofocus
                                 maxlength="15"
                                 required
-                                placeholder="Digite o nome do atleta."
+                                value="<?php echo $row['nome_atleta']; ?>"
                             >
                         </div> <!-- fecha input-group -->
                         <!-- fecha text nome_atleta -->
@@ -132,6 +189,7 @@ $totalRows      =   ($lista)->num_rows;
                                 autofocus
                                 maxlength="15"
                                 required
+                                value="<?php echo $row['data_nas_atleta']; ?>"
                             >
                         </div> <!-- fecha input-group -->
                         <!-- fecha text data_nas_atleta -->
@@ -151,13 +209,47 @@ $totalRows      =   ($lista)->num_rows;
                                 autofocus
                                 maxlength="15"
                                 required
+                                value="<?php echo $row['data_cad_atleta']; ?>"                               
                             >
                         </div> <!-- fecha input-group -->
                         <!-- fecha text data_cad_atleta -->
                         <br>
 
-                         <!-- textarea descri_atleta -->
-                        <label for="descri_atleta">Resumo:</label>
+                        <!-- radio destaque_atleta -->
+                        <label for="destaque_atleta">Destaque?</label>
+                        <div class="input-group">
+                            <label 
+                                for="destaque_atleta_s"
+                                class="radio-inline"
+                            >
+                                <input 
+                                    type="radio"
+                                    name="destaque_atleta"
+                                    id="destaque_atleta"
+                                    value="Sim"
+                                    <?php echo $row['destaque_atleta']=="Sim" ? "checked" : null; ?>
+                                >
+                                Sim
+                            </label>
+                            <label 
+                                for="destaque_atleta_n"
+                                class="radio-inline"
+                            >
+                                <input 
+                                    type="radio"
+                                    name="destaque_atleta"
+                                    id="destaque_atleta"
+                                    value="Não"
+                                    <?php echo $row['destaque_atleta']=="Não" ? "checked" : null; ?>
+                                >
+                                Não
+                            </label>
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha radio destaque_atleta -->
+                        <br>
+
+                        <!-- textarea descri_atleta -->
+                        <label for="descri_atleta">Descrição:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-list-alt"></span>
@@ -169,13 +261,34 @@ $totalRows      =   ($lista)->num_rows;
                                 placeholder="Digite a descrição da atleta."
                                 cols="30"
                                 rows="8"
-                            ></textarea>
+                            ><?php echo $row['descri_atleta']; ?></textarea>
                         </div> <!-- fecha input-group -->
                         <!-- fecha textarea descri_atleta -->
                         <br>
 
-                         <!-- file img_atleta -->
-                        <label for="img_atleta">Imagem:</label>
+                        <!-- Dados da imagem_produto ATUAL -->                        
+                        <label for="">Imagem ATUAL:</label>
+                        <br>
+                        <img 
+                            src="../imagens/<?php echo $row['img_atleta']; ?>" 
+                            alt=""
+                            class="img_responsive"
+                            style="max-width:40%"
+                        >
+                        <br>
+
+                        <!-- type="hidden" campo oculto somente para guardar dados -->
+                        <!-- guardamos o nome da imagem caso não seja alterada -->
+                        <input 
+                            type="hidden"
+                            name="img_atleta_atual"
+                            id="img_atleta_atual"
+                            value="<?php echo $row['img_atleta']; ?>"
+                        >
+                        <br>
+
+                        <!-- file imagem_produto -->
+                        <label for="img_atleta">NOVA Imagem:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-picture"></span>
@@ -191,8 +304,8 @@ $totalRows      =   ($lista)->num_rows;
                             >
                             <input 
                                 type="file" 
-                                name="img_atleta" 
-                                id="img_atleta"
+                                name="imagem_produto" 
+                                id="imagem_produto"
                                 class="form-control"
                                 accept="image/*"
                             >
@@ -200,18 +313,6 @@ $totalRows      =   ($lista)->num_rows;
                         <!-- fecha file imagem_produto -->
                         <br>
 
-                        <!-- btn enviar -->
-                        <input 
-                            type="submit" 
-                            value="Cadastrar"
-                            name="enviar"
-                            id="enviar"
-                            role="button"
-                            class="btn btn-danger btn-block"
-                        >
-                        </div> <!-- fecha input-group -->
-                        <!-- fecha textarea descri_atleta -->   
-                        <br>
                          <!-- btn enviar -->
                         <input 
                             type="submit" 
