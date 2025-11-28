@@ -108,11 +108,11 @@ INSERT INTO tbparceiros(id_parceiro,nome_parceiro,descri_parceiro,img_parceiro) 
     (2,'Colégio Dom Bosco de Itapetininga', 'Primeira e fiel patrocinadora do badminton na cidade, promovendo o esporte e oferecendo suporte aos atletas.', 'dombosco.jpeg'),
     (3,'Universal Chemical', 'Uma das maiores empresas da região, são apoiadores do esporte, sempre prestando suporte à equipe.', 'chemical.jpg'),
     (4,'Ligia', 'Uma das maiores apoiadoras da equipe, faz por amor ao esporte e toda a equipe. Coração e alma enormes.', 'ligia.jpeg'),
-    (5,'Cristina Mori', 'Psicóloga voluntária, mãe de atleta, proporciona acompanhamento da saúde mental dos nossos atletas.', 'crismori.jpeg'),
+    (5,'Cristina Mori', 'Psicóloga voluntária, mãe de atleta, proporciona acompanhamento da saúde mental dos nossos atletas.', 'crismori.jpeg.jpeg'),
     (6, 'Dr,Thiago', 'Médico voluntário que cuida da saúde dos atletas, realizando exames e acompanhamentos regulares.', 'drthiago.jpeg'),
-    (7,'Laura Takamori', 'Mãe de atletas e grande apoiadora do esporte, prestativa e sempre à disposição. Presta ajuda de forma voluntária em prol de toda a equipe.', 'laura.jpeg'),
+    (7,'Laura Takamori', 'Mãe de atletas e grande apoiadora do esporte, prestativa e sempre à disposição. Presta ajuda de forma voluntária em prol de toda a equipe.', 'laura.jpeg.jpeg'),
     (8, 'Roberto Ueno', 'Pai de atletas, sempre disposto a ajudar e a alavancar o time para outros patamares.', 'roberto.jpeg'),
-    (9,'Cristiane Matiazzo', 'Fisioterapeuta voluntária que cuida dos atletas, prevenindo lesões e promovendo a recuperação física.', 'cristiane.jpeg');
+    (9,'Cristiane Matiazzo', 'Fisioterapeuta voluntária que cuida dos atletas, prevenindo lesões e promovendo a recuperação física.', 'cristiane.jpeg.jpeg');
 
 -- Estrutura da tabela tbtorneios
 CREATE TABLE tbtorneios(

@@ -1,118 +1,103 @@
 <?php
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_atletas.php");
+//Variaveis globais
+$tabela     =   'tbusuarios';
+$campo_filtro   =   'id_usuario';
 
-// Variáveis Globais
-$tabela         =   "tbusuarios";
-$campo_filtro   =   "id_usuario";
-
-// Primeiro, precisamos carregar os dados do usuário ANTES do POST  
-// para recuperar nome da foto atual caso não seja trocada
-if (isset($_GET['id_usuario'])) {
-    mysqli_select_db($conn_atletas, $database_conn);
-    $filtro_select  =   $_GET['id_usuario'];
-    $consulta       =   "
-                        SELECT *
-                        FROM    ".$tabela."
-                        WHERE   ".$campo_filtro."=".$filtro_select.";
-                        ";
-    $lista          =   $conn_atletas->query($consulta);
-    $row            =   $lista->fetch_assoc();
-}
-
-// Se o formulário foi enviado
 if($_POST){
-
+    // Selecionar o banco de dados (USE)
     mysqli_select_db($conn_atletas,$database_conn);
 
+
     // Receber os dados do formulário
+    // Organizar os campos na mesma ordem
     $login_usuario    =   $_POST['login_usuario'];
-    $senha_usuario    =   $_POST['senha_usuario'];
-    $nivel_usuario    =   $_POST['nivel_usuario'];
+    $senha_usuario   =   $_POST['senha_usuario'];
+    $nivel_usuario   =   $_POST['nivel_usuario'];
 
-    // Campo para filtrar o registro
-    $filtro_update  =   $_POST['id_usuario'];
 
-    // FOTO DO USUÁRIO --------------------------
-    $foto_usuario = $row['foto_usuario']; // mantém a foto atual caso não troque
+   // Campo para filtrar o registro (WHERE)
+   $filtro_update   =   $_POST['id_usuario'];
 
-    // Se o usuário enviou uma nova foto
-    if (!empty($_FILES['foto_usuario']['name'])) {
-
-        $nomeArquivo = $_FILES['foto_usuario']['name'];
-        $tempArquivo = $_FILES['foto_usuario']['tmp_name'];
-        $destino = "../imagens/usuarios/" . $nomeArquivo;
-
-        move_uploaded_file($tempArquivo, $destino);
-
-        $foto_usuario = $nomeArquivo; 
-    }
-    // ------------------------------------------
 
     // Consulta SQL para ATUALIZAÇÃO dos dados
     $updateSQL  =   "
                     UPDATE ".$tabela."
-                        SET login_usuario  = '".$login_usuario."'   ,
-                            senha_usuario  = '".$senha_usuario."'    ,
-                            nivel_usuario  = '".$nivel_usuario."'   ,
-                            foto_usuario   = '".$foto_usuario."'
-                    WHERE ".$campo_filtro."='".$filtro_update."';
+                        SET login_usuario = '".$login_usuario."',
+                            senha_usuario =   '".$senha_usuario."',
+                            nivel_usuario =     '".$nivel_usuario."'
+                    WHERE   ".$campo_filtro."='".$filtro_update."';
                     ";
     $resultado  =   $conn_atletas->query($updateSQL);
 
-    // Redirecionamento
+    // Após a ação a página será redirecionada
     $destino    =   "usuarios_lista.php";
-    header("Location: $destino");
-    exit;
-}
+    if(mysqli_insert_id($conn_atletas)){
+        header("Location: $destino");
+    }else{
+        header("Location: $destino");
+    };
+};
 
-// Contar linhas (mantido do seu código)
-$totalRows = ($lista)->num_rows;
+//Consulta para trazer e filtrar os dados
+//Definir o USE do banco de dados
+mysqli_select_db($conn_atletas,$database_conn);
+
+$filtro_select  =   $_GET['id_usuario'];
+$consulta       =   "
+                    SELECT *
+                    FROM    ".$tabela."
+                    WHERE   ".$campo_filtro."=".$filtro_select.";
+                    ";
+$lista          =   $conn_atletas->query($consulta);
+$row            =   $lista->fetch_assoc();
+$totalRows      =   ($lista)->num_rows;
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categoria Insere</title>
-    <!-- Link CSS do Bootstrap -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Link para CSS Específico -->
-    <link rel="stylesheet" href="../css/meu_estilo.css">
+    <title>Atualiza Usuário</title>
+    <!-- CSS do Bootstrap -->
+     <link rel="stylesheet" href="../css/bootstrap.min.css">
+     <!-- link para css especifico -->
+      <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo">
-    <main class="container">
- <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
-            <h2 class="fundocategoria text-center">
+    
+<main class="container">
+    <div> <!-- abre row -->
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 " > <!-- abre dimensionamento -->
+            <h2 class="breadcrumb text-info">
                 <a href="usuarios_lista.php">
-                    <button class="btn btnseta">
-                        <span class="glyphicon glyphicon-chevron-left"></span>  
+                    <button class="btn btn-info">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
-                </a><strong><i>
-                Inserir Usuários </i></strong>
+                </a>
+                Atualiza Usuário
             </h2>
-            <br>
-            <div class="thumbnail"> <!--abrir thumbnail-->
-                <div class="alert alert">
+            <div class="thumbnail"> <!-- thumbnail -->
+                <div class="alert alert-info" role="alert"> <!-- alert -->
                     <form 
-                        action="usuarios_insere.php"
+                        action="usuarios_atualiza.php"
                         enctype="multipart/form-data"
                         method="post"
-                        id="form_insere_usuario"  
-                        name="form_insere_usuario"
+                        id="form_usuarios_atualiza"
+                        name="form_usuarios_atualiza"
                     >
+                     <!-- Inserir campo id_usuario OCULTO para uso em filtro -->
+                     <input 
+                         type="hidden"
+                         name="id_usuario"
+                         id="id_usuario"
+                         value="<?php echo $row['id_usuario']; ?>"
 
-                        <!-- id_usuario oculto -->
-                        <input
-                            type="hidden"
-                            name="id_usuario"
-                            id="id_usuario"
-                            value="<?php echo $row['id_usuario']; ?>"
-                        >
-
-                        <!-- login -->
-                        <label for="login_usuario">Login:</label>
+                         >
+                    <!-- text login_usuario -->
+                    <label for="login_usuario">Login:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-user"></span>
@@ -122,15 +107,18 @@ $totalRows = ($lista)->num_rows;
                                 name="login_usuario" 
                                 id="login_usuario"
                                 class="form-control"
-                                maxlength="30"
+                                placeholder="Digite o seu login."
+                                maxlength="100"
                                 required
                                 value="<?php echo $row['login_usuario']; ?>"
+
                             >
-                        </div>
+                            </div> <!-- fecha input-group -->
+                        <!-- fecha text login_usuario -->
                         <br>
 
-                        <!-- senha -->
-                        <label for="senha_usuario">Senha: </label>
+                         <!-- text senha_usuario -->
+                    <label for="senha_usuario">senha:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-qrcode"></span>
@@ -140,35 +128,49 @@ $totalRows = ($lista)->num_rows;
                                 name="senha_usuario" 
                                 id="senha_usuario"
                                 class="form-control"
-                                maxlength="8"
+                                placeholder="Digite a senha desejada."
+                                maxlength="100"
                                 required
                                 value="<?php echo $row['senha_usuario']; ?>"
+
                             >
-                        </div>
+                            </div> <!-- fecha input-group -->
+                        <!-- fecha text senha_usuario -->
                         <br>
 
-                        <!-- nível -->
-                        <label for="nivel_usuario_c">Nível do usuário?</label>
+                           <!-- radio nivel_usuario -->
+                           <label for="nivel_usuario">Nível do usuário</label>
                         <div class="input-group">
-                            <label class="radio-inline">
+                            <label 
+                                for="nivel_usuario_c"
+                                class="radio-inline"
+                            >
                                 <input 
                                     type="radio"
                                     name="nivel_usuario"
+                                    id="nivel_usuario"
                                     value="com"
-                                    <?php echo $row['nivel_usuario']=="com" ? "checked" : null; ?>
-                                >   Comum
+                                    <?php echo $row['nivel_usuario']=="com" ? "checked" : null; ?>  
+
+                                >
+                            Comum
                             </label>
-                            <label class="radio-inline">
+                            <label 
+                                for="nivel_usuario_s"
+                                class="radio-inline"
+                            >
                                 <input 
                                     type="radio"
                                     name="nivel_usuario"
+                                    id="nivel_usuario"
                                     value="sup"
-                                    <?php echo $row['nivel_usuario']=="sup" ? "checked" : null; ?>
-                                > Supervisor
-                            </label>
-                        </div>
+                                    <?php echo $row['nivel_usuario']=="sup" ? "checked" : null; ?>  
 
-                        <br>
+                                >
+                                Supervisor
+                            </label>
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha radio nivel_usuario -->
 
                         <!-- FOTO DO USUÁRIO -->
                         <label for="foto_usuario">Foto do usuário:</label>
@@ -189,26 +191,21 @@ $totalRows = ($lista)->num_rows;
                         >
                         <br><br>
 
-                        <!-- botão -->
+                        <br>
+                         <!-- btn enviar -->
+
                         <input 
                             type="submit" 
-                            value="Cadastrar"
+                            value="Atualizar"
                             name="enviar"
                             id="enviar"
-                            role="button"
-                            class="btn btntotal btn-block"
-                        >
-                    </form>
+                            class="btn btn-info btn-block"
+                         >
+                        </form>
 
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
+    <!-- link arquivos bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
-
 <?php mysqli_free_result($lista); ?>

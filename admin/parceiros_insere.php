@@ -16,8 +16,8 @@ if($_POST){
 
     // Receber os dados do formulário
     // Organizar os campos na mesma ordem
-    $nome_categoria    =   $_POST['nome_parceiro'];
-    $descri_categoria     =   $_POST['descri_parceiro'];
+    $nome_parceiro    =   $_POST['nome_parceiro'];
+    $descri_parceiro     =   $_POST['descri_parceiro'];
     $img_parceiro       =     $_POST['img_parceiro'];
 
     // Reunir os valores a serem inseridos
@@ -59,29 +59,29 @@ if($_POST){
 <body class="fundofixo">
 <main class="container">
  <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" > <!-- abre dimensionamento -->
-            <h2 class="breadcrumb text-danger">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
+        <h2 class="fundoparceiro text-center">
                 <a href="parceiros_lista.php">
-                    <button class="btn btn-danger btn-sm">
+                    <button class="btn btseta ">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
                 </a>
-                Inserir Parceiros
+                <strong><i>Inserir Parceiros</i></strong>
             </h2>
             <div class="thumbnail"> <!-- abre thumbnail -->
-                <div class="alert alert-danger">
+                <div class="alert">
                     <form 
-                        action="atletas_insere.php"
+                        action="parceiros_insere.php"
                         enctype="multipart/form-data"
                         method="post"
-                        id="form_insere_atleta"
-                        name="form_insere_atleta"
+                        id="form_insere_parceiro"
+                        name="form_insere_parceiro"
                     >
             <!-- text nome_parceiro -->
             <label for="nome_parceiro">Nome:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-apple"></span>
+                                <span class="glyphicon glyphicon-pencil"></span>
                             </span>
                             <input 
                                 type="text" 
@@ -101,7 +101,7 @@ if($_POST){
             <label for="descri_parceiro">Descrição de parceiro:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-list-alt"></span>
+                                <span class="glyphicon glyphicon-align-justify"></span>
                             </span>
                             <textarea 
                                 name="descri_parceiro" 
@@ -148,18 +148,15 @@ if($_POST){
                             name="enviar"
                             id="enviar"
                             role="button"
-                            class="btn btn-danger btn-block"
+                            class="btn btntotal btn-block"
                         >
                     </form>
                 </div> <!-- fecha alert alert-warning  -->
             </div> <!-- thumbnail -->
         </div> <!-- dimensionamento -->
     </div> <!-- fecha row -->
+</div>
 </main>
-
-
-
-
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>    

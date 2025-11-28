@@ -31,7 +31,7 @@ $totalRows  =   ($lista)->num_rows;
     <h1 class="fundoparceiro text-center"><strong><i>Lista de Parceiros</i></strong></h1>
                 <div class="btn btntotal bg-primary text-white">
                 Total de Parceiros:
-                <small class="badge"><?php echo $totalRows; ?></small>
+                <small><?php echo $totalRows; ?></small>
             </div>
             <!-- table -->
         <table class="table table-hover table-condensed tabela-branca">
@@ -61,10 +61,10 @@ $totalRows  =   ($lista)->num_rows;
                 <td><?php echo $row['descri_parceiro']; ?></td>
                  <td>
                     <img 
-                        src="../imagens/<?php echo $row['img_parceiro']; ?>" 
+                        src="../imagens/apoiadores/<?php echo $row['img_parceiro']; ?>" 
                         alt="<?php echo $row['nome_parceiro']; ?>" 
-                        class="img-responsive"
-                        width="100px"
+                        class="img-circle"
+                        width="80px"
                     >
                 </td>
                 <td>

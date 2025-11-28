@@ -79,7 +79,7 @@ $totalRows = ($lista)->num_rows;
     <main class="container">
     <div class="row">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
-    <h2 class="fundocategoria text-center">
+    <h2 class="fundoparceiro text-center">
                 <a href="parceiros_lista.php">
                     <button class="btn btnseta">
                         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -89,7 +89,7 @@ $totalRows = ($lista)->num_rows;
             </h2>
             <br>
             <div class="thumbnail">
-                <div class="alert alert-info" role="alert">
+                <div class="alert" role="alert">
 
                     <form 
                         action="parceiros_atualiza.php?id_parceiro=<?php echo $row['id_parceiro']; ?>"
@@ -110,7 +110,7 @@ $totalRows = ($lista)->num_rows;
                         <label for="nome_parceiro">Nome:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-th-large"></span>
+                                <span class="glyphicon glyphicon-pencil"></span>
                             </span>
                             <input 
                                 type="text" 
@@ -131,7 +131,7 @@ $totalRows = ($lista)->num_rows;
                          <label for="descri_parceiro">Descrição do parceiro:</label>
                          <div class="input-group">
                              <span class="input-group-addon">
-                                 <span class="glyphicon glyphicon-list-alt"></span>
+                                 <span class="glyphicon glyphicon-align-justify"></span>
                              </span>
                              <textarea 
                                  name="descri_parceiro" 
@@ -147,7 +147,7 @@ $totalRows = ($lista)->num_rows;
                          <br>
 
                          <!-- FOTO DO USUÁRIO -->
-                        <label for="img_parceiro">Foto do usuário:</label>
+                        <label for="img_parceiro">Foto do parceiro:</label>
                         <input 
                             type="file"
                             name="img_parceiro"
@@ -159,7 +159,7 @@ $totalRows = ($lista)->num_rows;
                         <!-- exibe foto atual -->
                         <br>
                         <img 
-                            src="../imagens/apoiadores/ echo $row['img_parceiro']; ?>" 
+                            src="../imagens/apoiadores/<?php echo $row['img_parceiro']; ?>" 
                             width="80"
                             style="border-radius:50%; object-fit:cover;"
                         >
@@ -170,7 +170,7 @@ $totalRows = ($lista)->num_rows;
                     value="Atualizar"
                     name="enviar"
                     id="enviar"
-                    class="btn btn-info btn-block"
+                    class="btn btntotal btn-block"
                 >
             </form>
 
