@@ -3,77 +3,73 @@
 include("../Connections/conn_atletas.php");
 
 if($_POST){
-    // Selecionar o banco de dados (USE)
+    // Selecionar o banco de dados
     mysqli_select_db($conn_atletas,$database_conn);
 
-    // 
-    // 1) UPLOAD DA FOTO
-    // 
-    $foto_nome = NULL;
+    // Variáveis
+    $tabela_insert  = "tbusuarios";
+    $campos_insert  = "
+                        login_usuario,
+                        senha_usuario,
+                        nivel_usuario,
+                        foto_usuario
+                       ";
 
-    if (!empty($_FILES['foto_usuario']['name'])) {
+    // Receber valores normais
+    $login_usuario  = $_POST['login_usuario'];
+    $senha_usuario  = $_POST['senha_usuario'];
+    $nivel_usuario  = $_POST['nivel_usuario'];
 
-        // Pasta onde as fotos serão salvas
-        $pasta = "../imagens/usuarios/";
+    // ------------------------------------------------------------------------------------
+    // UPLOAD DA IMAGEM
+    // ------------------------------------------------------------------------------------
 
-        // Cria a pasta caso não exista
-        if (!is_dir($pasta)) {
-            mkdir($pasta, 0777, true);
-        }
+    // Se o arquivo foi enviado
+    if(isset($_FILES['foto_usuario']) && $_FILES['foto_usuario']['error'] == 0){
 
-        // Nome único da foto
-        $foto_nome = time() . "_" . basename($_FILES['foto_usuario']['name']);
+        // pega nome original
+        $nome_original = $_FILES['foto_usuario']['name'];
 
-        // Caminho final do arquivo
-        $destino = $pasta . $foto_nome;
+        // gera nome único pra evitar conflito
+        $foto_usuario = time() . "_" . $nome_original;
 
-        // Move o arquivo enviado para a pasta de destino
+        // caminho da pasta
+        $destino = "../imagens/" . $foto_usuario;
+
+        // move o arquivo
         move_uploaded_file($_FILES['foto_usuario']['tmp_name'], $destino);
+
+    } else {
+        // se o usuário não enviou imagem
+        $foto_usuario = "";  
     }
-    // 
-    // FIM UPLOAD DA FOTO
-    // 
 
-    //teste
-    // Variáveis para acrescentar dados no banco
-    $tabela_insert  =   "tbusuarios";
-    $campos_insert  =   "
-                            login_usuario,
-                            senha_usuario,
-                            nivel_usuario,
-                            foto_usuario
-                        ";
+    // ------------------------------------------------------------------------------------
 
-    // Receber os dados do formulário
-    $login_usuario     =   $_POST['login_usuario'];
-    $senha_usuario     =   $_POST['senha_usuario'];
-    $nivel_usuario     =   $_POST['nivel_usuario'];  
-
-    // Campo da foto recebendo o nome salvo
-    $foto_usuario      =   $foto_nome;
-
-    // Reunir os valores a serem inseridos
-    $valores_insert =   "
+    // Montar valores
+    $valores_insert = "
                         '$login_usuario',
                         '$senha_usuario',
                         '$nivel_usuario',
                         '$foto_usuario'
-                        ";
+                      ";
 
-    // Consulta SQL para inserção dos dados
-    $insertSQL  =   "
-                    INSERT INTO ".$tabela_insert."
-                        (".$campos_insert.")
+    // SQL de inserção
+    $insertSQL  = "
+                    INSERT INTO $tabela_insert
+                        ($campos_insert)
                     VALUES
-                        (".$valores_insert.");
-                    ";
-    $resultado  =   $conn_atletas->query($insertSQL);
+                        ($valores_insert);
+                  ";
 
-    // Após a ação a página será redirecionada
-    $destino    =   "usuarios_lista.php";
-    header("Location: $destino");
-};
+    $resultado  = $conn_atletas->query($insertSQL);
+
+    // redirecionar
+    header("Location: usuarios_lista.php");
+    exit;
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -108,23 +104,31 @@ if($_POST){
                         name="form_insere_usuario"
                     >
                     
-                        <!-- CAMPO PARA FOTO DO USUÁRIO -->
-                        <!-- (ALTERAÇÃO 1 – adicionado campo de upload) -->
-                        <label for="foto_usuario">Foto de Perfil:</label>
+                       <!-- file img_atleta -->
+                    <label for="foto_usuario">Imagem:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-picture"></span>
                             </span>
+                            <!-- Exibir a imagem a ser inserida -->
+                            <img 
+                                src="" 
+                                alt=""
+                                name="imagem"
+                                id="imagem"
+                                class="img-responsive"
+                                style="max-height: 150px;"
+                            >
                             <input 
-                                type="file"
-                                name="foto_usuario"
+                                type="file" 
+                                name="foto_usuario" 
                                 id="foto_usuario"
                                 class="form-control"
                                 accept="image/*"
                             >
-                        </div>
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha file imagem_produto -->
                         <br>
-                        <!-- FIM CAMPO FOTO -->
 
                          <!-- text login_usuario -->
                          <label for="login_usuario">Login:</label>

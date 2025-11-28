@@ -61,13 +61,12 @@ $totalRows  =   ($lista)->num_rows;
 
                 <!-- FOTO -->
                 <td>
-                    <?php
-                        $caminho_fotos = "../imagens/usuarios/";
-                        $foto = (!empty($row['foto_usuario']))
-                                    ? $caminho_fotos . $row['foto_usuario']
-                                    : "../imagens/usuarios/default.png";
-                    ?>
-                    <img src="<?php echo $foto; ?>" class="foto-usuario" style="width:90px; height:90px; border-radius:50%;">
+                    <img 
+                        src="../imagens/<?php echo $row['foto_usuario']; ?>" 
+                        alt="<?php echo $row['login_usuario']; ?>" 
+                        class="img-responsive img-circle"
+                        width="100px"
+                    >
                 </td>
 
                 <!-- LOGIN -->
