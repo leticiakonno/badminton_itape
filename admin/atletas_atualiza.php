@@ -62,7 +62,7 @@ mysqli_select_db($conn_atletas,$database_conn);
 $filtro_select    =   $_GET['id_atleta'];
 $consulta           =   "
                     SELECT *
-                    FROM    ".$tabela."
+                    FROM   ".$tabela."
                     WHERE ".$campo_filtro."=".$filtro_select.";
                     ";
 $lista          =   $conn_atletas->query($consulta);

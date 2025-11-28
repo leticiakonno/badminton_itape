@@ -6,11 +6,25 @@ if($_POST){
     // Selecionar o banco de dados (USE)
     mysqli_select_db($conn_atletas,$database_conn);
 
+        // Guardar o nome da imagem no banco e o arquivo no diretório
+    if($_FILES['img_atleta']['name']){
+        $nome_img   =   $_FILES['img_atleta']['name'];
+        $tmp_img    =   $_FILES['img_atleta']['tmp_name'];
+        $dir_img    =   "../imagens/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    }else{
+        $nome_img=$_POST['img_atleta_atual'];
+    };
+
     // Variáveis para acrescentar dados no banco
     $tabela_insert  =   "tbatletas";
     $campos_insert  =   "
                             nome_atleta,
-                            descri_atleta
+                            descri_atleta,
+                            data_nas_atleta,
+                            data_cad_atleta,
+                            destaque_atleta,
+                            img_atleta
                         ";
 
     // Receber os dados do formulário
@@ -20,7 +34,7 @@ if($_POST){
     $data_nas_atleta   =   $_POST['data_nas_atleta'];
     $data_cad_atleta   =   $_POST['data_cad_atleta'];
     $destaque_atleta   =   $_POST['destaque_atleta'];
-    $img_atleta        =   $_POST['img_atleta'];
+    $img_atleta        =   $nome_img;
 
     // Reunir os valores a serem inseridos
     $valores_insert =   "
