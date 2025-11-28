@@ -32,7 +32,7 @@ $totalRows  =   ($lista)->num_rows;
     <h1 class="breadcrumb alert-danger text-center"><strong>Lista de Atletas</strong></h1>
     <div class="btn btn-danger">
         Total de Atletas:
-        <small class="badge"><?php echo $totalRows; ?></small>
+        <small><?php echo $totalRows; ?></small>
     </div>
     <!--table-->
     <table class="table table-hover table-condensed tabela-branca">
