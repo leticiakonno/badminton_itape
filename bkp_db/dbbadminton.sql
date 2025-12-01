@@ -141,7 +141,7 @@ CREATE TABLE tbusuarios (
  
 -- Extraindo dados da tabela `tbusuarios`
 INSERT INTO tbusuarios (id_usuario,login_usuario,senha_usuario,nivel_usuario) VALUES
-(1,'eduarda','1234','sup',),
+(1,'eduarda','1234','sup'),
 (2,'mari','456','sup'),
 (3,'mav','789','sup'),
 (4,'iwanezuk','1234','sup');
