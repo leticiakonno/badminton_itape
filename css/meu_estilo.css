@@ -25,6 +25,7 @@
 .btntotal {
     background-color: rgba(194, 15, 9, 0.904);
     color: rgb(255, 255, 255);
+    text-align: right;
 }
 .btnseta {
     background-color: rgba(3, 8, 65, 0.199)
