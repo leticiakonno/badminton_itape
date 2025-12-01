@@ -29,13 +29,13 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
 <!--main>h1-->
 <main class="container">
-    <h1 class="breadcrumb alert-danger text-center"><strong>Lista de Atletas</strong></h1>
-    <div class="btn btn-danger">
+    <h1 class="fundoatletas text-center titulo"><strong>Lista de Atletas</strong></h1>
+    <div class="btn btntotal bg-danger text-white">
         Total de Atletas:
         <small><?php echo $totalRows; ?></small>
     </div>
     <!--table-->
-    <table class="table table-hover table-condensed tabela-branca">
+    <table class="table table-hover table-condensed tabela-branca fontetabela">
         <thead> <!--cabeçalho da tabela-->
             <tr> <!--linha da tabela-->
                 <th class="hidden">ID</th> <!--célula do cabeçalho-->
