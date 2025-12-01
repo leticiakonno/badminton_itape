@@ -11,6 +11,11 @@
 </head>
 <body class="container">
     <h2 class="fundocategoria text-center">Conheça os atletas das seguintes categorias:</h2>
+    <div class="row"></div>
+
+    <!-- abre thumbnail -->
+     <a href=""></a>
+
 
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
