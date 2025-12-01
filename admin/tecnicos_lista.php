@@ -5,8 +5,8 @@ include("../Connections/conn_atletas.php");
 // Selecionar os dados
 $consulta   =   "
                 SELECT  *
-                FROM    vw_tbatletas
-                ORDER BY nome_atleta ASC;
+                FROM    tbtecnicos
+                ORDER BY nome_tecnico
                 ";
 // Fazer uma lista completa dos dados
 $lista      =   $conn_atletas->query($consulta);
@@ -20,85 +20,86 @@ $totalRows  =   ($lista)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atletas</title>
+    <title>Lista de Técnicos </title>
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo">
-<!--main>h1-->
-<main class="container">
-    <h1 class="fundoatletas text-center titulo"><strong>Lista de Atletas</strong></h1>
-    <div class="btn btntotal bg-danger text-white">
-        Total de Atletas:
-        <small><?php echo $totalRows; ?></small>
-    </div>
-    <!--table-->
-    <table class="table table-hover table-condensed tabela-branca fontetabela tabelacenter">
-        <thead> <!--cabeçalho da tabela-->
-            <tr> <!--linha da tabela-->
-                <th class="hidden">ID</th> <!--célula do cabeçalho-->
-                <th>NOME</th>
-                <th>CATEGORIA</th>
-                <th>DESTAQUE</th>   
-                <th>DESCRIÇÃO</th>
-                <th>DATA DE NASCIMENTO</th>
-                <th>DATA DE CADASTRO</th>
-                <th>IMAGEM</th>
-                                <th>
-                    <a 
-                        href="atletas_insere.php"
-                        class="btn btn-block btn-xs btnadicionar"
-                    >
+    <main class="container">
+    <h1 class="fundoparceiro text-center"><strong><i>Lista de Técnicos</i></strong></h1>
+                <div class="btn btntotal bg-primary text-white">
+                Total de Técnicos:
+                <small><?php echo $totalRows; ?></small>
+            </div>
+            <!-- table -->
+        <table class="table table-hover table-condensed tabela-branca">
+            <thead> <!--cabeçalho da tabela-->
+                <tr> <!--linha da tabela-->
+                    <th class="hidden">ID</th> <!--célula do cabeçalho-->
+                    <th>NOME</th>
+                    <th>NÍVEL</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>IMAGEM</th>
+                     <th>
+                        <a 
+                        href="tecnicos_insere.php"
+                        class="btn btn-block btn-primary btn-xs"
+                        >
                         <span class="hidden-xs">ADICIONAR <br></span>
                         <span class="glyphicon glyphicon-plus"></span>
-                    </a>
-                </th>
-            </tr>
-        </thead> 
-        <tbody>
+                     </a>
+                    </th>
+                    </tr>
+            </thead> 
+             <tbody>
             <!--Abre estrutura de repetição-->
             <?php do { ?>
             <tr>
-                <td class="hidden"><?php echo $row['id_atleta']; ?></td>
-                <td><?php echo $row['nome_atleta']; ?></td>
+                <!-- ID -->
+                <td class="hidden"><?php echo $row['id_tecnico']; ?></td>
+                <!-- NOME -->
+                <td><?php echo $row['nome_tecnico']; ?></td>
+
+                <!-- NÍVEL -->
                 <td>
-                    <span><?php echo $row['id_categoria_atleta']; ?></span>
+                    <?php
+                    if($row['nivel_tecnico']=='com') {
+                        echo('<span class="glyphicon glyphicon-user text-info"></span>');
+                    } else if($row['nivel_tecnico']=='sup') {
+                        echo('<span class="glyphicon glyphicon-star text-warning"></span>');
+                    }
+                    ?>
+                    <?php echo $row['nivel_tecnico']; ?>
                 </td>
-                <td>
-                     <?php
-                        if($row['destaque_atleta']=='Sim'){
-                            echo('<span class="glyphicon glyphicon-heart text-danger"></span>');
-                        } else if($row['destaque_atleta']=='Não'){ 
-                            echo('<span class="glyphicon glyphicon-ok text-info"></span>');
-                        };
-                     ?>
-                </td>
-                <td><?php echo $row['descri_atleta']; ?></td>
-                <td><?php echo $row['data_nas_atleta']; ?></td>
-                <td><?php echo $row['data_cad_atleta']; ?></td>
-                <td>
+
+                <!-- DESCRI -->
+                <td><?php echo $row['descri_tecnico']; ?></td>
+
+                <!-- IMAGEM -->
+                 <td>
                     <img 
-                        src="../imagens/atletas/<?php echo $row['img_atleta']; ?>" 
-                        alt="<?php echo $row['nome_atleta']; ?>" 
-                        class="img-circle"
+                        src="../imagens/tecnicos/<?php echo $row['img_tecnico']; ?>" 
+                        alt="<?php echo $row['nome_tecnico']; ?>" 
+                        class="img-circle img-fixed"
                         width="100px"
                     >
                 </td>
+
                 <td>
-                    <a href="atletas_atualiza.php?id_atleta=<?php echo $row['id_atleta']; ?>"
+                    <a href="tecnicos_atualiza.php?id_tecnico=<?php echo $row['id_tecnico']; ?>"
                         target="_self"
-                        class="btnalterar btn-xs btn-block text-center"
+                        class="btn-warning btn-xs btn-block text-center"
                         role="button"
                     >
                         <span class="hidden-xs">ALTERAR <br></span>
                         <span class="glyphicon glyphicon-wrench"></span>
                     </a>
                     <button
-                        data-id="<?php echo $row['id_atleta']; ?>"
-                        data-nome="<?php echo $row['nome_atleta']; ?>"
-                        class="btn btn-danger btntotal btn-xs btn-block delete"
+                        data-id="<?php echo $row['id_tecnico']; ?>"
+                        data-nome="<?php echo $row['nome_tecnico']; ?>"
+                        class="btn btn-danger btn-xs btn-block delete"
                     >
                         <span class="hidden-xs">EXCLUIR<br></span>
                         <span class="glyphicon glyphicon-trash"></span>
@@ -107,14 +108,13 @@ $totalRows  =   ($lista)->num_rows;
             </tr>
             <?php }while($row = $lista->fetch_assoc());  ?>
             <!-- Fechar a estrutura de repetição -->
-        </tbody>
+             </tbody>
     </table>
-</main>
+</main> 
 
-
-    <!--modal-->
-    <div id="myModal" class="modal fade" role="dialog" >
-    <div class="modal-dialog">
+  <!--modal-->
+  <div id="myModal" class="modal fade" role="dialog" >
+    <div class="modal-dialog text-center">
         <div class="modal-content">
             <div class="modal-header">
                 <button
@@ -124,34 +124,28 @@ $totalRows  =   ($lista)->num_rows;
                 >
                     &times;
                 </button>
-                <h4 class="modal-title text-danger">ATENÇÃO!</h4>
+                <h4 class="modal-title text-danger "><strong>ATENÇÃO!</strong></h4>
             </div> <!-- fecha modal-header -->
-            <div class="modal-body">
-                Deseja mesmo EXCLUIR o item?
+            <div class="modal-body text-center">
+                Deseja mesmo <strong>EXCLUIR</strong> o item?
                 <h4><span class="nome text-danger"></span></h4>
             </div> <!-- fecha modal-body -->
+
             <div class="modal-footer">
                 <a 
                     href="#" 
                     type="button" 
-                    class="btn btn-danger delete-yes"
+                    class="btn btntotal delete-yes"
                 >
                     Confirmar
                 </a>
-                <button class="btn btn-success" data-dismiss="modal">
+                <button class="btn btnmodal-cancelar" data-dismiss="modal">
                     Cancelar
                 </button>
             </div> <!-- fecha modal-footer -->
         </div> <!-- fecha modal-content -->
     </div> <!-- fecha modal-dialog -->
 </div> <!-- fecha modal -->
-
-
-<!-- Link arquivos Bootstrap js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>    
-</body>
-</html>
 
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -166,7 +160,7 @@ $totalRows  =   ($lista)->num_rows;
         // buscar o valor do atributo data-id
         $('span.nome').text(nome);
         // Inserir o nome do item na pergunta de confirmação
-        $('a.delete-yes').attr('href','atletas_exclui.php?id_atleta='+id);
+        $('a.delete-yes').attr('href','tecnicos_exclui.php?id_tecnico='+id);
         // mudar dinamicamente o id do link no botão confirmar
         $('#myModal').modal('show'); // abre modal
     });

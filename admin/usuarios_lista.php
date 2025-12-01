@@ -38,7 +38,7 @@ $totalRows  =   ($lista)->num_rows;
                 <thead>
                 <tr>
                     <th class="hidden">ID</th>
-                    <th>USER</th> <!-- NOVA COLUNA (ALTERAÇÃO 1) -->
+                    <th>USUÁRIO</th> <!-- NOVA COLUNA (ALTERAÇÃO 1) -->
                     <th>LOGIN</th>
                     <th>NÍVEL</th>
                     <th>

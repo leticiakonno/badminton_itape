@@ -90,13 +90,13 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
     <main class="container">
  <div class="row">
         <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" > <!-- abre dimensionamento -->
-            <h2 class="breadcrumb text-danger">
+            <h2 class="breadcrumb fundoatletas text-center titulo">
                 <a href="atletas_lista.php">
-                    <button class="btn btn-danger btn-sm">
+                    <button class="btn btntotal bg-danger text-white">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
                 </a>
@@ -277,7 +277,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                             name="enviar"
                             id="enviar"
                             role="button"
-                            class="btn btn-danger btn-block"
+                            class="btn btntotal bg-danger text-white btn-block" 
                         >
                     </form>
                 </div> <!-- fecha alert alert-danger  -->

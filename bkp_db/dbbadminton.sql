@@ -92,7 +92,7 @@ CREATE TABLE tbtecnicos(
 INSERT INTO tbtecnicos(id_tecnico,nome_tecnico,nivel_tecnico,descri_tecnico,img_tecnico) VALUES
  (1, 'Leiko Konno', 'Técnica Principal', 'Técnica voluntária de badminton pioneira na cidade de Itapetininga. Acredita que o esporte vai muito além de vencer o tempo todo, mas sim de transformar atletas e pessoas para a vida, com dignidade e humildade.', 'leiko.jpeg'),
  (2, 'Shogo Konno', 'Técnico Assistente', 'Técnico voluntário de badminton junto com a sua esposa Leiko e também é árbitro de nível nacional. Adora fazer uma piada e sempre com muita paciência para ajudar e ensinar.', 'shogo.jpeg'),
- (3, 'Letícia Konno', 'Técnica Assitente', 'Assistente técnica, ajuda voluntariamente a ministrar os treinos com seus pais. Atleta, mas também sempre disposta a ensinar através da experiência.', 'leticia.jpeg');
+ (3, 'Letícia Konno', 'Técnica Assistente', 'Assistente técnica, ajuda voluntariamente a ministrar os treinos com seus pais. Atleta, mas também sempre disposta a ensinar através da experiência.', 'leticia.jpeg');
 
 -- Estrutura da tabela tbparceiros
 CREATE TABLE tbparceiros(
@@ -140,7 +140,7 @@ CREATE TABLE tbusuarios (
  
 -- Extraindo dados da tabela `tbusuarios`
 INSERT INTO tbusuarios (id_usuario,login_usuario,senha_usuario,nivel_usuario) VALUES
-(1,'eduarda','1234','sup'),
+(1,'eduarda','1234','sup',),
 (2,'mari','456','sup'),
 (3,'mav','789','sup'),
 (4,'iwanezuk','1234','sup');
