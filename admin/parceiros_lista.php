@@ -63,8 +63,8 @@ $totalRows  =   ($lista)->num_rows;
                     <img 
                         src="../imagens/apoiadores/<?php echo $row['img_parceiro']; ?>" 
                         alt="<?php echo $row['nome_parceiro']; ?>" 
-                        class="img-circle"
-                        width="80px"
+                        class="img-circle img-fixed"
+                        width="100px"
                     >
                 </td>
                 <td>
