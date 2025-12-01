@@ -24,26 +24,13 @@ if($_POST){
     // UPLOAD DA IMAGEM
     // ------------------------------------------------------------------------------------
 
-    // Se o arquivo foi enviado
-    if(isset($_FILES['foto_usuario']) && $_FILES['foto_usuario']['error'] == 0){
-
-        // pega nome original
-        $nome_original = $_FILES['foto_usuario']['name'];
-
-        // gera nome único pra evitar conflito
-        $foto_usuario = time() . "_" . $nome_original;
-
-        // caminho da pasta
-        $destino = "../imagens/" . $foto_usuario;
-
-        // move o arquivo
-        move_uploaded_file($_FILES['foto_usuario']['tmp_name'], $destino);
-
-    } else {
-        // se o usuário não enviou imagem
-        $foto_usuario = "";  
-    }
-
+   // Guardar o nome da imagem no banco e o arquivo no diretório
+   if(isset($_POST['enviar'])){
+    $nome_img   =   $_FILES['foto_usuario']['name'];
+    $tmp_img    =   $_FILES['foto_usuario']['tmp_name'];
+    $dir_img    =   "../imagens/".$nome_img;
+    move_uploaded_file($tmp_img,$dir_img);
+};
     // ------------------------------------------------------------------------------------
 
     // Montar valores
