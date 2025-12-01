@@ -36,7 +36,7 @@ $totalRows  =   ($lista)->num_rows;
     </div>
     <!--table-->
     <table class="table table-hover table-condensed tabela-branca fontetabela tabelacenter">
-        <thead> <!--cabeçalho da tabela-->
+        <thead > <!--cabeçalho da tabela-->
             <tr> <!--linha da tabela-->
                 <th class="hidden">ID</th> <!--célula do cabeçalho-->
                 <th>NOME</th>
@@ -49,7 +49,7 @@ $totalRows  =   ($lista)->num_rows;
                                 <th>
                     <a 
                         href="atletas_insere.php"
-                        class="btn btn-block btn-xs btnadicionar"
+                        class="btn btn-block btnadicionar btn-xs btnadicionar"
                     >
                         <span class="hidden-xs">ADICIONAR <br></span>
                         <span class="glyphicon glyphicon-plus"></span>
