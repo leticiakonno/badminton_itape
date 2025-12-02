@@ -1,15 +1,13 @@
-<?php
+<?php 
+// Incluir o arquivo e fazer a conexão
 include("Connections/conn_atletas.php");
 
-// Consulta para trazer os dados e SE necessário filtrar
-$tabela         =   "vw_tbatletas";
-$campo_filtro   =   "destaque_atleta";
-$ordenar_por    =   "descri_categoria ASC";
-$filtro_select  =   "Não";
+// Consulta para trazer o banco de dados e SE necessário filtrar
+$tabela         =   "tbcategorias";
+$ordenar_por    =   "id_categoria ASC";
 $consulta       =   "
-                    SELECT  *
-                    FROM    ".$tabela."
-                    WHERE   ".$campo_filtro."='".$filtro_select."'
+                    SELECT   *
+                    FROM     ".$tabela."
                     ORDER BY ".$ordenar_por.";
                     ";
 $lista      =   $conn_atletas->query($consulta);
@@ -30,7 +28,7 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
     <main>
-    <h2 class="fundocategoria categoriageral text-center"><strong>Saiba mais sobre as categorias:</strong></h2>
+    <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre as categorias:</strong></h2>
     <div class="container">
     <br>
 
@@ -48,20 +46,20 @@ $totalRows  =   ($lista)->num_rows;
                             style="height: 20em;"
                         >
                     </a>
-                        <div class="caption text-center">
-                            <h5 class="text-info" style="font-size: 25px;"><strong><?php echo $row['nome_categoria']; ?></strong></h5>
-                            <p class="text-center"><?php echo $row['descri_categoria']; ?></p>
-                            <p>
-                                <a 
-                                    href="categorias_detalhe.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
-                                    class="btn btntotal" 
-                                    role="button"
-                                >
-                                    <span class="hidden-xs">Clique para saber mais...</span>
-                                    <span class="visible-xs glyphicon glyphicon-eye-open"></span>
-                                </a>
-                            </p>
-                        </div> <!--fecha caption-->
+                    <div class="caption text-center">
+                    <h5 class="text-dark" style="font-size: 25px;"><strong><?php echo $row['nome_categoria']; ?></strong></h5>
+                    <p class="text-center"><?php echo $row['descri_categoria']; ?></p>
+                    <p>
+                        <a 
+                            href="categorias_detalhe.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
+                            class="btn btntotal" 
+                            role="button"
+                        >
+                            <span class="hidden-xs">Clique para saber mais...</span>
+                            <span class="visible-xs glyphicon glyphicon-eye-open"></span>
+                        </a>
+                    </p>
+                </div> <!--fecha caption-->
                     </div> <!--fecha thumbnail-->
                 </div> <!--fecha dimensionamento-->
                 <?php }while($row=$lista->fetch_assoc()); ?>
