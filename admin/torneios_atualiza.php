@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <span class="glyphicon glyphicon-flag"></span>
                                 </span>
                                 <input type="text" name="tipo_torneio" class="form-control"
-                                       value="<?php echo htmlspecialchars($row['tipo_torneio']); ?>" required>
+                                       value="<?php echo $row['tipo_torneio']; ?>" required>
                             </div>
                             <br>
 
@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </span>
                                 <input type="text" name="descri_torneio" class="form-control"
-                                       value="<?php echo htmlspecialchars($row['descri_torneio']); ?>" required>
+                                       value="<?php echo $row['descri_torneio']; ?>" required>
                             </div>
                             <br>
 
