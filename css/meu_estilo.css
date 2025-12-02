@@ -101,4 +101,8 @@ table td, table th {
     font-family: "Times-New-Roman", serif;
     font-size: 20px;
 }
+.nomeatleta{
+    color: rgb(4, 4, 82);
+    text-align: center;
+}
 
