@@ -14,7 +14,7 @@ $lista      =   $conn_atletas->query($consulta);
 $row        =   $lista->fetch_assoc();
 // Contar o total de linhas
 //torneios
-$totalRows  =   ($lista)->num_rows;
+$totalRows  =   ($lista)->num_rows; 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

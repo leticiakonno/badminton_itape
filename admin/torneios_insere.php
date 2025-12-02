@@ -10,7 +10,8 @@ if($_POST){
     $tabela_insert  =   "tbtorneios";
     $campos_insert  =   "
                             tipo_torneio,
-                            descri_torneio
+                            descri_torneio,
+                            img_torneio
                         ";
 
     // Receber os dados do formulário
@@ -30,7 +31,8 @@ if($_POST){
     // Reunir os valores a serem inseridos
     $valores_insert =   "
                         '$tipo_torneio',
-                        '$descri_torneio'
+                        '$descri_torneio',
+                        '$nome_img'
                         ";
 
     // Consulta SQL para inserção dos dados

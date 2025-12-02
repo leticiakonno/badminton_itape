@@ -93,7 +93,7 @@ if($_POST){
                                 autofocus
                                 maxlength="15"
                                 required
-                                placeholder="Digite o nome do tecnico."
+                                placeholder="Digite o nome do técnico."
                             >
                         </div> <!-- fecha input-group -->
                         <!-- fecha text nome_tecnico -->
@@ -113,14 +113,14 @@ if($_POST){
                                 autofocus
                                 maxlength="15"
                                 required
-                                placeholder="Digite o nivel do tecnico."
+                                placeholder="Digite o nível do técnico."
                             >
                         </div> <!-- fecha input-group -->
                         <!-- fecha text nivel_tecnico -->
                         <br>
 
             <!-- textarea descri_tecnico -->
-            <label for="descri_tecnico">Descrição de tecnico:</label>
+            <label for="descri_tecnico">Descrição de técnico:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-align-justify"></span>
@@ -129,7 +129,7 @@ if($_POST){
                                 name="descri_tecnico" 
                                 id="descri_tecnico"
                                 class="form-control"
-                                placeholder="Digite a descrição da tecnico."
+                                placeholder="Digite a descrição da técnico."
                                 cols="30"
                                 rows="8"
                             ></textarea>
