@@ -31,6 +31,7 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <main class="container">
+    <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre as categorias:</strong></h2>
 
 
 <div class="row"> <!-- div row mantém os elementos na linha -->
@@ -51,12 +52,7 @@ $totalRows  =   ($lista)->num_rows;
                 class="img-responsive img-rounded"
             >                                    
             <div class="caption text-right">
-                <h3 class="text-danger">
-                    <strong><?php echo $row['nome_atleta']; ?></strong>
-                </h3>
-                <p class="text-warning">
-                    <strong><?php echo $row['descri_atleta']; ?></strong>
-                </p>
+              
                                                                                            
             </div>
         </div> <!-- fecha thumbnail -->

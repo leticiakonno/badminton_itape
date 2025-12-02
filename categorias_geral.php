@@ -30,7 +30,6 @@ $totalRows  =   ($lista)->num_rows;
     <main>
     <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre as categorias:</strong></h2>
     <div class="container">
-    <br>
 
                 <!-- abre thumbnail -->
                 <?php do{ ?>
