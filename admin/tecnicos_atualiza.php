@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 maxlength="15"
                                 required
                                 placeholder="Digite o nome do tecnico."
-                                value="<?php echo htmlspecialchars($row['nome_tecnico']); ?>"
+                                value="<?php echo $row['nome_tecnico']; ?>"
                             >
                         </div> <!-- fecha input-group -->
                         <!-- fecha text nome_tecnico -->
@@ -134,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 maxlength="15"
                                 required
                                 placeholder="Digite o nivel do tecnico."
-                                value="<?php echo htmlspecialchars($row['nivel_tecnico']); ?>"
+                                value="<?php echo $row['nivel_tecnico']; ?>"
                             >
                         </div> <!-- fecha input-group -->
                         <!-- fecha text nivel_tecnico -->
@@ -153,7 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 placeholder="Digite a descrição do técnico."
                                 cols="30"
                                 rows="8"
-                            ><?php echo htmlspecialchars($row['descri_tecnico']); ?></textarea>
+                            ><?php echo $row['descri_tecnico']; ?></textarea>
                         </div> <!-- fecha input-group -->
                         <!-- fecha textarea descri_parceira -->
                         <br>
@@ -167,7 +167,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <!-- Exibir a imagem atual do banco -->
                             <?php if(!empty($row['img_tecnico'])): ?>
                             <img 
-                                src="../imagens/tecnicos/<?php echo htmlspecialchars($row['img_tecnico']); ?>" 
+                                src="../imagens/tecnicos/<?php echo $row['img_tecnico']; ?>" 
                                 alt="Imagem atual do técnico"
                                 name="imagem_atual"
                                 id="imagem_atual"

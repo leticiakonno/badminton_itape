@@ -9,6 +9,14 @@
     background-color: transparent !important;
 }
 
+.fundo2 {
+    background-image: url("../imagens/moldura1.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    background-color: transparent !important;
+}
+
 .tabela-branca {
     background-color: rgba(255, 255, 255, 0.904);
 }
@@ -86,6 +94,11 @@ table td, table th {
 }
 
 .text{
-    color: darkblue;
+    color: rgb(4, 4, 82);
+}
+
+.fontedestaque{
+    font-family: "Times-New-Roman", serif;
+    font-size: 20px;
 }
 
