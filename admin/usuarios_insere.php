@@ -1,62 +1,47 @@
 <?php
-// Incluir o arquivo e fazer a conexão
 include("../Connections/conn_atletas.php");
 
 if($_POST){
-    // Selecionar o banco de dados
-    mysqli_select_db($conn_atletas,$database_conn);
 
-    // Variáveis
-    $tabela_insert  = "tbusuarios";
-    $campos_insert  = "
-                        login_usuario,
-                        senha_usuario,
-                        nivel_usuario,
-                        foto_usuario
-                       ";
-
-    // Receber valores normais
+    // RECEBE DADOS
     $login_usuario  = $_POST['login_usuario'];
     $senha_usuario  = $_POST['senha_usuario'];
     $nivel_usuario  = $_POST['nivel_usuario'];
 
-    // ------------------------------------------------------------------------------------
+    // ==============================================
     // UPLOAD DA IMAGEM
-    // ------------------------------------------------------------------------------------
+    // ==============================================
+    $foto_usuario = ""; // variavel que VAI para o banco!
 
-   // Guardar o nome da imagem no banco e o arquivo no diretório
-   if(isset($_POST['enviar'])){
-    $nome_img   =   $_FILES['foto_usuario']['name'];
-    $tmp_img    =   $_FILES['foto_usuario']['tmp_name'];
-    $dir_img    =   "../imagens/".$nome_img;
-    move_uploaded_file($tmp_img,$dir_img);
-};
-    // ------------------------------------------------------------------------------------
+    if(isset($_FILES['foto_usuario']) && $_FILES['foto_usuario']['error'] == 0){
 
-    // Montar valores
-    $valores_insert = "
-                        '$login_usuario',
-                        '$senha_usuario',
-                        '$nivel_usuario',
-                        '$foto_usuario'
-                      ";
+        $foto_usuario = $_FILES['foto_usuario']['name'];
+        $tmp_img      = $_FILES['foto_usuario']['tmp_name'];
 
-    // SQL de inserção
-    $insertSQL  = "
-                    INSERT INTO $tabela_insert
-                        ($campos_insert)
-                    VALUES
-                        ($valores_insert);
-                  ";
+        // Caminho final
+        $destino      = "../imagens/" . $foto_usuario;
 
-    $resultado  = $conn_atletas->query($insertSQL);
+        // Move arquivo
+        move_uploaded_file($tmp_img, $destino);
+    }
 
-    // redirecionar
+    // ==============================================
+    // INSERT
+    // ==============================================
+
+    $sql = "
+        INSERT INTO tbusuarios
+            (login_usuario, senha_usuario, nivel_usuario, foto_usuario)
+        VALUES
+            ('$login_usuario', '$senha_usuario', '$nivel_usuario', '$foto_usuario')
+    ";
+
+    $conn_atletas->query($sql);
+
     header("Location: usuarios_lista.php");
     exit;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
