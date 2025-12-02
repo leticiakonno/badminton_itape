@@ -21,6 +21,7 @@ $totalRows  =   ($lista)->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo</title>
+    <!-- não esquecer de comentar o JS e CSS para não dar conflito no index -->
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css"> 
     <!-- Link para CSS Específico -->
@@ -46,8 +47,10 @@ $totalRows  =   ($lista)->num_rows;
                     >
                 </a>
                 <div class="caption text-center">
-                    <h5 class="text-dark" style="font-size: 25px;"><strong><?php echo $row['nome_atleta']; ?></strong></h5>
-                    <p class="text-center"><?php echo $row['descri_atleta']; ?></p>
+                    <h5 class="text" style="font-size: 25px;"><strong><?php echo $row['nome_atleta']; ?></strong></h5>
+                    <p class="text-left">
+                        <?php echo mb_strimwidth ($row['descri_atleta'],0,45,"...");?>
+                    </p>
                     <p>
                         <a 
                             href="atletas_detalhe.php?id_atleta=<?php echo $row['id_atleta']; ?>" 

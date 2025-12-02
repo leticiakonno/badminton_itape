@@ -29,17 +29,17 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundo2">
 <?php include('menu_publico.php'); ?>
 <?php include('carroussel.php'); ?>
 
 <main class="container">
 
-<h2 class="breadcrumb alert-danger">
-    <a href="javascript:window.history.go(-1)" class="btn btn-danger">
+<h2 class="breadcrumb alert-danger fundoatletas titulo">
+    <a href="javascript:window.history.go(-1)" class="btn btntotal">
     <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
-    <strong><?php echo $row['descri_atleta']; ?></strong>
+    <strong><?php echo $row['nome_atleta']; ?></strong>
 </h2>
 <div class="row"> <!-- div row mantém os elementos na linha -->
 
@@ -48,19 +48,19 @@ $totalRows  =   ($lista)->num_rows;
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"> <!-- dimensionamento -->
         <div class="thumbnail">            
             <img 
-                src="imagens/<?php echo $row['img_atleta']; ?>" 
+                src="imagens/atletas/<?php echo $row['img_atleta']; ?>" 
                 alt=""
                 class="img-responsive img-rounded"
             >                                    
-            <div class="caption text-right">
-                <h3 class="text-danger">
+            <div class="caption text-left">
+                <h3 class="text-danger titulo">
                     <strong><?php echo $row['nome_atleta']; ?></strong>
                 </h3>
-                <p class="text-warning">
+                <p class="text fontedestaque">
                     <strong><?php echo $row['descri_atleta']; ?></strong>
                 </p>
                 <p class="text-left">
-                <?php echo $row['data_nas_atleta']; ?>
+                <strong>Data de Nascimento: <?php echo $row['data_nas_atleta']; ?></strong>
                 </p>                                                                            
             </div>
         </div> <!-- fecha thumbnail -->
