@@ -22,10 +22,25 @@
 
     
 }
+.categoriageral {
+    font-size: 50px;
+}
 .btntotal {
     background-color: rgba(194, 15, 9, 0.904);
     color: rgb(255, 255, 255);
+    text-align: right;
 }
+
+.btnadicionar {
+    background-color: rgba(15, 55, 196, 0.904);
+    color: rgb(255, 255, 255);
+}
+
+.btnalterar {
+    background-color: rgba(212, 176, 15, 0.904);
+    color: rgb(255, 255, 255);
+}
+
 .btnseta {
     background-color: rgba(3, 8, 65, 0.199)
 }
@@ -57,6 +72,17 @@
 .fontetabela{
     font-family: "Times-New-Roman", serif;
     font-size: 17px;
+}
+
+.tabelacenter{
+    display: table-cell !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+table td, table th {
+    vertical-align: middle !important;
+    text-align: center;
 }
 
 

@@ -35,8 +35,8 @@ $totalRows  =   ($lista)->num_rows;
         <small><?php echo $totalRows; ?></small>
     </div>
     <!--table-->
-    <table class="table table-hover table-condensed tabela-branca fontetabela">
-        <thead> <!--cabeçalho da tabela-->
+    <table class="table table-hover table-condensed tabela-branca fontetabela tabelacenter">
+        <thead > <!--cabeçalho da tabela-->
             <tr> <!--linha da tabela-->
                 <th class="hidden">ID</th> <!--célula do cabeçalho-->
                 <th>NOME</th>
@@ -49,7 +49,7 @@ $totalRows  =   ($lista)->num_rows;
                                 <th>
                     <a 
                         href="atletas_insere.php"
-                        class="btn btn-block btn-primary btn-xs"
+                        class="btn btn-block btnadicionar btn-xs btnadicionar"
                     >
                         <span class="hidden-xs">ADICIONAR <br></span>
                         <span class="glyphicon glyphicon-plus"></span>
@@ -89,7 +89,7 @@ $totalRows  =   ($lista)->num_rows;
                 <td>
                     <a href="atletas_atualiza.php?id_atleta=<?php echo $row['id_atleta']; ?>"
                         target="_self"
-                        class="btn-warning btn-xs btn-block text-center"
+                        class="btnalterar btn-xs btn-block text-center"
                         role="button"
                     >
                         <span class="hidden-xs">ALTERAR <br></span>
@@ -98,7 +98,7 @@ $totalRows  =   ($lista)->num_rows;
                     <button
                         data-id="<?php echo $row['id_atleta']; ?>"
                         data-nome="<?php echo $row['nome_atleta']; ?>"
-                        class="btn btn-danger btn-xs btn-block delete"
+                        class="btn btn-danger btntotal btn-xs btn-block delete"
                     >
                         <span class="hidden-xs">EXCLUIR<br></span>
                         <span class="glyphicon glyphicon-trash"></span>
