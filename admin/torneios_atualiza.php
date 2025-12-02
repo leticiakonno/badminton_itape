@@ -41,7 +41,7 @@ if ($_POST) {
 
         $nomeArquivo = time() . "_" . $_FILES['img_torneio']['name'];
         $tempArquivo = $_FILES['img_torneio']['tmp_name'];
-        $destino     = "../imagens/torneios/" . $nomeArquivo;
+        $destino     = "../imagens/" . $nomeArquivo;
 
         move_uploaded_file($tempArquivo, $destino);
 
@@ -85,17 +85,17 @@ if ($_POST) {
                         <span class="glyphicon glyphicon-chevron-left"></span>  
                     </button>
                 </a><strong><i>
-                Inserir Torneios </i></strong>
+                Atualizar Torneios </i></strong>
             </h2>
             <br>
             <div class="thumbnail"> <!--abrir thumbnail-->
                 <div class="alert alert">
                     <form 
-                        action="torneios_insere.php"
+                        action="torneios_atualiza.php"
                         enctype="multipart/form-data"
                         method="post"
-                        id="form_insere_torneio"  
-                        name="form_insere_torneio"
+                        id="form_atualiza_torneio"  
+                        name="form_atualiza_torneio"
                     >
 
                     <!-- Tipo -->
@@ -130,7 +130,7 @@ if ($_POST) {
                     <!-- Botão -->
                     <input 
                             type="submit" 
-                            value="Cadastrar"
+                            value="Atualizar"
                             name="enviar"
                             id="enviar"
                             role="button"
