@@ -75,6 +75,8 @@
 .titulo {
     font-family: "Times-New-Roman", serif;
     font-size: 45px;
+    font-style: italic;
+    color: rgb(4, 4, 82);
 }
 
 .fontetabela{
@@ -102,3 +104,6 @@ table td, table th {
     font-size: 20px;
 }
 
+.textrodape{
+    color: rgb(249, 249, 250);
+}
