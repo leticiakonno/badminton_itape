@@ -31,7 +31,12 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <main class="container">
-
+    <h2 class="fundocategoria categoriageral nomeatleta titulo">
+    <a href="javascript:window.history.go(-1)" class="btn btntotal">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <strong><?php echo $row['nome_categoria']; ?></strong>
+    </h2>
 
 <div class="row"> <!-- div row mantém os elementos na linha -->
 <br>
@@ -39,10 +44,7 @@ $totalRows  =   ($lista)->num_rows;
      <?php do{ ?> <!-- abre estrutura de repetição -->
     <div class="col-sm-10 col-sm-offset-1 col-md-4 coll-md-offset-4"> <!-- dimensionamento -->
         <div class="thumbnail" style="width: 40rem;">    
-        <h2 class="fundoatleta titulo text table td, table th">
-    <a href="javascript:window.history.go(-1)" class="btn btntotal">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
+        <h2 class="fundoatleta titulo nomeatleta table td, table th">
     <strong><?php echo $row['nome_atleta']; ?></strong>
 </h2>        
             <img 
@@ -51,12 +53,7 @@ $totalRows  =   ($lista)->num_rows;
                 class="img-responsive img-rounded"
             >                                    
             <div class="caption text-right">
-                <h3 class="text-danger">
-                    <strong><?php echo $row['nome_atleta']; ?></strong>
-                </h3>
-                <p class="text-warning">
-                    <strong><?php echo $row['descri_atleta']; ?></strong>
-                </p>
+              
                                                                                            
             </div>
         </div> <!-- fecha thumbnail -->
