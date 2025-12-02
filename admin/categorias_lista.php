@@ -33,23 +33,24 @@ $totalRows  = ($lista)->num_rows;
 <body class="fundofixo">
     <main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-8" > <!-- abre dimensionamento -->
-            <h1 class="fundocategoria text-center"><strong><i>Lista de Categorias</i></strong></h1>
+            <h1 class="fundocategoria text-center titulo"><strong><i>Lista de Categorias</i></strong></h1>
             <br>
             <div class="btn btntotal bg-primary text-white">
                 Total de Categorias:
                 <small><?php echo $totalRows; ?></small>
             </div>
             <!-- table -->
-        <table class="table table-hover table-condensed tabela-branca">
+        <table class="table table-hover table-condensed tabela-branca fontetabela">
             <thead> <!--cabeçalho da tabela-->
                 <tr> <!--linha da tabela-->
                     <th class="hidden">ID</th> <!--célula do cabeçalho-->
                     <th>NOME</th>
                     <th>DESCRIÇÃO</th>
+                    <th>IMAGEM</th>
                      <th>
                         <a 
                         href="categorias_insere.php"
-                        class="btn btn-block btn-primary btn-xs"
+                        class="btn btn-block btnadicionar btn-xs"
                         >
                         <span class="hidden-xs">ADICIONAR <br></span>
                         <span class="glyphicon glyphicon-plus"></span>
@@ -65,9 +66,17 @@ $totalRows  = ($lista)->num_rows;
                     <td><?php echo $row['nome_categoria']; ?></td>
                     <td><?php echo $row['descri_categoria']; ?></td>
                     <td>
+                    <img 
+                        src="../imagens/categorias/<?php echo $row['img_categoria']; ?>" 
+                        alt="<?php echo $row['nome_categoria']; ?>" 
+                        class="img-circle img-fixed"
+                        width="100px"
+                    >
+                </td>
+                    <td>
                         <a 
                             href="categorias_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>"
-                            class="btn btn-block btn-warning btn-xs"
+                            class="btn btn-block btnalterar btn-xs"
                             target="_self"
                             role="button"
                         >
@@ -77,7 +86,7 @@ $totalRows  = ($lista)->num_rows;
                         <button
                         data-id="<?php echo $row['id_categoria']; ?>"
                         data-nome="<?php echo $row['nome_categoria']; ?>"                        
-                        class="btn btn-danger btn-xs btn-block delete"
+                        class="btn  btntotal btn-xs btn-block delete"
                     >
                         <span class="hidden-xs">EXCLUIR<br></span>
                         <span class="glyphicon glyphicon-trash"></span>
@@ -104,7 +113,7 @@ $totalRows  = ($lista)->num_rows;
                 </button>
                 <h4 class="modal-title text-danger "><strong>ATENÇÃO!</strong></h4>
             </div> <!-- fecha modal-header -->
-            <div class="modal-body text-center">
+            <div class="modal-body text-center ">
                 Deseja mesmo <strong>EXCLUIR</strong> o item?
                 <h4><span class="nome text-danger"></span></h4>
             </div> <!-- fecha modal-body -->
