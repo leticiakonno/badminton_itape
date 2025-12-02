@@ -63,16 +63,7 @@ $totalRows  =   ($lista)->num_rows;
                 <td><?php echo $row['nome_tecnico']; ?></td>
 
                 <!-- NÍVEL -->
-                <td>
-                    <?php
-                    if($row['nivel_tecnico']=='com') {
-                        echo('<span class="glyphicon glyphicon-user text-info"></span>');
-                    } else if($row['nivel_tecnico']=='sup') {
-                        echo('<span class="glyphicon glyphicon-star text-warning"></span>');
-                    }
-                    ?>
-                    <?php echo $row['nivel_tecnico']; ?>
-                </td>
+                <td><?php echo $row['nivel_tecnico']; ?></td>
 
                 <!-- DESCRI -->
                 <td><?php echo $row['descri_tecnico']; ?></td>

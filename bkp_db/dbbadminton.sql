@@ -38,10 +38,10 @@ INSERT INTO tbcategorias (id_categoria, nome_categoria, descri_categoria, img_ca
 (6, 'Sub19', 'Atletas nascidos em 2006 ou depois.', 'sub19.jpeg'),
 (7, 'Aberto', 'Abrange atletas de todas as idades.', 'aberto.jpeg'),
 (8, 'Sênior I', 'Atletas nascidos em 1994 ou antes.', 'seniorI.jpeg'),
-(9, 'Sênior II', 'Atletas nascidos em 1989 ou antes.', 'seniorII.jpeg'),
-(10, 'Veterano I', 'Atletas nascidos em 1984 ou antes.', 'veteranoI.jpeg'),
-(11, 'Veterano II', 'Atletas nascidos em 1979 ou antes.', 'veteranoII.jpeg'),
-(12, 'Master I', 'Atletas nascidos em 1974 ou antes.', 'masterI.jpeg'),
+(9, 'Sênior II', 'Atletas nascidos em 1989 ou antes.', 'seniorII.png'),
+(10, 'Veterano I', 'Atletas nascidos em 1984 ou antes.', 'veteranoI.png'),
+(11, 'Veterano II', 'Atletas nascidos em 1979 ou antes.', 'veteranoII.png'),
+(12, 'Master I', 'Atletas nascidos em 1974 ou antes.', 'masterI.png'),
 (13, 'Master II', 'Atletas nascidos em 1969 ou antes.', 'masterII.jpeg'),
 (14, 'Master III', 'Atletas nascidos em 1964 ou antes.', 'masterIII.jpeg'),
 (15, 'Master IV', 'Atletas nascidos em 1959 ou antes.', 'masterIV.jpeg');
@@ -143,7 +143,7 @@ CREATE TABLE tbusuarios (
 INSERT INTO tbusuarios (id_usuario,login_usuario,senha_usuario,nivel_usuario) VALUES
 (1,'eduarda','1234','sup'),
 (2,'mari','456','sup'),
-(3,'mav','789','sup'),
+(3,'mav','789','sup',),
 (4,'iwanezuk','1234','sup');
  
 -- ------ CHAVES ------
