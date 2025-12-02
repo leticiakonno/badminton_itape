@@ -30,7 +30,7 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
     <main>
-    <h2 class="fundocategoria categoriageral text-center"><strong>Conheça os atletas das seguintes categorias:</strong></h2>
+    <h2 class="fundocategoria categoriageral text-center"><strong>Saiba mais sobre as categorias:</strong></h2>
     <div class="container">
     <br>
 
@@ -39,10 +39,10 @@ $totalRows  =   ($lista)->num_rows;
                 <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
                     <div class="thumbnail" style="width: 36rem;">
                         <a 
-                        href="produto_detalhe.php?id_produto=<?php echo $row['id_produto']; ?>" 
+                        href="categorias_detalhe.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
                     >
                         <img 
-                            src="imagens/<?php echo $row['imagem_produto']; ?>" 
+                            src="imagens/categorias/<?php echo $row['img_categoria']; ?>" 
                             alt=""
                             class="img-responsive img-rounded"
                             style="height: 20em;"
@@ -53,7 +53,7 @@ $totalRows  =   ($lista)->num_rows;
                             <p class="text-center"><?php echo $row['descri_categoria']; ?></p>
                             <p>
                                 <a 
-                                    href="atletas_detalhe.php?id_produto=<?php echo $row['id_produto']; ?>" 
+                                    href="categorias_detalhe.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
                                     class="btn btntotal" 
                                     role="button"
                                 >
