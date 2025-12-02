@@ -81,32 +81,33 @@ $totalRows = ($lista)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atualiza Usuários</title>
+    <title>Usuários Atualiza</title>
+    <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
     <main class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6">
-                <h2 class="fundoparceiro text-center">
-                    <a href="usuarios_lista.php">
-                        <button class="btn btnseta">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </button>
-                    </a>
-                    <strong><i>Atualiza Usuários</i></strong>
-                </h2>
-                <br>
-                <div class="thumbnail">
-                    <div class="alert" role="alert">
-                        <form 
-                            action="usuarios_atualiza.php?id_usuario=<?php echo $row['id_usuario']; ?>"
-                            enctype="multipart/form-data"
-                            method="post"
-                            id="form_usuario_atualiza"
-                            name="form_usuario_atualiza"
-                        >
+ <div class="row">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6" > <!-- abre dimensionamento -->
+            <h2 class="breadcrumb fundousuarios text-center titulo">
+                <a href="usuarios_lista.php">
+                    <button class="btn btntotal bg-danger text-white">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </button>
+                </a>
+                Atualizar Usuários
+            </h2>
+            <div class="thumbnail"> <!-- abre thumbnail -->
+                <div class="alert alert">
+                    <form 
+                        action="usuarios_insere.php"
+                        enctype="multipart/form-data"
+                        method="post"
+                        id="form_insere_usuario"
+                        name="form_insere_usuario"
+                    >
                             <!-- Inserir campo id_usuario OCULTO para uso em filtro -->
                             <input 
                                 type="hidden"
