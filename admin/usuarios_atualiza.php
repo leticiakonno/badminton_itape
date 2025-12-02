@@ -209,7 +209,7 @@ $totalRows = ($lista)->num_rows;
                                 value="Atualizar"
                                 name="enviar"
                                 id="enviar"
-                                class="btn btn-info btn-block"
+                                class="btn btntotal btn-block"
                             >
                         </form>
                     </div>
