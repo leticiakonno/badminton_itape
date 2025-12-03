@@ -29,12 +29,12 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
     <main class="container">
     <h1 class="fundoparceiro text-center titulo"><strong><i>Lista de Parceiros</i></strong></h1>
-                <div class=" active">
+                <div class=" btn btntotal bg-primary text-white">
                 Total de Parceiros:
                 <small><?php echo $totalRows; ?></small>
             </div>
             <!-- table -->
-        <table class="table table-hover table-condensed tabela-branca">
+        <table class="table table-hover table-condensed tabela-branca fontetabela">
             <thead> <!--cabeçalho da tabela-->
                 <tr> <!--linha da tabela-->
                     <th class="hidden">ID</th> <!--célula do cabeçalho-->
@@ -44,7 +44,7 @@ $totalRows  =   ($lista)->num_rows;
                      <th>
                         <a 
                         href="parceiros_insere.php"
-                        class="btn btn-block btn-primary btn-xs"
+                        class="btn btn-block btnadicionar btn-xs"
                         >
                         <span class="hidden-xs">ADICIONAR <br></span>
                         <span class="glyphicon glyphicon-plus"></span>
@@ -70,7 +70,7 @@ $totalRows  =   ($lista)->num_rows;
                 <td>
                     <a href="parceiros_atualiza.php?id_parceiro=<?php echo $row['id_parceiro']; ?>"
                         target="_self"
-                        class="btn-warning btn-xs btn-block text-center"
+                        class="btnalterar btn-xs btn-block text-center"
                         role="button"
                     >
                         <span class="hidden-xs">ALTERAR <br></span>
@@ -79,7 +79,7 @@ $totalRows  =   ($lista)->num_rows;
                     <button
                         data-id="<?php echo $row['id_parceiro']; ?>"
                         data-nome="<?php echo $row['nome_parceiro']; ?>"
-                        class="btn btn-danger btn-xs btn-block delete"
+                        class="btn  btntotal btn-xs btn-block delete"
                     >
                         <span class="hidden-xs">EXCLUIR<br></span>
                         <span class="glyphicon glyphicon-trash"></span>
