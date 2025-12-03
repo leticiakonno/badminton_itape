@@ -44,7 +44,8 @@ $totalRows  =   ($lista)->num_rows;
             <img 
                 src="imagens/apoiadores/<?php echo $row['img_parceiro']; ?>" 
                 alt=""
-                class="img-responsive img-rounded"
+                class=" img-rounded"
+                width="550px"
             >
             <div class="caption text-center">
                 <h3 class="nomeatleta">
