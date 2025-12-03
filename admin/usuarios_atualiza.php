@@ -102,11 +102,11 @@ $totalRows = ($lista)->num_rows;
             <div class="thumbnail"> <!-- abre thumbnail -->
                 <div class="alert alert">
                     <form 
-                        action="usuarios_insere.php"
+                        action="usuarios_atualiza.php"
                         enctype="multipart/form-data"
                         method="post"
-                        id="form_insere_usuario"
-                        name="form_insere_usuario"
+                        id="form_atualiza_usuario"
+                        name="form_atualiza_usuario"
                     >
                             <!-- Inserir campo id_usuario OCULTO para uso em filtro -->
                             <input 

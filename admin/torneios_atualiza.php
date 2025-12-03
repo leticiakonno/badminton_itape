@@ -78,31 +78,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torneios Atualiza</title>
+    <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
     <main class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6">
-                <h2 class="fundocategoria text-center">
-                    <a href="torneios_lista.php">
-                        <button class="btn btnseta">
-                            <span class="glyphicon glyphicon-chevron-left"></span>  
-                        </button>
-                    </a><strong><i>Atualizar Torneio</i></strong>
-                </h2>
-                <br>
-                <div class="thumbnail">
-                    <div class="alert alert">
-                        <!-- FORMULÁRIO CORRETO: -->
-                        <form 
-                            action="torneios_atualiza.php?id_torneio=<?php echo $id; ?>"
-                            enctype="multipart/form-data"
-                            method="post"
-                            id="form_atualiza_torneio"
-                            name="form_atualiza_torneio"
-                        >
+ <div class="row">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6" > <!-- abre dimensionamento -->
+            <h2 class="breadcrumb fundousuarios text-center titulo">
+                <a href="torneios_lista.php">
+                    <button class="btn btntotal bg-danger text-white">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </button>
+                </a>
+                Atualizar Torneios
+            </h2>
+            <div class="thumbnail"> <!-- abre thumbnail -->
+                <div class="alert alert">
+                    <form 
+                        action="torneios_atualiza.php"
+                        enctype="multipart/form-data"
+                        method="post"
+                        id="form_atualiza_torneio"
+                        name="form_atualiza_torneio"
+                    >
 
                             <!-- Tipo -->
                             <label>Tipo do Torneio:</label>
