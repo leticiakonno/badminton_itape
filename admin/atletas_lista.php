@@ -64,7 +64,7 @@ $totalRows  =   ($lista)->num_rows;
                 <td class="hidden"><?php echo $row['id_atleta']; ?></td>
                 <td><?php echo $row['nome_atleta']; ?></td>
                 <td>
-                    <span><?php echo $row['id_categoria_atleta']; ?></span>
+                    <span><?php echo $row['nome_categoria']; ?></span>
                 </td>
                 <td>
                      <?php
