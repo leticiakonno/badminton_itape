@@ -60,7 +60,7 @@ if($_POST){
 <main class="container">
  <div class="row">
         <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
-        <h2 class="fundoparceiro text-center">
+        <h2 class="fundoatletas text-center">
                 <a href="parceiros_lista.php">
                     <button class="btn btseta ">
                         <span class="glyphicon glyphicon-chevron-left"></span>

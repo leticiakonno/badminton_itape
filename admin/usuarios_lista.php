@@ -71,9 +71,9 @@ $totalRows  =   ($lista)->num_rows;
                 <td>
                     <?php
                     if($row['nivel_usuario']=='com') {
-                        echo('<span class="glyphicon glyphicon-user text-info"></span>');
+                        echo('<span class="glyphicon glyphicon-star-empty texticon"></span>');
                     } else if($row['nivel_usuario']=='sup') {
-                        echo('<span class="glyphicon glyphicon-star text-warning"></span>');
+                        echo('<span class="glyphicon glyphicon-star texticon"></span>');
                     }
                     ?>
                     <?php echo $row['nivel_usuario']; ?>
