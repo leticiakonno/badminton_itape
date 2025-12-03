@@ -42,9 +42,9 @@ INSERT INTO tbcategorias (id_categoria, nome_categoria, descri_categoria, img_ca
 (10, 'Veterano I', 'Atletas nascidos em 1984 ou antes.', 'veteranoI.png'),
 (11, 'Veterano II', 'Atletas nascidos em 1979 ou antes.', 'veteranoII.png'),
 (12, 'Master I', 'Atletas nascidos em 1974 ou antes.', 'masterI.png'),
-(13, 'Master II', 'Atletas nascidos em 1969 ou antes.', 'masterII.jpeg'),
-(14, 'Master III', 'Atletas nascidos em 1964 ou antes.', 'masterIII.jpeg'),
-(15, 'Master IV', 'Atletas nascidos em 1959 ou antes.', 'masterIV.jpeg');
+(13, 'Master II', 'Atletas nascidos em 1969 ou antes.', 'masterII.png'),
+(14, 'Master III', 'Atletas nascidos em 1964 ou antes.', 'masterIII.png'),
+(15, 'Master IV', 'Atletas nascidos em 1959 ou antes.', 'masterIV.png');
 
 -- Estrutura da tabela tbatletas
 CREATE TABLE tbatletas(

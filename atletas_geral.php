@@ -48,6 +48,9 @@ $totalRows  =   ($lista)->num_rows;
                 </a>
                 <div class="caption text-center">
                     <h5 class="text" style="font-size: 25px;"><strong><?php echo $row['nome_atleta']; ?></strong></h5>
+                    <p class="texticon">
+                    <strong><?php echo $row['nome_categoria']; ?></strong>
+                    </p>
                     <p class="text-left">
                         <?php echo mb_strimwidth ($row['descri_atleta'],0,45,"...");?>
                     </p>
