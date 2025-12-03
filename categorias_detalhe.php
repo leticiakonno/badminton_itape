@@ -29,9 +29,9 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundo2">
 <main class="container">
-    <h2 class="fundocategoria categoriageral nomeatleta titulo">
+    <h2 class=" categoriageral nomeatleta titulo">
     <a href="javascript:window.history.go(-1)" class="btn btntotal">
     <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
