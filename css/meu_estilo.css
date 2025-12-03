@@ -137,3 +137,22 @@ table td, table th {
     font-style: italic;
     font-size: 20px;
 }
+
+.navbarbg{
+    background-color: rgba(0, 0, 85, 0.822);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-brand > img {
+    height: 85px;    /* ajuste aqui */
+    width: auto;
+    padding: 0;
+    margin-top: -40px; /* se precisar alinhar */
+    padding-left: 40px;
+}
+
+.navbartext{
+    color: rgb(220, 220, 221);
+}
+
