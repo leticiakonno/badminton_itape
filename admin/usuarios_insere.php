@@ -53,26 +53,25 @@ if($_POST){
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
     <main class="container">
  <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
-            <h2 class="fundocategoria text-center">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6" > <!-- abre dimensionamento -->
+            <h2 class="breadcrumb fundousuarios text-center titulo">
                 <a href="usuarios_lista.php">
-                    <button class="btn btnseta">
-                        <span class="glyphicon glyphicon-chevron-left"></span>  
+                    <button class="btn btntotal bg-danger text-white">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
-                </a><strong><i>
-                Inserir Usuários </i></strong>
+                </a>
+                Inserir Usuários
             </h2>
-            <br>
-            <div class="thumbnail"> <!--abrir thumbnail-->
+            <div class="thumbnail"> <!-- abre thumbnail -->
                 <div class="alert alert">
                     <form 
                         action="usuarios_insere.php"
                         enctype="multipart/form-data"
                         method="post"
-                        id="form_insere_usuario"  
+                        id="form_insere_usuario"
                         name="form_insere_usuario"
                     >
                     

@@ -72,6 +72,14 @@
     color: rgba(0, 0, 54, 0.904);
 }
 
+.fundousuarios {
+    background-color: rgba(255, 255, 255, 0.959);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;    
+    color: rgba(0, 0, 54, 0.904);
+}
+
 .titulo {
     font-family: "Times-New-Roman", serif;
     font-size: 45px;
@@ -102,6 +110,10 @@ table td, table th {
 .fontedestaque{
     font-family: "Times-New-Roman", serif;
     font-size: 20px;
+}
+.nomeatleta{
+    color: rgb(4, 4, 82);
+    text-align: center;
 }
 
 .textrodape{

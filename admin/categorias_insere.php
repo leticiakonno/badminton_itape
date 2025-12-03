@@ -6,22 +6,35 @@ if($_POST){
     // Selecionar o banco de dados (USE)
     mysqli_select_db($conn_atletas,$database_conn);
 
+        // Guardar o nome da imagem no banco e o arquivo no diretório
+    if($_FILES['img_categoria']['name']){
+        $nome_img   =   $_FILES['img_categoria']['name'];
+        $tmp_img    =   $_FILES['img_categoria']['tmp_name'];
+        $dir_img    =   "../imagens/categoria/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    }else{
+        $nome_img=$_POST['img_categoria_atual'];
+    };
+
     // Variáveis para acrescentar dados no banco
     $tabela_insert  =   "tbcategorias";
     $campos_insert  =   "
                             nome_categoria,
-                            descri_categoria
+                            descri_categoria,
+                            img_categoria
                         ";
 
     // Receber os dados do formulário
     // Organizar os campos na mesma ordem
-    $nome_categoria    =   $_POST['nome_categoria'];
+    $nome_categoria      =   $_POST['nome_categoria'];
     $descri_categoria     =   $_POST['descri_categoria'];
+    $img_categoria        =   $nome_img;
 
     // Reunir os valores a serem inseridos
     $valores_insert =   "
                         '$nome_categoria',
-                        '$descri_categoria'
+                        '$descri_categoria',
+                        '$img_categoria'
                         ";
 
     // Consulta SQL para inserção dos dados
@@ -41,7 +54,12 @@ if($_POST){
         header("Location: $destino");
     };
 };
+
+// Selecionar o banco de dados (USE)
+mysqli_select_db($conn_atletas,$database_conn);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -112,7 +130,31 @@ if($_POST){
                         </div> <!-- fecha input-group -->
                         <!-- fecha textarea descri_categoria -->
                         <br>
-
+                         <!-- file img_atleta -->
+                         <label for="img_categoria">Imagem:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-picture"></span>
+                            </span>
+                            <!-- Exibir a imagem a ser inserida -->
+                            <img 
+                                src="" 
+                                alt=""
+                                name="imagem"
+                                id="imagem"
+                                class="img-responsive"
+                                style="max-height: 150px;"
+                            >
+                            <input 
+                                type="file" 
+                                name="img_categoria" 
+                                id="img_categoria"
+                                class="form-control"
+                                accept="image/*"
+                            >
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha file imagem_produto -->
+                        <br>
 
                         <!-- btn enviar -->
                         <input 

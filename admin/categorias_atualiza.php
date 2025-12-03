@@ -11,20 +11,32 @@ if($_POST){
     // Selecionar o banco de dados (USE)
     mysqli_select_db($conn_atletas,$database_conn);
 
+     // Guardar o nome da imagem no banco e o arquivo no diretório
+     if($_FILES['img_categoria']['name']){
+        $nome_img   =   $_FILES['img_categoria']['name'];
+        $tmp_img    =   $_FILES['img_categoria']['tmp_name'];
+        $dir_img    =   "../imagens/categoria/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    }else{
+        $nome_img=$_POST['img_categoria_atual'];
+    };
+
     // Receber os dados do formulário
     // Organizar os campos na mesma ordem
-    $nome_categoria    =   $_POST['nome_categoria'];
-    $descri_categoria     =   $_POST['descri_categoria'];
+    $nome_categoria            =   $_POST['nome_categoria'];
+    $descri_categoria          =   $_POST['descri_categoria'];
+    $img_categoria             =   $nome_img;
 
     // Campo para filtrar o registro (WHERE)
-    $filtro_update  =   $_POST['id_categoria'];
+    $filtro_update      =   $_POST['id_categoria'];
 
     // Consulta SQL para ATUALIZAÇÃO dos dados
     $updateSQL  =   "
                     UPDATE ".$tabela."
-                        SET nome_categoria  =   '".$nome_categoria."'   ,
-                            descri_categoria =   '".$descri_categoria."'
-                    WHERE ".$campo_filtro."='".$filtro_update."';
+                        SET  nome_categoria         =   '".$nome_categoria."',
+                            descri_categoria       =   '".$descri_categoria."',
+                            img_categoria          =   '".$img_categoria."
+                    WHERE ".$campo_filtro." =   '".$filtro_update."';
                     ";
     $resultado  =   $conn_atletas->query($updateSQL);
 
@@ -38,18 +50,22 @@ if($_POST){
 };
 
 // Consulta para trazer e filtrar os dados
-// Definir o USE do banco de dados
+// Definir o USE do banco de dados;
 mysqli_select_db($conn_atletas,$database_conn);
-$filtro_select  =   $_GET['id_categoria'];
-$consulta       =   "
+$filtro_select    =   $_GET['id_categoria'];
+$consulta           =   "
                     SELECT *
-                    FROM    ".$tabela."
-                    WHERE   ".$campo_filtro."=".$filtro_select.";
+                    FROM   ".$tabela."
+                    WHERE ".$campo_filtro."=".$filtro_select.";
                     ";
 $lista          =   $conn_atletas->query($consulta);
 $row            =   $lista->fetch_assoc();
 $totalRows      =   ($lista)->num_rows;
+
+// Selecionar o banco de dados (USE)
+mysqli_select_db($conn_atletas,$database_conn);
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -128,7 +144,54 @@ $totalRows      =   ($lista)->num_rows;
                             >
                             </textarea>
                         </div> <!-- fecha input-group -->
-                        <!-- fecha textarea descri_categoria -->   
+                        <!-- fecha textarea descri_categoria -->  
+                         <br>
+                          <!-- Dados da imagem_produto ATUAL -->                        
+                        <label for="">Imagem ATUAL:</label>
+                        <br>
+                        <img 
+                            src="../imagens/<?php echo $row['img_categoria']; ?>" 
+                            alt=""
+                            class="img_responsive"
+                            style="max-width:40%"
+                        >
+                        <br>
+
+                        <!-- type="hidden" campo oculto somente para guardar dados -->
+                        <!-- guardamos o nome da imagem caso não seja alterada -->
+                        <input 
+                            type="hidden"
+                            name="img_categoria_atual"
+                            id="img_categoria_atual"
+                            value="<?php echo $row['img_categoria']; ?>"
+                        >
+                        <br>
+
+                        <!-- file imagem_produto -->
+                        <label for="img_categoria">NOVA Imagem:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-picture"></span>
+                            </span>
+                            <!-- Exibir a imagem a ser inserida -->
+                            <img 
+                                src="" 
+                                alt=""
+                                name="imagem"
+                                id="imagem"
+                                class="img-responsive"
+                                style="max-height: 150px;"
+                            >
+                            <input 
+                                type="file" 
+                                name="imagem_categoria" 
+                                id="imagem_categoria"
+                                class="form-control"
+                                accept="image/*"
+                            >
+                        </div> <!-- fecha input-group -->
+                        <!-- fecha file imagem_produto -->
+                        <br> 
                         <br>
                          <!-- btn enviar -->
                         <input 

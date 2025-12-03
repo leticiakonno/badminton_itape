@@ -28,7 +28,7 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
     <main class="container">
-    <h1 class="fundoparceiro text-center"><strong><i>Lista de Parceiros</i></strong></h1>
+    <h1 class="fundoparceiro text-center titulo"><strong><i>Lista de Parceiros</i></strong></h1>
                 <div class=" active">
                 Total de Parceiros:
                 <small><?php echo $totalRows; ?></small>
