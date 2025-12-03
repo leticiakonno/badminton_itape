@@ -76,7 +76,16 @@ if($totalRows > 0){;// Verifica se há produtos para exibir
                     <strong><?php echo $row['nome_atleta']; ?></strong>
                 </h3>
                 <p class="text-left">
-                <?php echo mb_strimwidth ($row['descri_atleta'],0,42,"...");?>
+                    <?php echo mb_strimwidth ($row['descri_atleta'],0,45,"...");?>
+                </p>
+                <p class="text-left">
+                    <?php
+                        if($row['destaque_atleta']=='Sim'){
+                            echo('<span class="glyphicon glyphicon-star texticon"></span>');
+                        }else if($row['destaque_atleta']=='Não'){
+                            echo('<span class="glyphicon glyphicon-star-empty texticon"></span>');
+                        };
+                    ?>
                 </p>                                                                            <!-- mb_strimwidth diminiu o tamanho de linhas que são exibidos dentro do card de descrição -->
                 <p>
                     <a 

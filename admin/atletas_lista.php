@@ -69,9 +69,9 @@ $totalRows  =   ($lista)->num_rows;
                 <td>
                      <?php
                         if($row['destaque_atleta']=='Sim'){
-                            echo('<span class="glyphicon glyphicon-heart text-danger"></span>');
+                            echo('<span class="glyphicon glyphicon-star texticon"></span>');
                         } else if($row['destaque_atleta']=='Não'){ 
-                            echo('<span class="glyphicon glyphicon-ok text-info"></span>');
+                            echo('<span class="glyphicon glyphicon-star-empty texticon"></span>');
                         };
                      ?>
                 </td>
