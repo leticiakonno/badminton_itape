@@ -15,7 +15,7 @@ if($_POST){
      if($_FILES['img_categoria']['name']){
         $nome_img   =   $_FILES['img_categoria']['name'];
         $tmp_img    =   $_FILES['img_categoria']['tmp_name'];
-        $dir_img    =   "../imagens/categoria/".$nome_img;
+        $dir_img    =   "../imagens/categorias/".$nome_img;
         move_uploaded_file($tmp_img,$dir_img);
     }else{
         $nome_img=$_POST['img_categoria_atual'];
@@ -106,6 +106,7 @@ mysqli_select_db($conn_atletas,$database_conn);
                             id="id_categoria"
                             value="<?php echo $row['id_categoria']; ?>"
                         >
+                        
                     <!-- text nome_categoria -->
                         <label for="nome_categoria">Nome:</label>
                         <div class="input-group">
@@ -146,24 +147,22 @@ mysqli_select_db($conn_atletas,$database_conn);
                         </div> <!-- fecha input-group -->
                         <!-- fecha textarea descri_categoria -->  
                          <br>
-                          <!-- Dados da imagem_produto ATUAL -->                        
-                        <label for="">Imagem ATUAL:</label>
+                         <!-- FOTO DO USUÁRIO -->
+                        <label for="img_categoria">Foto Atual:</label>
+                        <input 
+                            type="file"
+                            name="img_categoria"
+                            id="img_categoria"
+                            class="form-control"
+                            accept="image/*"
+                        >
+
+                        <!-- exibe foto atual -->
                         <br>
                         <img 
-                            src="../imagens/<?php echo $row['img_categoria']; ?>" 
-                            alt=""
-                            class="img_responsive"
-                            style="max-width:40%"
-                        >
-                        <br>
-
-                        <!-- type="hidden" campo oculto somente para guardar dados -->
-                        <!-- guardamos o nome da imagem caso não seja alterada -->
-                        <input 
-                            type="hidden"
-                            name="img_categoria_atual"
-                            id="img_categoria_atual"
-                            value="<?php echo $row['img_categoria']; ?>"
+                            src="../imagens/categorias/<?php echo $row['img_categoria']; ?>" 
+                            width="80"
+                            style="border-radius:50%; object-fit:cover;"
                         >
                         <br>
 
