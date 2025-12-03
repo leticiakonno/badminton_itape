@@ -64,14 +64,14 @@ $totalRows  =   ($lista)->num_rows;
                 <td class="hidden"><?php echo $row['id_atleta']; ?></td>
                 <td><?php echo $row['nome_atleta']; ?></td>
                 <td>
-                    <span><?php echo $row['id_categoria_atleta']; ?></span>
+                    <span><?php echo $row['nome_categoria']; ?></span>
                 </td>
                 <td>
                      <?php
                         if($row['destaque_atleta']=='Sim'){
-                            echo('<span class="glyphicon glyphicon-heart text-danger"></span>');
+                            echo('<span class="glyphicon glyphicon-star texticon"></span>');
                         } else if($row['destaque_atleta']=='Não'){ 
-                            echo('<span class="glyphicon glyphicon-ok text-info"></span>');
+                            echo('<span class="glyphicon glyphicon-star-empty texticon"></span>');
                         };
                      ?>
                 </td>

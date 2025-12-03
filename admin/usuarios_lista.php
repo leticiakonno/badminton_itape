@@ -19,32 +19,35 @@ $totalRows  =   ($lista)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Usuários</title>
+    <title>Usuários Lista</title>
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
+
 <body class="fundofixo">
     <main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-8" > <!-- abre dimensionamento -->
-    <h1 class="fundoparceiro text-center"><strong><i>Lista de Usuários</i></strong></h1>
-                <div class="btn btntotal bg-primary text-white">
+            <h1 class="fundocategoria text-center titulo"><strong><i>Lista de Usuários</i></strong></h1>
+            <br>
+            <div class="btn btntotal bg-primary text-white">
                 Total de Usuários:
-                <small class="badge"><?php echo $totalRows; ?></small>
+                <small><?php echo $totalRows; ?></small>
             </div>
             <!-- table -->
-        <table class="table table-hover table-condensed tabela-branca">
+        <table class="table table-hover table-condensed tabela-branca fontetabela">
                 <thead>
                 <tr>
                     <th class="hidden">ID</th>
-                    <th>USUÁRIO</th> <!-- NOVA COLUNA (ALTERAÇÃO 1) -->
                     <th>LOGIN</th>
-                    <th>NÍVEL</th>
+                    <th>NÍVEL DO USUÁRIO</th>
+                    <th>FOTO DO USUÁRIO</th> <!-- NOVA COLUNA (ALTERAÇÃO 1) -->
+                    
                     <th>
                         <a 
                             href="usuarios_insere.php"
-                            class="btn btn-block btn-primary btn-xs"
+                            class="btn btn-block btnadicionar btn-xs btnadicionar"
                         >
                             <span class="hidden-xs">ADICIONAR<br></span>
                             <span class="glyphicon glyphicon-plus"></span>
@@ -59,15 +62,7 @@ $totalRows  =   ($lista)->num_rows;
 
                 <td class="hidden"><?php echo $row['id_usuario']; ?></td>
 
-                <!-- FOTO -->
-                <td>
-                    <img 
-                        src="../imagens/usuarios/<?php echo $row['foto_usuario']; ?>" 
-                        alt="<?php echo $row['login_usuario']; ?>" 
-                        class="img-responsive img-circle"
-                        width="100px"
-                    >
-                </td>
+                
 
                 <!-- LOGIN -->
                 <td><?php echo $row['login_usuario']; ?></td>
@@ -84,18 +79,31 @@ $totalRows  =   ($lista)->num_rows;
                     <?php echo $row['nivel_usuario']; ?>
                 </td>
 
+                <!-- FOTO -->
+                <td style="padding-left: 60px;">
+                    <img 
+                        src="../imagens/usuarios/<?php echo $row['foto_usuario']; ?>" 
+                        alt="<?php echo $row['login_usuario']; ?>" 
+                        class="img-responsive img-circle"
+                        width="100px"
+                    >
+                </td>
+
                 <!-- AÇÕES -->
                 <td>
                     <a href="usuarios_atualiza.php?id_usuario=<?php echo $row['id_usuario']; ?>"
-                        class="btn btn-block btn-warning btn-xs">
-                        <span class="hidden-xs">ALTERAR<br></span>
-                        <span class="glyphicon glyphicon-refresh"></span>
+                        target="_self"
+                        class="btnalterar btn-xs btn-block text-center"
+                        role="button"
+                    >
+                        <span class="hidden-xs">ALTERAR <br></span>
+                        <span class="glyphicon glyphicon-wrench"></span>
                     </a>
-
                     <button
                         data-id="<?php echo $row['id_usuario']; ?>"
                         data-nome="<?php echo $row['login_usuario']; ?>"
-                        class="btn btn-danger btn-xs btn-block delete">
+                        class="btn btn-danger btntotal btn-xs btn-block delete"
+                    >
                         <span class="hidden-xs">EXCLUIR<br></span>
                         <span class="glyphicon glyphicon-trash"></span>
                     </button>
@@ -110,28 +118,33 @@ $totalRows  =   ($lista)->num_rows;
     </main>
 
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+<div id="myModal" class="modal fade" role="dialog" >
+    <div class="modal-dialog text-center">
         <div class="modal-content">
             <div class="modal-header">
-                <button class="close" type="button" data-dismiss="modal">
+                <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                >
                     &times;
                 </button>
-                <h4 class="modal-title text-danger">ATENÇÃO!</h4>
+                <h4 class="modal-title text-danger "><strong>ATENÇÃO!</strong></h4>
             </div> <!-- fecha modal-header -->
-            <div class="modal-body">
-                Deseja mesmo EXCLUIR o item?
+            <div class="modal-body text-center ">
+                Deseja mesmo <strong>EXCLUIR</strong> o item?
                 <h4><span class="nome text-danger"></span></h4>
             </div> <!-- fecha modal-body -->
+
             <div class="modal-footer">
                 <a 
-                    href="#"
-                    type="button"
-                    class="btn btn-danger delete-yes"
+                    href="#" 
+                    type="button" 
+                    class="btn btntotal delete-yes"
                 >
                     Confirmar
                 </a>
-                <button class="btn btn-success " data-dismiss="modal">
+                <button class="btn btnmodal-cancelar" data-dismiss="modal">
                     Cancelar
                 </button>
             </div> <!-- fecha modal-footer -->

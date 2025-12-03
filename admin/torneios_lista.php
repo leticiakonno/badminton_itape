@@ -21,21 +21,24 @@ $totalRows  =   ($lista)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Torneios</title>
+    <title>Torneios Lista</title>
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
+
 <body class="fundofixo">
     <main class="container">
-    <h1 class="fundoparceiro text-center"><strong><i>Lista de Torneios</i></strong></h1>
-                <div class="btn btntotal bg-primary text-white">
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-8" > <!-- abre dimensionamento -->
+            <h1 class="fundocategoria text-center titulo"><strong><i>Lista de Torneios</i></strong></h1>
+            <br>
+            <div class="btn btntotal bg-primary text-white">
                 Total de Torneios:
-                <small class="badge"><?php echo $totalRows; ?></small>
+                <small><?php echo $totalRows; ?></small>
             </div>
             <!-- table -->
-        <table class="table table-hover table-condensed tabela-branca">
+        <table class="table table-hover table-condensed tabela-branca fontetabela">
             <thead> <!--cabeçalho da tabela-->
                 <tr> <!--linha da tabela-->
                     <th class="hidden">ID</th> <!--célula do cabeçalho-->
@@ -45,7 +48,7 @@ $totalRows  =   ($lista)->num_rows;
                      <th>
                         <a 
                         href="torneios_insere.php"
-                        class="btn btn-block btn-primary btn-xs"
+                        class="btn btn-block btnadicionar btn-xs btnadicionar"
                         >
                         <span class="hidden-xs">ADICIONAR <br></span>
                         <span class="glyphicon glyphicon-plus"></span>
@@ -69,22 +72,26 @@ $totalRows  =   ($lista)->num_rows;
                     >
                 </td>
                 <!-- torneios -->
+
+                <!-- AÇÕES -->
                 <td>
                     <a href="torneios_atualiza.php?id_torneio=<?php echo $row['id_torneio']; ?>"
-                        class="btn btn-block btn-warning btn-xs">
-                        <span class="hidden-xs">ALTERAR<br></span>
-                        <span class="glyphicon glyphicon-refresh"></span>
+                        target="_self"
+                        class="btnalterar btn-xs btn-block text-center"
+                        role="button"
+                    >
+                        <span class="hidden-xs">ALTERAR <br></span>
+                        <span class="glyphicon glyphicon-wrench"></span>
                     </a>
-
                     <button
                         data-id="<?php echo $row['id_torneio']; ?>"
                         data-nome="<?php echo $row['tipo_torneio']; ?>"
-                        class="btn btn-danger btn-xs btn-block delete">
+                        class="btn btn-danger btntotal btn-xs btn-block delete"
+                    >
                         <span class="hidden-xs">EXCLUIR<br></span>
                         <span class="glyphicon glyphicon-trash"></span>
                     </button>
                 </td>
-
             </tr>
             <?php } while($row = $lista->fetch_assoc()); ?>
         </tbody>

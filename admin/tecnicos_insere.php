@@ -53,25 +53,25 @@ if($_POST){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Técnicos Insere</title>
-     <!-- Link CSS do Bootstrap -->
+    <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
-<body class="fundofixo">
-<main class="container">
+<body class="fundofixo fontetabela">
+    <main class="container">
  <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
-        <h2 class="fundoparceiro text-center">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6" > <!-- abre dimensionamento -->
+            <h2 class="breadcrumb fundousuarios text-center titulo">
                 <a href="tecnicos_lista.php">
-                    <button class="btn btseta ">
+                    <button class="btn btntotal bg-danger text-white">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
                 </a>
-                <strong><i>Inserir Técnicos</i></strong>
+                Inserir Técnicos
             </h2>
             <div class="thumbnail"> <!-- abre thumbnail -->
-                <div class="alert">
+                <div class="alert alert">
                     <form 
                         action="tecnicos_insere.php"
                         enctype="multipart/form-data"

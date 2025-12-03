@@ -116,7 +116,7 @@ $totalRows  = ($lista)->num_rows;
             <div class="modal-body text-center ">
                 Deseja mesmo <strong>EXCLUIR</strong> o item?
                 <h4><span class="nome text-danger"></span></h4>
-            </div> <!-- fecha modal-body -->
+            </div> <!-- fecha modal-body -->    
 
             <div class="modal-footer">
                 <a 

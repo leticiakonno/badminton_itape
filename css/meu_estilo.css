@@ -72,6 +72,14 @@
     color: rgba(0, 0, 54, 0.904);
 }
 
+.fundousuarios {
+    background-color: rgba(255, 255, 255, 0.959);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;    
+    color: rgba(0, 0, 54, 0.904);
+}
+
 .titulo {
     font-family: "Times-New-Roman", serif;
     font-size: 45px;
@@ -112,16 +120,6 @@ table td, table th {
     color: rgb(249, 249, 250);
 }
 
-.categoriabusca{
-    background-color: rgba(255, 255, 255, 0.959);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 10px;    
-    color: rgba(80, 2, 2, 0.904);
-    font-weight: bold;
-}
-.parceirosdetalhe {
-    color:  rgba(194, 15, 9, 0.904);
-    font-style: italic;
-    font-size: 20px;
+.texticon{
+    color: rgb(160, 4, 4);
 }
