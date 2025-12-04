@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/meu_estilo.css">-->
 </head>
 <body>
-<nav class="nav navbarbg navbar-inverse">
+<nav class="nav navbarbg ">
     <div class="container-fluid">
         <!-- Agrupamente Mobile -->
         <div class="navbar-header">

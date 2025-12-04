@@ -49,6 +49,7 @@ if($_POST){
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+<?php include("menu_adm.php"); ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -31,6 +31,7 @@ $totalRows  = ($lista)->num_rows;
 </head>
 
 <body class="fundofixo">
+<?php include("menu_adm.php"); ?>
     <main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-8" > <!-- abre dimensionamento -->
             <h1 class="fundocategoria text-center titulo"><strong><i>Lista de Categorias</i></strong></h1>

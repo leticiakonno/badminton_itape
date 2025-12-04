@@ -27,6 +27,7 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo">
+<?php include("menu_adm.php"); ?>
 <!--main>h1-->
 <main class="container">
     <h1 class="fundoatletas text-center titulo"><strong>Lista de Atletas</strong></h1>

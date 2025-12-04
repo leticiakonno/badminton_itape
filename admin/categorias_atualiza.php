@@ -78,6 +78,7 @@ mysqli_select_db($conn_atletas,$database_conn);
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo">
+<?php include("menu_adm.php"); ?>
     <main class="container">
     <div class="row">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->

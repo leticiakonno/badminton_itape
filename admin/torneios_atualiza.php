@@ -84,6 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo fontetabela">
+<?php include("menu_adm.php"); ?>
     <main class="container">
  <div class="row">
         <div class="col-xs-12 col-sm-offset-3 col-sm-6" > <!-- abre dimensionamento -->
