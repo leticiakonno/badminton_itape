@@ -86,7 +86,7 @@
         <h4>CONTATO</h4>
         <br>
         <form 
-            action="rodape_contato_envia.php"
+            action="rodape_contato.php"
             name="form_contato"
             id="form_contato"
             method="post"
