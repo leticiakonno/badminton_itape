@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/meu_estilo.css"> -->
 </head>
 <body class="fundofixo">
-<div class="row panel-footer" style="background-color:rgb(3, 33, 104);"> <!-- abre painel de rodapé -->
+<div class="row panel-footer" style="background-color:rgba(3, 33, 104, 0.9);"> <!-- abre painel de rodapé -->
 
 <!-- ÁREA DE LOCALIZAÇÃO -->
 <div class="col-sm-6 col-md-4" >
