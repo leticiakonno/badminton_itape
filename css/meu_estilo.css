@@ -132,7 +132,7 @@ table td, table th {
 }
 
 .navbarbg{
-    background-color: rgba(0, 0, 85, 0.822);
+    background-color: rgba(3, 33, 104, 0.884);
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -165,7 +165,7 @@ table td, table th {
     padding: 10px;
 }
 .fundo3 {
-    background-image: url("../imagens/fundoadm.jpeg") !important;
+    background-image: url("../imagens/fundoadm4.jpg") !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-size: cover !important;
