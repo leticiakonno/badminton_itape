@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/meu_estilo.css">-->
 </head>
 <body>
-<nav class="nav navbar-inverse">
+<nav class="nav navbarbg navbar-inverse">
     <div class="container-fluid">
         <!-- Agrupamente Mobile -->
         <div class="navbar-header">
@@ -25,9 +25,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
             <a href="index.php" class="navbar-brand">
-                <img src="../imagens/logochurrascopequeno.png" alt="">
+                 <img src="../imagens/logobadminton.png" alt="Logo" class="logo">
             </a>
         </div> <!-- fecha navbar-header -->
         
@@ -38,6 +41,10 @@
                 <li><a href="atletas_lista.php">ATLETAS</a></li>
                 <li><a href="categorias_lista.php">CATEGORIAS</a></li>
                 <li><a href="usuarios_lista.php">USUÁRIOS</a></li>
+                <li><a href="parceiros_lista.php">PARCEIROS</a></li>
+                <li><a href="tecnicos_lista.php">TÉCNICOS</a></li>
+                <li><a href="torneios_lista.php">TORNEIOS</a></li>
+
                 <li class="active">
                     <a href="../index.php">
                         <span class="glyphicon glyphicon-home"></span>
