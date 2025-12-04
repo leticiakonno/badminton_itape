@@ -11,13 +11,13 @@
 </head>
 <body class="fundo3">
 <main class="container">
-<h1 class="adm text-center">Área Administrativa</h1>
+<h1 class="adm text-center titulo">Área Administrativa</h1>
 <div class="row">
 
     <!-- ADM ATLETAS -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas">
-            <img src="../imagens/atletas.jpg" width="200px" height="responsive" alt="">
+            <img src="../imagens/atletas.png" width="300px" height="responsive" alt="">
             <br>
             <div class="fundoatletas">
                 <!-- botão principal -->
@@ -50,7 +50,7 @@
     <!-- ADM CATEGORIAS -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas">
-            <img src="../imagens/categorias.jpg" width="200px" height="responsive"  alt="">
+            <img src="../imagens/categorias.png" width="200px" height="responsive"  alt="">
             <br>
             <div class="fundoatletas">
                 <!-- botão principal -->
@@ -83,7 +83,7 @@
     <!-- ADM USUÁRIOS -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas">
-            <img src="../imagens/usuario.png" width="200px" height="responsive" alt="">
+            <img src="../imagens/usuario.png" width="300px" height="responsive" alt="">
             <br>
             <div class="fundoatletas">
                 <!-- botão principal -->
@@ -116,7 +116,7 @@
     <!-- ADM PARCEIROS -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas">
-            <img src="../imagens/parceiros.jpg" width="200px" height="responsive" alt="">
+            <img src="../imagens/parceiros.png" width="300px" height="responsive" alt="">
             <br>
             <div class="fundoatletas">
                 <!-- botão principal -->
@@ -149,7 +149,7 @@
     <!-- ADM TÉCNICOS   -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas">
-            <img src="../imagens/tecnicos.jpg" width="200px" height="50px"  alt="">
+            <img src="../imagens/tecnicos.png" width="200px" height="50px"  alt="">
             <br>
             <div class="fundoatletas">
                 <!-- botão principal -->
@@ -182,7 +182,7 @@
     <!-- ADM TORNEIOS -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas">
-            <img src="../imagens/torneios.jpg" width="200px" height="responsive"  alt="">
+            <img src="../imagens/torneios.png" width="133px" height="responsive"  alt="">
             <br>
             <div class="fundoatletas">
                 <!-- botão principal -->
