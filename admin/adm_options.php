@@ -9,7 +9,7 @@
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundo3">
 <main class="container">
 <h1 class="adm text-center">Área Administrativa</h1>
 <div class="row">
