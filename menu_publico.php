@@ -30,13 +30,13 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
 </head>
 <body class="fundofixo">
 <!-- Abre a barra de navegação -->
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar navbarbg">
 <div class="container-fluid">
     <div class="navbar-header"> <!-- Agrupamento MOBILE -->
         <a href="index.php" class="navbar-brand">
-            <img src="imagens/logobadminton.png" alt="">
+        <img src="imagens/logobadminton.png" alt="Logo" class="logo">
         </a>
-        <button [
+        <button
         type="button"
         class="navbar-toggle collapsed"
         data-toggle="collapse"
@@ -52,43 +52,43 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
     <div class="collapse navbar-collapse" id="defaultNavbar"> <!-- barra de navegação -->
         <ul class="nav navbar-nav navbar-right">
             <li class="active">
-                <a href="index.php">
+                <a class="navbartext" href="index.php">
                     <span class="glyphicon glyphicon-home"></span>
                 </a>
             </li>
-            <li><a href="index.php#destaques">DESTAQUES</a></li>
-            <li><a href="index.php#produtos">PRODUTOS</a></li>
+            <li><a class="navbartext" href="index.php#destaques">DESTAQUES</a></li>
+            <li><a class="navbartext" href="index.php#atletas">ATLETAS</a></li>
             <li class="dropdown">
                 <a 
-                    href="produtos_tipos.php"
-                    class="dropdown-toggle"
+                    href="atletas_categorias.php"
+                    class="dropdown-toggle navbartext"
                     data-toggle="dropdown"
                     role="button"
                     aria-expanded="false"
                 >
-                TIPOS
+                CATEGORIAS
                 <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="produtos_tipos.php">
+                        <a class="navbartext" href="atletas_categorias.php">
                             TODOS
                         </a>
                     </li>
                     <?php do{ ?> <!-- abre estrutura de repetição -->
                         <li>
-                            <a href="produtos_por_tipo.php?id_tipo=<?php echo $row_menu['id_tipo']; ?>">
-                                <?php echo $row_menu['rotulo_tipo']; ?>
+                            <a href="atletas_por_categoria.php?id_categoria=<?php echo $row_menu['id_categoria']; ?>">
+                                <?php echo $row_menu['nome_categoria']; ?>
                             </a>
                         </li>
                     <?php } while ($row_menu=$lista_menu->fetch_assoc()); ?>
                     <!-- Fecha estrutura de repetição -->
                 </ul>
             </li> <!-- Fecha dropdown -->
-            <li><a href="index.php#contato">CONTATO</a></li>
+            <li><a class="navbartext" href="index.php#contato">CONTATO</a></li>
             <!-- Form Busca -->
              <form
-                action="produtos_busca.php"
+                action="atletas_busca.php"
                 method="get"
                 name="form_busca"
                 id="form_busca"
@@ -100,7 +100,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                         <input
                             type="text"
                             class="form-control"
-                            placeholder="Burca Produto"
+                            placeholder="Buscar..."
                             name="buscar"
                             id="buscar"
                             size="9"
@@ -118,7 +118,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                 </div> <!-- Fecha form-group-->
              </form>
             <li class="active">
-                <a href="admin/index.php">
+                <a class="navbartext" href="admin/index.php">
                     <span class="glyphicon glyphicon-user"></span>
                 </a>
             </li>
