@@ -2,15 +2,11 @@
 // Incluir o arquivo e fazer a conexão
 include("Connections/conn_atletas.php");
 
-// Verificar se o parâmetro foi passado
-if(!isset($_GET['id_torneio']) || empty($_GET['id_torneio'])) {
-    die("ID do torneio não especificado!");
-}
-
-$tabela         =   "tbtorneios";
-$campo_filtro   =   "id_torneio";
-$ordenar_por    =   "tipo_torneio ASC";
-$filtro_select  =   $_GET['id_torneio'];
+// Consulta para trazer o banco de dados e SE necessário filtrar
+$tabela         =   "tbtecnicos";
+$campo_filtro   =   "id_tecnico";
+$ordenar_por    =   "nome_tecnico ASC";
+$filtro_select  =   $_GET['id_tecnico'];
 $consulta       =   "
                     SELECT   *
                     FROM     ".$tabela."
@@ -20,11 +16,6 @@ $consulta       =   "
 $lista      =   $conn_atletas->query($consulta);
 $row        =   $lista->fetch_assoc();
 $totalRows  =   ($lista)->num_rows;
-
-// Verificar se encontrou resultados
-if($totalRows == 0) {
-    die("Torneio não encontrado!");
-}
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +23,7 @@ if($totalRows == 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torneios Detalhes</title>
+    <title>Técnicos Detalhes</title>
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
@@ -40,7 +31,7 @@ if($totalRows == 0) {
 </head>
 <body class="fundo2">
 <?php include('menu_publico.php'); ?>
-
+<?php include('carroussel.php'); ?>
 
 <main class="container">
 
@@ -48,8 +39,7 @@ if($totalRows == 0) {
     <a href="javascript:window.history.go(-1)" class="btn btntotal">
     <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
-    <!-- CORREÇÃO: A tabela tbtorneios não tem 'nome_tecnico', use 'tipo_torneio' -->
-    <strong><?php echo $row['tipo_torneio']; ?></strong>
+    <strong><?php echo $row['nome_tecnico']; ?></strong>
 </h2>
 <div class="row"> <!-- div row mantém os elementos na linha -->
 
@@ -58,18 +48,18 @@ if($totalRows == 0) {
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"> <!-- dimensionamento -->
         <div class="thumbnail">            
             <img 
-                src="imagens/torneios/<?php echo $row['img_torneio']; ?>" 
+                src="imagens/tecnicos/<?php echo $row['img_tecnico']; ?>" 
                 alt=""
                 class="img-rounded"
                 style="height: 40em;" 
             >                                    
             <div class="caption text-left">
                 <h3 class="text-danger titulo">
-                    <strong><?php echo $row['tipo_torneio']; ?></strong>
+                    <strong><?php echo $row['nome_tecnico']; ?></strong>
                 </h3>
                 
                 <p class="text fontedestaque">
-                    <strong><?php echo $row['descri_torneio']; ?></strong>
+                    <strong><?php echo $row['descri_tecnico']; ?></strong>
                 </p>
                                                                                           
             </div>
@@ -80,6 +70,9 @@ if($totalRows == 0) {
 
 </div> <!-- fecha row -->
 
+<!-- Link arquivos Bootstrap js 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script> --> 
 </main>
 <footer>
     <?php include('rodape.php'); ?>
