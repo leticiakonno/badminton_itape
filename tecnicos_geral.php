@@ -28,6 +28,8 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head> 
 <body class="fundofixo fontetabela">
+<?php include('menu_publico.php'); ?>
+
     <main>
     <h2 class="fundoatletas categoriageral text-center titulo"><strong>Conheça os Técnicos:</strong></h2>
     <div class="container">
@@ -70,6 +72,11 @@ $totalRows  =   ($lista)->num_rows;
         <?php }while($row=$lista->fetch_assoc()); ?>
     </div> <!-- fecha div container -->
 </main>
+
+<footer>
+    <?php include('rodape.php'); ?>
+</footer>
+
 
 <!-- não esquecer de comentar o JS e CSS para não dar conflito no index -->
 <!-- Link arquivos Bootstrap js -->

@@ -116,7 +116,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                         </span>
                     </div> <!-- Fecha input-group-->
                 </div> <!-- Fecha form-group-->
-             </form>
+             </form>   
             <li class="active">
                 <a class="navbartext" href="admin/index.php">
                     <span class="glyphicon glyphicon-user"></span>

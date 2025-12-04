@@ -31,7 +31,7 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
     <main class="container">
-    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-8" > <!-- abre dimensionamento -->
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12 " > <!-- abre dimensionamento -->
             <h1 class="fundocategoria text-center titulo"><strong><i>Lista de Torneios</i></strong></h1>
             <br>
             <div class="btn btntotal bg-primary text-white">
@@ -101,35 +101,40 @@ $totalRows  =   ($lista)->num_rows;
 
     </main>
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+<!--modal-->
+<div id="myModal" class="modal fade" role="dialog" >
+    <div class="modal-dialog text-center">
         <div class="modal-content">
             <div class="modal-header">
-                <button class="close" type="button" data-dismiss="modal">
+                <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                >
                     &times;
                 </button>
-                <h4 class="modal-title text-danger">ATENÇÃO!</h4>
+                <h4 class="modal-title text-danger "><strong>ATENÇÃO!</strong></h4>
             </div> <!-- fecha modal-header -->
-            <div class="modal-body">
-                Deseja mesmo EXCLUIR o item?
+            <div class="modal-body text-center ">
+                Deseja mesmo <strong>EXCLUIR</strong> o item?
                 <h4><span class="nome text-danger"></span></h4>
-            </div> <!-- fecha modal-body -->
+            </div> <!-- fecha modal-body -->    
+
             <div class="modal-footer">
                 <a 
-                    href="#"
-                    type="button"
-                    class="btn btn-danger delete-yes"
+                    href="#" 
+                    type="button" 
+                    class="btn btntotal delete-yes"
                 >
                     Confirmar
                 </a>
-                <button class="btn btn-success" data-dismiss="modal">
+                <button class="btn btnmodal-cancelar" data-dismiss="modal">
                     Cancelar
                 </button>
             </div> <!-- fecha modal-footer -->
         </div> <!-- fecha modal-content -->
     </div> <!-- fecha modal-dialog -->
-</div> <!-- fecha myModal -->
+</div> <!-- fecha modal -->
 
 
 

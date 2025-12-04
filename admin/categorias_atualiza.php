@@ -82,13 +82,13 @@ mysqli_select_db($conn_atletas,$database_conn);
     <main class="container">
     <div class="row">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
-    <h2 class="fundocategoria text-center">
+    <h2 class="fundocategoria text-center titulo">
                 <a href="categorias_lista.php">
                     <button class="btn btnseta">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
-                </a><strong><i>
-                Atualiza Categoria</i></strong>
+                </a>
+                Atualiza Categoria
             </h2>
             <br>
              <div class="thumbnail">

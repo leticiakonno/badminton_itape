@@ -100,17 +100,17 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
 <?php include("menu_adm.php"); ?>
     <main class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" > <!-- abre dimensionamento -->
-            <h2 class="breadcrumb text-danger">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
+            <h2 class="fundocategoria text-center titulo">
                 <a href="atletas_lista.php">
-                    <button class="btn btn-danger">
+                    <button class="btn btntotal">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
                 </a>
                 Atualiza Atleta
             </h2>
              <div class="thumbnail">
-                <div class="alert alert-danger">
+                <div class="alert alert">
                     <form 
                         action="atletas_atualiza.php"
                         enctype="multipart/form-data"
@@ -321,7 +321,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                             name="enviar"
                             id="enviar"
                             role="button"
-                            class="btn btn-danger btn-block"
+                            class="btn btntotal btn-block"
                         >
                     </form>
                 </div> <!-- fecha alert alert-warning  -->
