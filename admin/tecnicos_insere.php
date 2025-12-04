@@ -49,7 +49,7 @@ if($_POST){
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php include("menu_adm.php"); ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,6 +60,7 @@ if($_POST){
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo fontetabela">
+<?php include("menu_adm.php"); ?>
     <main class="container">
  <div class="row">
         <div class="col-xs-12 col-sm-offset-3 col-sm-6" > <!-- abre dimensionamento -->

@@ -49,9 +49,6 @@
     color: rgb(255, 255, 255);
 }
 
-.btnseta {
-    background-color: rgba(3, 8, 65, 0.199)
-}
 .btnmodal-cancelar {
     background-color: rgba(4, 110, 66, 0.904);
     color: rgb(255, 255, 255);
@@ -101,7 +98,7 @@ table td, table th {
 }
 
 .fontedestaque{
-    font-family: "Times-New-Roman", serif;
+    font-family: "Times-New-Roman", sans-serif;
     font-size: 20px;
 }
 .nomeatleta{

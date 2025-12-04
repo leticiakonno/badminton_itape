@@ -61,13 +61,13 @@ if($_POST){
 <main class="container">
  <div class="row">
         <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
-        <h2 class="fundoatletas text-center">
+        <h2 class="fundoatletas text-center titulo">
                 <a href="parceiros_lista.php">
-                    <button class="btn btseta ">
+                    <button class="btn btntotal ">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
                 </a>
-                <strong><i>Inserir Parceiros</i></strong>
+                Inserir Parceiros
             </h2>
             <div class="thumbnail"> <!-- abre thumbnail -->
                 <div class="alert">

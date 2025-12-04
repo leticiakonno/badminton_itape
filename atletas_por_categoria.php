@@ -31,7 +31,6 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include('menu_publico.php'); ?>
-<?php include('carroussel.php'); ?>
 
 <main class="container">
     
