@@ -54,20 +54,21 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
                     <strong><?php echo $row_destaque['nome_atleta']; ?></strong>
                 </h3>
                 <p class="texticon">
-                    <strong><?php echo $row['nome_categoria']; ?></strong>
+                    <strong><?php echo $row_destaque['nome_categoria']; ?></strong>
                     </p>
                 <p class="text-left">
                 <?php echo mb_strimwidth ($row_destaque['descri_atleta'],0,45,"...");?>
-                </p>          
+                </p>   
+                <p class="text-right">        
                     <a 
                         href="atletas_detalhe.php?id_atleta=<?php echo $row_destaque['id_atleta']; ?>"
-                        class="btn btn-danger"
+                        class="btn btntotal "
                         role="button"
                     >
                         <span class="hidden-xs">Saiba mais...</span>
                         <span class="visible-xs glyphicon glyphicon-eye-open"></span>
                     </a>
-                </p>
+                    </p> 
             </div>
         </div> <!-- fecha thumbnail -->
     </div> <!-- fecha dimensionamento -->
