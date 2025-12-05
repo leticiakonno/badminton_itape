@@ -56,7 +56,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                     <span class="glyphicon glyphicon-home"></span>
                 </a>
             </li>
-            <li><a class="navbartext" href="index.php#destaques">DESTAQUES</a></li>
+            <li><a class="navbartext" href="../atletas.destaque.php">DESTAQUES</a></li>
             <li><a class="navbartext" href="../atletas_geral.php">ATLETAS</a></li>
             <li class="dropdown">
                 <a 
