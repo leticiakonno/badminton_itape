@@ -57,10 +57,10 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                 </a>
             </li>
             <li><a class="navbartext" href="index.php#destaques">DESTAQUES</a></li>
-            <li><a class="navbartext" href="index.php#atletas">ATLETAS</a></li>
+            <li><a class="navbartext" href="atletas_geral.php">ATLETAS</a></li>
             <li class="dropdown">
                 <a 
-                    href="atletas_categorias.php"
+                    href="atletas_por_categoria.php"
                     class="dropdown-toggle navbartext"
                     data-toggle="dropdown"
                     role="button"
@@ -71,7 +71,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a class="navbartext" href="atletas_categorias.php">
+                        <a class="navbartext" href="atletas_por_categoria.php">
                             TODOS
                         </a>
                     </li>

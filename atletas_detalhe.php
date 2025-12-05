@@ -31,7 +31,6 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundo2">
 <?php include('menu_publico.php'); ?>
-
 <main class="container">
 
 <h2 class="breadcrumb alert-danger fundoatletas titulo">

@@ -29,6 +29,7 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 <body class="container">
+<?php include('menu_publico.php'); ?>
 <!-- Mostrar se os registros retornarem VAZIOS -->
 <?php if($totalRows == 0){ ?>
     <h2 class="categoriabusca">

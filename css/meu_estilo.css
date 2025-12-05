@@ -49,6 +49,7 @@
     color: rgb(255, 255, 255);
 }
 
+
 .btnmodal-cancelar {
     background-color: rgba(4, 110, 66, 0.904);
     color: rgb(255, 255, 255);
@@ -129,7 +130,7 @@ table td, table th {
 }
 
 .navbarbg{
-    background-color: rgba(3, 33, 104, 0.884);
+    background-color: rgba(0, 26, 88, 0.918);
     padding-top: 15px;
     padding-bottom: 15px;
 }

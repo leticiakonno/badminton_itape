@@ -30,6 +30,7 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 <body class="fundo2">
+<?php include('menu_publico.php'); ?>
 <main class="container">
     <h2 class=" categoriageral nomeatleta titulo">
     <a href="javascript:window.history.go(-1)" class="btn btntotal">

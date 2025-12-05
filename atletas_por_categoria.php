@@ -31,7 +31,6 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include('menu_publico.php'); ?>
-
 <main class="container">
     
 <!-- Mostrar se os registros retornarem vazios -->
@@ -46,11 +45,11 @@ $totalRows  =   ($lista)->num_rows;
 
 <!-- Mostrar se os NÃO registros retornarem VAZIOS -->
 <?php if($totalRows>0){ ?>
-<h2 class="breadcrumb alert-danger">
-    <a href="javascritp:window.history.go(-1)" class="btn btn-danger">
+    <h2 class="breadcrumb alert-danger fundoatletas titulo">
+    <a href="javascritp:window.history.go(-1)" class="btn btntotal">
         <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
-    <strong><?php echo $row['nome_atleta']; ?></strong>
+    <strong><?php echo $row['nome_categoria']; ?></strong>
 </h2>
 
 <div class="row"> <!-- div row mantém os elementos na linha -->
@@ -70,17 +69,17 @@ $totalRows  =   ($lista)->num_rows;
             >                                                                                       <!-- height "em" deixa o tamanho da imagem relativo ao tamanho da página -->
             </a>                                       
 
-            <div class="caption text-right">
-                <h3 class="text-danger">
+            <div class="caption ">
+                <h3 class="text text-left">
                     <strong><?php echo $row['nome_atleta']; ?></strong>
                 </h3>
                 <p class="text-left">
                 <?php echo mb_strimwidth ($row['descri_atleta'],0,45,"...");?>
                 </p>                                                                            <!-- mb_strimwidth diminiu o tamanho de linhas que são exibidos dentro do card de descrição -->
-                <p>
+                <p class="text-right">
                     <a 
                         href="atletas_detalhe.php?id_atleta=<?php echo $row['id_atleta']; ?>"
-                        class="btn btn-danger"
+                        class="btn btntotal"
                         role="button"
                     >
                         <span class="hidden-xs">Saiba mais...</span>

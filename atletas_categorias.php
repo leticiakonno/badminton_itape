@@ -28,8 +28,6 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include('menu_publico.php'); ?>
-
-
 <main class="container">
 
     <h2 class="breadcrumb fundoatletas titulo text-center">
@@ -52,7 +50,7 @@ if($totalRows > 0){;// Verifica se há produtos para exibir
             }
             // Atualiza $tipo_atual e exibe o novo cabeçalho do grupo
             $tipo_atual = $row['id_categoria_atleta'];
-            echo '<h2 class="breadcrumb titulo">'.$row['nome_categoria'].'</h2>';
+            echo '<h2 class="breadcrumb titulo"><strong>'.$row['nome_categoria'].'</strong></h2>';
             // Abre uma nova div row para os produtos deste grupo
             echo '<div class="row"><!-- manter os elementos na linha (poliça) -->'; 
         }

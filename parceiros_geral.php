@@ -27,6 +27,7 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 <body class="fundofixo">
+<?php include('menu_publico.php'); ?>
     <main class="container">
     <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre os nossos parceiros:</strong></h2>
     <br><br>

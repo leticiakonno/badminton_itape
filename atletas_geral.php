@@ -28,6 +28,7 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head> 
 <body class="fundofixo fontetabela">
+<?php include('menu_publico.php'); ?>
     <main>
     <h2 class="fundoatletas categoriageral text-center titulo"><strong>Conheça os atletas:</strong></h2>
     <div class="container">
