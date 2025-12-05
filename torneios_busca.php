@@ -10,9 +10,9 @@ if(!isset($_GET['buscar']) || empty(trim($_GET['buscar']))) {
 
 // Consulta para trazer o banco de dados e SE necessário filtrar
 $tabela         =   "tbtorneios";
-$campo_filtro   =   "tipo_torneio"; // Alterado para tipo_torneio (mais intuitivo)
+$campo_filtro   =   "tipo_torneio"; 
 $ordenar_por    =   "tipo_torneio ASC";
-$filtro_select  =   trim($_GET['buscar']); // Remover espaços extras
+$filtro_select  =   trim($_GET['buscar']); 
 
 // Prevenir SQL Injection
 $filtro_select_safe = $conn_atletas->real_escape_string($filtro_select);
