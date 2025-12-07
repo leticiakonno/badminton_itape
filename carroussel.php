@@ -29,7 +29,7 @@
     <!-- imagens -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="imagens/carroussel.png" alt=""  class="center-block">
+            <img src="imagens/banner1.png" alt=""  class="center-block">
         </div> <!-- fecha item -->
         <div class="item">
         <img src="imagens/carroussel.png" alt=""  class="center-block">
