@@ -13,10 +13,10 @@
 <?php include('menu_publico.php'); ?>
     <main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12" > <!-- abre dimensionamento -->
-        <h2 class="fundoformulario categoriageral text-center titulo"><strong>Gostaria de enviar uma sugestão, tirar dúvidas ou agendar um treino gratuito? </strong></h2>
-    <br>
         <div class="form-container tabela-branca">
-        <h4 class="formulario text-center titulo">Preencha o formulário abaixo</h4>
+        <h2 class=" formulario text-center titulo"><strong>Sugestões, dúvidas ou agendamento de um treino gratuito: </strong></h2>
+        <h4 class="formulario text-center titulo">PREENCHA O FORMULÁRIO </h4>
+        <br>
         <form 
             action="formulario_contato.php"
             name="form_contato"
