@@ -169,3 +169,30 @@ table td, table th {
     background-size: cover !important;
     background-color: transparent !important;
 }
+.fundoformulario {
+    background-color: rgba(255, 255, 255, 0.959);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px; 
+    font-family: "Cabin", sans-serif; 
+    font-size: 33px;  
+    color: rgba(96, 2, 2, 0.904);
+
+    
+}
+.formulario {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    border-radius: 10px;  
+    font-size: 30px; 
+    font-weight: bold;  
+    color: rgba(5, 24, 109, 0.904);   
+}
+.formulariobusca{
+    background-color: rgba(255, 255, 255, 0.959);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;    
+    color: rgba(151, 4, 4, 0.904);
+    font-weight: bold;
+}
