@@ -62,7 +62,22 @@
                 </div> <!-- fecha form-group -->
                 </div>
             </p>
- 
+            <p>
+                <div class="row">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">CPF:</label>
+                    <div class="col-sm-6">
+                    <input 
+                        type="text"
+                        name="cpf"
+                        placeholder="000.000.000-00"
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}",
+                        class="form-control"
+                        required
+                    >
+                    </div>
+                </div> <!-- fecha form-group CPF -->
+
              <!-- input group Telefone -->
             <p>
                 <div class="row">
