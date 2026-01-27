@@ -17,6 +17,7 @@
             <br>
         <h2 class="fundoatletas titulo text-center" style="border: 30px;"><strong>Saiba mais sobre nossa história:</strong></h2>
         <br>
+        <img src="imagens/familia.jpeg.png" style="float: right; margin-left: 20px; width: 600px; height: 400px;border-radius: 15px; ">
         <p class="historia">A história do badminton em Itapetininga se funde com  a dedicação da pioneira <strong>Leiko Konno.</strong>
         </strong>O esporte, inicialmente desconhecido na cidade, começou a ganhar forma após o marido dela, Shogo,
         trazer raquetes do Japão.O que era uma prática informal em praças tornou-se um projeto sério quando Leiko, 
@@ -24,22 +25,15 @@
 
         <h6 class="historia" style="font-weight: bolder; font-style: italic;">Destaques da Tragetória:</h6>
         <p class="historia"><strong>Projetos Sociais:</strong> Em 2010, Leiko iniciou um trabalho voluntário na Casa de Adolescente, utilizando o esporte
-        como ferramenta contra a ociosidade e auxílio no desenvolvimento de crianças e jovens. </p>
-        <p class="historia"><strong>Formação de Atletas:</strong> O projeto revelou talentos como <i>Douglas Vieira</i>, hoje árbitro profissional, e a própria filha
-        de Leiko, <i>Letícia</i>, que alcançou o 6° lugar no ranking nacional e foi <strong>pentacampeã regional </strong> por Itapetininga.</p>
-        <p class="historia"><strong>Impacto Educacional:</strong> Além do físico, o badminton na cidade é reconhecido por melhorar a concentração e o raciocínio dos alunos, com
-        treinos que passsaram por locais como o Clube dos Bancários e a EMEIF Maria Aparecida Brisola Franci.</p>
+        como ferramenta contra a ociosidade e auxílio no desenvolvimento de crianças e jovens. <br>
+        <strong>Formação de Atletas:</strong> O projeto revelou talentos como <i>Douglas Vieira</i>, hoje árbitro profissional, e a própria filha
+        de Leiko, <i>Letícia</i>, que alcançou o 6° lugar no ranking nacional e foi <strong>pentacampeã regional </strong> por Itapetininga. <br>
+        <strong>Impacto Educacional:</strong> Além do físico, o badminton na cidade é reconhecido por melhorar a concentração e o raciocínio dos alunos, com
+        treinos que passsaram por locais como o Clube dos Bancários e a EMEIF Maria Aparecida Brisola Franci. <br>
+        Hoje o badminton itapetiningano é fruto do esforço familiar que transformou a modalidade em um pilar de disciplina e cidadania, mantendo vivo o sonho de um centro de treinamento
+        exclusivo para as futuras gerações. 
 
-        <p class="historia">Hoje o badminton itapetiningano é fruto do esforço familiar que transformou a modalidade em um pilar de disciplina e cidadania, mantendo vivo o sonho de um centro de treinamento
-            exclusivo para as futuras gerações.
-        </p>
-            <div>
-                <img src="imagens/banner1.png" 
-                    class="img-responsive img-rounded"
-                    style="height: 20em;"               
-                    >  
-            </div>                       
-        </div>
-    </div>
+        </div> <!--fecha tabela-->
+    </div> <!--fecha dimensionamento-->
 </main>
 </body>
