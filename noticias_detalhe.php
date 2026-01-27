@@ -58,7 +58,6 @@ $totalRows  =   ($lista)->num_rows;
     </div> <!-- fecha dimensionamento -->
     <?php }while($row=$lista->fetch_assoc()); ?> <!-- fecha estrutura de repetição -->
     <!-- Fecha thumbnail/card -->
-
 </div> <!-- fecha row -->
 
 <!-- Link arquivos Bootstrap js 
