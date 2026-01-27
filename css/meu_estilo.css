@@ -148,14 +148,14 @@ table td, table th {
 }
 
 .adm {
-        background-color: rgba(255, 255, 255, 0.959);
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border-radius: 10px;    
-        color: rgba(0, 0, 54, 0.904);
-        font-size: 45px;
-        font-family: "Cabin", sans-serif;
-        font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.959);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;    
+    color: rgba(0, 0, 54, 0.904);
+    font-size: 45px;
+    font-family: "Cabin", sans-serif;
+    font-weight: bold;
 
 
 }
@@ -197,7 +197,7 @@ table td, table th {
     font-weight: bold;
 }
 
-.sidebar-noticias {
+.sidebar{
     flex: 1; /* Ocupa 25% do espaço */
     background: #f9f9f9;
     padding: 15px;
@@ -210,4 +210,15 @@ table td, table th {
     .layout {
         flex-direction: column;
     }
+}
+
+.layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.bordacontainer{
+    border-radius: 20px;
 }
