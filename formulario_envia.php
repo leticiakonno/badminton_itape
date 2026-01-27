@@ -62,7 +62,7 @@
                 </div> <!-- fecha form-group -->
                 </div>
             </p>
-            <p>
+          <!--  <p>
                 <div class="row">
                 <div class="form-group">
                     <label class="col-sm-3 control-label">CPF:</label>
@@ -76,7 +76,7 @@
                         required
                     >
                     </div>
-                </div> <!-- fecha form-group CPF -->
+                </div>  fecha form-group CPF -->
 
              <!-- input group Telefone -->
             <p>
@@ -212,6 +212,10 @@
         </div>
 </div>
 </main>
+<BR>
+    <footer>
+        <?php include('rodape.php'); ?>
+    </footer>
 
 <script>
 document.getElementById('assunto_contato').addEventListener('change', function () {

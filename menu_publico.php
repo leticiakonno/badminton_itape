@@ -85,7 +85,8 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                     <!-- Fecha estrutura de repetição -->
                 </ul>
             </li> <!-- Fecha dropdown -->
-            <li><a class="navbartext" href="formulario_envia.php">CONTATO</a></li>
+            <li><a class="navbartext" href="formulario_envia.php">FALE CONOSCO</a></li>
+            <li><a class="navbartext" href="historia.php">HISTÓRIA</a></li>
             <!-- Form Busca -->
              <form
                 action="atletas_busca.php"

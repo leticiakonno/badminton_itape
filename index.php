@@ -22,13 +22,14 @@
         <!-- Atletas -->
         <a name="atletas"></a>
         <hr>
-        <?php include('atletas_geral.php'); ?>
+        <?php include('atletas_destaque.php'); ?>
 
+        <div>
          <!-- Historia -->
-        <a name="historia"></a>
-        <hr>
-        <?php include('historia.php'); ?>
-
+            <a name="historia"></a>
+            <hr>
+            <?php include('historiaresumo.php'); ?>
+        </div>
         <!-- RODAPÉ -->
         <footer>
             <?php include('rodape.php'); ?>

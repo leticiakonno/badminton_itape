@@ -11,7 +11,7 @@
 </head>
 <body class="fundofixo">
 <?php include('menu_publico.php'); ?>
-    <main class="containerhistoria">
+    <main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12" > <!-- abre dimensionamento -->
         <div class="form-container tabela-branca">
         <br>
@@ -35,7 +35,11 @@
 
         </div> <!--fecha tabela-->
     </div> <!--fecha dimensionamento-->
-<?php include('rodape.php'); ?>
 
 </main>
+<footer>
+    <?php include('rodape.php'); ?>
+</footer>
 </body>
+</html>
+<?php mysqli_free_result($lista); ?>
