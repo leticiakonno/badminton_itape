@@ -211,6 +211,7 @@ table td, table th {
         flex-direction: column;
     }
 }
+
 .layout {
     display: flex;
     max-width: 1200px;
