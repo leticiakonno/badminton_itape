@@ -32,9 +32,6 @@
                 <h3 class="text-danger titulo">
                     <strong><?php echo $row['nome_atleta']; ?></strong>
                 </h3>
-                <p class="texticon">
-                    <strong><?php echo $row['nome_categoria']; ?></strong>
-                    </p>
                 <p class="text fontedestaque">
                     <strong><?php echo $row['descri_atleta']; ?></strong>
                 </p>
