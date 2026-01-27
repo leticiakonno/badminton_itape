@@ -233,3 +233,10 @@ table td, table th {
         font-family: "Cabin", sans-serif;
         padding: 20px;
 }
+
+.titulonoticia{
+    font-family: "Times-New-Roman", serif;
+    font-size: 60px;
+    font-style: italic;
+    color: rgb(4, 4, 82);
+}
