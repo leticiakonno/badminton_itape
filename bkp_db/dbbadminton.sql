@@ -139,13 +139,26 @@ CREATE TABLE tbusuarios (
     nivel_usuario ENUM('sup','com') NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
  
--- Extraindo dados da tabela `tbusuarios`
+-- Extraindo dados da tabela tbusuarios
 INSERT INTO tbusuarios (id_usuario,login_usuario,senha_usuario,nivel_usuario) VALUES
 (1,'eduarda','1234','sup'),
 (2,'mari','456','sup'),
 (3,'mav','789','sup'),
 (4,'iwanezuk','1234','sup');
- 
+
+-- Estrutura da tabela tbnoticias
+CREATE TABLE tbnoticias (
+    id_noticia INT(11) NOT NULL,
+    descri_noticia VARCHAR(500) NOT NULL,
+    img_noticia VARCHAR(50) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Extraindo dados da tabela tbnoticias
+ INSERT INTO tbnoticias (id_noticia,descri_noticia,img_noticia) VALUES
+ (1,'Pioneira do badminton na cidade de Itapetininga é citade em livro histórico da cidade', 'noticia1.jpg'),
+ (2,'Atletas conquistam 14 medalhas em etapa Estadual em Itapetininga', 'noticia2.jpeg'),
+ (3,'Atletas conquistam o Hepta para cidade de Itapetiniga nos Jogos Regionais', 'noticia3.jpeg');
+
 -- ------ CHAVES ------
 ALTER TABLE tbatletas
     ADD PRIMARY KEY (id_atleta),
