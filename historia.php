@@ -33,11 +33,12 @@
         <p class="historia">Hoje o badminton itapetiningano é fruto do esforço familiar que transformou a modalidade em um pilar de disciplina e cidadania, mantendo vivo o sonho de um centro de treinamento
             exclusivo para as futuras gerações.
         </p>
-
-        <img src="imagens/banner1.png" 
-           class="img-responsive img-rounded"
-            style="height: 20em;"               
-            >                         
+            <div>
+                <img src="imagens/banner1.png" 
+                    class="img-responsive img-rounded"
+                    style="height: 20em;"               
+                    >  
+            </div>                       
         </div>
     </div>
 </main>
