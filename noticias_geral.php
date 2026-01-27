@@ -26,7 +26,7 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="css/bootstrap.min.css"> 
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
-</head>
+</head> 
 <body class="fundofixo">
 <?php include('menu_publico.php'); ?>
 
@@ -78,6 +78,10 @@ $totalRows  =   ($lista)->num_rows;
 
 <!-- Link arquivos Bootstrap js --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<br>
+<footer>
+    <?php include('rodape.php'); ?>
+</footer> 
 </body>
 </html>

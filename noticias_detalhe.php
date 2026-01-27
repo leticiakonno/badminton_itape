@@ -5,7 +5,7 @@ include("Connections/conn_atletas.php");
 // Consulta para trazer os dados e SE necessário filtrar
 $tabela         =   "tbnoticias";
 $campo_filtro   =   "id_noticia";
-$ordenar_por    =   "id_noticia ASC";
+$ordenar_por    =   "descri_noticia ASC";
 $filtro_select  =   $_GET['id_noticia'];
 $consulta       =   "
                     SELECT  *
@@ -34,35 +34,49 @@ $totalRows  =   ($lista)->num_rows;
             </a>
             <strong><?php echo $row['titulo_noticia']; ?></strong>
         </h2>
-
-        <div class="row"> <!-- div row mantém os elementos na linha -->
-    <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
-     <?php do{ ?> <!-- abre estrutura de repetição -->
-    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"> <!-- dimensionamento -->
-        <div class="thumbnail">            
+    <div class="row"> <!-- manter os elementos na linha (poliça) -->
+    <br>
+    <!-- Abre thumbnail/card -->
+    <?php do{ ?> <!-- Abre a estrutura de repetição -->
+    <div class="col-sm-12"> <!-- dimensionamento -->
+        <div class="thumbnail">
             <img 
-                src="imagens/atletas/<?php echo $row['img_noticia']; ?>" 
+                src="imagens<?php echo $row['img_noticia']; ?>" 
                 alt=""
                 class="img-rounded"
-                style="height: 40em;" 
-            >                                    
-            <div class="caption text-left">
-                <h3 class="text-danger titulo">
+                width="550px"
+            >
+            <div class="caption text-center">
+                <h3 class="titulonoticia">
                     <strong><?php echo $row['titulo_noticia']; ?></strong>
                 </h3>
-                <p class="text fontedestaque">
+                <p class="descrinoticia">
                     <strong><?php echo $row['descri_noticia']; ?></strong>
-                </p>                                                                          
-            </div>
+                </p>         
+                    <!-- <a 
+                        href="noticia_detalhe.php?id_noticia=<?php echo $row['id_noticia']; ?>" 
+                        class="btn btn-danger" 
+                        role="button"
+                    >
+                        <span class="hidden-xs">Saiba mais...</span>
+                        <span class="visible-xs glyphicon glyphicon-eye-open"></span>
+                    </a> -->
+                </p>
+            </div> <!-- fecha caption -->
         </div> <!-- fecha thumbnail -->
     </div> <!-- fecha dimensionamento -->
-    <?php }while($row=$lista->fetch_assoc()); ?> <!-- fecha estrutura de repetição -->
+    <?php }while($row=$lista->fetch_assoc()); ?> 
+    <!-- Fecha a estrutura de repetição -->
     <!-- Fecha thumbnail/card -->
+
 </div> <!-- fecha row -->
 
 <!-- Link arquivos Bootstrap js 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script> --> 
-    </main>
+</main>
+<footer>
+    <?php include('rodape.php'); ?>
+</footer>
 </body>
 </html>
