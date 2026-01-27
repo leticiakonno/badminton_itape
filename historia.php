@@ -11,11 +11,11 @@
 </head>
 <body class="fundofixo">
 <?php include('menu_publico.php'); ?>
-    <main class="container">
+    <main class="container-historia">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12" > <!-- abre dimensionamento -->
-        <div class="form-container tabela-branca">
+        <div class="form-container tabela-branca ">
             <br>
-        <h2 class="fundoatletas titulo text-center" style="border: 30px;"><strong>Saiba mais sobre nossa história:</strong></h2>
+        <h2 class="fundoatletas titulo text-center texto-historia" style="border: 30px;"><strong>Saiba mais sobre nossa história:</strong></h2>
         <br>
         <p class="historia">A história do badminton em Itapetininga se funde com  a dedicação da pioneira <strong>Leiko Konno.</strong>
         </strong>O esporte, inicialmente desconhecido na cidade, começou a ganhar forma após o marido dela, Shogo,
@@ -33,11 +33,12 @@
         <p class="historia">Hoje o badminton itapetiningano é fruto do esforço familiar que transformou a modalidade em um pilar de disciplina e cidadania, mantendo vivo o sonho de um centro de treinamento
             exclusivo para as futuras gerações.
         </p>
-
-        <img src="imagens/banner1.png" 
-           class="img-responsive img-rounded"
-            style="height: 20em;"               
-            >                         
+            <div class="imagem-historia">
+                <img src="imagens/banner1.png" 
+                    class="img-responsive img-rounded"
+                    style="height: 20em;"               
+                    >  
+            </div>                       
         </div>
     </div>
 </main>
