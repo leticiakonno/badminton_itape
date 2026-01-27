@@ -149,15 +149,69 @@ INSERT INTO tbusuarios (id_usuario,login_usuario,senha_usuario,nivel_usuario) VA
 -- Estrutura da tabela tbnoticias
 CREATE TABLE tbnoticias (
     id_noticia INT(11) NOT NULL,
+    titulo_noticia VARCHAR(50) NOT NULL,
     descri_noticia VARCHAR(500) NOT NULL,
     img_noticia VARCHAR(50) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Extraindo dados da tabela tbnoticias
- INSERT INTO tbnoticias (id_noticia,descri_noticia,img_noticia) VALUES
- (1,'Pioneira do badminton na cidade de Itapetininga é citade em livro histórico da cidade', 'noticia1.jpg'),
- (2,'Atletas conquistam 14 medalhas em etapa Estadual em Itapetininga', 'noticia2.jpeg'),
- (3,'Atletas conquistam o Hepta para cidade de Itapetiniga nos Jogos Regionais', 'noticia3.jpeg');
+ INSERT INTO tbnoticias (id_noticia,titulo_noticia,descri_noticia,img_noticia) VALUES
+ (1,'Pioneira do Badminton em Itapetininga é citada em livro histórico da cidade','Badminton de Itapetininga: O Legado de Leiko Konno Eternizado em Livro
+A história do esporte em Itapetininga ganha um registro oficial e emocionante. A treinadora Leiko Konno, reconhecida como a pioneira do badminton na cidade, celebrou recentemente sua inclusão no livro "Itapetininga: Entre Memoriais e Registros", de autoria de Milton Cardoso.
+
+Um Reconhecimento Além das Quadras
+Em um relato sensível, Leiko expressou a honra de ver a trajetória do badminton local — um trabalho iniciado com pioneirismo e dedicação — impressa nas páginas da história itapetiningana. Para a treinadora, o projeto vai muito além da prática esportiva: trata-se de um projeto social que transformou e continua transformando muitas vidas na comunidade.
+
+"Ver a nossa trajetória de pioneirismo no Badminton impressa nessas páginas é uma honra que não cabe no peito. Mais do que esporte, este projeto social transformou e continua transformando muitas vidas." — Leiko Konno.
+
+Superando Obstáculos
+O reconhecimento vem como uma validação de anos de esforço. Leiko destacou que, apesar da indiferença e dos duros obstáculos enfrentados ao longo da jornada, ver esse legado documentado confirma que o caminho escolhido foi o correto. Graças ao trabalho de resgate histórico, a dedicação de todos os envolvidos no projeto agora está eternizada para as futuras gerações.
+
+Destaques da publicação:
+
+Pioneirismo: Registro oficial do início da modalidade em Itapetininga.
+
+Valor Social: O impacto do esporte como ferramenta de transformação de vida.
+
+História Viva: A garantia de que o legado não será esquecido pelos anos que virão.', 'noticia1.jpg'),
+ (2,'Atletas de badminton conquistam 14 medalhas em etapa Estadual no Sesi de Votorantim','Os atletas de Badminton de Itapetininga conquistaram 14 medalhas de ouro, prata e bronze, neste último fim de semana na 4ª Etapa Estadual de Badminton (categorias Aberta e Jovens) e na 2ª Etapa Estadual Parabadminton (pontos válidos para o RK nacional). As competições foram realizadas no SESI de Votorantim.
+
+Itapetininga contou com os atletas Vinícius, Catarina, Tiago, Vitor, Aylla, Marina, Theo, Pedro, Larissa, Milena, Julio, Douglas, Cristiane e Eduardo, nas categorias sub 9, sub 11, sub 13, sub 15, sub 17, sub 19 e Aberta C e D, sob a coordenação da técnica e professora Leiko Konno que conta com apoio da Secretaria de Esporte, Lazer e Juventude.
+
+Ouro
+
+Tiago Matiazzo – Dupla Mista
+
+Prata
+
+Julio Paiva - Simples
+
+Aylla Maeseki – Dupla Feminina
+
+Marina Mori – Dupla Feminina
+
+Catarina Takashi – Dupla Feminina
+
+Bronze
+
+Vitor Takashi - 2 bronze - Simples e Dupla Masculina
+
+Vinicius Lima - 2 bronze – Dupla Masculina e Dupla Mista
+
+Catarina Takashi – Dupla Mista
+
+Theo Maeseki – Dupla Masculina
+
+Pedro Lima – Dupla Masculina
+
+Julio Paiva – Dupla Masculina
+
+Cristiane Matiazzo – Dupla Feminina', 'noticia2.jpeg'),
+ (3,'Atletas de Badminton conquistam o título de Heptacampeão para Itapetininga nos Jogos Regionais','Ouro para as equipes masculina e feminina de Badminton de Itapetininga em todas as categorias, em três dias de provas nos Jogos Regionais. Os atletas venceram na categoria Simples feminina e masculina, na categoria Dupla feminina e masculina e na categoria Equipe feminina e masculina.
+
+Sob a coordenação da professora Leiko Konno, os atletas Julio Jun Kano Paiva, Pedro Otávio Lima dos Santos, Theo Maeseki Shimatsu, Vitor Eli de Lima Takashi, Aylla Maeseki Shihammatsu, Gabriella Oliveira Cavalcante Santos, Larissa Naomi Takamori Ueno, Marina Akemi Mori de Souza Correia, Milena Namie Takamori Ueno. A técnica contou com os auxiliares Letícia Konno e Isabela Galvão.
+
+“Fomos novamente campeões nos Jogos Regionais de Itapetininga. Conquistamos o sétimo título para o município. Treinamos bastante e mostramos muita garra e técnica. Uma experiência marcante”, destacou a técnica Leiko Konno.', 'noticia3.jpeg');
 
 -- ------ CHAVES ------
 ALTER TABLE tbatletas

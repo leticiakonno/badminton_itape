@@ -45,14 +45,14 @@ $totalRows  =   ($lista)->num_rows;
                     >
                         <img 
                             src="imagens/<?php echo $row['img_noticia']; ?>" 
-                            alt="<?php echo $row['descri_noticia']; ?>"
+                            alt="<?php echo $row['titulo_noticia']; ?>"
                             class="img-responsive img-rounded"
                             style="height: 800px; width: 100%; object-fit: cover;"
                         >
                     </a>
                     <div class="caption text-center">
                         <h5 class="text-dark" style="font-size: 40px; min-height: 60px;">
-                            <strong><?php echo $row['descri_noticia']; ?></strong>
+                            <strong><?php echo $row['titulo_noticia']; ?></strong>
                         </h5>
                         <p class="text-center" style="min-height: 80px;">
                             <?php echo substr($row['descri_noticia'], 0, 100) . '...'; ?>
