@@ -33,11 +33,12 @@ $totalRows  =   ($lista)->num_rows;
 <main class="container bordacontainer">
     <div class="layout bordacontainer">
         <aside class="sidebar bordacontainer" id="sidebar">
-            <h2 class="text-center titulo"><strong>FIQUE POR DENTRO!</strong></h2>
-                    <div class="row">
+            <h2 class="text-center titulonoticia"><strong>FIQUE POR DENTRO!</strong></h2>
+            <br>
+            <div class="row">
             <!-- abre thumbnail -->
             <?php do{ ?>
-            <div class="col-sm-6 col-md-4 col-lg-3"> <!-- dimensionamento -->
+            <div class="col-sm-12"> <!-- dimensionamento -->
                 <div class="thumbnail">
                     <a 
                     href="noticia_detalhe.php?id_noticia=<?php echo $row['id_noticia']; ?>" 
@@ -46,11 +47,11 @@ $totalRows  =   ($lista)->num_rows;
                             src="imagens/<?php echo $row['img_noticia']; ?>" 
                             alt="<?php echo $row['descri_noticia']; ?>"
                             class="img-responsive img-rounded"
-                            style="height: 200px; width: 100%; object-fit: cover;"
+                            style="height: 800px; width: 100%; object-fit: cover;"
                         >
                     </a>
                     <div class="caption text-center">
-                        <h5 class="text-dark" style="font-size: 20px; min-height: 60px;">
+                        <h5 class="text-dark" style="font-size: 40px; min-height: 60px;">
                             <strong><?php echo $row['descri_noticia']; ?></strong>
                         </h5>
                         <p class="text-center" style="min-height: 80px;">
