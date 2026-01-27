@@ -228,7 +228,7 @@ table td, table th {
         padding-top: 15px;
         padding-bottom: 15px;
         border-radius: 10px;    
-        color: rgba(0, 0, 0, 0.904);
+        color: #333;
         font-size: 21px;
         font-family: "Cabin", sans-serif;
         padding: 20px;
@@ -240,3 +240,8 @@ table td, table th {
     font-style: italic;
     color: rgb(4, 4, 82);
 } 
+
+.containerhistoria {
+    display: flex;
+    align-items: center;
+}
