@@ -283,3 +283,14 @@ table td, table th {
     flex: 1;
     max-width: 300px;
 }
+
+/* Isso força a linha a não deixar buracos e alinhar tudo à esquerda */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Isso garante que o flexbox não quebre o layout do Bootstrap 3 */
+.row:before, .row:after {
+  display: none !important;
+}
