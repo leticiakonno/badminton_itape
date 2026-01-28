@@ -270,3 +270,17 @@ table td, table th {
 .line{
     line-height: 1.6;
 }
+
+.containerpri {
+     display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.principal {
+    flex: 3;
+}
+.sidebar-news {
+    flex: 1;
+  max-width: 300px;
+}

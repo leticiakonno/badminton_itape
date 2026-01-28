@@ -30,7 +30,7 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css"> 
 </head>
 <body class="fundofixo">
-
+<?php include('menu_publico.php'); ?>
 <main class="container">
 <i><h2 class="fundoatletas titulo text-center"><strong>DESTAQUES</strong></h2></i>
 <div class="row"> <!-- div row mantém os elementos na linha -->
@@ -79,6 +79,7 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
 <!-- Link arquivos Bootstrap js 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script> --> 
+<?php include('rodape.php'); ?>
 </body>
 </html>
 <?php mysqli_free_result($lista_destaque); ?>

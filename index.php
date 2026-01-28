@@ -13,14 +13,11 @@
     <!-- CARROUSSEL -->
     <?php include('carroussel.php'); ?>
 
-<main class="container">
-    <!-- Notícias -->
-    <a name="noticias"></a>
-    <hr>
-    <?php include ('noticias_geral.php')?>
+<main class="containerpri tabela-branca">
+    <div class="principal">
 
     <!-- Torneios -->
-    <a name="torneios"></a>
+    <a name="torneios" ></a>
     <hr>
     <?php include('torneios_geral.php'); ?>
 
@@ -29,13 +26,18 @@
     <hr>
     <?php include('atletas_destaque.php'); ?>
 
-    <div>
         <!-- Historia -->
         <a name="historia"></a>
         <hr>
         <?php include('historiaresumo.php'); ?>
     </div>
 
+    <aside class="sidebar-news">
+     <!-- Notícias -->
+    <a name="noticias" ></a>
+    <hr>
+    <?php include ('noticias_geral.php')?>
+    </aside>
 </main>
 </body>
 <!-- RODAPÉ -->

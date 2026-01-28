@@ -33,7 +33,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
 <nav class="navbar navbar navbarbg">
 <div class="container-fluid">
     <div class="navbar-header"> <!-- Agrupamento MOBILE -->
-        <a href="index.php" class="navbar-brand">
+        <a href="../index.php" class="navbar-brand">
         <img src="../imagens/logobadminton.png" alt="Logo" class="logo">
         </a>
         <button
@@ -85,7 +85,8 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                     <!-- Fecha estrutura de repetição -->
                 </ul>
             </li> <!-- Fecha dropdown -->
-            <li><a class="navbartext" href="index.php#contato">CONTATO</a></li>
+            <li><a class="navbartext" href="../formulario_envia.php">FALE CONOSCO</a></li>
+            <li><a class="navbartext" href="../historia.php">HISTORIA</a></li>
             <!-- Form Busca -->
              <form
                 action="atletas_busca.php"
