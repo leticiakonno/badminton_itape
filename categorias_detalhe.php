@@ -24,10 +24,10 @@ $totalRows  =   ($lista)->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atletas</title>
-    <!-- Link CSS do Bootstrap 
-    <link rel="stylesheet" href="css/bootstrap.min.css">-->
-    <!-- Link para CSS Específico 
-    <link rel="stylesheet" href="css/meu_estilo.css">-->
+    <!-- Link CSS do Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Link para CSS Específico -->
+    <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 <body class="fundo2">
 <?php include('menu_publico.php'); ?>
@@ -64,10 +64,10 @@ $totalRows  =   ($lista)->num_rows;
 
 </div> <!-- fecha row -->
 
-<!-- Link arquivos Bootstrap js 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script> --> 
+<!-- Link arquivos Bootstrap js --> 
 </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>
