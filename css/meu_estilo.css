@@ -198,11 +198,13 @@ table td, table th {
 }
 
 .sidebar{
-    flex: 1; /* Ocupa 25% do espaço */
-    background: #f9f9f9;
-    padding: 15px;
-    border-left: 1px solid #ddd;
-    min-height: 100vh;
+    flex: 1; /* Ocupa 25% da largura */
+    min-width: 280px;
+    background-color: #f8f9fa; /* Um cinza claro para destacar */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #d90429; /* Uma borda com a cor do seu site */
+    height: fit-content; /* Ajusta a altura conforme as notícias */
 }
 
 /* Responsivo: Em celulares, a sidebar vai para baixo */
@@ -214,9 +216,11 @@ table td, table th {
 
 .layout {
     display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha no telemóvel */
     max-width: 1200px;
     margin: 0 auto;
-    gap: 20px;
+    gap: 20px; /* Espaço entre o corpo e a sidebar */
+    padding: 20px;
 }
 
 .bordacontainer{
@@ -236,7 +240,7 @@ table td, table th {
 
 .titulonoticia{
     font-family: "Times-New-Roman", serif;
-    font-size: 60px;
+    font-size: 40px;
     font-style: italic;
     color: rgb(4, 4, 82);
 } 

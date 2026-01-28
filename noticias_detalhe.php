@@ -44,7 +44,7 @@ $totalRows  =   ($lista)->num_rows;
                 src="imagens<?php echo $row['img_noticia']; ?>" 
                 alt=""
                 class="img-rounded"
-                width="550px"
+                width="150px"
             >
             <div class="caption text-center">
                 <h3 class="titulonoticia">

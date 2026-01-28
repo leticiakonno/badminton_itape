@@ -10,31 +10,37 @@
     <a name="home"></a>
     <?php include('menu_publico.php'); ?>
 
-    <main class="container">
-        <!-- CARROUSSEL -->
-        <?php include('carroussel.php'); ?>
+    <!-- CARROUSSEL -->
+    <?php include('carroussel.php'); ?>
 
-        <!-- Torneios -->
-        <a name="torneios"></a>
+<main class="container">
+    <!-- Notícias -->
+    <a name="noticias"></a>
+    <hr>
+    <?php include ('noticias_geral.php')?>
+
+    <!-- Torneios -->
+    <a name="torneios"></a>
+    <hr>
+    <?php include('torneios_geral.php'); ?>
+
+    <!-- Atletas -->
+    <a name="atletas"></a>
+    <hr>
+    <?php include('atletas_destaque.php'); ?>
+
+    <div>
+        <!-- Historia -->
+        <a name="historia"></a>
         <hr>
-        <?php include('torneios_destaque.php'); ?>
+        <?php include('historiaresumo.php'); ?>
+    </div>
 
-        <!-- Atletas -->
-        <a name="atletas"></a>
-        <hr>
-        <?php include('atletas_destaque.php'); ?>
-
-        <div>
-         <!-- Historia -->
-            <a name="historia"></a>
-            <hr>
-            <?php include('historiaresumo.php'); ?>
-        </div>
-        <!-- RODAPÉ -->
-        <footer>
-            <?php include('rodape.php'); ?>
-            <a name="contato"></a>
-        </footer>
-    </main>
+</main>
 </body>
+<!-- RODAPÉ -->
+    <footer>
+        <?php include('rodape.php'); ?>
+        <a name="contato"></a>
+    </footer>
 </html>

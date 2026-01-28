@@ -16,11 +16,11 @@
         <br>
         <h2 class="fundoatletas titulo text-center historia-resumo" style="border: 30px;"><strong> Nossa história:</strong></h2>
 
-        <img src="imagens/familia.jpeg.png" style="float: right; margin: 20px; width: 220px; height: 220px;border-radius: 8px; ">
+        <img src="imagens/familia.jpeg.png" style="float: right; margin: 20px; width: 220px; height: 260px;border-radius: 8px; ">
         <p class="historia"><br>A história do badminton em Itapetininga se funde com  a dedicação da pioneira <strong>Leiko Konno.</strong>
         </strong>O esporte, inicialmente desconhecido na cidade, começou a ganhar forma após o marido dela, Shogo,
         trazer raquetes do Japão.O que era uma prática informal em praças tornou-se um projeto sério quando Leiko, 
-        motivada pelo interesse da filha caçula, Letícia.... <br>
+        motivada pelo interesse da filha caçula, Letícia.... <br><br>
 
             <a href="historia.php"
             class="btn btnhistoria"
