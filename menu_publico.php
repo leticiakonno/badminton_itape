@@ -28,7 +28,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
 <!-- Abre a barra de navegação -->
 <nav class="navbar navbar navbarbg">
 <div class="container-fluid">

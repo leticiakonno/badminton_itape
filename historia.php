@@ -9,7 +9,7 @@
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
 <?php include('menu_publico.php'); ?>
     <main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12" > <!-- abre dimensionamento -->
@@ -42,4 +42,3 @@
 </footer>
 </body>
 </html>
-<?php mysqli_free_result($lista); ?>
