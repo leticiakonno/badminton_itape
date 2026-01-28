@@ -78,7 +78,7 @@ $totalRows  =   ($lista)->num_rows;
 <!-- Link arquivos Bootstrap js-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>  
-<?php include('rodape.php'); 
+<?php include('rodape.php'); ?>
 </body>
 </html>
-<?php mysqli_free_result($lista); ?>
+<?php mysqli_free_result($lista); 
