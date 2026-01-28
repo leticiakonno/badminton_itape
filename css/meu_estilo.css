@@ -261,3 +261,12 @@ table td, table th {
     padding: 8px 15px; 
     margin-top: 10px;
 }
+
+.descrinoticia{
+    font-family: "Times-New-Roman";
+    font-size: 20px;
+}
+
+.line{
+    line-height: 1.6;
+}

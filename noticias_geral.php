@@ -30,7 +30,7 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
     <div class="layout bordacontainer">
 
-    <main class="conteudo container bordacontainer"></main>
+    <main class="conteudo container bordacontainer">
         <aside class="sidebar bordacontainer" id="sidebar">
             <h2 class="text-center titulonoticia"><strong>FIQUE POR DENTRO!</strong></h2>
             <br>
@@ -40,7 +40,7 @@ $totalRows  =   ($lista)->num_rows;
             <div class="col-sm-12"> <!-- dimensionamento -->
                 <div class="thumbnail">
                     <a 
-                    href="noticia_detalhe.php?id_noticia=<?php echo $row['id_noticia']; ?>" 
+                    href="noticias_detalhe.php?id_noticia=<?php echo $row['id_noticia']; ?>" 
                     >
                         <img 
                             src="imagens/<?php echo $row['img_noticia']; ?>" 

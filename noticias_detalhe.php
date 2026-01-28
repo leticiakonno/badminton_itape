@@ -41,27 +41,17 @@ $totalRows  =   ($lista)->num_rows;
     <div class="col-sm-12"> <!-- dimensionamento -->
         <div class="thumbnail">
             <img 
-                src="imagens<?php echo $row['img_noticia']; ?>" 
+                src="imagens/<?php echo $row['img_noticia']; ?>" 
                 alt=""
                 class="img-rounded"
-                width="150px"
+                width="1200px"
             >
             <div class="caption text-center">
-                <h3 class="titulonoticia">
+                <h3 class="titulo">
                     <strong><?php echo $row['titulo_noticia']; ?></strong>
                 </h3>
-                <p class="descrinoticia">
-                    <strong><?php echo $row['descri_noticia']; ?></strong>
-                </p>         
-                    <!-- <a 
-                        href="noticia_detalhe.php?id_noticia=<?php echo $row['id_noticia']; ?>" 
-                        class="btn btn-danger" 
-                        role="button"
-                    >
-                        <span class="hidden-xs">Saiba mais...</span>
-                        <span class="visible-xs glyphicon glyphicon-eye-open"></span>
-                    </a> -->
-                </p>
+                <p class="descrinoticia line">
+                    <?php echo $row['descri_noticia']; ?>
             </div> <!-- fecha caption -->
         </div> <!-- fecha thumbnail -->
     </div> <!-- fecha dimensionamento -->
