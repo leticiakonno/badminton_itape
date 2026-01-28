@@ -52,11 +52,11 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
     <div class="collapse navbar-collapse" id="defaultNavbar"> <!-- barra de navegação -->
         <ul class="nav navbar-nav navbar-right">
             <li class="active">
-                <a class="navbartext" href="index.php">
+                <a class="navbartext" href="../index.php">
                     <span class="glyphicon glyphicon-home"></span>
                 </a>
             </li>
-            <li><a class="navbartext" href="../atletas.destaque.php">DESTAQUES</a></li>
+            <li><a class="navbartext" href="../atletas_destaque.php">DESTAQUES</a></li>
             <li><a class="navbartext" href="../atletas_geral.php">ATLETAS</a></li>
             <li class="dropdown">
                 <a 
@@ -86,7 +86,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                 </ul>
             </li> <!-- Fecha dropdown -->
             <li><a class="navbartext" href="../formulario_envia.php">FALE CONOSCO</a></li>
-            <li><a class="navbartext" href="../historia.php">HISTORIA</a></li>
+            <li><a class="navbartext" href="../historia.php">HISTÓRIA</a></li>
             <!-- Form Busca -->
              <form
                 action="atletas_busca.php"
