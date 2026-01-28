@@ -273,8 +273,7 @@ table td, table th {
 
 .containerpri {
      display: flex;
-  gap: 20px;
-  align-items: flex-start;
+    gap: 20px;
 }
 
 .principal {
@@ -282,5 +281,5 @@ table td, table th {
 }
 .sidebar-news {
     flex: 1;
-  max-width: 300px;
+    max-width: 300px;
 }

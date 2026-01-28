@@ -30,6 +30,7 @@
         <a name="historia"></a>
         <hr>
         <?php include('historiaresumo.php'); ?>
+        
     </div>
 
     <aside class="sidebar-news">
