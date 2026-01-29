@@ -9,8 +9,7 @@
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-
-<body >
+<body class="fundofixo fontetabela">
     <!-- MENU -->
     <a name="home"></a>
     <?php include('menu_publico.php'); ?>

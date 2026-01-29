@@ -28,7 +28,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="container fundo2">
+<body class="container fundo2 fontetabela">
 <?php include('menu_publico.php'); ?>
 <h2 class="fundocategoria categoriageral nomeatleta titulo">
     <a href="javascript:window.history.go(-1)" class="btn btntotal">

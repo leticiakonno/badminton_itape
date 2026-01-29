@@ -28,7 +28,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundo3">
+<body class="fundo3 fontetabela">
 <!-- Abre a barra de navegação -->
 <nav class="navbar navbar navbarbg">
 <div class="container-fluid">
@@ -119,7 +119,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                 </div> <!-- Fecha form-group-->
              </form>
             <li class="active">
-                <a class="navbartext" href="admin/index.php">
+                <a class="navbartext" href="index.php">
                     <span class="glyphicon glyphicon-user"></span>
                 </a>
             </li>

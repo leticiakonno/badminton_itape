@@ -29,7 +29,7 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css"> 
 </head>
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
 <?php include('menu_publico.php'); ?>
 <main class="container">
 <i><h2 class="fundoatletas titulo text-center"><strong>DESTAQUES</strong></h2></i>

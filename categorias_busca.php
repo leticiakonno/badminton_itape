@@ -28,7 +28,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="container">
+<body class="container fontetabela">
 <?php include('menu_publico.php'); ?>
 <!-- Mostrar se os registros retornarem VAZIOS -->
 <?php if($totalRows == 0){ ?>
