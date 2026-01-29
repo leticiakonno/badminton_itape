@@ -6,7 +6,7 @@ include("Connections/conn_atletas.php");
 $tabela         =   "tbnoticias";
 $campo_filtro   =   "id_noticia";
 $ordenar_por    =   "descri_noticia ASC";
-//$filtro_select  =   $_GET['id_noticia'];
+$filtro_select  =   $_GET['id_noticia'];
 $consulta       =   "
                     SELECT  *
                     FROM    ".$tabela."
@@ -29,7 +29,7 @@ $totalRows  =   ($lista)->num_rows;
         <!-- Link para CSS Específico -->
         <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundo2 fontetabela">
+<body class="fundofixo fontetabela">
 <?php include('menu_publico.php'); ?>
     <main class="container">
         <h2 class="breadcrumb alert-danger fundoatletas titulo">
