@@ -143,12 +143,15 @@
 </div> <!-- fecha dimensionamento / área -->
 
 <!-- ÁREA DE DESENVOLVEDOR -->
-<div class="col-sm-12" >
+<div class="col-sm-12">
     <div class="panel-footer" style="background:none;">
         <h6 class="textrodape text-center">
-            Developed by Leticia Konno, Leticia Eduarda e Mavelyn Leme&trade; 2025
+            Developed by 
+            <a href="https://site-da-leticia-konno.com" target="_blank">Leticia Konno</a>, 
+            <a href="https://site-da-leticia-eduarda.com" target="_blank">Leticia Eduarda</a> e 
+            <a href="https://site-da-mavelyn.com" target="_blank">Mavelyn Leme</a>&trade; 2025
             <br>
-            <a href="https://www.iwanezuk.com.br">
+            <a href="https://www.iwanezuk.com.br" target="_blank">
                 www.iwanezuk.com.br
             </a>
         </h6>
