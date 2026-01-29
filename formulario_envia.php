@@ -23,8 +23,7 @@
                         name="form_contato"
                         id="form_contato"
                         method="post"
-                        class="form-horizontal"
-                        
+                        class="form-horizontal"                       
                     >
                         <!-- input group NOME -->
                             <div class="form-group ">
@@ -36,8 +35,7 @@
                                     id="nome_formulario"
                                     placeholder="Digite seu nome completo."
                                     required
-                                    class="form-control"
-                                    
+                                    class="form-control"                                    
                                 >
                                 </div>
                             </div> <!-- fecha form-group -->
@@ -188,7 +186,7 @@
             </div>
         </div>
     </main>
-    <BR>
+    <br>
 <footer>
     <?php include('rodape.php'); ?>
 </footer>

@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="css/meu_estilo.css"> 
 </head>
 <body class="fundofixo">
-<div class="row panel-footer" style="background-color:rgba(3, 33, 104, 0.9);"> <!-- abre painel de rodapé -->
+<div class= "row panel-footer margem" style="background-color:rgba(1, 13, 82, 0.9)"> <!-- abre painel de rodapé -->
 
 <!-- ÁREA DE LOCALIZAÇÃO -->
 <div class="col-sm-6 col-md-4" >
-    <div class="panel-footer textrodape" style="background:none;">
+    <div class="panel-footer textrodape " style="background:none;">
         <img src="imagens/logochurrascopequeno.png" alt="">
         <br>
         <i>Badminton Itapê, juntos pelo crescimento dentro e fora da quadra!</i>
@@ -165,9 +165,7 @@
         </h6>
     </div> <!-- fecha panel-footer --> 
 </div> <!-- fecha dimensionamento / área -->    
-
 </div> <!-- fecha painel principal do rodapé -->
-
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script> 

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 <body class="fundofixo fontetabela">
-    <main class="container">
+<main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12" > <!-- abre dimensionamento -->
         <div class="form-container titulo fundohistoria">
         <h2 class="fundoatletas titulo text-center historia-resumo"><strong> NOSSA HISTÓRIA</strong></h2>
@@ -31,9 +31,8 @@
                 <span class="visible-xs glyphicon glyphicon-eye-open"></span>
             </a>
         </p>
-    </div> <!--fecha tabela-->
+        </div> <!--fecha tabela-->
     </div> <!--fecha dimensionamento-->
-
 </main>
 </body> 
 </html>
