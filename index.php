@@ -9,17 +9,16 @@
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+
+<body >
     <!-- MENU -->
     <a name="home"></a>
     <?php include('menu_publico.php'); ?>
-
     <!-- CARROUSSEL -->
     <?php include('carroussel.php'); ?>
 
-<main class="containerpri tabela-branca">
+    <main class="containerpri tabela-branca container-fluid">
     <div class="principal">
-
     <!-- Torneios -->
     <a name="torneios" ></a>
     <hr>
@@ -28,13 +27,13 @@
     <!-- Atletas -->
     <a name="atletas"></a>
     <hr>
-    <?php include('atletas_destaque.php'); ?>
+    <?php include('atletas_destaque_inicio.php'); ?>
 
         <!-- Historia -->
         <a name="historia"></a>
         <hr>
         <?php include('historiaresumo.php'); ?>
-        
+        <br>
     </div>
 
     <aside class="sidebar-news">
@@ -44,6 +43,7 @@
     <?php include ('noticias_geral.php')?>
     </aside>
 </main>
+
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script> 

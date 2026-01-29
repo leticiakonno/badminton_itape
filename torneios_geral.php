@@ -28,7 +28,7 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo fontetabela">
   
-    <main>
+    <main class="container">
     <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre os torneios:</strong></h2>
     <br><br>
     <div class="container">
