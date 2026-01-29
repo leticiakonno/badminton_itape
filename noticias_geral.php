@@ -29,6 +29,7 @@ $totalRows  =   ($lista)->num_rows;
 </head> 
 <body class="fundofixo fontetabela">
     <div class="layout bordacontainer">
+
     <main class="conteudo container bordacontainer">
         <aside class="sidebar bordacontainer" id="sidebar">
             <h2 class="text-center titulonoticia"><strong>FIQUE POR DENTRO!</strong></h2>
