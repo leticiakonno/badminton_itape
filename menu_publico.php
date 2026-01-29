@@ -13,7 +13,6 @@ $consulta_menu  =   "
 $lista_menu      =   $conn_atletas->query($consulta_menu);
 $row_menu        =   $lista_menu->fetch_assoc();
 $totalRows_menu  =   ($lista_menu)->num_rows;
-
 ?>
 
 <!DOCTYPE html>

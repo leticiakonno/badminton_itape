@@ -28,43 +28,41 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo fontetabela">
 <?php include('menu_publico.php'); ?>
-    <main>
+<main>
     <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre as categorias:</strong></h2>
     <br><br>
     <div class="container">
-
-                <!-- abre thumbnail -->
-                <?php do{ ?>
-                <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
-                    <div class="thumbnail" style="width: 36rem;">
-                        <a 
+    <!-- abre thumbnail -->
+    <?php do{ ?>
+        <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
+            <div class="thumbnail" style="width: 36rem;">
+                <a 
+                href="categorias_detalhe.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
+            >
+                <img 
+                    src="imagens/categorias/<?php echo $row['img_categoria']; ?>" 
+                    alt=""
+                    class="img-responsive img-rounded"
+                    style="height: 20em;"
+                >
+                </a>
+                <div class="caption text-center">
+                <h5 class="text-dark" style="font-size: 25px;"><strong><?php echo $row['nome_categoria']; ?></strong></h5>
+                <p class="text-center"><?php echo $row['descri_categoria']; ?></p>
+                <p>
+                    <a 
                         href="categorias_detalhe.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
+                        class="btn btntotal" 
+                        role="button"
                     >
-                        <img 
-                            src="imagens/categorias/<?php echo $row['img_categoria']; ?>" 
-                            alt=""
-                            class="img-responsive img-rounded"
-                            style="height: 20em;"
-                        >
+                        <span class="hidden-xs">Clique para saber mais...</span>
+                        <span class="visible-xs glyphicon glyphicon-eye-open"></span>
                     </a>
-                    <div class="caption text-center">
-                    <h5 class="text-dark" style="font-size: 25px;"><strong><?php echo $row['nome_categoria']; ?></strong></h5>
-                    <p class="text-center"><?php echo $row['descri_categoria']; ?></p>
-                    <p>
-                        <a 
-                            href="categorias_detalhe.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
-                            class="btn btntotal" 
-                            role="button"
-                        >
-                            <span class="hidden-xs">Clique para saber mais...</span>
-                            <span class="visible-xs glyphicon glyphicon-eye-open"></span>
-                        </a>
-                    </p>
+                </p>
                 </div> <!--fecha caption-->
-                    </div> <!--fecha thumbnail-->
-                </div> <!--fecha dimensionamento-->
-                <?php }while($row=$lista->fetch_assoc()); ?>
-
+            </div> <!--fecha thumbnail-->
+        </div> <!--fecha dimensionamento-->
+        <?php }while($row=$lista->fetch_assoc()); ?>
     </div>
 </main>
 <!-- Link arquivos Bootstrap js -->

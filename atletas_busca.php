@@ -34,7 +34,6 @@ $totalRows  =   ($lista)->num_rows;
 
 
 <main class="container">
-
 <!-- Mostrar se os registros retornarem VAZIOS -->
 <?php if($totalRows == 0){ ?>
     <h2 class="breadcrumb alert-danger fundoatletas titulo">

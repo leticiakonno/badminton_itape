@@ -31,8 +31,8 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo fontetabela">
 <?php include('menu_publico.php'); ?>
+
 <main class="container">
-    
 <!-- Mostrar se os registros retornarem vazios -->
  <?php if($totalRows==0){ ?>
 <h2 class="breadcrumb fundoatletas titulo text-center">
