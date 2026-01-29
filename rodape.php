@@ -52,17 +52,17 @@
                 </a>
             </li>
             <li>
-                <a href="index.php#destaques" class="textrodape">
+                <a href="atletas_destaque.php" class="textrodape">
                     <span class="glyphicon glyphicon-fire">&nbsp;DESTAQUES</span>
                 </a>
             </li>
             <li>
-                <a href="index.php#produtos" class="textrodape">
+                <a href="atletas_geral.php" class="textrodape">
                     <span class="glyphicon glyphicon-cutlery">&nbsp;ATLETAS</span>
                 </a>
             </li>
             <li>
-                <a href="produtos_tipos.php" class="textrodape">
+                <a href="categorias_geral.php" class="textrodape">
                     <span class="glyphicon glyphicon-tasks">&nbsp;CATEGORIAS</span>
                 </a>
             </li>
