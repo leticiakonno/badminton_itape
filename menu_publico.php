@@ -15,18 +15,6 @@ $row_menu        =   $lista_menu->fetch_assoc();
 $totalRows_menu  =   ($lista_menu)->num_rows;
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
-<!-- o menu publico é o unico que fica com o CSS, Bootstrap e JS ativados-->
-    <!-- Link CSS do Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Link para CSS Específico -->
-    <link rel="stylesheet" href="css/meu_estilo.css">
-</head>
 <body class="fundofixo fontetabela">
 <!-- Abre a barra de navegação -->
 <nav class="navbar navbar navbarbg">
@@ -127,10 +115,6 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
 </div> <!-- Fecha container-fluid -->
 </nav>
 <!-- Fecha barra de navegação -->
-
-<!-- Link arquivos Bootstrap js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>    
 </body>
 </html>
 
