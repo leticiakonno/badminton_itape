@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Link CSS do Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Link para CSS Específico -->
-    <link rel="stylesheet" href="css/meu_estilo.css">
-</head>
+
 <body class="fundofixo fontetabela">
 <main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12" > <!-- abre dimensionamento -->

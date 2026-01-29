@@ -1,21 +1,10 @@
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
-    <!-- Link CSS do Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"> 
-    <!-- Link para CSS Específico -->
-    <link rel="stylesheet" href="css/meu_estilo.css"> 
-</head>
 <body class="fundofixo">
-<div class= "row panel-footer margem" style="background-color:rgba(1, 13, 82, 0.9)"> <!-- abre painel de rodapé -->
+<div class= "row panel-footer margem" style="background-color:rgba(3, 33, 104, 0.9)"> <!-- abre painel de rodapé -->
 
 <!-- ÁREA DE LOCALIZAÇÃO -->
 <div class="col-sm-6 col-md-4" >
-    <div class="panel-footer textrodape " style="background:none;">
+    <div class="panel-footer textrodape" style="background:none;">
         <img src="imagens/logochurrascopequeno.png" alt="">
         <br>
         <i>Badminton Itapê, juntos pelo crescimento dentro e fora da quadra!</i>
@@ -52,28 +41,23 @@
                 </a>
             </li>
             <li>
-                <a href="atletas_destaque.php" class="textrodape">
-                    <span class="glyphicon glyphicon-heart-empty">&nbsp;DESTAQUES</span>
+                <a href="index.php#destaques" class="textrodape">
+                    <span class="glyphicon glyphicon-fire">&nbsp;DESTAQUES</span>
                 </a>
             </li>
             <li>
-                <a href="atletas_geral.php" class="textrodape">
-                    <span class="glyphicon glyphicon-text-color">&nbsp;ATLETAS</span>
+                <a href="index.php#produtos" class="textrodape">
+                    <span class="glyphicon glyphicon-cutlery">&nbsp;ATLETAS</span>
                 </a>
             </li>
             <li>
-                <a href="categorias_geral.php" class="textrodape">
+                <a href="produtos_tipos.php" class="textrodape">
                     <span class="glyphicon glyphicon-tasks">&nbsp;CATEGORIAS</span>
                 </a>
             </li>
             <li>
-                <a href="formulario_envia.php" class="textrodape">
-                    <span class="glyphicon glyphicon-envelope">&nbsp;CONTATO</span>
-                </a>
-            </li>
-            <li>
-                <a href="historia.php" class="textrodape">
-                    <span class="glyphicon glyphicon-book">&nbsp;HISTÓRIA</span>
+                <a href="index.php#contato" class="textrodape">
+                    <span class="glyphicon glyphicon-send">&nbsp;CONTATO</span>
                 </a>
             </li>
             <li>
@@ -159,20 +143,21 @@
 </div> <!-- fecha dimensionamento / área -->
 
 <!-- ÁREA DE DESENVOLVEDOR -->
-<div class="col-sm-12" >
+<div class="col-sm-12">
     <div class="panel-footer" style="background:none;">
         <h6 class="textrodape text-center">
-            Developed by Leticia Konno, Leticia Eduarda e Mavelyn Leme&trade; 2025
+            Developed by 
+            <a href="https://site-da-leticia-konno.com" target="_blank">Leticia Konno</a>, 
+            <a href="https://site-da-leticia-eduarda.com" target="_blank">Leticia Eduarda</a> e 
+            <a href="https://site-da-mavelyn.com" target="_blank">Mavelyn Leme</a>&trade; 2025
             <br>
-            <a href="https://www.iwanezuk.com.br">
+            <a href="https://www.iwanezuk.com.br" target="_blank">
                 www.iwanezuk.com.br
             </a>
         </h6>
     </div> <!-- fecha panel-footer --> 
 </div> <!-- fecha dimensionamento / área -->    
 </div> <!-- fecha painel principal do rodapé -->
-<!-- Link arquivos Bootstrap js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script> 
+
 </body>
 </html>
