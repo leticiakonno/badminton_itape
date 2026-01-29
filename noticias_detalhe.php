@@ -29,10 +29,10 @@ $totalRows  =   ($lista)->num_rows;
         <!-- Link para CSS Específico -->
         <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo fontetabela">
+<body class="fundo3  fontetabela">
 <?php include('menu_publico.php'); ?>
     <main class="container">
-        <h2 class="breadcrumb alert-danger fundoatletas titulo">
+        <h2 class="breadcrumb alert-danger fundoatletas text-center titulo">
             <a href="javascript:window.history.go(-1)" class="btn btntotal">
             <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
@@ -44,11 +44,12 @@ $totalRows  =   ($lista)->num_rows;
     <?php do{ ?> <!-- Abre a estrutura de repetição -->
     <div class="col-sm-12"> <!-- dimensionamento -->
         <div class="thumbnail">
+            <br>
             <img 
                 src="imagens/<?php echo $row['img_noticia']; ?>" 
                 alt=""
                 class="img-rounded"
-                width="1200px"
+                width="800px"
             >
             <div class="caption text-center">
                 <h3 class="titulo">

@@ -29,7 +29,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundo2 fontetabela">
+<body class="fundo3 fontetabela">
 <?php include('menu_publico.php'); ?>
 <main class="container">
 

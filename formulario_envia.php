@@ -13,7 +13,7 @@
 <?php include('menu_publico.php'); ?>
     <main class="container">
         <div>
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">  <!-- abre dimensionamento -->
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">  <!-- abre dimensionamento -->
                 <div class="form-container tabela-branca" style="padding: 30px; border-radius: 8px;">
                     <h2 class=" formulario text-center titulo"><strong>Sugestões, dúvidas ou agendamento de um treino gratuito: </strong></h2>
                     <h4 class="formulario text-center titulo">PREENCHA O FORMULÁRIO </h4>
@@ -126,6 +126,7 @@
                                 <div class="col-sm-offset-3 col-sm-8">
                                     <div class="alert formulariobusca text-center">
                                         <strong>Treinos gratuitos:</strong><br>
+                                        Terça-feira às 
                                         Quarta-feira às 18h<br>
                                         Sábado às 16h
                                     </div>
