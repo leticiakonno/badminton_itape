@@ -6,7 +6,7 @@ include("Connections/conn_atletas.php");
 $tabela         =   "tbnoticias";
 $campo_filtro   =   "id_noticia";
 $ordenar_por    =   "descri_noticia ASC";
-//$filtro_select  =   $_GET['id_noticia'];
+$filtro_select  =   $_GET['id_noticia'];
 $consulta       =   "
                     SELECT  *
                     FROM    ".$tabela."
