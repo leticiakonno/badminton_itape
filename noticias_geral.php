@@ -57,7 +57,7 @@ $totalRows  =   ($lista)->num_rows;
                         </p>
                         <p>
                             <a 
-                                href="noticias_detalhe.php?id_torneio=<?php echo $row['id_noticia']; ?>" 
+                                href="noticias_detalhe.php?id_noticia=<?php echo $row['id_noticia']; ?>" 
                                 class="btn btntotal" 
                                 role="button"
                             >
