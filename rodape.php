@@ -53,12 +53,12 @@
             </li>
             <li>
                 <a href="atletas_destaque.php" class="textrodape">
-                    <span class="glyphicon glyphicon-fire">&nbsp;DESTAQUES</span>
+                    <span class="glyphicon glyphicon-heart-empty">&nbsp;DESTAQUES</span>
                 </a>
             </li>
             <li>
                 <a href="atletas_geral.php" class="textrodape">
-                    <span class="glyphicon glyphicon-cutlery">&nbsp;ATLETAS</span>
+                    <span class="glyphicon glyphicon-text-color">&nbsp;ATLETAS</span>
                 </a>
             </li>
             <li>
@@ -67,8 +67,13 @@
                 </a>
             </li>
             <li>
-                <a href="index.php#contato" class="textrodape">
-                    <span class="glyphicon glyphicon-send">&nbsp;CONTATO</span>
+                <a href="formulario_envia.php" class="textrodape">
+                    <span class="glyphicon glyphicon-envelope">&nbsp;CONTATO</span>
+                </a>
+            </li>
+            <li>
+                <a href="historia.php" class="textrodape">
+                    <span class="glyphicon glyphicon-book">&nbsp;HISTÓRIA</span>
                 </a>
             </li>
             <li>

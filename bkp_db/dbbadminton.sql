@@ -234,6 +234,9 @@
     ALTER TABLE tbparceiros
         ADD PRIMARY KEY (id_parceiro);
 
+    ALTER TABLE tbnoticias
+        ADD PRIMARY KEY (id_noticia);
+
     
     -- ----- AUTO INCREMENTS -----
     ALTER TABLE tbatletas
@@ -253,6 +256,9 @@
 
     ALTER TABLE tbparceiros
         MODIFY id_parceiro INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+    
+    ALTER TABLE tbnoticias
+        MODIFY id_noticia INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 
     -- Limitadores e referências da Chave Estrangeira
