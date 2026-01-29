@@ -11,7 +11,7 @@
 }
 
 .carousel.item img.img-carrossel {
-    width: 80%;
+    width: 100%;
     height: 80%;
     object-fit: cover; /* Faz preencher sem deformar */
 }
