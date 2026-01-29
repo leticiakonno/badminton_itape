@@ -37,7 +37,6 @@
                 </h5>
             </div> <!-- fecha text-center -->
         </div> <!-- fecha jumbotron -->
-
     </section>
 </main>
 
