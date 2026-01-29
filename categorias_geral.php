@@ -26,7 +26,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
 <?php include('menu_publico.php'); ?>
     <main>
     <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre as categorias:</strong></h2>

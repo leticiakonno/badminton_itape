@@ -24,11 +24,11 @@ $totalRows  =   ($lista)->num_rows;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo</title>
     <!-- Link CSS do Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="container">
+<body class="container fontetabela">
 <?php include('menu_publico.php'); ?>
 <!-- Mostrar se os registros retornarem VAZIOS -->
 <?php if($totalRows == 0){ ?>

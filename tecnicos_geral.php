@@ -79,9 +79,9 @@ $totalRows  =   ($lista)->num_rows;
 
 
 <!-- não esquecer de comentar o JS e CSS para não dar conflito no index -->
-<!-- Link arquivos Bootstrap js -->
+<!-- Link arquivos Bootstrap js-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>  
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

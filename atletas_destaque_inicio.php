@@ -11,7 +11,8 @@ $consulta_destaque      =   "
                             SELECT   *
                             FROM     ".$tabela_destaque."
                             WHERE    ".$campo_filtro_destaque."='".$filtro_select_destaque."'
-                            ORDER BY ".$ordenar_por_destaque.";
+                            ORDER BY ".$ordenar_por_destaque."
+                            LIMIT 3;
                             ";
 $lista_destaque          =   $conn_atletas->query($consulta_destaque);
 $row_destaque   =   $lista_destaque->fetch_assoc();
@@ -29,10 +30,10 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css"> 
 </head>
-<body class="fundofixo fontetabela">
-<?php include('menu_publico.php'); ?>
+<body class="fundofixo">
 <main class="container">
 <i><h2 class="fundoatletas titulo text-center"><strong>DESTAQUES</strong></h2></i>
+<br>
 <div class="row"> <!-- div row mantém os elementos na linha -->
 <br>
     <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
@@ -79,7 +80,6 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>  
-<?php include('rodape.php'); ?>
 </body>
 </html>
 <?php mysqli_free_result($lista_destaque); ?>

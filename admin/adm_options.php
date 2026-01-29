@@ -9,10 +9,10 @@
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
-<body class="fundo3">
+<body class="fundo3 fontetabela">
 <main class="container">
 <h1 class="adm text-center titulo">Área Administrativa</h1>
-<div class="row">
+<div class="row ">
 
     <!-- ADM ATLETAS -->
     <div class="col-sm-6 col-md-4">
@@ -214,7 +214,7 @@
 
         <!-- ADM NOTÍCIAS   -->
     <div class="col-sm-6 col-md-4">
-        <div class="thumbnail fundoatletas">
+        <div class="thumbnail fundoatletas ">
             <img src="../imagens/noticias.png" width="200px" height="50px"  alt="">
             <br>
             <div class="fundoatletas">

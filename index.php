@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Badminton Itapetininga</title>
+        <!-- Link CSS do Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Link para CSS Específico -->
+    <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
     <!-- MENU -->
     <a name="home"></a>
     <?php include('menu_publico.php'); ?>
-
     <!-- CARROUSSEL -->
     <?php include('carroussel.php'); ?>
 
-<main class="containerpri tabela-branca">
+    <main class="containerpri tabela-branca container-fluid">
     <div class="principal">
-
     <!-- Torneios -->
     <a name="torneios" ></a>
     <hr>
@@ -24,12 +26,13 @@
     <!-- Atletas -->
     <a name="atletas"></a>
     <hr>
-    <?php include('atletas_destaque.php'); ?>
+    <?php include('atletas_destaque_inicio.php'); ?>
 
         <!-- Historia -->
         <a name="historia"></a>
         <hr>
         <?php include('historiaresumo.php'); ?>
+        <br>
     </div>
 
     <aside class="sidebar-news">
@@ -39,10 +42,15 @@
     <?php include ('noticias_geral.php')?>
     </aside>
 </main>
-</body>
+
+<!-- Link arquivos Bootstrap js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
 <!-- RODAPÉ -->
     <footer>
         <?php include('rodape.php'); ?>
         <a name="contato"></a>
     </footer>
+</body>
+
 </html>

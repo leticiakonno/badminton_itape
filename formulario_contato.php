@@ -7,7 +7,7 @@
     <meta http-equiv="refresh" content="15;URL=index.php">
     <title>Verificação do Formulário</title>
 </head>
-<body class="fundo2">
+<body class="fundo2 fontetabela">
 <?php include('menu_publico.php'); ?>
 <main class="container">
     <section>
@@ -37,7 +37,6 @@
                 </h5>
             </div> <!-- fecha text-center -->
         </div> <!-- fecha jumbotron -->
-
     </section>
 </main>
 

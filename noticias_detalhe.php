@@ -24,8 +24,12 @@ $totalRows  =   ($lista)->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias Detalhe</title>
+        <!-- Link CSS do Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"> 
+        <!-- Link para CSS Específico -->
+        <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundo2">
+<body class="fundo2 fontetabela">
 <?php include('menu_publico.php'); ?>
     <main class="container">
         <h2 class="breadcrumb alert-danger fundoatletas titulo">
@@ -61,9 +65,9 @@ $totalRows  =   ($lista)->num_rows;
 
 </div> <!-- fecha row -->
 
-<!-- Link arquivos Bootstrap js 
+<!-- Link arquivos Bootstrap js --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script> --> 
+<script src="js/bootstrap.min.js"></script> 
 </main>
 <footer>
     <?php include('rodape.php'); ?>

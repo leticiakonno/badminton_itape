@@ -29,7 +29,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
 <?php include('menu_publico.php'); ?>
 
 
@@ -102,9 +102,9 @@ $totalRows  =   ($lista)->num_rows;
 </div> <!-- fecha row -->
 <?php }; ?>
 
-<!-- Link arquivos Bootstrap js
+<!-- Link arquivos Bootstrap js-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>-->  
+<script src="js/bootstrap.min.js"></script>  
 </main>
 <footer>
     <?php include('rodape.php'); ?>

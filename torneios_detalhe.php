@@ -38,7 +38,7 @@ if($totalRows == 0) {
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundo2">
+<body class="fundo2 fontetabela">
 <?php include('menu_publico.php'); ?>
 
 
@@ -84,6 +84,9 @@ if($totalRows == 0) {
 <footer>
     <?php include('rodape.php'); ?>
 </footer>
+<!-- Link arquivos Bootstrap js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

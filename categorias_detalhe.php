@@ -29,7 +29,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundo2">
+<body class="fundo2 fontetabela">
 <?php include('menu_publico.php'); ?>
 <main class="container">
     <h2 class=" categoriageral nomeatleta titulo">
@@ -64,10 +64,10 @@ $totalRows  =   ($lista)->num_rows;
 
 </div> <!-- fecha row -->
 
-<!-- Link arquivos Bootstrap js 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script> --> 
+<!-- Link arquivos Bootstrap js --> 
 </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

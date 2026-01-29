@@ -22,12 +22,12 @@ $totalRows  =   ($lista)->num_rows;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo</title>
     <!-- não esquecer de comentar o JS e CSS para não dar conflito no index -->
-    <!-- Link CSS do Bootstrap 
-    <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-    <!-- Link para CSS Específico 
-    <link rel="stylesheet" href="css/meu_estilo.css">-->
+    <!-- Link CSS do Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <!-- Link para CSS Específico -->
+    <link rel="stylesheet" href="css/meu_estilo.css">
 </head> 
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
     <div class="layout bordacontainer">
 
     <main class="conteudo container bordacontainer">
@@ -46,11 +46,11 @@ $totalRows  =   ($lista)->num_rows;
                             src="imagens/<?php echo $row['img_noticia']; ?>" 
                             alt="<?php echo $row['titulo_noticia']; ?>"
                             class="img-responsive img-rounded"
-                            style="height: 800px; width: 100%; object-fit: cover;"
+                            style="height: 250px; width: 150%; object-fit: cover;"
                         >
                     </a>
                     <div class="caption text-center">
-                        <h5 class="text-dark" style="font-size: 40px; min-height: 60px;">
+                        <h5 class="text-dark" style="font-size: 15px; min-height: 40px;">
                             <strong><?php echo $row['titulo_noticia']; ?></strong>
                         </h5>
                         <p class="text-center" style="min-height: 80px;">

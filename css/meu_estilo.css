@@ -201,7 +201,7 @@ table td, table th {
     flex: 1; /* Ocupa 25% da largura */
     min-width: 280px;
     background-color: #f8f9fa; /* Um cinza claro para destacar */
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     border-left: 4px solid #d90429; /* Uma borda com a cor do seu site */
     height: fit-content; /* Ajusta a altura conforme as notícias */
@@ -219,7 +219,7 @@ table td, table th {
     flex-wrap: wrap; /* Permite quebrar linha no telemóvel */
     max-width: 1200px;
     margin: 0 auto;
-    gap: 20px; /* Espaço entre o corpo e a sidebar */
+    gap: 5px; /* Espaço entre o corpo e a sidebar */
     padding: 20px;
 }
 
@@ -272,15 +272,35 @@ table td, table th {
 }
 
 .containerpri {
-     display: flex;
-  gap: 20px;
-  align-items: flex-start;
+    display: flex;
+    gap: 20px;
 }
 
 .principal {
     flex: 3;
+
 }
 .sidebar-news {
     flex: 1;
-  max-width: 300px;
+    max-width: 450px;
+    float: left;
+    width: 75%; /* Em vez de um valor fixo em px, use porcentagem */
+
+}
+
+/* Isso força a linha a não deixar buracos e alinhar tudo à esquerda */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Isso garante que o flexbox não quebre o layout do Bootstrap 3 */
+.row:before, .row:after {
+  display: none !important;
+}
+
+.fundohistoria {
+    background-color: rgba(255, 255, 255, 0.959);
+    border-radius: 10px;    
+    color: rgba(0, 0, 54, 0.904);
 }
