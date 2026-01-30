@@ -13,9 +13,9 @@
 <?php include('menu_publico.php'); ?>
 <main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12" > <!-- abre dimensionamento -->
-        <div class="form-container tabela-branca">
+        <div class="form-container tabela-branca" style="border-radius:10px ;">
         <br>
-        <h2 class="fundoatletas titulo text-center" style="border: 30px;"><strong>Saiba mais sobre nossa história:</strong></h2>
+        <h2 class="fundoatletas titulo text-center" ><strong>Saiba mais sobre nossa história:</strong></h2>
         <br>
         <img src="imagens/familia.jpeg.png" style="float: right; margin: 20px; width: 500px; height: 600px;border-radius: 8px; ">
         <p class="historia">A história do badminton em Itapetininga se funde com  a dedicação da pioneira <strong>Leiko Konno.</strong>
