@@ -41,23 +41,28 @@
                 </a>
             </li>
             <li>
-                <a href="index.php#destaques" class="textrodape">
-                    <span class="glyphicon glyphicon-fire">&nbsp;DESTAQUES</span>
+                <a href="atletas_destaque.php" class="textrodape">
+                    <span class="glyphicon glyphicon-star">&nbsp;DESTAQUES</span>
                 </a>
             </li>
             <li>
-                <a href="index.php#produtos" class="textrodape">
-                    <span class="glyphicon glyphicon-cutlery">&nbsp;ATLETAS</span>
+                <a href="atletas_geral.php" class="textrodape">
+                    <span class="glyphicon glyphicon-text-color">&nbsp;ATLETAS</span>
                 </a>
             </li>
             <li>
-                <a href="produtos_tipos.php" class="textrodape">
+                <a href="categorias_geral.php" class="textrodape">
                     <span class="glyphicon glyphicon-tasks">&nbsp;CATEGORIAS</span>
                 </a>
             </li>
             <li>
-                <a href="index.php#contato" class="textrodape">
-                    <span class="glyphicon glyphicon-send">&nbsp;CONTATO</span>
+                <a href="formulario_envia.php" class="textrodape">
+                    <span class="glyphicon glyphicon-envelope">&nbsp;CONTATO</span>
+                </a>
+            </li>
+             <li>
+                <a href="historia.php" class="textrodape">
+                    <span class="glyphicon glyphicon-book">&nbsp;CONTATO</span>
                 </a>
             </li>
             <li>
