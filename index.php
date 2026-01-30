@@ -42,6 +42,7 @@
         <?php include('historiaresumo.php'); ?>
         <br>
     </div>
+    
 
     <aside class="sidebar-news">
      <!-- Notícias -->
