@@ -49,6 +49,15 @@
     color: rgb(255, 255, 255);
 }
 
+.btnvermais{
+    margin: 20px auto;   /* 'auto' nas laterais empurra o botão para o centro */
+    background-color: rgba(194, 15, 9, 0.904);
+    color: rgb(255, 255, 255);
+    display: block;      /* Transforma o botão em um bloco */
+    width: fit-content;  /* Faz o botão ter apenas o tamanho do texto dele */
+    font-size: medium;
+}
+
 
 .btnmodal-cancelar {
     background-color: rgba(4, 110, 66, 0.904);

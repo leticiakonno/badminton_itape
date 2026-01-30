@@ -27,6 +27,14 @@
     <a name="atletas"></a>
     <hr>
     <?php include('atletas_destaque_inicio.php'); ?>
+            <a 
+            href="atletas_destaque.php" 
+            class="btn btnvermais" 
+            role="button"
+        >
+            <span>Clique para saber mais...</span>
+            <span class="visible-xs glyphicon glyphicon-eye-open"></span>
+        </a>
 
         <!-- Historia -->
         <a name="historia"></a>
