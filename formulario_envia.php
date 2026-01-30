@@ -125,10 +125,11 @@
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-8">
                                     <div class="alert formulariobusca text-center">
-                                        <strong>Treinos gratuitos:</strong><br>
-                                        Terça-feira às 
-                                        Quarta-feira às 18h<br>
-                                        Sábado às 16h
+                                        Treinos gratuitos:<br>
+                                        Terça-feira a partir das 19h às 21h <br>
+                                        Quarta-feira a partir das 19h às 21h<br>
+                                        Sexta-feira a partir das 19h às 21h<br>
+                                        Sábado a partir das 14h às 17h
                                     </div>
                                 </div>
                             </div>
@@ -139,13 +140,15 @@
                                 <div class="col-sm-8">
                                     <select name="dia-treino" id="dia-treino" class="form-control">
                                         <option value="" style="font-weight: bold;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Selecione o dia</option>
+                                        <option value="terca">Terça-feira</option>
                                         <option value="quarta">Quarta-feira</option>
+                                        <option value="sexta">Sexta-feira</option>
                                         <option value="sabado">Sábado</option>
                                     </select>
                                 </div>
                         </div>
 
-                        <!-- horario do treino -->
+                        <!-- horario do treino 
                         <div class="form-group" id="campo-horario" style="display:none;">
                             <label class="col-sm-3 control-label">Horário</label>
                                 <div class="col-sm-8">
@@ -155,7 +158,7 @@
                                         <option value="16:00">16h</option>
                                     </select>
                                 </div>
-                        </div>
+                        </div>-->
 
                         <!-- construa o textarea comentários -->
                             <div class="form-group">
