@@ -58,7 +58,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a class="navbartext" href="atletas_por_categoria.php">
+                        <a class="navbartext" href="atletas_geral.php">
                             TODOS
                         </a>
                     </li>

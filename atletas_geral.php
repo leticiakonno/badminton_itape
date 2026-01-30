@@ -4,7 +4,7 @@ include("Connections/conn_atletas.php");
 
 // Consulta para trazer o banco de dados e SE necessário filtrar
 $tabela         =   "vw_tbatletas";
-$ordenar_por    =   "descri_atleta ASC";
+$ordenar_por    =   "data_nas_atleta DESC";
 $consulta       =   "
                     SELECT   *
                     FROM     ".$tabela."
