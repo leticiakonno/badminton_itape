@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-<div id="banners" class="carousel slide" data-ride="carousel">
+<div id="banners" class="carousel slide margemcarrousel" data-ride="carousel">
     <!-- Indicador dos itens -->
     <ol class="carousel-indicators">
         <li data-target="#banners" data-slide-to="0" class="active"></li>

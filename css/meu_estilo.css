@@ -356,3 +356,7 @@ table td, table th {
   .barcolor{
     background-color: #ffffff;
   }
+
+  .margemcarrousel{
+    margin-top: -20px;
+  }
