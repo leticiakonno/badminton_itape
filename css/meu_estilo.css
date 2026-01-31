@@ -352,3 +352,7 @@ table td, table th {
     width: 100%;
     height: auto;
   }
+
+  .barcolor{
+    background-color: #ffffff;
+  }

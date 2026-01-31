@@ -20,7 +20,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
 <nav class="navbar navbar navbarbg">
 <div class="container-fluid">
     <div class="navbar-header"> <!-- Agrupamento MOBILE -->
-        <a href="index.php" class="navbar-brand">
+        <a href="index.php" class="navbar-brand center">
         <img src="imagens/logobadminton.png" alt="Logo" class="logo">
         </a>
         <button
@@ -31,9 +31,9 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
         aria-expanded="false"
         >
             <span class="sr-only">Navegação Mobile</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar barcolor"></span>
+            <span class="icon-bar barcolor"></span>
+            <span class="icon-bar barcolor"></span>
         </button>
     </div> <!-- Fecha agrupamento MOBILE -->
     <div class="collapse navbar-collapse" id="defaultNavbar"> <!-- barra de navegação -->
