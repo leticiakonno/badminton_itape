@@ -41,8 +41,13 @@
         <hr>
         <?php include('historiaresumo.php'); ?>
         <br>
+
+    <!-- Historia -->
+        <a name="parceiros"></a>
+        <hr>
+        <?php include('parceiros_index.php'); ?>
+        <br>
     </div>
-    
 
     <aside class="sidebar-news">
      <!-- Notícias -->
