@@ -36,15 +36,16 @@
             <span class="visible-xs glyphicon glyphicon-eye-open"></span>
         </a>
 
-        <!-- Historia -->
+        <!-- Técnicos -->
+         <a name="tecnicos"></a>
+         <hr>
+         <?php include('tecnicos_geral_inicio.php');?>
+         <br>
+
+         <!-- Historia -->
         <a name="historia"></a>
         <hr>
         <?php include('historiaresumo.php'); ?>
-        <br>
-    <!-- Parceiros -->
-        <a name="parceiros"></a>
-        <hr>
-        <?php include('parceiros_index.php'); ?>
         <br>
     </div>
 
