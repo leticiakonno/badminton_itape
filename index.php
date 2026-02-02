@@ -39,7 +39,7 @@
         <!-- Técnicos -->
          <a name="tecnicos"></a>
          <hr>
-         <?php include('tecnicos_geral.php');?>
+         <?php include('tecnicos_geral_inicio.php');?>
          <br>
 
          <!-- Historia -->
