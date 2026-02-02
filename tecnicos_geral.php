@@ -15,23 +15,9 @@ $row        =   $lista->fetch_assoc();
 $totalRows  =   ($lista)->num_rows;
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Técnicos</title>
-    <!-- não esquecer de comentar o JS e CSS para não dar conflito no index -->
-    <!-- Link CSS do Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"> 
-    <!-- Link para CSS Específico -->
-    <link rel="stylesheet" href="css/meu_estilo.css">
-</head> 
 <body class="fundofixo fontetabela">
-<?php include('menu_publico.php'); ?>
-
-    <main>
-    <h2 class="fundoatletas categoriageral text-center titulo"><strong>Conheça os Técnicos:</strong></h2>
+    <main class="container">
+    <h2 class="fundoatletas categoriageral text-center titulo"><strong>TÉCNICOS</strong></h2>
     <div class="container">
     <br>
         <!-- abre thumbnail -->
@@ -72,16 +58,6 @@ $totalRows  =   ($lista)->num_rows;
         <?php }while($row=$lista->fetch_assoc()); ?>
     </div> <!-- fecha div container -->
 </main>
-
-<footer>
-    <?php include('rodape.php'); ?>
-</footer>
-
-
-<!-- não esquecer de comentar o JS e CSS para não dar conflito no index -->
-<!-- Link arquivos Bootstrap js-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>  
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>
