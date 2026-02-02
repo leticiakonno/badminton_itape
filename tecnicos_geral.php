@@ -73,6 +73,7 @@ $totalRows  =   ($lista)->num_rows;
         <?php }while($row=$lista->fetch_assoc()); ?>
     </div> <!-- fecha div container -->
 </main>
+<br>
 <!-- não esquecer de comentar o JS e CSS para não dar conflito no index -->
 <!-- Link arquivos Bootstrap js-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
