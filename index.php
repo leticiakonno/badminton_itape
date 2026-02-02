@@ -42,7 +42,7 @@
         <?php include('historiaresumo.php'); ?>
         <br>
 
-    <!-- Historia -->
+    <!-- Parceiros -->
         <a name="parceiros"></a>
         <hr>
         <?php include('parceiros_index.php'); ?>
