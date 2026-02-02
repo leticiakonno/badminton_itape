@@ -31,8 +31,9 @@ $totalRows  =   ($lista)->num_rows;
                <div>
                    <div>
                     <img src="imagens/parceiros_index.png" 
-                    style="display:inline-block">
+                    style="width: 200px; height: 200px;">
             
                </div>
+        </main>
 </body>
 </html>

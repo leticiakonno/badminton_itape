@@ -41,7 +41,6 @@
         <hr>
         <?php include('historiaresumo.php'); ?>
         <br>
-
     <!-- Parceiros -->
         <a name="parceiros"></a>
         <hr>
@@ -54,7 +53,11 @@
     <a name="noticias" ></a>
     <hr>
     <?php include ('noticias_geral.php')?>
+
+<br>
+
     </aside>
+    
 </main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
