@@ -3,12 +3,25 @@
 include("../Connections/conn_atletas.php");
 
 // Variáveis Globais
-$tabela         =   "tbatletas";
-$campo_filtro   =   "id_atleta";
+$tabela         =   'tbatletas';
+$campo_filtro   =   'id_atleta';
 
 if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
     // Selecionar o banco de dados (USE)
     mysqli_select_db($conn_atletas,$database_conn);
+
+       // Receber os dados do formulário
+    // Organizar os campos na mesma ordem
+    $id_categoria_atleta    =   $_POST['id_categoria_atleta'];
+    $nome_atleta            =   $_POST['nome_atleta'];
+    $data_nas_atleta        =   $_POST['data_nas_atleta'];
+    $data_cad_atleta        =   $_POST['data_cad_atleta'];
+    $descri_atleta          =   $_POST['descri_atleta'];
+    $img_atleta             =   $nome_img;
+    $destaque_atleta        =   $_POST['destaque_atleta'];
+
+    // Campo para filtrar o registro (WHERE)
+    $filtro_update      =   $_POST['id_atleta'];
 
     // Guardar o nome da imagem no banco e o arquivo no diretório
     if($_FILES['img_atleta']['name']){
@@ -20,18 +33,7 @@ if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
         $nome_img=$_POST['img_atleta_atual'];
     };
 
-    // Receber os dados do formulário
-    // Organizar os campos na mesma ordem
-    $id_categoria_atleta    =   $_POST['id_categoria_atleta'];
-    $nome_atleta            =   $_POST['nome_atleta'];
-    $data_nas_atleta        =   $_POST['data_nas_atleta'];
-    $data_cad_atleta        =   $_POST['data_cad_atleta'];
-    $descri_atleta          =   $_POST['descri_produto'];
-    $img_atleta             =   $nome_img;
-    $destaque_atleta        =   $_POST['destaque_atleta'];
-
-    // Campo para filtrar o registro (WHERE)
-    $filtro_update      =   $_POST['id_atleta'];
+ 
 
     // Consulta SQL para ATUALIZAÇÃO dos dados
     $updateSQL  =   "
