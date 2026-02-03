@@ -57,11 +57,25 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                 </a>
             </li>
             <li><a class="navbartext" href="../atletas_destaque.php">DESTAQUES</a></li>
-            <li><a class="navbartext" href="../atletas_geral.php">ATLETAS</a></li>
-            <li><a class="navbartext" href="../tecnicos_geral.php">TÉCNICOS</a></li>
             <li class="dropdown">
-                <a 
-                    href="atletas_categorias.php"
+                <a href="#"
+                   class="dropdown-toggle navbartext" 
+                   data-toggle="dropdown" 
+                   role="button" 
+                   aria-haspopup="true" 
+                   aria-expanded="false"
+                >
+                EQUIPE 
+                <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="navbartext" href="../tecnicos_geral.php">Técnicos</a></li>
+                    <li><a class="navbartext" href="../atletas_geral.php">Atletas</a></li>
+                </ul>
+                </li>
+            <li class="dropdown">
+                <a z
                     class="dropdown-toggle navbartext"
                     data-toggle="dropdown"
                     role="button"
@@ -78,7 +92,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                     </li>
                     <?php do{ ?> <!-- abre estrutura de repetição -->
                         <li>
-                            <a href="atletas_por_categoria.php?id_categoria=<?php echo $row_menu['id_categoria']; ?>">
+                            <a href="../atletas_por_categoria.php?id_categoria=<?php echo $row_menu['id_categoria']; ?>">
                                 <?php echo $row_menu['nome_categoria']; ?>
                             </a>
                         </li>
