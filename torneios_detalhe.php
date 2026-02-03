@@ -61,7 +61,7 @@ if($totalRows == 0) {
                 src="imagens/torneios/<?php echo $row['img_torneio']; ?>" 
                 alt=""
                 class="img-rounded"
-                style="height: 40em;" 
+                style="height: 20em;" 
             >                                    
             <div class="caption text-left">
                 <h3 class="text-danger titulo">
