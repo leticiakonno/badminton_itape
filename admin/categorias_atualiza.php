@@ -11,42 +11,51 @@ if($_POST){
     // Selecionar o banco de dados (USE)
     mysqli_select_db($conn_atletas,$database_conn);
 
-     // Guardar o nome da imagem no banco e o arquivo no diretório
-     if($_FILES['img_categoria']['name']){
-        $nome_img   =   $_FILES['img_categoria']['name'];
-        $tmp_img    =   $_FILES['img_categoria']['tmp_name'];
-        $dir_img    =   "../imagens/categorias/".$nome_img;
-        move_uploaded_file($tmp_img,$dir_img);
-    }else{
-        $nome_img=$_POST['img_categoria_atual'];
-    };
-
     // Receber os dados do formulário
     // Organizar os campos na mesma ordem
     $nome_categoria            =   $_POST['nome_categoria'];
     $descri_categoria          =   $_POST['descri_categoria'];
-    $img_categoria             =   $nome_img;
 
     // Campo para filtrar o registro (WHERE)
     $filtro_update      =   $_POST['id_categoria'];
+
+    
+     // *** BUSCAR FOTO ATUAL ***
+    $consulta_atual = "SELECT img_categoria FROM $tabela WHERE $campo_filtro = '$filtro_update'";
+    $resultado_atual = $conn_atletas->query($consulta_atual);
+    $dados_atual = $resultado_atual->fetch_assoc();
+    $img_categoria = $dados_atual['img_categoria']; // Mantém foto atual
+
+    // Guardar o nome da imagem no banco e o arquivo no diretório
+    if(!empty($_FILES['img_categoria']['name']))   {
+        $nomeArquivo = time() . "_" . $_FILES['img_categoria']['name'];
+        $tempArquivo = $_FILES['img_categoria']['tmp_name'];
+        
+        // Criar pasta se não existir
+        if (!is_dir('../imagens/categorias/')) {
+            mkdir('../imagens/categorias/', 0777, true);
+        }
+        
+        $destino = "../imagens/categorias/" . $nomeArquivo;
+        move_uploaded_file($tempArquivo, $destino);
+        
+        $img_categoria = $nomeArquivo; // Atualiza com nova foto
+    }
 
     // Consulta SQL para ATUALIZAÇÃO dos dados
     $updateSQL  =   "
                     UPDATE ".$tabela."
                         SET  nome_categoria         =   '".$nome_categoria."',
                             descri_categoria       =   '".$descri_categoria."',
-                            img_categoria          =   '".$img_categoria."
+                            img_categoria          =   '".$img_categoria."'
                     WHERE ".$campo_filtro." =   '".$filtro_update."';
                     ";
     $resultado  =   $conn_atletas->query($updateSQL);
 
     // Após a ação a página será redirecionada
     $destino    =   "categorias_lista.php";
-    if(mysqli_insert_id($conn_atletas)){
         header("Location: $destino");
-    }else{
-        header("Location: $destino");
-    };
+        exit;
 };
 
 // Consulta para trazer e filtrar os dados

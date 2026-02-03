@@ -17,24 +17,33 @@ if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
     $data_nas_atleta        =   $_POST['data_nas_atleta'];
     $data_cad_atleta        =   $_POST['data_cad_atleta'];
     $descri_atleta          =   $_POST['descri_atleta'];
-    $img_atleta             =   $nome_img;
     $destaque_atleta        =   $_POST['destaque_atleta'];
 
     // Campo para filtrar o registro (WHERE)
     $filtro_update      =   $_POST['id_atleta'];
 
+     // *** BUSCAR FOTO ATUAL ***
+    $consulta_atual = "SELECT img_atleta FROM $tabela WHERE $campo_filtro = '$filtro_update'";
+    $resultado_atual = $conn_atletas->query($consulta_atual);
+    $dados_atual = $resultado_atual->fetch_assoc();
+    $img_atleta = $dados_atual['img_atleta']; // Mantém foto atual
+
     // Guardar o nome da imagem no banco e o arquivo no diretório
-    if($_FILES['img_atleta']['name']){
-        $nome_img   =   $_FILES['img_atleta']['name'];
-        $tmp_img    =   $_FILES['img_atleta']['tmp_name'];
-        $dir_img    =   "../imagens/".$nome_img;
-        move_uploaded_file($tmp_img,$dir_img);
-    }else{
-        $nome_img=$_POST['img_atleta_atual'];
-    };
-
+    if(!empty($_FILES['img_atleta']['name']))   {
+        $nomeArquivo = time() . "_" . $_FILES['img_atleta']['name'];
+        $tempArquivo = $_FILES['img_atleta']['tmp_name'];
+        
+        // Criar pasta se não existir
+        if (!is_dir('../imagens/atletas/')) {
+            mkdir('../imagens/atletas/', 0777, true);
+        }
+        
+        $destino = "../imagens/atletas/" . $nomeArquivo;
+        move_uploaded_file($tempArquivo, $destino);
+        
+        $foto_usuario = $nomeArquivo; // Atualiza com nova foto
+    }
  
-
     // Consulta SQL para ATUALIZAÇÃO dos dados
     $updateSQL  =   "
                     UPDATE ".$tabela."
@@ -51,11 +60,8 @@ if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
 
     // Após a ação a página será redirecionada
     $destino    =   "atletas_lista.php";
-    if(mysqli_insert_id($conn_atletas)){
         header("Location: $destino");
-    }else{
-        header("Location: $destino");
-    };
+        exit;
 };
 
 // Consulta para trazer e filtrar os dados
@@ -135,8 +141,8 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                             </span>
                             <!-- select>option*2 -->
                             <select 
-                                name="id_tipo_produto" 
-                                id="id_tipo_produto"
+                                name="id_categoria_atleta" 
+                                id="id_categoria_atleta"
                                 class="form-control"
                                 required
                             >

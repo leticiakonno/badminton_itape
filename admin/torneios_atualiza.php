@@ -5,71 +5,65 @@ include("../Connections/conn_atletas.php");
 $tabela = "tbtorneios";
 $campo_filtro = "id_torneio";
 
-// 1) VALIDAR SE TEM ID NA URL
-if (!isset($_GET['id_torneio'])) {
-    die("Erro: ID do torneio não informado!");
-}
+if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
+    // Selecionar o banco de dados (USE)
+    mysqli_select_db($conn_atletas,$database_conn);
 
-$id = intval($_GET['id_torneio']);
 
-mysqli_select_db($conn_atletas, $database_conn);
+$tipo_torneio       =   $_POST['tipo_torneio'];
+$descri_torneio     =   $_POST['descri_torneio'];
 
-// 2) CARREGAR DADOS DO TORNEIO
-$consulta = "
-    SELECT *
-    FROM $tabela
-    WHERE $campo_filtro = $id
-";
+$filtro_update      =   $_POST['id_torneio'];
 
-$lista = $conn_atletas->query($consulta);
-$row = $lista->fetch_assoc();
+   // *** BUSCAR FOTO ATUAL ***
+    $consulta_atual = "SELECT img_torneio FROM $tabela WHERE $campo_filtro = '$filtro_update'";
+    $resultado_atual = $conn_atletas->query($consulta_atual);
+    $dados_atual = $resultado_atual->fetch_assoc();
+    $img_torneio = $dados_atual['img_torneio']; // Mantém foto atual
 
-// Se não achou o torneio
-if (!$row) {
-    die("Erro: Torneio não encontrado.");
-}
-
-// 3) PROCESSAR UPDATE QUANDO ENVIAR O FORMULÁRIO
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    $tipo_torneio   = $_POST['tipo_torneio'];
-    $descri_torneio = $_POST['descri_torneio'];
-    $img_torneio    = $row['img_torneio']; // mantém foto atual
-
-    // Se enviou nova imagem
-    if (!empty($_FILES['img_torneio']['name'])) {
-
+    // Guardar o nome da imagem no banco e o arquivo no diretório
+    if(!empty($_FILES['img_torneio']['name']))   {
         $nomeArquivo = time() . "_" . $_FILES['img_torneio']['name'];
         $tempArquivo = $_FILES['img_torneio']['tmp_name'];
-        $destino     = "../imagens/" . $nomeArquivo;
-
+        
+        // Criar pasta se não existir
+        if (!is_dir('../imagens/torneio/')) {
+            mkdir('../imagens/torneio/', 0777, true);
+        }
+        
+        $destino = "../imagens/torneio/" . $nomeArquivo;
         move_uploaded_file($tempArquivo, $destino);
-
-        $img_torneio = $nomeArquivo;
+        
+        $img_torneio = $nomeArquivo; // Atualiza com nova foto
     }
 
-    // UPDATE
-    $updateSQL = "
-        UPDATE $tabela SET
-            tipo_torneio = '$tipo_torneio',
-            descri_torneio = '$descri_torneio',
-            img_torneio = '$img_torneio'
-        WHERE $campo_filtro = $id
-    ";
+    // Consulta SQL para ATUALIZAÇÃO dos dados
+    $updateSQL  =   "
+                    UPDATE ".$tabela."
+                        SET tipo_torneio =   '".$tipo_torneio."',
+                            descri_torneio         =   '".$descri_torneio."',
+                            img_torneio          =   '".$img_torneio."'
+                    WHERE ".$campo_filtro." =   '".$filtro_update."';
+                    ";
+    $resultado  =   $conn_atletas->query($updateSQL);
 
-    // DEBUG - REMOVA DEPOIS
-    // echo "<pre>SQL: $updateSQL</pre>";
-    // exit();
-
-    $resultado = $conn_atletas->query($updateSQL);
-
-    if ($resultado) {
-        header("Location: torneios_lista.php");
+    // Após a ação a página será redirecionada
+    $destino    =   "torneios_lista.php";
+        header("Location: $destino");
         exit;
-    } else {
-        echo "Erro ao atualizar: " . $conn_atletas->error;
-    }
-}
+};
+
+// Definir o USE do banco de dados;
+mysqli_select_db($conn_atletas,$database_conn);
+$filtro_select    =   $_GET['id_torneio'];
+$consulta           =   "
+                    SELECT *
+                    FROM   ".$tabela."
+                    WHERE ".$campo_filtro."=".$filtro_select.";
+                    ";
+$lista          =   $conn_atletas->query($consulta);
+$row            =   $lista->fetch_assoc();
+$totalRows      =   ($lista)->num_rows;
 
 ?>
 <!DOCTYPE html>
