@@ -32,7 +32,7 @@ $totalRows  =   ($lista)->num_rows;
 <?php include('menu_publico.php'); ?> 
 
 <main class="container">
-    <h2 class="fundoatletas  text-center titulo"><strong>CONHEÇA OS ATLETAS:</strong></h2>
+    <h2 class="fundoatletas  text-center titulo"><strong>ATLETAS</strong></h2>
     <div class="container">
     <br>
         <!-- abre thumbnail -->
