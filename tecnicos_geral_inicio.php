@@ -17,13 +17,14 @@ $totalRows  =   ($lista)->num_rows;
 
 <body class="fundofixo fontetabela">
     <main class="container">
-    <h2 class="fundoatletas categoriageral text-center titulo"><strong>TÉCNICOS</strong></h2>
-    <div class="container">
+    <h2 class="fundoatletas titulo text-center"><strong>TÉCNICOS</strong></h2>
+    <br>
+    <div class="row">
     <br>
         <!-- abre thumbnail -->
         <?php do{ ?>
         <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
-            <div class="thumbnail" style="width: 36rem;">
+            <div class="thumbnail">
                 <a 
                 href="tecnicos_detalhe.php?id_tecnico=<?php echo $row['id_tecnico']; ?>" 
                 >
@@ -34,7 +35,7 @@ $totalRows  =   ($lista)->num_rows;
                         style="height: 20em;"
                     >
                 </a>
-                <div class="caption text-center">
+                <div class="caption text-left">
                     <h5 class="text" style="font-size: 25px;"><strong><?php echo $row['nome_tecnico']; ?></strong></h5>
                     <p class="texticon">
                     <strong><?php echo $row['nivel_tecnico']; ?></strong>
@@ -42,13 +43,13 @@ $totalRows  =   ($lista)->num_rows;
                     <p class="text-left">
                         <?php echo mb_strimwidth ($row['descri_tecnico'],0,45,"...");?>
                     </p>
-                    <p>
+                    <p class="text-right">
                         <a 
                             href="tecnicos_detalhe.php?id_tecnico=<?php echo $row['id_tecnico']; ?>" 
                             class="btn btntotal" 
                             role="button"
                         >
-                            <span class="hidden-xs">Clique para saber mais...</span>
+                            <span class="hidden-xs">Saiba mais...</span>
                             <span class="visible-xs glyphicon glyphicon-eye-open"></span>
                         </a>
                     </p>

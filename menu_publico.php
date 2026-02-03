@@ -44,8 +44,25 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                 </a>
             </li>
             <li><a class="navbartext" href="atletas_destaque.php">DESTAQUES</a></li>
-            <li><a class="navbartext" href="atletas_geral.php">ATLETAS</a></li>
-            <li><a class="navbartext" href="tecnicos_geral.php">TÉCNICOS</a></li>
+
+            <li class="dropdown">
+                <a href="#"
+                   class="dropdown-toggle navbartext" 
+                   data-toggle="dropdown" 
+                   role="button" 
+                   aria-haspopup="true" 
+                   aria-expanded="false"
+                >
+                EQUIPE 
+                <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="tecnicos_geral.php">Técnicos</a></li>
+                    <li><a href="atletas_geral.php">Atletas</a></li>
+                </ul>
+                </li>
+
             <li class="dropdown">
                 <a 
                     href="atletas_por_categoria.php"

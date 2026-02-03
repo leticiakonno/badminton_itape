@@ -19,7 +19,7 @@ $row_destaque   =   $lista_destaque->fetch_assoc();
 $totalRows_destaque      =   ($lista_destaque)->num_rows;
 ?>
 
-<body class="fundofixo">
+<body class="fundofixo fontetabela">
 <main class="container">
 <i><h2 class="fundoatletas titulo text-center"><strong>DESTAQUES</strong></h2></i>
 <br>

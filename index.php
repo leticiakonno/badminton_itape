@@ -16,7 +16,7 @@
     <!-- CARROUSSEL -->
     <?php include('carroussel.php'); ?>
 
-    <main class="containerpri tabela-branca container-fluid">
+    <main class="containerpri fundo-index container-fluid">
     <div class="principal">
     <!-- Torneios -->
     <a name="torneios" ></a>
@@ -40,7 +40,6 @@
          <a name="tecnicos"></a>
          <hr>
          <?php include('tecnicos_geral_inicio.php');?>
-         <br>
 
          <!-- Historia -->
         <a name="historia"></a>
@@ -54,11 +53,8 @@
     <a name="noticias" ></a>
     <hr>
     <?php include ('noticias_geral.php')?>
-
-<br>
-
-    </aside>
-    
+    <br>
+    </aside>   
 </main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
