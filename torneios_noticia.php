@@ -1,92 +1,113 @@
-<?php 
-// Incluir o arquivo e fazer a conexão
+<?php
 include("Connections/conn_atletas.php");
 
-// Verificar se o parâmetro foi passado
-if(!isset($_GET['id_torneio']) || empty($_GET['id_torneio'])) {
-    die("ID do torneio não especificado!");
+/* Verifica se veio a categoria */
+if (!isset($_GET['categoria']) || empty(trim($_GET['categoria']))) {
+    header("Location: torneios_geral.php");
+    exit();
 }
 
-$tabela         =   "tbtorneios";
-$campo_filtro   =   "id_torneio";
-$ordenar_por    =   "tipo_torneio ASC";
-$filtro_select  =   $_GET['id_torneio'];
-$consulta       =   "
-                    SELECT   *
-                    FROM     ".$tabela."
-                    WHERE    ".$campo_filtro."='".$filtro_select."'
-                    ORDER BY ".$ordenar_por.";
-                    ";
-$lista      =   $conn_atletas->query($consulta);
-$row        =   $lista->fetch_assoc();
-$totalRows  =   ($lista)->num_rows;
+/* Recebe e protege */
+$categoria = trim($_GET['categoria']);
+$categoria_safe = $conn_atletas->real_escape_string($categoria);
 
-// Verificar se encontrou resultados
-if($totalRows == 0) {
-    die("Torneio não encontrado!");
-}
+/* Consulta */
+$tabela = "tb_torneios_noticias";
+$ordenar_por = "data_publicacao DESC";
+
+$consulta = "
+    SELECT *
+    FROM $tabela
+    WHERE categoria = '$categoria_safe'
+    ORDER BY $ordenar_por
+";
+
+$lista = $conn_atletas->query($consulta);
+$row = $lista->fetch_assoc();
+$totalRows = $lista->num_rows;
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torneios Detalhes</title>
-    <!-- Link CSS do Bootstrap -->
+    <title>Notícias do Torneio</title>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundo2 fontetabela">
-<?php include('menu_publico.php'); ?>
 
+<body class="fundofixo fontetabela">
+
+<?php include('menu_publico.php'); ?>
 
 <main class="container">
 
-<h2 class="breadcrumb alert-danger fundoatletas titulo">
+<?php if ($totalRows == 0) { ?>
+    <h2 class="breadcrumb alert-warning fundoatletas titulo text-center">
+        Nenhuma notícia encontrada para esta categoria
+    </h2>
+<?php } ?>
+
+<?php if ($totalRows > 0) { ?>
+<h2 class="breadcrumb alert-success fundoatletas titulo">
     <a href="javascript:window.history.go(-1)" class="btn btntotal">
-    <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
-    <!-- CORREÇÃO: A tabela tbtorneios não tem 'nome_tecnico', use 'tipo_torneio' -->
-    <strong><?php echo $row['tipo_torneio']; ?></strong>
+    Notícias da categoria:
+    <strong><?= htmlspecialchars($categoria); ?></strong>
+    <span class="badge"><?= $totalRows; ?></span>
 </h2>
-<div class="row"> <!-- div row mantém os elementos na linha -->
 
-    <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
-     <?php do{ ?> <!-- abre estrutura de repetição -->
-    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"> <!-- dimensionamento -->
-        <div class="thumbnail">            
-            <img 
-                src="imagens/torneios/<?php echo $row['img_torneio']; ?>" 
-                alt=""
-                class="img-rounded"
-                style="height: 20em;" 
-            >                                    
-            <div class="caption text-left">
-                <h3 class="text-danger titulo">
-                    <strong><?php echo $row['tipo_torneio']; ?></strong>
-                </h3>
-                
-                <p class="text fontedestaque">
-                    <strong><?php echo $row['descri_torneio']; ?></strong>
+<div class="row">
+
+<?php do { ?>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="thumbnail">
+
+            <img
+                src="<?= $row['imagem']; ?>"
+                alt="<?= $row['titulo']; ?>"
+                class="img-responsive img-rounded"
+                style="height:200px; width:100%; object-fit:cover;"
+            >
+
+            <div class="caption text-center">
+                <h4 class="text-primary">
+                    <strong><?= $row['titulo']; ?></strong>
+                </h4>
+
+                <p class="text-left" style="min-height:80px;">
+                    <?= mb_strimwidth($row['resumo'], 0, 100, "..."); ?>
                 </p>
-                                                                                          
-            </div>
-        </div> <!-- fecha thumbnail -->
-    </div> <!-- fecha dimensionamento -->
-    <?php }while($row=$lista->fetch_assoc()); ?> <!-- fecha estrutura de repetição -->
-    <!-- Fecha thumbnail/card -->
 
-</div> <!-- fecha row -->
+                <p>
+                    <a
+                        href="torneios_noticia_detalhe.php?id=<?= $row['id_noticia_torneio']; ?>"
+                        class="btn btntotal btn-block"
+                    >
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                        Ler notícia
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+<?php } while ($row = $lista->fetch_assoc()); ?>
+
+</div>
+<?php } ?>
 
 </main>
+
 <footer>
     <?php include('rodape.php'); ?>
 </footer>
-<!-- Link arquivos Bootstrap js -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
 <?php mysqli_free_result($lista); ?>
