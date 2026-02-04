@@ -46,7 +46,7 @@ $totalRows  =   ($lista)->num_rows;
         <div class="thumbnail">
             <br>
             <img 
-                src="imagens/<?php echo $row['img_noticia']; ?>" 
+                src="imagens/noticias/<?php echo $row['img_noticia']; ?>" 
                 alt=""
                 class="img-rounded"
                 width="800px"

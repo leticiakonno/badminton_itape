@@ -4,11 +4,12 @@ include("Connections/conn_atletas.php");
 
 // Consulta para trazer o banco de dados e SE necessário filtrar
 $tabela         =   "tbnoticias";
-$ordenar_por    =   "id_noticia ASC";
+$ordenar_por    =   "id_noticia DESC";
 $consulta       =   "
                     SELECT   *
                     FROM     ".$tabela."
-                    ORDER BY ".$ordenar_por.";
+                    ORDER BY ".$ordenar_por."
+                    LIMIT 3;
                     ";
 $lista      =   $conn_atletas->query($consulta);
 $row        =   $lista->fetch_assoc();
@@ -31,7 +32,7 @@ $totalRows  =   ($lista)->num_rows;
                     href="noticias_detalhe.php?id_noticia=<?php echo $row['id_noticia']; ?>" 
                     >
                         <img 
-                            src="imagens/<?php echo $row['img_noticia']; ?>" 
+                            src="imagens/noticias/<?php echo $row['img_noticia']; ?>" 
                             alt="<?php echo $row['titulo_noticia']; ?>"
                             class="img-responsive img-rounded"
                             style="height: 250px; width: 150%; object-fit: cover;"
