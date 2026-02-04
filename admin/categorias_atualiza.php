@@ -151,8 +151,7 @@ mysqli_select_db($conn_atletas,$database_conn);
                                 placeholder="Digite a descrição da categoria."
                                 cols="30"
                                 rows="8"
-                                value="<?php echo $row['descri_categoria']; ?>"
-                            >
+                            ><?php echo $row['descri_categoria']; ?>
                             </textarea>
                         </div> <!-- fecha input-group -->
                         <!-- fecha textarea descri_categoria -->  

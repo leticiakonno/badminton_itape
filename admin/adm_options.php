@@ -231,12 +231,12 @@
                  </div> <!-- fecha btn-group-justified -->
                  <div class="btn-group btn-group-justified" role="group">
                     <div class="btn-group btnadm"> <!-- botão Listar -->
-                        <a href="tecnicos_lista.php">
+                        <a href="noticias_lista.php">
                             <button class="btn btntotal">Listar</button>
                         </a>
                     </div> <!-- fecha btn-group Listar -->
                     <div class="btn-group"> <!-- botão Inserir -->
-                        <a href="tecnicos_insere.php">
+                        <a href="noticias_insere.php">
                             <button class="btn btntotal">Inserir</button>
                         </a>
                     </div> <!-- fecha btn-group Inserir -->
