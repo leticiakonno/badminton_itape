@@ -12,6 +12,7 @@ if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
     $titulo   = $_POST['titulo'];
     $resumo   = $_POST['resumo'];
     $conteudo = $_POST['conteudo'];
+    $categoria = $_POST['categoria'];
     $status   = $_POST['status'];
     
     $filtro_update = $_POST['id_noticia_torneio'];
@@ -50,6 +51,7 @@ if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
                         SET titulo =   '".$titulo."',
                             resumo =   '".$resumo."',
                             conteudo = '".$conteudo."',
+                            categoria = '".$categoria."',
                             imagem =   '".$imagem."',
                             status =   '".$status."'
                     WHERE ".$campo_filtro." =   '".$filtro_update."';
@@ -137,6 +139,22 @@ $totalRows      =   ($lista)->num_rows;
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </span>
                                 <textarea name="conteudo" class="form-control" rows="6" required><?php echo $row['conteudo']; ?></textarea>
+                            </div>
+                            <br>
+
+                            <!-- Categoria -->
+                            <label>Categoria:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-tags"></span>
+                                </span>
+                                <select name="categoria" class="form-control" required>
+                                    <option value="">Selecione</option>
+                                    <option value="regional" <?php echo ($row['categoria'] == 'regional') ? 'selected' : ''; ?>>Regional</option>
+                                    <option value="estadual" <?php echo ($row['categoria'] == 'estadual') ? 'selected' : ''; ?>>Estadual</option>
+                                    <option value="nacional" <?php echo ($row['categoria'] == 'nacional') ? 'selected' : ''; ?>>Nacional</option>
+                                    <option value="internacional" <?php echo ($row['categoria'] == 'internacional') ? 'selected' : ''; ?>>Internacional</option>
+                                </select>
                             </div>
                             <br>
 

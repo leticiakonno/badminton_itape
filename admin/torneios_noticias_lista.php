@@ -43,6 +43,7 @@ $totalRows  =   ($lista)->num_rows;
                 <tr> <!--linha da tabela-->
                     <th class="hidden">ID</th> <!--célula do cabeçalho-->
                     <th>TÍTULO</th>
+                    <th>CATEGORIA</th>
                     <th>RESUMO</th>
                     <th>IMAGEM</th>
                     <th>STATUS</th>
@@ -67,6 +68,7 @@ $totalRows  =   ($lista)->num_rows;
                     <strong><?php echo substr($row['titulo'], 0, 50); ?></strong><br>
                     <small class="text-muted"><?php echo strlen($row['titulo']) > 50 ? '...' : ''; ?></small>
                 </td>
+                <td><?php echo ucfirst($row['categoria']); ?></td>
                 <td><?php echo substr($row['resumo'], 0, 80) . (strlen($row['resumo']) > 80 ? '...' : ''); ?></td>
                  <td>
                     <?php if(!empty($row['imagem'])) { 
@@ -116,7 +118,7 @@ $totalRows  =   ($lista)->num_rows;
             </tr>
             <?php } while($row = $lista->fetch_assoc()); } else { ?>
             <tr>
-                <td colspan="7" class="text-center">Nenhuma notícia de torneio encontrada.</td>
+                <td colspan="8" class="text-center">Nenhuma notícia de torneio encontrada.</td>
             </tr>
             <?php } ?>
         </tbody>
