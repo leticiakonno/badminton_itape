@@ -3,7 +3,7 @@
 include("Connections/conn_atletas.php");
 
 // Consulta para trazer o banco de dados e SE necessário filtrar
-$tabela         =   "tbtorneios";
+$tabela         =   "tbtorneios";  // ← TABELA DE TIPOS DE TORNEIOS
 $ordenar_por    =   "id_torneio ASC";
 $consulta       =   "
                     SELECT   *
@@ -43,9 +43,13 @@ $totalRows  =   ($lista)->num_rows;
                             <?php echo substr($row['descri_torneio'], 0, 100) . '...'; ?>
                         </p>
                         <p>
+                            <?php
+                            // Converter o tipo do torneio para minúsculo
+                            $categoria_param = strtolower($row['tipo_torneio']);
+                            ?>
                             <a 
-                                href="torneios_noticia.php?categoria=nacional" class="btn btn-danger"
-                                class="btn btntotal" 
+                                href="torneios_noticia.php?categoria=<?php echo $categoria_param; ?>" 
+                                class="btn btn-danger btntotal" 
                                 role="button"
                             >
                                 <span class="hidden-xs">Clique para saber mais...</span>

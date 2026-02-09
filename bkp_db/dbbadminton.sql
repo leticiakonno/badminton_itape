@@ -130,6 +130,32 @@
         (3,'Nacional', 'Torneio para os melhores atletas em território brasileiro na categoria.', 'nacional.png'),
         (4,'Internacional', 'Torneios de nível, Sulamericano, Panamericano e Mundial, abrange os melhores atletas do mundo.', 'internacional.png');
 
+    -- Estrutura para tabela tb_torneios_noticias
+    
+
+    CREATE TABLE tb_torneios_noticias (
+        id_noticia_torneio int(11) NOT NULL,
+        titulo varchar(255) NOT NULL,
+        resumo varchar(300) DEFAULT NULL,
+        conteudo text NOT NULL,
+        categoria varchar(20) DEFAULT NULL,
+        imagem varchar(255) DEFAULT NULL,
+        data_publicacao datetime DEFAULT current_timestamp(),
+        status enum('ativo','inativo') DEFAULT 'ativo'
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+    --
+    -- Despejando dados para a tabela `tb_torneios_noticias`
+    --
+
+    INSERT INTO tb_torneios_noticias (id_noticia_torneio, titulo, resumo, conteudo, categoria, imagem, data_publicacao, status) VALUES
+    (3, 'NACIONAL', 'edsasdsd', 'dfssdsdsd', 'nacional', '', '2026-02-04 19:24:49', 'ativo'),
+    (4, 'REGIONAL TESTE ', 'BLABLABLA', 'DASDDSDAASD', 'regional', '', '2026-02-04 19:40:25', 'ativo'),
+    (5, 'ESTADUAL TESTE ', 'BLABALA', 'DEFDSDF', 'estadual', '', '2026-02-04 19:40:54', 'ativo'),
+    (6, 'INTERNACIONAL TESTE', 'DFSDFDSDFSSSDF', 'DSDSASDASASDASD', 'internacional', '', '2026-02-04 19:41:15', 'ativo'),
+    (7, 'noticia regional', 'jnfkjdsfjhjs', 'dssdffd', 'estadual', 'CEFFAEA2-90C4-4ADF-9C3A-583FB28AC6CF.png', '2026-02-09 19:39:43', 'ativo');
+
+
     -- Estrutura da tabela tbusuario
     CREATE TABLE tbusuarios (
         id_usuario INT(11) NOT NULL,
