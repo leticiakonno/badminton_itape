@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Refresh" content="15;URL=../index.php">
+    <meta http-equiv="Refresh" content="15000;URL=../index.php">
     <title>Invasor</title>
     <script src="https://kit.fontawesome.com/d03c290dd3.js" crossorigin="anonymous"></script>
     <!-- Link CSS do Bootstrap -->
@@ -15,31 +15,32 @@
     <main class="containeir">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                <h1 class="breadcrumb text-danger text-center">Atenção!</h1>
+                <h1 class="breadcrumb invasortitulo text-center">Atenção!</h1>
                 <div class="thumbnail text-center">
-                    <span class="fa-stack fa-7x">
+                    <span class="fa-stack fa-7x" style="margin-top: 20px;">
                         <i class="fas fa-user-secret fa-stack-1x"></i>
-                        <i class="fas fa-ban fa-stack-2x text-danger"></i>
+                        <i class="fas fa-ban fa-stack-2x iconinvasor"></i>
                     </span>
                     <br><br>
-                    <div class="alert alert-danger" role="alert">
-                        <h4>
+                    <div class="alert" role="alert">
+                        <h4 class="textousuario">
                             <i class="fas fa-spinner fa-pulse fa-lg"></i>
                             Usuário e/ou Senha Inválido
                         </h4>
+                        <br>
                         <p class="text-danger">
-                            <a href="login.php"class="btn btn-danger">
+                            <a href="login.php"class="btn btninvasor">
                                 <i class="fas fa-external-link-alt fa-rotate-270 fa-3x"></i>
                                 <br><br>
                                 Tentar <br> novamente
                             </a>
-                            <a href="../index.php"class="btn btn-success">
-                                <i class="fas fa-home fa-3x"></i>
+                            <a href="../index.php"class="btn btninvasor1">
+                                <i class="fas fa-person-shelter fa-3x"></i>
                                 <br><br>
                                 Voltar <br> Área Pública
                             </a>
                         </p>
-                            <small>
+                            <small class="textousuario">
                                 <br>
                                 Caso não faça uma escolha em 15 segundos será redirecionado automaticamente para a página inicial.
                             </small>
