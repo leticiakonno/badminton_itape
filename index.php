@@ -53,6 +53,11 @@
     <a name="noticias" ></a>
     <hr>
     <?php include ('noticias_geral.php')?>
+
+         <!-- Parceiros -->
+    <a name="parceiros" ></a>
+    <hr>
+    <?php include ('parceiros_geral_inicio.php')?>
     <br>
     </aside>   
 </main>

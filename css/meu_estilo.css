@@ -213,6 +213,16 @@ table td, table th {
     height: fit-content; /* Ajusta a altura conforme as notícias */
 }
 
+.sidebarparceiros{
+    flex: 1; /* Ocupa 25% da largura */
+    min-width: 280px;
+    background-color: #ffffff; /* Um cinza claro para destacar */
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #d90429; /* Uma borda com a cor do seu site */
+    height: fit-content; /* Ajusta a altura conforme as notícias */
+}
+
 /* Responsivo: Em celulares, a sidebar vai para baixo */
 @media (max-width: 768px) {
     .layout {
@@ -363,4 +373,12 @@ table td, table th {
 
   .fundo-index{
     background-color: rgba(255, 255, 255, 0.911);
+}
+
+/* Cria uma classe para thumbnails sem borda */
+.thumbnail-sem-borda{
+    border: none !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
