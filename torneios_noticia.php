@@ -12,13 +12,14 @@ $categoria = trim($_GET['categoria']);
 $categoria_safe = $conn_atletas->real_escape_string($categoria);
 
 /* Consulta */
-$tabela = "tb_torneios_noticias";
+$tabela = "tb_torneios_noticias";  // ← TABELA DE NOTÍCIAS DE TORNEIOS
 $ordenar_por = "data_publicacao DESC";
 
 $consulta = "
     SELECT *
     FROM $tabela
     WHERE categoria = '$categoria_safe'
+    AND status = 'ativo'
     ORDER BY $ordenar_por
 ";
 
@@ -26,7 +27,7 @@ $lista = $conn_atletas->query($consulta);
 $row = $lista->fetch_assoc();
 $totalRows = $lista->num_rows;
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -51,12 +52,12 @@ $totalRows = $lista->num_rows;
 
 <?php if ($totalRows > 0) { ?>
 <h2 class="breadcrumb alert-success fundoatletas titulo">
-    <a href="javascript:window.history.go(-1)" class="btn btntotal">
+    <a href="index.php" class="btn btntotal">
         <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
     Notícias da categoria:
-    <strong><?= htmlspecialchars($categoria); ?></strong>
-    <span class="badge"><?= $totalRows; ?></span>
+    <strong><?php echo htmlspecialchars(ucfirst($categoria)); ?></strong>
+    <span class="badge"><?php echo $totalRows; ?></span>
 </h2>
 
 <div class="row">
@@ -65,25 +66,38 @@ $totalRows = $lista->num_rows;
     <div class="col-sm-6 col-md-4 col-lg-3">
         <div class="thumbnail">
 
+            <?php 
+            if(!empty($row['imagem'])) { 
+                $imagem_path = $row['imagem'];
+                // Verificar se o caminho já contém o diretório
+                if (strpos($imagem_path, 'imagens/noticias/') === false && strpos($imagem_path, '../') === false) {
+                    $imagem_path = "imagens/noticias/" . $imagem_path;
+                }
+            ?>
             <img
-                src="<?= $row['imagem']; ?>"
-                alt="<?= $row['titulo']; ?>"
+                src="<?php echo $imagem_path; ?>"
+                alt="<?php echo htmlspecialchars($row['titulo']); ?>"
                 class="img-responsive img-rounded"
                 style="height:200px; width:100%; object-fit:cover;"
             >
+            <?php } else { ?>
+            <div class="text-center" style="height:200px; background-color:#f8f9fa; display:flex; align-items:center; justify-content:center;">
+                <span class="text-muted">Sem imagem</span>
+            </div>
+            <?php } ?>
 
             <div class="caption text-center">
                 <h4 class="text-primary">
-                    <strong><?= $row['titulo']; ?></strong>
+                    <strong><?php echo htmlspecialchars(substr($row['titulo'], 0, 60)); ?><?php echo strlen($row['titulo']) > 60 ? '...' : ''; ?></strong>
                 </h4>
 
                 <p class="text-left" style="min-height:80px;">
-                    <?= mb_strimwidth($row['resumo'], 0, 100, "..."); ?>
+                    <?php echo htmlspecialchars(mb_strimwidth($row['resumo'], 0, 100, "...")); ?>
                 </p>
 
                 <p>
                     <a
-                        href="torneios_noticia_detalhe.php?id=<?= $row['id_noticia_torneio']; ?>"
+                        href="torneios_noticias_detalhe.php?id=<?php echo $row['id_noticia_torneio']; ?>"
                         class="btn btntotal btn-block"
                     >
                         <span class="glyphicon glyphicon-eye-open"></span>
