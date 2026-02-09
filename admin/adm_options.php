@@ -212,6 +212,41 @@
         </div> <!-- fecha thumbnail -->
     </div> <!-- fecha dimensionamento -->
 
+      <!-- ADM TORNEIOS NOTÍCIAS   -->
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail fundoatletas ">
+            <img src="../imagens/noticias.png" width="200px" height="50px"  alt="">
+            <br>
+            <div class="fundoatletas">
+                <!-- botão principal -->
+                 <div class="btn-group btn-group-justified" role="group">
+                    <div class="btn-group">
+                        <button 
+                            class="btn btn-default disabled"
+                            style="cursor: default;"
+                        >
+                            <strong> TORNEIOS NOTÍCIAS</strong>
+                        </button>
+                    </div> <!-- fecha btn-group -->
+                 </div> <!-- fecha btn-group-justified -->
+                 <div class="btn-group btn-group-justified" role="group">
+                    <div class="btn-group btnadm"> <!-- botão Listar -->
+                        <a href="torneios_noticias_lista.php">
+                            <button class="btn btntotal">Listar</button>
+                        </a>
+                    </div> <!-- fecha btn-group Listar -->
+                    <div class="btn-group"> <!-- botão Inserir -->
+                        <a href="torneios_noticias_insere.php">
+                            <button class="btn btntotal">Inserir</button>
+                        </a>
+                    </div> <!-- fecha btn-group Inserir -->
+                 </div> <!-- fecha btn-group-justified -->
+            </div> <!-- fecha alert-warning -->
+        </div> <!-- fecha thumbnail -->
+    </div> <!-- fecha dimensionamento -->
+
+
+
         <!-- ADM NOTÍCIAS   -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas ">
