@@ -145,7 +145,7 @@
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
     --
-    -- Despejando dados para a tabela `tb_torneios_noticias`
+    -- Despejando dados para a tabela tb_torneios_noticias
     --
 
     INSERT INTO tb_torneios_noticias (id_noticia_torneio, titulo, resumo, conteudo, categoria, imagem, data_publicacao, status) VALUES
