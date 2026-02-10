@@ -56,6 +56,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                     <span class="glyphicon glyphicon-home"></span>
                 </a>
             </li>
+            <li class="active"><a class="navbartext" href="index.php">ADMIN</a></li>
             <li class="dropdown">
                 <a href="#"
                    class="dropdown-toggle navbartext" 
@@ -99,7 +100,6 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                     <!-- Fecha estrutura de repetição -->
                 </ul>
             </li> <!-- Fecha dropdown -->
-            <li><a class="navbartext" href="../formulario_envia.php">FALE CONOSCO</a></li>
             <li><a class="navbartext" href="../historia.php">HISTÓRIA</a></li>
               <li><a class="navbartext" href="../parceiros_geral.php">PARCEIROS</a></li>
             <!-- Form Busca -->
