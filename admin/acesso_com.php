@@ -1,5 +1,5 @@
 <?php 
-session_name("chuletaaa");
+session_name("badmintonnnn");
 
 if(!isset($_SESSION)){
     session_start();
