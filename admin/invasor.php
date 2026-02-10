@@ -15,7 +15,7 @@
     <main class="containeir">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                <h1 class="breadcrumb invasortitulo text-center">Atenção!</h1>
+                <h1 class="breadcrumb invasortitulo text-center" style="font-weight: bold;">ATENÇÃO!</h1>
                 <div class="thumbnail text-center">
                     <span class="fa-stack fa-7x" style="margin-top: 20px;">
                         <i class="fas fa-user-secret fa-stack-1x"></i>
