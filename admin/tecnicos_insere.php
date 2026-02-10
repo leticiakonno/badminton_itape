@@ -1,4 +1,8 @@
 <?php
+// Incluindo o sistema de identificação
+include("acesso_com.php");
+
+// Incluir arquivo e fazer conexão
 include("../Connections/conn_atletas.php");
 
 if($_POST){
