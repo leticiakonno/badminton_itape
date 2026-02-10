@@ -44,9 +44,9 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
         aria-expanded="false"
         >
             <span class="sr-only">Navegação Mobile</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar" style="background-color:white !important;"></span>
+            <span class="icon-bar" style="background-color:white !important;"></span>
+            <span class="icon-bar" style="background-color:white !important;"></span>
         </button>
     </div> <!-- Fecha agrupamento MOBILE -->
     <div class="collapse navbar-collapse" id="defaultNavbar"> <!-- barra de navegação -->
