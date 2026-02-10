@@ -109,7 +109,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
               <li><a class="navbartext" href="../parceiros_geral.php">PARCEIROS</a></li>
             <!-- Form Busca -->
              <form
-                action="atletas_busca.php"
+                action="busca_geral.php"
                 method="get"
                 name="form_busca"
                 id="form_busca"
@@ -141,6 +141,11 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
             <li class="active">
                 <a class="navbartext" href="index.php">
                     <span class="glyphicon glyphicon-user"></span>
+                </a>
+            </li>
+            <li>
+                <a class="navbartext" href="logout.php">
+                    <span class="glyphicon glyphicon-log-out"></span>
                 </a>
             </li>
         </ul>

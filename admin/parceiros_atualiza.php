@@ -140,9 +140,8 @@ $totalRows = ($lista)->num_rows;
                                  class="form-control"
                                  placeholder="Digite a descrição do parceiro."
                                  cols="30"
-                                 rows="8"
-                                 value="<?php echo $row['descri_parceiro']; ?>"
-                             ></textarea>
+                                 rows="8"  
+                             ><?php echo $row['descri_parceiro']; ?></textarea>
                          </div> <!-- fecha input-group -->
                          <!-- fecha textarea descri_categoria -->   
                          <br>
