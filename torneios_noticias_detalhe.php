@@ -46,7 +46,7 @@ $row = $lista->fetch_assoc();
     </style>
 </head>
 
-<body class="fundofixo fontetabela">
+<body class="fundo3 fontetabela">
 
 <?php include('menu_publico.php'); ?>
 
