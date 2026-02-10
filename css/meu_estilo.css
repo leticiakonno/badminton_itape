@@ -61,6 +61,20 @@
     color: rgb(255, 255, 255);
 }
 
+.btninvasor1{
+    background-color: rgba(0, 175, 9, 0.904);
+    color: rgb(255, 255, 255);
+}
+
+.btninvasor{
+    background-color: rgba(168, 6, 6, 0.904);
+    color: rgb(255, 255, 255);
+}
+
+.iconinvasor{
+    color: rgba(168, 6, 6, 0.904);
+}
+
 .fundoatletas {
     background-color: rgba(255, 255, 255, 0.959);
     padding-top: 15px;
@@ -76,6 +90,23 @@
     border-radius: 10px;    
     color: rgba(0, 0, 54, 0.904);
 }
+
+.fundousuarios{
+    background-color: rgba(255, 255, 255, 0.959);
+    margin-top: 20px
+}
+
+.textousuario{
+    font-weight: bold;
+}
+
+.icone-login {
+    margin-top: 40px; /* Ajuste o valor conforme necessário */
+    display: block;   /* Garante que a margem funcione corretamente */
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .titulo {
     font-family: "Times-New-Roman", serif;
@@ -133,6 +164,12 @@ table td, table th {
     color:  rgba(119, 7, 5, 0.904);
     font-style: italic;
     font-size: 20px;
+}
+
+.invasortitulo {
+    color:  rgba(119, 7, 5, 0.904);
+    font-style: italic;
+    font-size: 50px;
 }
 
 .navbarbg{
@@ -207,6 +244,16 @@ table td, table th {
     flex: 1; /* Ocupa 25% da largura */
     min-width: 280px;
     background-color: #f8f9fa; /* Um cinza claro para destacar */
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #d90429; /* Uma borda com a cor do seu site */
+    height: fit-content; /* Ajusta a altura conforme as notícias */
+}
+
+.sidebarparceiros{
+    flex: 1; /* Ocupa 25% da largura */
+    min-width: 280px;
+    background-color: #ffffff; /* Um cinza claro para destacar */
     padding: 30px;
     border-radius: 8px;
     border-left: 4px solid #d90429; /* Uma borda com a cor do seu site */
@@ -363,4 +410,12 @@ table td, table th {
 
   .fundo-index{
     background-color: rgba(255, 255, 255, 0.911);
+}
+
+/* Cria uma classe para thumbnails sem borda */
+.thumbnail-sem-borda{
+    border: none !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
 }

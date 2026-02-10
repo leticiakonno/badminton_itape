@@ -51,6 +51,11 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
     </div> <!-- Fecha agrupamento MOBILE -->
     <div class="collapse navbar-collapse" id="defaultNavbar"> <!-- barra de navegação -->
         <ul class="nav navbar-nav navbar-right">
+            <li>
+                <button type="button" class="btn navbar-btn disabled">
+                    Olá, <?php echo ($_SESSION['login_usuario']); ?>
+                </button>
+            </li>
             <li class="active">
                 <a class="navbartext" href="../index.php">
                     <span class="glyphicon glyphicon-home"></span>
@@ -104,7 +109,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
               <li><a class="navbartext" href="../parceiros_geral.php">PARCEIROS</a></li>
             <!-- Form Busca -->
              <form
-                action="atletas_busca.php"
+                action="busca_geral.php"
                 method="get"
                 name="form_busca"
                 id="form_busca"
