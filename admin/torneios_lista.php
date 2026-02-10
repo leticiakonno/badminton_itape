@@ -69,7 +69,7 @@ $totalRows  =   ($lista)->num_rows;
                 <td><?php echo $row['descri_torneio']; ?></td>
                  <td>
                     <img 
-                        src="../imagens/<?php echo $row['img_torneio']; ?>" 
+                        src="../imagens/torneios/<?php echo $row['img_torneio']; ?>" 
                         alt="<?php echo $row['tipo_torneio']; ?>" 
                         class="img-responsive"
                         width="100px"
