@@ -1,3 +1,8 @@
+<?php 
+// Incluindo o sistema de identificação
+include("acesso_com.php");  
+?>
+
 <!DOCTYPE html>
 <html lang="pt.br">
 <head>
