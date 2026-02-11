@@ -31,12 +31,10 @@ $totalRows  =   ($lista)->num_rows;
     <main class="container">
     <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre os nossos parceiros:</strong></h2>
     <br><br>
-
-        <!-- abre thumbnail -->
-        <div class="row">
+    <div class="row">
         <?php do{ ?>
         <div class="col-xs-12 col-sm-6 col-md-4 "> <!-- dimensionamento -->
-            <div class="thumbnail">
+            <div class="thumbnail"> <!-- abre thumbnail -->
                 <a 
                 href="parceiros_detalhe.php?id_parceiro=<?php echo $row['id_parceiro']; ?>" 
             >
@@ -62,16 +60,16 @@ $totalRows  =   ($lista)->num_rows;
                     <span class="visible-xs glyphicon glyphicon-eye-open"></span>
                 </a>
             </p>
-        </div> <!--fecha caption-->
+            </div> <!--fecha caption-->
             </div> <!--fecha thumbnail-->
         </div> <!--fecha dimensionamento-->
-   
-        <?php }while($row=$lista->fetch_assoc()); ?>
-     </div>
+    <?php }while($row=$lista->fetch_assoc()); ?>
+    </div>
 </main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>    
+<script src="js/bootstrap.min.js"></script>  
+<?php include('rodape.php'); ?>  
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>
