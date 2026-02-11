@@ -18,6 +18,7 @@ $row        =   $lista->fetch_assoc();
 // Contar o total de linhas
 $totalRows  =   ($lista)->num_rows; 
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
