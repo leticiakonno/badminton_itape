@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-historia
+
 .fundofixo {
     background-image: url("../imagens/fundo.jpg") !important;
     background-repeat: no-repeat !important;
@@ -291,27 +291,7 @@ table td, table th {
         padding: 20px;
 }
 /* IMAGEM - PADRÃO (mobile continua igual) */
-.img-historia {
-   width: 100%;
-   height: auto;
-   border-radius: 8px;
-   margin: 20px auto 10px auto;
-}
 
-@media (min-width: 992px) {
-   .img-historia {
-       max-width: 520px;          /* imagem menor */
-       background-color: #fff;    /* fundo branco */
-       padding: 12px;             /* cria a borda branca */
-       border-radius: 10px;
-       margin-left: auto;         /* empurra para direita */
-       margin-right: 30px;        /* espaço da borda direita */
-   }
-   .texto-imagem {
-       max-width: 520px;
-       margin-left: auto;
-   }
-}
 
 .titulonoticia{
     font-family: "Times-New-Roman", serif;
