@@ -62,7 +62,7 @@ $totalRows  =   ($lista)->num_rows;
             <tr>
                 <td class="hidden"><?php echo $row['id_noticia']; ?></td>
                 <td><?php echo $row['titulo_noticia']; ?></td>
-                <td><?php echo $row['descri_noticia']; ?></td>
+                 <td><?php echo substr($row['descri_noticia'], 0, 200) . (strlen($row['descri_noticia']) > 200 ? '...' : ''); ?></td>
                  <td>
                     <img 
                         src="../imagens/noticias/<?php echo $row['img_noticia']; ?>" 

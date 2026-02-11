@@ -1,4 +1,4 @@
-
+ <script src="https://kit.fontawesome.com/d03c290dd3.js" crossorigin="anonymous"></script>
 <body class="fundofixo">
 <div class= "row panel-footer margem" style="background-color:rgba(3, 33, 104, 0.9)"> <!-- abre painel de rodapé -->
 
@@ -47,7 +47,7 @@
             </li>
             <li>
                 <a href="atletas_geral.php" class="textrodape">
-                    <span class="glyphicon glyphicon-text-color">&nbsp;ATLETAS</span>
+                <span> <i class="fa-solid fa-star"></i>&nbsp;ATLETAS</span>
                 </a>
             </li>
             <li>
@@ -75,7 +75,7 @@
 </div> <!-- fecha dimensionamento / área -->
 
 <!-- ÁREA DE CONTATO -->
-<div class="col-sm-6 col-md-4" >
+<div class="col-xs-12 col-sm-6 col-md-4" >
     <div class="panel-footer textrodape" style="background:none;">
         <h4>CONTATO</h4>
         <br>

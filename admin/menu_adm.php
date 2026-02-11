@@ -44,23 +44,24 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
         aria-expanded="false"
         >
             <span class="sr-only">Navegação Mobile</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar" style="background-color:white !important;"></span>
+            <span class="icon-bar" style="background-color:white !important;"></span>
+            <span class="icon-bar" style="background-color:white !important;"></span>
         </button>
     </div> <!-- Fecha agrupamento MOBILE -->
     <div class="collapse navbar-collapse" id="defaultNavbar"> <!-- barra de navegação -->
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <button type="button" class="btn navbar-btn disabled">
-                    Olá, <?php echo ($_SESSION['login_usuario']); ?>
-                </button>
+            <button type="button" class="btn navbar-btn disabled">
+                Olá, <?php echo ($_SESSION['login_usuario']); ?>
+            </button>
             </li>
             <li class="active">
                 <a class="navbartext" href="../index.php">
                     <span class="glyphicon glyphicon-home"></span>
                 </a>
             </li>
+            <li class="active"><a class="navbartext" href="index.php">ADMIN</a></li>
             <li class="dropdown">
                 <a href="#"
                    class="dropdown-toggle navbartext" 
@@ -104,12 +105,11 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                     <!-- Fecha estrutura de repetição -->
                 </ul>
             </li> <!-- Fecha dropdown -->
-            <li><a class="navbartext" href="../formulario_envia.php">FALE CONOSCO</a></li>
             <li><a class="navbartext" href="../historia.php">HISTÓRIA</a></li>
               <li><a class="navbartext" href="../parceiros_geral.php">PARCEIROS</a></li>
             <!-- Form Busca -->
              <form
-                action="busca_geral.php"
+                action="atletas_busca.php"
                 method="get"
                 name="form_busca"
                 id="form_busca"
