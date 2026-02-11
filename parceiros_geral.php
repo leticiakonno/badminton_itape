@@ -65,7 +65,6 @@ $totalRows  =   ($lista)->num_rows;
         </div> <!--fecha caption-->
             </div> <!--fecha thumbnail-->
         </div> <!--fecha dimensionamento-->
-   
         <?php }while($row=$lista->fetch_assoc()); ?>
      </div>
 </main>
