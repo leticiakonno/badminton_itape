@@ -33,11 +33,14 @@ $totalRows  =   ($lista)->num_rows;
 <?php include("menu_adm.php"); ?>
 <!--main>h1-->
 <main class="container">
+    <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-12 "> <!-- dimensionamento -->
     <h1 class="fundoatletas text-center titulo"><strong>Lista de Atletas</strong></h1>
     <div class="btn btntotal bg-danger text-white">
         Total de Atletas:
         <small><?php echo $totalRows; ?></small>
     </div>
+ 
     <!--table-->
     <table class="table table-hover table-condensed tabela-branca fontetabela tabelacenter">
         <thead > <!--cabeçalho da tabela-->
@@ -49,7 +52,7 @@ $totalRows  =   ($lista)->num_rows;
                 <th>DESCRIÇÃO</th>
                 <th>DATA DE NASCIMENTO</th>
                 <th>DATA DE CADASTRO</th>
-                <th>IMAGEM</th>
+                <th class="hidden-xs">IMAGEM</th>
                                 <th>
                     <a 
                         href="atletas_insere.php"
@@ -82,7 +85,7 @@ $totalRows  =   ($lista)->num_rows;
                 <td><?php echo $row['descri_atleta']; ?></td>
                 <td><?php echo $row['data_nas_atleta']; ?></td>
                 <td><?php echo $row['data_cad_atleta']; ?></td>
-                <td>
+                <td class="hidden-xs">
                     <img 
                         src="../imagens/atletas/<?php echo $row['img_atleta']; ?>" 
                         alt="<?php echo $row['nome_atleta']; ?>" 
@@ -149,7 +152,8 @@ $totalRows  =   ($lista)->num_rows;
         </div> <!-- fecha modal-content -->
     </div> <!-- fecha modal-dialog -->
 </div> <!-- fecha modal -->
-
+</div>  <!-- fecha dimensionamento -->
+</div>
 
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
