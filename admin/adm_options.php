@@ -215,7 +215,7 @@
       <!-- ADM TORNEIOS NOTÍCIAS   -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas ">
-            <img src="../imagens/noticiastorneio.png" style="width: 300px;px"  alt="">
+            <img src="../imagens/noticiastorneio.png" style="width: 300px;"  alt="">
             <br>
             <div class="fundoatletas">
                 <!-- botão principal -->

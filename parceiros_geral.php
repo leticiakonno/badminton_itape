@@ -33,9 +33,10 @@ $totalRows  =   ($lista)->num_rows;
     <br><br>
 
         <!-- abre thumbnail -->
+        <div class="row">
         <?php do{ ?>
-        <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
-            <div class="thumbnail" style="width: 36rem;">
+        <div class="col-xs-12 col-sm-6 col-md-4 "> <!-- dimensionamento -->
+            <div class="thumbnail">
                 <a 
                 href="parceiros_detalhe.php?id_parceiro=<?php echo $row['id_parceiro']; ?>" 
             >
@@ -64,7 +65,9 @@ $totalRows  =   ($lista)->num_rows;
         </div> <!--fecha caption-->
             </div> <!--fecha thumbnail-->
         </div> <!--fecha dimensionamento-->
+   
         <?php }while($row=$lista->fetch_assoc()); ?>
+     </div>
 </main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
