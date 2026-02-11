@@ -250,7 +250,8 @@
         <!-- ADM NOTÍCIAS   -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas ">
-            <img src="../imagens/noticias.png" style="width:300px"  alt="">
+            <img src="../imagens/noticias.png" style="width:300
+            px"  alt="">
             <br>
             <div class="fundoatletas">
                 <!-- botão principal -->
