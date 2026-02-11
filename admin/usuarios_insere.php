@@ -1,4 +1,7 @@
 <?php
+// Incluindo o sistema de identificação
+include("acesso_sup.php");
+
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_atletas.php");
 
