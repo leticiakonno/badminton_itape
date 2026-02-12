@@ -28,8 +28,8 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="container fundo2 fontetabela">
 <?php include('menu_publico.php'); ?>
+<body class="container fundo2 fontetabela">
 <h2 class="fundocategoria categoriageral nomeatleta titulo">
     <a href="javascript:window.history.go(-1)" class="btn btntotal">
         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -72,7 +72,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Fecha thumbnail/card -->
 
 </div> <!-- fecha row -->
-
+<?php include('rodape.php'); ?>
 <!-- Link arquivos Bootstrap js --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>   
