@@ -63,7 +63,7 @@ $totalRows = $lista->num_rows;
 <div class="row">
 
 <?php do { ?>
-    <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="col-xs-12 col-sm-6 col-md-4 "> <!-- dimensionamento -->
         <div class="thumbnail">
 
             <?php 
