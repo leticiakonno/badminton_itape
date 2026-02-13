@@ -29,13 +29,15 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 <?php include('menu_publico.php'); ?>
-<body class="container fundo2 fontetabela">
-<h2 class="fundocategoria categoriageral nomeatleta titulo">
-    <a href="javascript:window.history.go(-1)" class="btn btntotal">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <strong><?php echo $row['nome_parceiro']; ?></strong>
-</h2>
+
+<body class="fundo2 fontetabela">
+    <main class="container">
+        <h2 class="fundocategoria categoriageral nomeatleta titulo">
+            <a href="javascript:window.history.go(-1)" class="btn btntotal">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <strong><?php echo $row['nome_parceiro']; ?></strong>
+        </h2>
 <div class="row"> <!-- manter os elementos na linha (poliça) -->
     <br>
     <!-- Abre thumbnail/card -->
@@ -72,6 +74,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Fecha thumbnail/card -->
 
 </div> <!-- fecha row -->
+</main>
 <?php include('rodape.php'); ?>
 <!-- Link arquivos Bootstrap js --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
