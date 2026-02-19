@@ -9,7 +9,7 @@
         <main class="container">
             <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12" > <!-- abre dimensionamento -->
                 <div class="form-container titulo fundohistoria">
-                    <h2 class="fundoatletas titulo text-center historia-resumo"><strong> NOSSA JORNADA</strong></h2>
+                    <h2 class="fundoatletas titulo text-center historia-resumo"><strong>NOSSA JORNADA</strong></h2>
                 </div>
                 <br>
                 
