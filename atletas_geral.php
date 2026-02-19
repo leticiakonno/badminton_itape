@@ -35,10 +35,11 @@ $totalRows  =   ($lista)->num_rows;
     <h2 class="fundoatletas  text-center titulo"><strong>ATLETAS</strong></h2>
     <div class="container">
     <br>
+    <div class="row">
         <!-- abre thumbnail -->
         <?php do{ ?>
-        <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
-            <div class="thumbnail" style="width: 36rem;">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-md-4"> <!-- dimensionamento -->
+            <div class="thumbnail" style="width: 100%; padding-top: 20px;">
                 <a 
                 href="atletas_detalhe.php?id_atleta=<?php echo $row['id_atleta']; ?>" 
                 >
@@ -72,13 +73,16 @@ $totalRows  =   ($lista)->num_rows;
         </div> <!--fecha dimensionamento-->
         <?php }while($row=$lista->fetch_assoc()); ?>
     </div> <!-- fecha div container -->
-</main>
+</div>
 
 <!-- não esquecer de comentar o JS e CSS para não dar conflito no index -->
 <!-- Link arquivos Bootstrap js-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>  
-<?php include('rodape.php'); ?>
+<script src="js/bootstrap.min.js"></script> 
+</main>
+<footer> 
+    <?php include('rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); 

@@ -56,8 +56,9 @@ $totalRows  =   ($lista)->num_rows;
 
     <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
      <?php do{ ?> <!-- abre estrutura de repetição -->
-    <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-md-4"> <!-- dimensionamento -->
         <div class="thumbnail">
+            <br>
             <a 
                 href="atletas_detalhe.php?id_produto=<?php echo $row['id_atleta']; ?>"
             >

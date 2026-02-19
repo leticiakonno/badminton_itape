@@ -238,6 +238,7 @@ table td, table th {
     border-radius: 10px;    
     color: rgba(151, 4, 4, 0.904);
     font-weight: bold;
+    font-size: 20px;
 }
 
 .sidebar{
@@ -290,6 +291,8 @@ table td, table th {
         font-family: "Cabin", sans-serif;
         padding: 20px;
 }
+/* IMAGEM - PADRÃO (mobile continua igual) */
+
 
 .titulonoticia{
     font-family: "Times-New-Roman", serif;
@@ -360,8 +363,9 @@ table td, table th {
 }
 
 .margem{
-    margin-right: 15px;
-    width: 100vw;
+     margin: 0;         /* Remove as margens que empurram o layout */
+    width: 100%;       /* Usa a largura disponível sem transbordar */
+    overflow-x: hidden; /* Garante que nada escape para os lados */
 }
 
 

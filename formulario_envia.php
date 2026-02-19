@@ -126,10 +126,12 @@
                                 <div class="col-sm-offset-3 col-sm-8">
                                     <div class="alert formulariobusca text-center">
                                         Treinos gratuitos:<br>
-                                        Terça-feira a partir das 19h às 21h <br>
-                                        Quarta-feira a partir das 19h às 21h<br>
-                                        Sexta-feira a partir das 19h às 21h<br>
-                                        Sábado a partir das 14h às 17h
+                                            <div class="text-center" style="color: rgba(5, 24, 109, 0.904);" >
+                                                Terça-feira a partir das 19h às 21h <br>
+                                                Quarta-feira a partir das 19h às 21h<br>
+                                                Sexta-feira a partir das 19h às 21h<br>
+                                                Sábado a partir das 14h às 17h
+                                         </div>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +186,7 @@
                             </button>
                             </div>
                         </div>
-                        <br><br>
+                        <br>
                     </form>
                 </div>
             </div>

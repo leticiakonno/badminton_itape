@@ -1,149 +1,78 @@
-<?php 
-// Incluir o arquivo e fazer a conexão
+<?php
 include("Connections/conn_atletas.php");
 
-// Consulta para trazer o banco de dados e SE necessário filtrar
+$filtro_select = $_GET['buscar'];
 
-$buscar  =   $_GET['buscar'];                       // "GET" busca o parâmetro na URL
-$sqlAtletas = "
-                SELECT id_atleta, nome_atleta, descri_atleta
-                FROM vw_tbatletas
-                WHERE descri_atleta LIKE '%$buscar%'
-";
-$listaAtletas = $conn_atletas->query($sqlAtletas);
-$totalAtletas = $listaAtletas->num_rows;
+// SQL UNIFICADO: Buscamos em todas as tabelas e damos nomes genéricos às colunas
+$consulta_unificada = "
+    SELECT id_atleta AS id, nome_atleta AS nome, descri_atleta AS descri, 'atletas' AS tipo, img_atleta AS imagem 
+    FROM tbatletas 
+    WHERE nome_atleta LIKE '%$filtro_select%' OR descri_atleta LIKE '%$filtro_select%'
 
-$sqlCategorias = "
-    SELECT id_categoria, nome_categoria, descri_categoria
-    FROM tbcategorias
-    WHERE nome_categoria LIKE '%$buscar%'
-";
-$listaCategorias = $conn_atletas->query($sqlCategorias);
-$totalCategorias = $listaCategorias->num_rows;
+    UNION
+    
+    SELECT id_categoria AS id, nome_categoria AS nome, descri_categoria AS descri, 'torneios' AS tipo, img_categoria AS imagem  
+    FROM tbcategorias 
+    WHERE nome_torneio LIKE '%$filtro_select%'
 
-$sqlTecnicos = "
-    SELECT id_tecnico, nome_tecnico, descri_tecnico, img_tecnico
-    FROM tbtecnicos
-    WHERE nome_tecnico LIKE '%$buscar%
-";
-$listaTecnicos = $conn_atletas->query($sqlTecnicos);
-$totalTecnicos = $listaTecnicos->num_rows;
+    UNION
+    
+    SELECT id_tecnico AS id, nome_tecnico AS nome, descri_tecnico AS descri, 'parceiros' AS tipo, img_tecnico AS imagem 
+    FROM tbtecnicos 
+    WHERE nome_parceiro LIKE '%$filtro_select%' OR descri_tecnico LIKE '%$filtro_select%'
 
-$sqlParceiros = "
-    SELECT id_parceiro, nome_parceiro, descri_parceiro, img_parceiro
-    FROM tbparceiros
-    WHERE nome_parceiro LIKE '%$buscar%'
+    
+    UNION
+    
+    SELECT id_parceiro AS id, nome_parceiro AS nome, descri_parceiro AS descri, 'parceiros' AS tipo, img_parceiro AS imagem 
+    FROM tbparceiros 
+    WHERE nome_parceiro LIKE '%$filtro_select%' OR descri_parceiro LIKE '%$filtro_select%'
+    
+    UNION
+    
+    SELECT id_torneio AS id, tipo_torneio AS nome, descri_torneio AS descri, 'torneios' AS tipo, img_torneio AS imagem 
+    FROM tbtorneios 
+    WHERE nome_torneio LIKE '%$filtro_select%'
 ";
-$listaParceiros = $conn_atletas->query($sqlParceiros);
-$totalParceiros = $listaParceiros->num_rows;
 
-$sqlTorneios = "
-    SELECT id_torneio, tipo_torneio, descri_torneio, img_torneio
-    FROM tbtorneios
-    WHERE tipo_torneio LIKE '%$buscar%'
-";
-$listaTorneios = $conn_atletas->query($sqlTorneios);
-$totalTorneios = $listaTorneios->num_rows;
-
-$sqlNoticias = "
-    SELECT id_noticia, titulo_noticia, descri_noticia, img_noticia
-    FROM tbnoticias
-    WHERE titulo_noticia LIKE '%$buscar%'
-";
-$listaNoticias = $conn_atletas->query($sqlNoticias);
-$totalNoticias = $listaNoticias->num_rows;
+$lista = $conn_atletas->query($consulta_unificada);
+$totalRows = $lista->num_rows;
+$row = $lista->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
-    <!-- Link CSS do Bootstrap -->
+    <title>Busca Geral - Badminton Itapetininga</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Link para CSS Específico -->
-    <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo fontetabela">
-<?php include('menu_publico.php'); ?>
+<body class="container">
+    <h2>Você pesquisou por: "<?php echo $filtro_select; ?>"</h2>
+    <hr>
 
-
-<main class="container">
-<!-- Mostrar se os registros retornarem VAZIOS -->
-<?php if($totalRows == 0){ ?>
-    <h2 class="breadcrumb alert-danger fundoatletas titulo">
-        <a href="javascript:window.history.go(-1)" class="btn btntotal">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        Você pesquisou:
-        "<i><strong><?php echo $_GET['buscar']; ?></strong></i>"
-        <br>
-        Zero resultados! Acho que esse campo não existe (ainda!) </h2>
-<?php }; ?>
-
-<!-- Mostrar se os registros NÃO retornarem VAZIOS -->
-<?php if($totalAtletas > 0){ ?>
-<h2 class="breadcrumb alert-danger fundoatletas titulo">
-    <a href="javascript:window.history.go(-1)" class="btn btntotal">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-        Você pesquisou:
-        "<i><strong><?php echo $_GET['buscar']; ?></strong></i>"
-</h2>
-<div class="row"> <!-- manter os elementos na linha (poliça) -->
-
-    <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
-     <?php do{ ?> <!-- abre estrutura de repetição -->
-    <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
-        <div class="thumbnail">
-            <a 
-                href="atletas_detalhe.php?id_atleta=<?php echo $row['id_atleta']; ?>"
-            >
-            <img 
-                src="imagens/atletas/<?php echo $row['img_atleta']; ?>" 
-                alt=""
-                class="img-responsive img-rounded"
-                style="height: 20em;"               
-            >                                                                                       <!-- height "em" deixa o tamanho da imagem relativo ao tamanho da página -->
-            </a>                                       
-
-            <div class="caption text-right">
-                <h3 class="text">
-                    <strong><?php echo $row['nome_atleta']; ?></strong>
-                </h3>
-                <p class="texticon">
-                    <strong><?php echo $row['nome_categoria']; ?></strong>
-                </p>
-                
-                <p class="text-left">
-                    <?php echo mb_strimwidth ($row['descri_atleta'],0,45,"...");?>
-                </p>                                                                            <!-- mb_strimwidth diminiu o tamanho de linhas que são exibidos dentro do card de descrição -->
-                <p>
-                    <a 
-                        href="atletas_detalhe.php?id_atleta=<?php echo $row['id_atleta']; ?>"
-                        class="btn btntotal"
-                        role="button"
-                    >
-                        <span class="hidden-xs">Saiba mais...</span>
-                        <span class="visible-xs glyphicon glyphicon-eye-open"></span>
-                    </a>
-                </p>
-            </div>
-        </div> <!-- fecha thumbnail -->
-    </div> <!-- fecha dimensionamento -->
-    <?php }while($row=$lista->fetch_assoc()); ?> <!-- fecha estrutura de repetição -->
-    <!-- Fecha thumbnail/card -->
-</div> <!-- fecha row -->
-<?php }; ?>
-
-<!-- Link arquivos Bootstrap js-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>  
-</main>
-<footer>
-    <?php include('rodape.php'); ?>
-</footer>
+    <?php if($totalRows > 0) { ?>
+        <div class="row">
+            <?php do { 
+                // Ajustamos o link e a pasta da imagem conforme o TIPO do resultado
+                $link_detalhe = $row['tipo'] . "_detalhe.php?id_" . substr($row['tipo'], 0, -1) . "=" . $row['id'];
+                $pasta_img = ($row['tipo'] == 'parceiros') ? 'apoiadores/' : '';
+            ?>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="imagens/<?php echo $pasta_img . $row['imagem']; ?>" style="height: 15em;">
+                        <div class="caption">
+                            <h4><?php echo $row['nome']; ?></h4>
+                            <p><span class="label label-info"><?php echo ucfirst($row['tipo']); ?></span></p>
+                            <p><?php echo substr($row['descri'], 0, 100); ?>...</p>
+                            <a href="<?php echo $link_detalhe; ?>" class="btn btn-danger">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+            <?php } while($row = $lista->fetch_assoc()); ?>
+        </div>
+    <?php } else { ?>
+        <div class="alert alert-warning">Nenhum resultado encontrado para sua busca.</div>
+    <?php } ?>
 </body>
 </html>
-<?php mysqli_free_result($lista); ?>

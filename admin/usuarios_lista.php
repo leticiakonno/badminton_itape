@@ -1,4 +1,7 @@
 <?php
+//Incluir o Sistema de Autenticação
+include("acesso_sup.php");
+
 //incluir arquivo e fazer a conexão
 include ("..//Connections/conn_atletas.php");
 // Selecionar os dados

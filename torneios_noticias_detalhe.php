@@ -60,7 +60,8 @@ $row = $lista->fetch_assoc();
     </h2>
 
     <div class="row">
-        <div class="col-md-10 col-md-offset-1 conteudo-noticia-branco">
+         <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 conteudo-noticia-branco">
+        
 
             <?php 
             if(!empty($row['imagem'])) { 
@@ -74,7 +75,7 @@ $row = $lista->fetch_assoc();
                     src="<?php echo $imagem_path; ?>"
                     alt="<?php echo htmlspecialchars($row['titulo']); ?>"
                     class="img-responsive img-rounded"
-                    style="width:100%; max-height:400px; object-fit:cover; margin-bottom:20px;"
+                    style="max-width: 700px; width: 100%; height: auto;"
                 >
             <?php } ?>
 
