@@ -39,6 +39,7 @@ $totalRows  =   ($lista)->num_rows;
         <?php do{ ?>
         <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
             <div class="thumbnail" style="width: 36rem;">
+                <br>
                 <a 
                 href="tecnicos_detalhe.php?id_tecnico=<?php echo $row['id_tecnico']; ?>" 
                 >

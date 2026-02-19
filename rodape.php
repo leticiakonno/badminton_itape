@@ -1,10 +1,10 @@
  <script src="https://kit.fontawesome.com/d03c290dd3.js" crossorigin="anonymous"></script>
 <body class="fundofixo">
-<div class= "row panel-footer margem" style="background-color:rgba(3, 33, 104, 0.9)"> <!-- abre painel de rodapé -->
+<div class= "row panel-footer margem" style="background-color:rgba(3, 33, 104, 0.9);"> <!-- abre painel de rodapé -->
 
 <!-- ÁREA DE LOCALIZAÇÃO -->
-<div class="col-sm-6 col-md-4" >
-    <div class="panel-footer textrodape" style="background:none;">
+<div class="col-xs-12 col-sm-6 col-md-4" >
+    <div class="textrodape" style="background:none; padding: 15px;">
         <img src="imagens/logochurrascopequeno.png" alt="">
         <br>
         <i>Badminton Itapê, juntos pelo crescimento dentro e fora da quadra!</i>
@@ -30,10 +30,9 @@
 </div> <!-- fecha dimensionamento / área -->
 
 <!-- ÁREA DE NAVEGAÇÃO -->
-<div class="col-sm-6 col-md-4" >
-    <div class="panel-footer textrodape" style="background:none;">
+<div class="col-xs-12 col-sm-6 col-md-4" >
+    <div class="textrodape" style="background:none;">
         <h4>LINKS</h4>
-        <br>
         <ul class="nav nav-pills nav-stacked">
             <li>
                 <a href="index.php#home" class="textrodape">
@@ -76,9 +75,8 @@
 
 <!-- ÁREA DE CONTATO -->
 <div class="col-xs-12 col-sm-6 col-md-4" >
-    <div class="panel-footer textrodape" style="background:none;">
+    <div class="textrodape" style="background:none;">
         <h4>CONTATO</h4>
-        <br>
         <form 
             action="rodape_contato.php"
             name="form_contato"
@@ -148,8 +146,8 @@
 </div> <!-- fecha dimensionamento / área -->
 
 <!-- ÁREA DE DESENVOLVEDOR -->
-<div class="col-sm-12">
-    <div class="panel-footer" style="background:none;">
+<div class="col-xs-12" >
+    <div style="background:none;">
         <h6 class="textrodape text-center">
             Developed by 
             <a href="https://site-da-leticia-konno.com" target="_blank">Leticia Konno</a>, 

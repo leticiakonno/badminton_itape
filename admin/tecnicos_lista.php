@@ -32,7 +32,7 @@ $totalRows  =   ($lista)->num_rows;
 
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
-    <main class="container">
+    <main class="container" style="width: 90%;">
       <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-12 col-md-offset-0" > <!-- abre dimensionamento -->
             <h1 class="fundocategoria text-center titulo"><strong><i>Lista de Técnicos</i></strong></h1>
             <br>
