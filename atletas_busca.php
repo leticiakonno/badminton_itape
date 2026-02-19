@@ -1,22 +1,6 @@
 <?php 
-// Incluir o arquivo e fazer a conexão
-include("Connections/conn_atletas.php");
-
-// Consulta para trazer o banco de dados e SE necessário filtrar
-$tabela         =   "vw_tbatletas";
-$campo_filtro   =   "descri_atleta";
-$ordenar_por    =   "descri_atleta ASC";
-$filtro_select  =   $_GET['buscar'];                       // "GET" busca o parâmetro na URL
-$consulta       =   "
-                    SELECT   *
-                    FROM     ".$tabela."
-                    WHERE    ".$campo_filtro." LIKE ('%".$filtro_select."%')
-                    ORDER BY ".$ordenar_por.";
-                    ";
-$lista      =   $conn_atletas->query($consulta);
-$row        =   $lista->fetch_assoc();
-$totalRows  =   ($lista)->num_rows;
-?>
+include('controllers/busca_geral.php');
+$busca = processadorBuscas('tbatletas', $_GET['buscar'], $conn_atletas);?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
