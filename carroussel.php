@@ -24,7 +24,7 @@
     <div class="carousel-inner" role="listbox">
         <div class="item active">
             <a href="historia.php">
-            <img src="imagens/banner1.jpg" alt=""  class="center-block">
+            <img src="imagens/banner1.png" alt=""  class="center-block">
             </a>
         </div> <!-- fecha item -->
 
