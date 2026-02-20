@@ -150,9 +150,9 @@
     <div style="background:none;">
         <h6 class="textrodape text-center">
             Developed by 
-            <a href="https://site-da-leticia-konno.com" target="_blank">Leticia Konno</a>, 
-            <a href="https://site-da-leticia-eduarda.com" target="_blank">Leticia Eduarda</a> e 
-            <a href="https://site-da-mavelyn.com" target="_blank">Mavelyn Leme</a>&trade; 2025
+            <a href="https://mavelyn.com.br/letkonno" target="_blank">Leticia Konno</a>, 
+            <a href="https://mavelyn.com.br/letedu" target="_blank">Leticia Eduarda</a> e 
+            <a href="https://mavelyn.com.br/mavelyn" target="_blank">Mavelyn Leme</a>&trade; 2025
             <br>
             <a href="https://www.iwanezuk.com.br" target="_blank">
                 www.iwanezuk.com.br
