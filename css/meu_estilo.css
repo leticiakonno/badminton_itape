@@ -424,3 +424,17 @@ table td, table th {
     box-shadow: none !important;
 }
 
+/* Media Query para atingir apenas dispositivos móveis (Bootstrap 3 usa 767px como quebra) */
+@media (max-width: 767px) {
+    /* Força a cor branca nos links dentro do menu colapsado */
+    .navbar-nav .open .dropdown-menu > li > a {
+        color: #ffffff !important;
+    }
+
+    /* Opcional: Cor quando o usuário passa o dedo ou clica no item (efeito hover) */
+    .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #dddddd !important;
+        background-color: transparent; /* Mantém o fundo azul do seu menu */
+    }
+}

@@ -156,6 +156,9 @@ $totalRows  = ($lista)->num_rows;
         $('#myModal').modal('show'); // abre modal
     });
 </script>
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

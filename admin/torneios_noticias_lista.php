@@ -183,6 +183,9 @@ $totalRows  =   ($lista)->num_rows;
         });
     });
 </script>
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

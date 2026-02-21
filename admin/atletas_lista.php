@@ -173,10 +173,11 @@ $totalRows  =   ($lista)->num_rows;
         $('#myModal').modal('show'); // abre modal
     });
 </script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>  
-
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>
