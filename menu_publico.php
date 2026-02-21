@@ -15,7 +15,7 @@ $row_menu        =   $lista_menu->fetch_assoc();
 $totalRows_menu  =   ($lista_menu)->num_rows;
 ?>
 
-<body class="fundofixo fontetabela">
+<body>
 <!-- Abre a barra de navegação -->
 <nav class="navbar navbar navbarbg">
 <div class="container-fluid">
