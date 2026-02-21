@@ -41,7 +41,7 @@ $totalRows  =   ($lista)->num_rows;
 <div class="row fundo-index"> <!-- manter os elementos na linha (poliça) -->
     <!-- Abre thumbnail/card -->
     <?php do{ ?> <!-- Abre a estrutura de repetição -->
-    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"> <!-- dimensionamento -->
+    <div class="col-xs-12 col-sm-6 col-md-8 col-md-offset-2"> <!-- dimensionamento -->
         <br><br>
         <div class="thumbnail">
             <img 
