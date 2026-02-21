@@ -31,7 +31,8 @@ $totalRows  =   ($lista)->num_rows;
     <main class="container">
     <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre os nossos parceiros:</strong></h2>
     <br><br>
-    <div class="row">
+    <div class="fundo-index" style="padding-top: 50px;border-radius: 15px;">
+    <div class="row" style="padding-left: 50px; padding-right: 50px;"> 
         <?php do{ ?>
         <div class="col-xs-12 col-sm-6 col-md-4 "> <!-- dimensionamento -->
             <div class="thumbnail"> <!-- abre thumbnail -->
@@ -48,7 +49,7 @@ $totalRows  =   ($lista)->num_rows;
             <div class="caption text-center">
             <h5 class="text-dark" style="font-size: 25px;"><strong><?php echo mb_strimwidth ($row['nome_parceiro'],0,27,"...");?></strong></h5>
             <p class="text-center">
-                <?php echo mb_strimwidth ($row['descri_parceiro'],0,45,"...");?>
+                <?php echo mb_strimwidth ($row['descri_parceiro'],0,38,"...");?>
             </p>
             <p>
                 <a 
@@ -64,7 +65,9 @@ $totalRows  =   ($lista)->num_rows;
             </div> <!--fecha thumbnail-->
         </div> <!--fecha dimensionamento-->
     <?php }while($row=$lista->fetch_assoc()); ?>
-    </div>
+    </div> <!--fecha row -->
+</div>
+<br>
 </main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
