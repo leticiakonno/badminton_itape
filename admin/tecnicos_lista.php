@@ -32,82 +32,89 @@ $totalRows  =   ($lista)->num_rows;
 
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
-    <main class="container" style="width: 90%;">
-      <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-12 col-md-offset-0" > <!-- abre dimensionamento -->
-            <h1 class="fundocategoria text-center titulo"><strong><i>Lista de Técnicos</i></strong></h1>
-            <br>
-            <div class="btn btntotal bg-primary text-white">
-                Total de Técnicos:
-                <small><?php echo $totalRows; ?></small>
-            </div>
-            <!-- table -->
-        <table class="table table-hover table-condensed tabela-branca fontetabela">
-            <thead> <!--cabeçalho da tabela-->
-                <tr> <!--linha da tabela-->
-                    <th class="hidden">ID</th> <!--célula do cabeçalho-->
-                    <th>NOME</th>
-                    <th>NÍVEL</th>
-                    <th>DESCRIÇÃO</th>
-                    <th>IMAGEM</th>
-                     <th>
-                        <a 
-                        href="tecnicos_insere.php"
-                        class="btn btn-block btnadicionar btn-xs btnadicionar"
-                        >
-                        <span class="hidden-xs">ADICIONAR <br></span>
-                        <span class="glyphicon glyphicon-plus"></span>
-                     </a>
-                    </th>
-                    </tr>
-            </thead> 
-             <tbody>
-            <!--Abre estrutura de repetição-->
-            <?php do { ?>
-            <tr>
-                <!-- ID -->
-                <td class="hidden"><?php echo $row['id_tecnico']; ?></td>
-                <!-- NOME -->
-                <td><?php echo $row['nome_tecnico']; ?></td>
-
-                <!-- NÍVEL -->
-                <td><?php echo $row['nivel_tecnico']; ?></td>
-
-                <!-- DESCRI -->
-                <td><?php echo $row['descri_tecnico']; ?></td>
-
-                <!-- IMAGEM -->
-                 <td>
-                    <img 
-                        src="../imagens/tecnicos/<?php echo $row['img_tecnico']; ?>" 
-                        alt="<?php echo $row['nome_tecnico']; ?>" 
-                        class="img-circle img-fixed"
-                        width="100px"
+<main class="container" style="width: 90%;">
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-12 col-md-offset-0" > <!-- abre dimensionamento -->
+        <h1 class="fundocategoria text-center titulo">
+            <a href="adm_options.php">
+                <button class="btn btntotal">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </button>
+            </a>
+            <strong><i>Lista de Técnicos</i></strong>
+        </h1>
+        <br>
+        <div class="btn btntotal bg-primary text-white">
+            Total de Técnicos:
+            <small><?php echo $totalRows; ?></small>
+        </div>
+        <!-- table -->
+    <table class="table table-hover table-condensed tabela-branca fontetabela">
+        <thead> <!--cabeçalho da tabela-->
+            <tr> <!--linha da tabela-->
+                <th class="hidden">ID</th> <!--célula do cabeçalho-->
+                <th>NOME</th>
+                <th>NÍVEL</th>
+                <th>DESCRIÇÃO</th>
+                <th>IMAGEM</th>
+                    <th>
+                    <a 
+                    href="tecnicos_insere.php"
+                    class="btn btn-block btnadicionar btn-xs btnadicionar"
                     >
-                </td>
-                <!-- AÇÕES  -->
-                <td>
-                    <a href="tecnicos_atualiza.php?id_tecnico=<?php echo $row['id_tecnico']; ?>"
-                        target="_self"
-                        class="btnalterar btn-xs btn-block text-center"
-                        role="button"
-                    >
-                        <span class="hidden-xs">ALTERAR <br></span>
-                        <span class="glyphicon glyphicon-wrench"></span>
+                    <span class="hidden-xs">ADICIONAR <br></span>
+                    <span class="glyphicon glyphicon-plus"></span>
                     </a>
-                    <button
-                        data-id="<?php echo $row['id_tecnico']; ?>"
-                        data-nome="<?php echo $row['nome_tecnico']; ?>"
-                        class="btn btn-danger btntotal btn-xs btn-block delete"
-                    >
-                        <span class="hidden-xs">EXCLUIR<br></span>
-                        <span class="glyphicon glyphicon-trash"></span>
-                    </button>
-                </td>
-            </tr>
-            <?php }while($row = $lista->fetch_assoc());  ?>
-            <!-- Fechar a estrutura de repetição -->
-             </tbody>
-    </table>
+                </th>
+                </tr>
+        </thead> 
+        <tbody>
+        <!--Abre estrutura de repetição-->
+        <?php do { ?>
+        <tr>
+            <!-- ID -->
+            <td class="hidden"><?php echo $row['id_tecnico']; ?></td>
+            <!-- NOME -->
+            <td><?php echo $row['nome_tecnico']; ?></td>
+
+            <!-- NÍVEL -->
+            <td><?php echo $row['nivel_tecnico']; ?></td>
+
+            <!-- DESCRI -->
+            <td><?php echo $row['descri_tecnico']; ?></td>
+
+            <!-- IMAGEM -->
+                <td>
+                <img 
+                    src="../imagens/tecnicos/<?php echo $row['img_tecnico']; ?>" 
+                    alt="<?php echo $row['nome_tecnico']; ?>" 
+                    class="img-circle img-fixed"
+                    width="100px"
+                >
+            </td>
+            <!-- AÇÕES  -->
+            <td>
+                <a href="tecnicos_atualiza.php?id_tecnico=<?php echo $row['id_tecnico']; ?>"
+                    target="_self"
+                    class="btnalterar btn-xs btn-block text-center"
+                    role="button"
+                >
+                    <span class="hidden-xs">ALTERAR <br></span>
+                    <span class="glyphicon glyphicon-wrench"></span>
+                </a>
+                <button
+                    data-id="<?php echo $row['id_tecnico']; ?>"
+                    data-nome="<?php echo $row['nome_tecnico']; ?>"
+                    class="btn btn-danger btntotal btn-xs btn-block delete"
+                >
+                    <span class="hidden-xs">EXCLUIR<br></span>
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </td>
+        </tr>
+        <?php }while($row = $lista->fetch_assoc());  ?>
+        <!-- Fechar a estrutura de repetição -->
+        </tbody>
+</table>
 </main> 
 
   <!--modal-->

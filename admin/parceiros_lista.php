@@ -31,8 +31,15 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
-    <main class="container">
-    <h1 class="fundoatletas text-center titulo"><strong><i>Lista de Parceiros</i></strong></h1>
+<main class="container">
+    <h1 class="fundoatletas text-center titulo">
+        <a href="adm_options.php">
+            <button class="btn btntotal">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </button>
+        </a>
+        <strong><i>Lista de Parceiros</i></strong>
+    </h1>
                 <div class=" btn btntotal bg-primary text-white">
                 Total de Parceiros:
                 <small><?php echo $totalRows; ?></small>

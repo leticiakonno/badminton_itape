@@ -35,7 +35,14 @@ $totalRows  =   ($lista)->num_rows;
 <main class="container" style="width: 90%;">
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-12 "> <!-- dimensionamento -->
-        <h1 class="fundoatletas text-center titulo"><strong>Lista de Atletas</strong></h1>
+        <h1 class="fundoatletas text-center titulo">
+            <a href="adm_options.php">
+                <button class="btn btntotal">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </button>
+            </a>
+            <strong>Lista de Atletas</strong>
+        </h1>
         <div class="btn btntotal bg-danger text-white">
             Total de Atletas:
             <small><?php echo $totalRows; ?></small>

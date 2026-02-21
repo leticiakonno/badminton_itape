@@ -31,9 +31,16 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
-    <main class="container">
-    <h1 class="fundoatletas text-center titulo"><strong><i>Lista de Notícias</i></strong></h1>
-                <div class=" btn btntotal bg-primary text-white">
+<main class="container">
+    <h1 class="fundoatletas text-center titulo">
+        <a href="adm_options.php">
+            <button class="btn btntotal">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </button>
+        </a>
+        <strong><i>Lista de Notícias</i></strong>
+    </h1>
+            <div class=" btn btntotal bg-primary text-white">
                 Total de Notícias:
                 <small><?php echo $totalRows; ?></small>
             </div>
@@ -56,7 +63,7 @@ $totalRows  =   ($lista)->num_rows;
                     </th>
                     </tr>
             </thead> 
-             <tbody>
+            <tbody>
             <!--Abre estrutura de repetição-->
             <?php do { ?>
             <tr>
@@ -92,10 +99,9 @@ $totalRows  =   ($lista)->num_rows;
             </tr>
             <?php }while($row = $lista->fetch_assoc());  ?>
             <!-- Fechar a estrutura de repetição -->
-             </tbody>
+        </tbody>
     </table>
 </main> 
-
   <!--modal-->
   <div id="myModal" class="modal fade" role="dialog" >
     <div class="modal-dialog text-center">
@@ -130,11 +136,9 @@ $totalRows  =   ($lista)->num_rows;
         </div> <!-- fecha modal-content -->
     </div> <!-- fecha modal-dialog -->
 </div> <!-- fecha modal -->
-
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>   
-
 <!-- Script para o Modal -->
 <script type="text/javascript">
     $('.delete').on('click',function(){

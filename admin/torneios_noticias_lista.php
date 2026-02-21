@@ -33,9 +33,16 @@ $totalRows  =   ($lista)->num_rows;
 
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
-    <main class="container">
+<main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12 " > <!-- abre dimensionamento -->
-            <h1 class="fundocategoria text-center titulo"><strong><i>Lista de Notícias de Torneios</i></strong></h1>
+            <h1 class="fundocategoria text-center titulo">
+                <a href="adm_options.php">
+                    <button class="btn btntotal">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </button>
+                </a>
+                <strong><i>Lista de Notícias de Torneios</i></strong>
+            </h1>
             <br>
             <div class="btn btntotal bg-primary text-white">
                 Total de Notícias:
@@ -127,10 +134,8 @@ $totalRows  =   ($lista)->num_rows;
             <?php } ?>
         </tbody>
         </table>
-        </div> <!--fecha dimensionamento-->
-
-    </main>
-
+    </div> <!--fecha dimensionamento-->
+</main>
 <!--modal-->
 <div id="myModal" class="modal fade" role="dialog" >
     <div class="modal-dialog text-center">
