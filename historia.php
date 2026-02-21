@@ -1,3 +1,8 @@
+<?php 
+// Incluir o arquivo e fazer a conexão
+include("Connections/conn_atletas.php");
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -72,6 +77,9 @@
                 </div><!-- /.form-container -->
             </div><!-- /.col -->
         </div><!-- /.row -->
+    <!-- Link arquivos Bootstrap js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
     </main>
 <br><br>
     <footer>
@@ -79,3 +87,4 @@
     </footer>
 </body>
 </html>
+<?php mysqli_free_result($lista_menu); ?>

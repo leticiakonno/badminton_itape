@@ -64,7 +64,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
 
             <li class="dropdown">
                 <a 
-                    href="atletas_por_categoria.php"
+                    href="#"
                     class="dropdown-toggle navbartext"
                     data-toggle="dropdown"
                     role="button"

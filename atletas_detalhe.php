@@ -39,12 +39,13 @@ $totalRows  =   ($lista)->num_rows;
     </a>
     <strong><?php echo $row['nome_atleta']; ?></strong>
 </h2>
-<div class="row"> <!-- div row mantém os elementos na linha -->
+<div class="row" > <!-- div row mantém os elementos na linha -->
 
     <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
      <?php do{ ?> <!-- abre estrutura de repetição -->
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"> <!-- dimensionamento -->
-        <div class="thumbnail">            
+        <div class="thumbnail">  
+            <br>          
             <img 
                 src="imagens/atletas/<?php echo $row['img_atleta']; ?>" 
                 alt=""
