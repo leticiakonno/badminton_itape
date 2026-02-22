@@ -20,7 +20,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
 <nav class="navbar navbar navbarbg">
 <div class="container-fluid">
     <div class="navbar-header"> <!-- Agrupamento MOBILE -->
-        <a href="index.php" class="navbar-brand center">
+        <a href="index.php" class="navbar-brand center ">
         <img src="imagens/logobadminton.png" alt="Logo" class="logo">
         </a>
         <button

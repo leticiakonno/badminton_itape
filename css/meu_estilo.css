@@ -179,10 +179,10 @@ table td, table th {
 }
 
 .navbar-brand > img {
-    height: 85px;    /* ajuste aqui */
+    height: 65px;    /* ajuste aqui */
     width: auto;
     padding: 0;
-    margin-top: -40px; /* se precisar alinhar */
+    margin-top: -30px; /* se precisar alinhar */
     padding-left: 40px;
 }
 
@@ -437,4 +437,49 @@ table td, table th {
         color: #dddddd !important;
         background-color: transparent; /* Mantém o fundo azul do seu menu */
     }
+}
+
+/* Força tudo a respeitar a largura da tela no mobile */
+@media (max-width: 767px) {
+    .sidebar-news, 
+    .sidebar-news *, 
+    .principal, 
+    .principal * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Remove padding excessivo que pode empurrar o conteúdo para fora */
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .container, .container-fluid {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        overflow-x: hidden; /* Evita a rolagem lateral */
+    }
+}
+
+
+/* Ajuste para o Desktop */
+@media (min-width: 1200px) {
+    .panel-footer .container {
+        width: 90%; /* Reduz a largura interna para aumentar as margens laterais */
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+/* Garante que os títulos fiquem alinhados */
+.textrodape h4 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Remove a borda padrão do panel-footer do Bootstrap se necessário */
+.panel-footer {
+    border: none !important;
 }
