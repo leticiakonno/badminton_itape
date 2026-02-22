@@ -8,7 +8,8 @@ $ordenar_por    =   "id_tecnico ASC";
 $consulta       =   "
                     SELECT   *
                     FROM     ".$tabela."
-                    ORDER BY ".$ordenar_por.";
+                    ORDER BY ".$ordenar_por."
+                    LIMIT 3;
                     ";
 $lista      =   $conn_atletas->query($consulta);
 $row        =   $lista->fetch_assoc();
