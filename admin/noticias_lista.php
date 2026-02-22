@@ -33,7 +33,7 @@ $totalRows  =   ($lista)->num_rows;
 <?php include("menu_adm.php"); ?>
 <main class="container">
     <h1 class="fundoatletas text-center titulo">
-        <a href="adm_options.php">
+        <a href="index.php">
             <button class="btn btntotal">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </button>

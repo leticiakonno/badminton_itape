@@ -36,7 +36,7 @@ $totalRows  =   ($lista)->num_rows;
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-12 "> <!-- dimensionamento -->
         <h1 class="fundoatletas text-center titulo">
-            <a href="adm_options.php">
+            <a href="index.php">
                 <button class="btn btntotal">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </button>
