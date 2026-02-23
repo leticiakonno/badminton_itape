@@ -18,7 +18,7 @@ $totalRows  =   ($lista)->num_rows;
 
 <body class="fundofixo fontetabela">
     <main class="container">
-    <h2 class="fundoatletas titulo text-center"><strong>TÉCNICOS</strong></h2>
+    <h2 class="fundoatletas titulo text-center"><strong>NOSSOS MENTORES   <span class="glyphicon glyphicon-flash"></span></i></strong></h2>
     <br>
     <div class="row">
     <br>
