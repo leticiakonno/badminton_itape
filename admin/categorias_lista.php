@@ -37,8 +37,15 @@ $totalRows  = ($lista)->num_rows;
 <?php include("menu_adm.php"); ?>
     <main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12" > <!-- abre dimensionamento -->
-            <h1 class="fundocategoria text-center titulo"><strong><i>Lista de Categorias</i></strong></h1>
-            <br>
+        <h1 class="fundocategoria text-center titulo">
+            <a href="index.php">
+                <button class="btn btntotal">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </button>
+            </a>
+            <strong><i>Lista de Categorias</i></strong>
+        </h1>
+        <br>
             <div class="btn btntotal bg-primary text-white">
                 Total de Categorias:
                 <small><?php echo $totalRows; ?></small>
@@ -156,6 +163,9 @@ $totalRows  = ($lista)->num_rows;
         $('#myModal').modal('show'); // abre modal
     });
 </script>
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

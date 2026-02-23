@@ -16,7 +16,7 @@
     <!-- CARROUSSEL -->
     <?php include('carroussel.php'); ?>
 
-    <main class="containerpri fundo-index container-fluid">
+<main class="containerpri fundo-index container-fluid" style="overflow-x: hidden;">
     <div class="principal">
     <!-- Torneios -->
     <a name="torneios" ></a>
@@ -45,7 +45,6 @@
         <a name="historia"></a>
         <hr>
         <?php include('historiaresumo.php'); ?>
-        <br>
     </div>
 
     <aside class="sidebar-news">

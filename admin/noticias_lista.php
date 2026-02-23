@@ -31,9 +31,17 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
-    <main class="container">
-    <h1 class="fundoatletas text-center titulo"><strong><i>Lista de Notícias</i></strong></h1>
-                <div class=" btn btntotal bg-primary text-white">
+<main class="container">
+    <div class="col-xs-12 col-sm-6 col-md-12" > <!-- abre dimensionamento -->
+    <h1 class="fundoatletas text-center titulo">
+        <a href="index.php">
+            <button class="btn btntotal">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </button>
+        </a>
+        <strong><i>Lista de Notícias</i></strong>
+    </h1>
+            <div class=" btn btntotal bg-primary text-white">
                 Total de Notícias:
                 <small><?php echo $totalRows; ?></small>
             </div>
@@ -56,13 +64,14 @@ $totalRows  =   ($lista)->num_rows;
                     </th>
                     </tr>
             </thead> 
-             <tbody>
+            <tbody>
             <!--Abre estrutura de repetição-->
             <?php do { ?>
             <tr>
                 <td class="hidden"><?php echo $row['id_noticia']; ?></td>
                 <td><?php echo $row['titulo_noticia']; ?></td>
-                 <td><?php echo substr($row['descri_noticia'], 0, 200) . (strlen($row['descri_noticia']) > 200 ? '...' : ''); ?></td>
+                <td class="hidden-xs"><?php echo substr($row['descri_noticia'], 0, 200) . (strlen($row['descri_noticia']) > 200 ? '...' : ''); ?></td>
+                 <td class="hidden-lg hidden-md"><?php echo substr($row['descri_noticia'], 0, 50) . (strlen($row['descri_noticia']) > 50 ? '...' : ''); ?></td>
                  <td>
                     <img 
                         src="../imagens/noticias/<?php echo $row['img_noticia']; ?>" 
@@ -92,10 +101,9 @@ $totalRows  =   ($lista)->num_rows;
             </tr>
             <?php }while($row = $lista->fetch_assoc());  ?>
             <!-- Fechar a estrutura de repetição -->
-             </tbody>
+        </tbody>
     </table>
 </main> 
-
   <!--modal-->
   <div id="myModal" class="modal fade" role="dialog" >
     <div class="modal-dialog text-center">
@@ -130,11 +138,10 @@ $totalRows  =   ($lista)->num_rows;
         </div> <!-- fecha modal-content -->
     </div> <!-- fecha modal-dialog -->
 </div> <!-- fecha modal -->
-
+</div>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>   
-
 <!-- Script para o Modal -->
 <script type="text/javascript">
     $('.delete').on('click',function(){
@@ -149,6 +156,9 @@ $totalRows  =   ($lista)->num_rows;
         $('#myModal').modal('show'); // abre modal
     });
 </script>
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

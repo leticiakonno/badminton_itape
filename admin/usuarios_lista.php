@@ -31,9 +31,16 @@ $totalRows  =   ($lista)->num_rows;
 
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
-    <main class="container">
+<main class="container">
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-8" > <!-- abre dimensionamento -->
-            <h1 class="fundocategoria text-center titulo"><strong><i>Lista de Usuários</i></strong></h1>
+            <h1 class="fundocategoria text-center titulo">
+                <a href="index.php">
+                    <button class="btn btntotal">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </button>
+                </a>
+                <strong><i>Lista de Usuários</i></strong>
+            </h1>
             <br>
             <div class="btn btntotal bg-primary text-white">
                 Total de Usuários:
@@ -117,10 +124,8 @@ $totalRows  =   ($lista)->num_rows;
             <?php } while($row = $lista->fetch_assoc()); ?>
         </tbody>
         </table>
-        </div> <!--fecha dimensionamento-->
-
-    </main>
-
+    </div> <!--fecha dimensionamento-->
+</main>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog" >
     <div class="modal-dialog text-center">
@@ -173,6 +178,9 @@ $totalRows  =   ($lista)->num_rows;
         $('#myModal').modal('show'); // abre modal
     });
 </script>
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

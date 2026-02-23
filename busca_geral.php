@@ -37,11 +37,10 @@ if ($filtro != "") {
     <meta charset="UTF-8">
     <title>Resultado da Busca</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Link para CSS Específico -->
-    <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo fontetabela">
-<?php include('menu_publico.php'); ?>
+<body class="container">
+    <h2>Você pesquisou por: "<?php echo $filtro_select; ?>"</h2>
+    <hr>
 
 <main class="container">
     <h2 class="breadcrumb alert-danger fundoatletas titulo">

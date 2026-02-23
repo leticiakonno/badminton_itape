@@ -97,7 +97,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                     </li>
                     <?php do{ ?> <!-- abre estrutura de repetição -->
                         <li>
-                            <a href="../atletas_por_categoria.php?id_categoria_atleta=<?php echo $row_menu['id_categoria_atleta']; ?>">
+                            <a class="navbartext" href="../atletas_por_categoria.php?id_categoria=<?php echo $row_menu['id_categoria']; ?>">
                                 <?php echo $row_menu['nome_categoria']; ?>
                             </a>
                         </li>

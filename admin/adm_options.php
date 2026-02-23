@@ -13,7 +13,6 @@
 <main class="container">
 <h1 class="adm text-center titulo">Área Administrativa</h1>
 <div class="row ">
-
     <!-- ADM ATLETAS -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas">
