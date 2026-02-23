@@ -32,6 +32,7 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
 <main class="container">
+    <div class="col-xs-12 col-sm-6 col-md-12" > <!-- abre dimensionamento -->
     <h1 class="fundoatletas text-center titulo">
         <a href="index.php">
             <button class="btn btntotal">
@@ -69,7 +70,8 @@ $totalRows  =   ($lista)->num_rows;
             <tr>
                 <td class="hidden"><?php echo $row['id_noticia']; ?></td>
                 <td><?php echo $row['titulo_noticia']; ?></td>
-                 <td><?php echo substr($row['descri_noticia'], 0, 200) . (strlen($row['descri_noticia']) > 200 ? '...' : ''); ?></td>
+                <td class="hidden-xs"><?php echo substr($row['descri_noticia'], 0, 200) . (strlen($row['descri_noticia']) > 200 ? '...' : ''); ?></td>
+                 <td class="hidden-lg hidden-md"><?php echo substr($row['descri_noticia'], 0, 50) . (strlen($row['descri_noticia']) > 50 ? '...' : ''); ?></td>
                  <td>
                     <img 
                         src="../imagens/noticias/<?php echo $row['img_noticia']; ?>" 
@@ -136,6 +138,7 @@ $totalRows  =   ($lista)->num_rows;
         </div> <!-- fecha modal-content -->
     </div> <!-- fecha modal-dialog -->
 </div> <!-- fecha modal -->
+</div>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>   

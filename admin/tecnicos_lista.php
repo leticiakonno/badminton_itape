@@ -33,7 +33,7 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
 <main class="container" style="width: 90%;">
-    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-12 col-md-offset-0" > <!-- abre dimensionamento -->
+    <div class="col-xs-12 col-sm-6 col-md-12" > <!-- abre dimensionamento -->
         <h1 class="fundocategoria text-center titulo">
             <a href="index.php">
                 <button class="btn btntotal">
@@ -55,7 +55,7 @@ $totalRows  =   ($lista)->num_rows;
                 <th>NOME</th>
                 <th>NÍVEL</th>
                 <th>DESCRIÇÃO</th>
-                <th>IMAGEM</th>
+                <th class="hidden-xs">IMAGEM</th>
                     <th>
                     <a 
                     href="tecnicos_insere.php"
@@ -80,10 +80,11 @@ $totalRows  =   ($lista)->num_rows;
             <td><?php echo $row['nivel_tecnico']; ?></td>
 
             <!-- DESCRI -->
-            <td><?php echo $row['descri_tecnico']; ?></td>
+            <td class="hidden-xs"><?php echo $row['descri_tecnico']; ?></td>
+            <td class="hidden-lg hidden-sm"><?php echo mb_strimwidth ($row['descri_tecnico'],0,38,"...");?></td>
 
             <!-- IMAGEM -->
-                <td>
+                <td class="hidden-xs">
                 <img 
                     src="../imagens/tecnicos/<?php echo $row['img_tecnico']; ?>" 
                     alt="<?php echo $row['nome_tecnico']; ?>" 

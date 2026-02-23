@@ -58,7 +58,7 @@ $totalRows  =   ($lista)->num_rows;
                 <th>DESTAQUE</th>   
                 <th class="hidden-xs">DESCRIÇÃO</th>
                 <th class="hidden-xs">DATA DE NASCIMENTO</th>
-                <th class="hidden-xs">DATA DE CADASTRO</th>
+                <th class="hidden-xs hidden-sm">DATA DE CADASTRO</th>
                 <th class="hidden-xs">IMAGEM</th>
                                 <th>
                     <a 
@@ -91,7 +91,7 @@ $totalRows  =   ($lista)->num_rows;
                 </td>
                 <td class="hidden-xs"><?php echo $row['descri_atleta']; ?></td>
                 <td class="hidden-xs"><?php echo $row['data_nas_atleta']; ?></td>
-                <td class="hidden-xs"><?php echo $row['data_cad_atleta']; ?></td>
+                <td class="hidden-xs hidden-sm"><?php echo $row['data_cad_atleta']; ?></td>
                 <td class="hidden-xs">
                     <img 
                         src="../imagens/atletas/<?php echo $row['img_atleta']; ?>" 
@@ -160,6 +160,7 @@ $totalRows  =   ($lista)->num_rows;
     </div> <!-- fecha modal-dialog -->
 </div> <!-- fecha modal -->
 </div>  <!-- fecha dimensionamento -->
+<br>
 </div>
 
 
