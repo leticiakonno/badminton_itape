@@ -1,4 +1,7 @@
 <?php
+//Incluir o Sistema de Autenticação
+include("acesso_com.php");
+
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_atletas.php");
 
@@ -140,9 +143,8 @@ $totalRows = ($lista)->num_rows;
                                  class="form-control"
                                  placeholder="Digite a descrição do parceiro."
                                  cols="30"
-                                 rows="8"
-                                 value="<?php echo $row['descri_parceiro']; ?>"
-                             ></textarea>
+                                 rows="8"  
+                             ><?php echo $row['descri_parceiro']; ?></textarea>
                          </div> <!-- fecha input-group -->
                          <!-- fecha textarea descri_categoria -->   
                          <br>
@@ -181,9 +183,11 @@ $totalRows = ($lista)->num_rows;
 </div>
 </div>
 </main>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

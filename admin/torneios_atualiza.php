@@ -1,4 +1,7 @@
 <?php
+//Incluir o Sistema de Autenticação
+include("acesso_com.php");
+
 // Conexão
 include("../Connections/conn_atletas.php");
 
@@ -158,11 +161,11 @@ $totalRows      =   ($lista)->num_rows;
             </div>
         </div>
     </main>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>
-
 <?php mysqli_free_result($lista); ?>

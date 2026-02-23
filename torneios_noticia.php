@@ -38,7 +38,7 @@ $totalRows = $lista->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 
-<body class="fundofixo fontetabela">
+<body class="fundo3 fontetabela">
 
 <?php include('menu_publico.php'); ?>
 
@@ -63,7 +63,7 @@ $totalRows = $lista->num_rows;
 <div class="row">
 
 <?php do { ?>
-    <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="col-xs-12 col-sm-6 col-md-4 "> <!-- dimensionamento -->
         <div class="thumbnail">
 
             <?php 
@@ -87,7 +87,7 @@ $totalRows = $lista->num_rows;
             <?php } ?>
 
             <div class="caption text-center">
-                <h4 class="text-primary">
+                <h4 class="text-dark">
                     <strong><?php echo htmlspecialchars(substr($row['titulo'], 0, 60)); ?><?php echo strlen($row['titulo']) > 60 ? '...' : ''; ?></strong>
                 </h4>
 

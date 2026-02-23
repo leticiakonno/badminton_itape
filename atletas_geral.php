@@ -31,14 +31,14 @@ $totalRows  =   ($lista)->num_rows;
 <!-- MENU -->
 <?php include('menu_publico.php'); ?> 
 
-<main class="container">
+<main class="container ">
     <h2 class="fundoatletas  text-center titulo"><strong>ATLETAS</strong></h2>
-    <div class="container">
-    <br>
-        <!-- abre thumbnail -->
+    <br><br>
+    <div class="fundo-index" style="padding-top: 50px;border-radius: 15px;">
+    <div class="row" style="padding-left: 50px; padding-right: 50px;">        <!-- abre thumbnail -->
         <?php do{ ?>
-        <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
-            <div class="thumbnail" style="width: 36rem;">
+        <div class="col-xs-12  col-sm-6 col-md-4  " > <!-- dimensionamento -->
+            <div class="thumbnail" style="width: 100%; padding-top: 20px;">
                 <a 
                 href="atletas_detalhe.php?id_atleta=<?php echo $row['id_atleta']; ?>" 
                 >
@@ -55,7 +55,7 @@ $totalRows  =   ($lista)->num_rows;
                     <strong><?php echo $row['nome_categoria']; ?></strong>
                     </p>
                     <p class="text-left">
-                        <?php echo mb_strimwidth ($row['descri_atleta'],0,45,"...");?>
+                        <?php echo mb_strimwidth ($row['descri_atleta'],0,38,"...");?>
                     </p>
                     <p>
                         <a 
@@ -69,16 +69,21 @@ $totalRows  =   ($lista)->num_rows;
                     </p>
                 </div> <!--fecha caption-->
             </div> <!--fecha thumbnail-->
+            <br>
         </div> <!--fecha dimensionamento-->
         <?php }while($row=$lista->fetch_assoc()); ?>
     </div> <!-- fecha div container -->
-</main>
+</div>
+<br>
 
 <!-- não esquecer de comentar o JS e CSS para não dar conflito no index -->
 <!-- Link arquivos Bootstrap js-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>  
-<?php include('rodape.php'); ?>
+<script src="js/bootstrap.min.js"></script> 
+</main>
+<footer> 
+    <?php include('rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); 

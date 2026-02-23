@@ -60,7 +60,6 @@ if($_POST){
 
 // Selecionar o banco de dados (USE)
 mysqli_select_db($conn_atletas,$database_conn);
-
 ?>
 
 <!DOCTYPE html>
@@ -76,15 +75,15 @@ mysqli_select_db($conn_atletas,$database_conn);
 </head>
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
-    <main class="container">
- <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
-            <h2 class="fundocategoria text-center titulo">
-                <a href="categorias_lista.php">
-                    <button class="btn btntotal">
-                        <span class="glyphicon glyphicon-chevron-left"></span>  
-                    </button>
-                </a>
+<main class="container">
+<div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8 " > <!-- abre dimensionamento -->
+        <h2 class="fundocategoria text-center titulo">
+            <a href="categorias_lista.php">
+                <button class="btn btntotal">
+                    <span class="glyphicon glyphicon-chevron-left"></span>  
+                </button>
+            </a>
                 Inserir Categoria 
             </h2>
             <br>
@@ -178,5 +177,8 @@ mysqli_select_db($conn_atletas,$database_conn);
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>    
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>

@@ -1,4 +1,7 @@
 <?php
+//Incluir o Sistema de Autenticação
+include("acesso_com.php");
+
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_atletas.php");
 
@@ -93,7 +96,7 @@ mysqli_select_db($conn_atletas,$database_conn);
     <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
     <h2 class="fundocategoria text-center titulo">
                 <a href="categorias_lista.php">
-                    <button class="btn btnseta">
+                    <button class="btn btntotal">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
                 </a>
@@ -219,7 +222,10 @@ mysqli_select_db($conn_atletas,$database_conn);
 
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>    
+<script src="../js/bootstrap.min.js"></script>
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

@@ -1,4 +1,7 @@
 <?php
+//Incluir o Sistema de Autenticação
+include("acesso_com.php");
+
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_atletas.php");
 
@@ -337,10 +340,12 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
         </div> <!-- dimensionamento -->
     </div> <!-- fecha row -->
 </main>
-
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>    
+<script src="../js/bootstrap.min.js"></script>
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

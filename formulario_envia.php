@@ -1,3 +1,8 @@
+<?php 
+// Incluir o arquivo e fazer a conexão
+include("Connections/conn_atletas.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -126,10 +131,12 @@
                                 <div class="col-sm-offset-3 col-sm-8">
                                     <div class="alert formulariobusca text-center">
                                         Treinos gratuitos:<br>
-                                        Terça-feira a partir das 19h às 21h <br>
-                                        Quarta-feira a partir das 19h às 21h<br>
-                                        Sexta-feira a partir das 19h às 21h<br>
-                                        Sábado a partir das 14h às 17h
+                                            <div class="text-center" style="color: rgba(5, 24, 109, 0.904);" >
+                                                Terça-feira a partir das 19h às 21h <br>
+                                                Quarta-feira a partir das 19h às 21h<br>
+                                                Sexta-feira a partir das 19h às 21h<br>
+                                                Sábado a partir das 14h às 17h
+                                         </div>
                                     </div>
                                 </div>
                             </div>
@@ -184,12 +191,15 @@
                             </button>
                             </div>
                         </div>
-                        <br><br>
+                        <br>
                     </form>
                 </div>
             </div>
         </div>
     </main>
+<!-- Link arquivos Bootstrap js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
     <br>
 <footer>
     <?php include('rodape.php'); ?>
@@ -239,5 +249,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
     }
 });
 </script>
+
 </body>
 </html>
+<?php mysqli_free_result($lista_menu); ?>

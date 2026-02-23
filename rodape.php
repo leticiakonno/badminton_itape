@@ -1,39 +1,40 @@
-
+ <script src="https://kit.fontawesome.com/d03c290dd3.js" crossorigin="anonymous"></script>
 <body class="fundofixo">
-<div class= "row panel-footer margem" style="background-color:rgba(3, 33, 104, 0.9)"> <!-- abre painel de rodapé -->
+<div class= "row panel-footer margem" style="background-color:rgba(3, 33, 104, 0.9);"> <!-- abre painel de rodapé -->
 
 <!-- ÁREA DE LOCALIZAÇÃO -->
-<div class="col-sm-6 col-md-4" >
-    <div class="panel-footer textrodape" style="background:none;">
-        <img src="imagens/logochurrascopequeno.png" alt="">
-        <br>
-        <i>Badminton Itapê, juntos pelo crescimento dentro e fora da quadra!</i>
-        <address>
-            <i>Rua Aristides Lobo, 17 - Centro - Itapetininga - SP - CEP 18200-185</i>
-            <br>
-            <span class="glyphicon glyphicon-phone-alt"></span>
-            &nbsp;Fone: (15) 99715-1143
-            <br>
-            <span class="glyphicon glyphicon-envelope"></span>
-            &nbsp;E-mail:
-            <a 
-                class="textrodape"
-                href="mailto:leiko_konno@hotmail.com?subject=Contato&cc=seuemail@mail.com"
-            >
-            leiko_konno@hotmail.com
-            </a>
-            <div class="embed-responsive embed-responsive-16by9"> <!-- mapa -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3526027249522!2d-48.05764850321044!3d-23.5916841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc93b46246ed%3A0x6ec0870ce87bb6fd!2sSenac%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1761610404615!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div> <!-- fecha mapa -->
-        </address>
-    </div> <!-- fecha panel-footer --> 
-</div> <!-- fecha dimensionamento / área -->
+ <div class="container"> 
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4" >
+            <div class="textrodape" style="background:none; padding: 15px;">
+                <img src="imagens/logochurrascopequeno.png" alt="">
+                <br>
+                <i>Badminton Itapê, juntos pelo crescimento dentro e fora da quadra!</i>
+                <address>
+                    <i>Rua Aristides Lobo, 17 - Centro - Itapetininga - SP - CEP 18200-185</i>
+                    <br>
+                    <span class="glyphicon glyphicon-phone-alt"></span>
+                    &nbsp;Fone: (15) 99715-1143
+                    <br>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    &nbsp;E-mail:
+                    <a 
+                        class="textrodape"
+                        href="mailto:leiko_konno@hotmail.com?subject=Contato&cc=seuemail@mail.com"
+                    >
+                    leiko_konno@hotmail.com
+                    </a>
+                    <div class="embed-responsive embed-responsive-16by9"> <!-- mapa -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3526027249522!2d-48.05764850321044!3d-23.5916841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc93b46246ed%3A0x6ec0870ce87bb6fd!2sSenac%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1761610404615!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div> <!-- fecha mapa -->
+                </address>
+            </div> <!-- fecha panel-footer --> 
+        </div> <!-- fecha dimensionamento / área -->
 
 <!-- ÁREA DE NAVEGAÇÃO -->
-<div class="col-sm-6 col-md-4" >
-    <div class="panel-footer textrodape" style="background:none;">
+<div class="col-xs-12 col-sm-6 col-md-4" >
+    <div class="textrodape" style="background:none;">
         <h4>LINKS</h4>
-        <br>
         <ul class="nav nav-pills nav-stacked">
             <li>
                 <a href="index.php#home" class="textrodape">
@@ -47,7 +48,7 @@
             </li>
             <li>
                 <a href="atletas_geral.php" class="textrodape">
-                    <span class="glyphicon glyphicon-text-color">&nbsp;ATLETAS</span>
+                <span> <i class="fa-solid fa-star"></i>&nbsp;ATLETAS</span>
                 </a>
             </li>
             <li>
@@ -75,10 +76,9 @@
 </div> <!-- fecha dimensionamento / área -->
 
 <!-- ÁREA DE CONTATO -->
-<div class="col-sm-6 col-md-4" >
-    <div class="panel-footer textrodape" style="background:none;">
+<div class="col-xs-12 col-sm-6 col-md-4" >
+    <div class="textrodape" style="background:none;">
         <h4>CONTATO</h4>
-        <br>
         <form 
             action="rodape_contato.php"
             name="form_contato"
@@ -148,13 +148,13 @@
 </div> <!-- fecha dimensionamento / área -->
 
 <!-- ÁREA DE DESENVOLVEDOR -->
-<div class="col-sm-12">
-    <div class="panel-footer" style="background:none;">
+<div class="col-xs-12" >
+    <div style="background:none;">
         <h6 class="textrodape text-center">
             Developed by 
-            <a href="https://site-da-leticia-konno.com" target="_blank">Leticia Konno</a>, 
-            <a href="https://site-da-leticia-eduarda.com" target="_blank">Leticia Eduarda</a> e 
-            <a href="https://site-da-mavelyn.com" target="_blank">Mavelyn Leme</a>&trade; 2025
+            <a href="https://iwanezuk.com.br/l2m/letkonno" target="_blank">Leticia Konno</a>, 
+            <a href="https://iwanezuk.com.br/l2m/letedu" target="_blank">Leticia Eduarda</a> e 
+            <a href= "https://iwanezuk.com.br/l2m/mavelyn" target="_blank">Mavelyn Leme</a>&trade; 2026
             <br>
             <a href="https://www.iwanezuk.com.br" target="_blank">
                 www.iwanezuk.com.br
@@ -163,6 +163,7 @@
     </div> <!-- fecha panel-footer --> 
 </div> <!-- fecha dimensionamento / área -->    
 </div> <!-- fecha painel principal do rodapé -->
-
+</div>
+</div>
 </body>
 </html>

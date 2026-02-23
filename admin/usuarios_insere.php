@@ -1,4 +1,7 @@
 <?php
+// Incluindo o sistema de identificação
+include("acesso_sup.php");
+
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_atletas.php");
 
@@ -182,9 +185,11 @@ if($_POST){
         </div>
     </div>
 </main>
-
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>    
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>

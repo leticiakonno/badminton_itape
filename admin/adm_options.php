@@ -13,7 +13,6 @@
 <main class="container">
 <h1 class="adm text-center titulo">Área Administrativa</h1>
 <div class="row ">
-
     <!-- ADM ATLETAS -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas">
@@ -215,7 +214,7 @@
       <!-- ADM TORNEIOS NOTÍCIAS   -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas ">
-            <img src="../imagens/noticias.png" width="200px" height="50px"  alt="">
+            <img src="../imagens/noticiastorneio.png" style="width: 300px;"  alt="">
             <br>
             <div class="fundoatletas">
                 <!-- botão principal -->
@@ -244,13 +243,11 @@
             </div> <!-- fecha alert-warning -->
         </div> <!-- fecha thumbnail -->
     </div> <!-- fecha dimensionamento -->
-
-
-
-        <!-- ADM NOTÍCIAS   -->
+    
+    <!-- ADM NOTÍCIAS   -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail fundoatletas ">
-            <img src="../imagens/noticias.png" width="200px" height="50px"  alt="">
+            <img src="../imagens/noticias.png" style="width:300px"  alt="">
             <br>
             <div class="fundoatletas">
                 <!-- botão principal -->
