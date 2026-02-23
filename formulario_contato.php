@@ -24,8 +24,8 @@
                 $telefone_formulario = $_POST['telefone_formulario'];
                 $email_formulario  =   $_POST['email_formulario'];
                 $assunto_contato = $_POST['assunto_contato'];
-                $msg_contato    =   "Mensagem de:".$nome_contato."\n".$_POST['comentarios_contato'];
-                $mailsend   =   mail($destino,"Formulário de comentário",$msg_contato,"From:",$email_contato);
+                $msg_contato    =   "Mensagem de:".$nome_formulario."\n".$_POST['comentarios_contato'];
+                $mailsend   =   mail($destino,"Formulário de comentário",$msg_contato,"From:",$email_formulario);
             ?>
             <div class="text-center">
                 <p>
