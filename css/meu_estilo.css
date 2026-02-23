@@ -330,19 +330,21 @@ table td, table th {
 
 .containerpri {
     display: flex;
-    gap: 20px;
+    flex-wrap: nowrap; /* No desktop, eles ficam lado a lado */
+    gap: 30px;
+    padding-top: 20px;
+    align-items: flex-start; /* Impede que a sidebar estique verticalmente */
 }
 
 .principal {
-    flex: 3;
-
+    flex: 3; /* Ocupa 75% do espaço */
+    min-width: 0; /* Essencial para o flexbox não quebrar com imagens */
 }
-.sidebar-news {
-    flex: 1;
-    max-width: 450px;
-    float: left;
-    width: 75%; /* Em vez de um valor fixo em px, use porcentagem */
 
+.sidebar-news {
+    flex: 1; /* Ocupa 25% do espaço */
+    min-width: 300px; /* Define um tamanho mínimo para não ficar espremido */
+    /* REMOVIDO: width: 75% e float: left que quebravam o layout */
 }
 
 /* Isso força a linha a não deixar buracos e alinhar tudo à esquerda */
@@ -439,26 +441,23 @@ table td, table th {
     }
 }
 
-/* Força tudo a respeitar a largura da tela no mobile */
-@media (max-width: 767px) {
-    .sidebar-news, 
-    .sidebar-news *, 
+/* --- AJUSTES PARA TABLET E MOBILE (Abaixo de 991px) --- */
+@media (max-width: 991px) {
+    .containerpri {
+        flex-wrap: wrap; /* Permite quebrar a linha */
+        flex-direction: column; /* Força um embaixo do outro */
+    }
+
     .principal, 
-    .principal * {
+    .sidebar-news {
+        width: 100% !important;
+        flex: none !important;
         max-width: 100% !important;
-        box-sizing: border-box !important;
+        min-width: 100% !important;
     }
     
-    /* Remove padding excessivo que pode empurrar o conteúdo para fora */
-    .row {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-    
-    .container, .container-fluid {
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-        overflow-x: hidden; /* Evita a rolagem lateral */
+    .sidebar-news {
+        margin-top: 40px; /* Dá um respiro entre o conteúdo e a sidebar */
     }
 }
 
@@ -482,4 +481,13 @@ table td, table th {
 /* Remove a borda padrão do panel-footer do Bootstrap se necessário */
 .panel-footer {
     border: none !important;
+}
+
+/* --- Classe utilitária para limitar imagens verticais em telas grandes --- */
+.img-limitada {
+    max-width: 500px; /* Define um "teto". A imagem nunca passará de 500px de largura */
+    width: 100%;      /* Tenta ocupar todo o espaço disponível até atingir o teto */
+    height: auto;     /* Mantém a proporção correta da foto */
+    margin: 20px auto; /* Centraliza a imagem horizontalmente e dá um espaço vertical */
+    display: block;   /* Necessário para que o 'margin auto' funcione para centralizar */
 }
