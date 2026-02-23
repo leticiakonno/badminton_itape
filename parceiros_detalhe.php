@@ -30,19 +30,19 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <?php include('menu_publico.php'); ?>
 
-<body class="fundo2 fontetabela">
+<body class="fundo3 fontetabela">
     <main class="container">
-        <h2 class="fundocategoria categoriageral nomeatleta titulo">
+       <h2 class="breadcrumb alert-danger fundoatletas titulo">
             <a href="javascript:window.history.go(-1)" class="btn btntotal">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
             <strong><?php echo $row['nome_parceiro']; ?></strong>
         </h2>
-<div class="row"> <!-- manter os elementos na linha (poliça) -->
-    <br>
+<div class="row fundo-index"> <!-- manter os elementos na linha (poliça) -->
     <!-- Abre thumbnail/card -->
     <?php do{ ?> <!-- Abre a estrutura de repetição -->
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"> <!-- dimensionamento -->
+        <br><br>
         <div class="thumbnail">
             <img 
                 src="imagens/apoiadores/<?php echo $row['img_parceiro']; ?>" 
@@ -74,6 +74,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Fecha thumbnail/card -->
 
 </div> <!-- fecha row -->
+<br>
 </main>
 <?php include('rodape.php'); ?>
 <!-- Link arquivos Bootstrap js --> 

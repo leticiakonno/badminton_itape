@@ -1,24 +1,24 @@
     -- Backup Geral do banco de dados dbbadminton
     -- Excluir o usuário dbbadminton caso ele exista
-    DROP USER IF EXISTS 'dbbadminton'@'localhost';
+    DROP USER IF EXISTS 'iwanez83_ti19'@'localhost';
     
     -- Criar o usuário dbbadminton se ele não existir
-    CREATE USER IF NOT EXISTS 'dbbadminton'@'localhost'
+    CREATE USER IF NOT EXISTS 'iwanez83_ti19'@'localhost'
         IDENTIFIED BY 'badmintonitape';
-    GRANT ALL PRIVILEGES ON *.* TO 'dbbadminton'@'localhost'
+    GRANT ALL PRIVILEGES ON *.* TO 'iwanez83_ti19'@'localhost'
         WITH GRANT OPTION;
         FLUSH PRIVILEGES;
     
     -- Excluir o banco de dados dbbadminton caso ele exista
-    DROP DATABASE IF EXISTS dbbadminton;
+    DROP DATABASE IF EXISTS iwanez83_ti19;
     
     -- Criar o banco de dados dbbadminton se ele não existir
-    CREATE DATABASE IF NOT EXISTS dbbadminton
+    CREATE DATABASE IF NOT EXISTS iwanez83_ti19
         DEFAULT CHARACTER SET utf8
         COLLATE utf8_general_ci;
     
     -- Usamos o banco de dados dbbadminton
-    USE dbbadminton;
+    USE iwanez83_ti19;
 
     -- Estruta da tabela tbcategorias
     CREATE TABLE tbcategorias(
@@ -93,7 +93,8 @@
     INSERT INTO tbtecnicos(id_tecnico,nome_tecnico,nivel_tecnico,descri_tecnico,img_tecnico) VALUES
     (1, 'Leiko Konno', 'Técnica Principal', 'Técnica voluntária de badminton pioneira na cidade de Itapetininga. Acredita que o esporte vai muito além de vencer o tempo todo, mas sim de transformar atletas e pessoas para a vida, com dignidade e humildade.', 'leiko.png'),
     (2, 'Shogo Konno', 'Técnico Assistente', 'Técnico voluntário de badminton junto com a sua esposa Leiko e também é árbitro de nível nacional. Adora fazer uma piada e sempre com muita paciência para ajudar e ensinar.', 'shogo.png'),
-    (3, 'Letícia Konno', 'Técnica Assistente', 'Assistente técnica, ajuda voluntariamente a ministrar os treinos com seus pais. Atleta, mas também sempre disposta a ensinar através da experiência.', 'leticia.png');
+    (3, 'Daichi Inoue', 'Técnico Assitente', 'Técnico voluntário, vindo diretamento do Japão. Aceitou o desafio de se descolar para o outro lado do mundo por paixão ao esporte e incentivo ao crescimento,', 'daichi.png'),
+    (4, 'Letícia Konno', 'Técnica Assistente', 'Assistente técnica, ajuda voluntariamente a ministrar os treinos com seus pais. Atleta, mas também sempre disposta a ensinar através da experiência.', 'leticia.png');
 
     -- Estrutura da tabela tbparceiros
     CREATE TABLE tbparceiros(
@@ -108,11 +109,11 @@
         (1,'Prefeitura de Itapetininga', 'A Prefeitura de Itapetininga é a principal parceira do projeto Badminton Itapetininga, apoiando e incentivando o esporte na cidade.', 'prefeitura.png'),
         (2,'Colégio Dom Bosco de Itapetininga', 'Primeira e fiel patrocinadora do badminton na cidade, promovendo o esporte e oferecendo suporte aos atletas.', 'dombosco.jpeg'),
         (3,'Universal Chemical', 'Uma das maiores empresas da região, são apoiadores do esporte, sempre prestando suporte à equipe.', 'chemical.jpg'),
-        (4,'Ligia', 'Uma das maiores apoiadoras da equipe, faz por amor ao esporte e toda a equipe. Coração e alma enormes.', 'ligia.jpeg'),
+        (4,'Ligia', 'Uma das maiores apoiadoras da equipe, faz por amor ao esporte e toda a equipe. Coração e alma enormes.', 'ligia.png'),
         (5,'Cristina Mori', 'Psicóloga voluntária, mãe de atleta, proporciona acompanhamento da saúde mental dos nossos atletas.', 'crismori.png'),
-        (6,'Dr.Thiago', 'Médico voluntário que cuida da saúde dos atletas, realizando exames e acompanhamentos regulares.', 'drthiago.jpeg'),
+        (6,'Dr.Thiago', 'Médico voluntário que cuida da saúde dos atletas, realizando exames e acompanhamentos regulares.', 'drthiago.png'),
         (7,'Laura Takamori', 'Mãe de atletas e grande apoiadora do esporte, prestativa e sempre à disposição. Presta ajuda de forma voluntária em prol de toda a equipe.', 'laura.png'),
-        (8,'Roberto Ueno', 'Pai de atletas, sempre disposto a ajudar e a alavancar o time para outros patamares.', 'roberto.jpeg'),
+        (8,'Roberto Ueno', 'Pai de atletas, sempre disposto a ajudar e a alavancar o time para outros patamares.', 'roberto.png'),
         (9,'Cristiane Matiazzo', 'Fisioterapeuta voluntária que cuida dos atletas, prevenindo lesões e promovendo a recuperação física.', 'cristiane.png');
 
     -- Estrutura da tabela tbtorneios

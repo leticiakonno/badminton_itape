@@ -21,7 +21,7 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
 
 <body class="fundofixo fontetabela">
 <main class="container">
-<i><h2 class="fundoatletas titulo text-center"><strong>TALENTOS</strong></h2></i>
+<i><h2 class="fundoatletas titulo text-center"><strong>NOSSOS TALENTOS   <span class="glyphicon glyphicon-star"></span></strong></h2></i>
 <br>
 <div class="row"> <!-- div row mantém os elementos na linha -->
 <br>

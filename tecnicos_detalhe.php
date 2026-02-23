@@ -41,12 +41,14 @@ $totalRows  =   ($lista)->num_rows;
     </a>
     <strong><?php echo $row['nome_tecnico']; ?></strong>
 </h2>
-<div class="row"> <!-- div row mantém os elementos na linha -->
-
+<div class="row fundo-index"> <!-- div row mantém os elementos na linha -->
+<br>
     <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
      <?php do{ ?> <!-- abre estrutura de repetição -->
-    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"> <!-- dimensionamento -->
-        <div class="thumbnail">            
+    <div class="col-xs-12  col-sm-6 col-md-4 "> <!-- dimensionamento -->
+        <br>
+        <div class="thumbnail">    
+        <br>
             <img 
                 src="imagens/tecnicos/<?php echo $row['img_tecnico']; ?>" 
                 alt=""

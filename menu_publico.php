@@ -15,12 +15,12 @@ $row_menu        =   $lista_menu->fetch_assoc();
 $totalRows_menu  =   ($lista_menu)->num_rows;
 ?>
 
-<body class="fundofixo fontetabela">
+<body>
 <!-- Abre a barra de navegação -->
 <nav class="navbar navbar navbarbg">
 <div class="container-fluid">
     <div class="navbar-header"> <!-- Agrupamento MOBILE -->
-        <a href="index.php" class="navbar-brand center">
+        <a href="index.php" class="navbar-brand center ">
         <img src="imagens/logobadminton.png" alt="Logo" class="logo">
         </a>
         <button
@@ -57,14 +57,14 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                 </a>
 
                 <ul class="dropdown-menu">
-                    <li><a href="tecnicos_geral.php">Técnicos</a></li>
-                    <li><a href="atletas_geral.php">Atletas</a></li>
+                    <li><a class="navbartext" href="tecnicos_geral.php">Técnicos</a></li>
+                    <li><a class="navbartext" href="atletas_geral.php">Atletas</a></li>
                 </ul>
                 </li>
 
             <li class="dropdown">
                 <a 
-                    href="atletas_por_categoria.php"
+                    href="#"
                     class="dropdown-toggle navbartext"
                     data-toggle="dropdown"
                     role="button"
@@ -81,7 +81,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                     </li>
                     <?php do{ ?> <!-- abre estrutura de repetição -->
                         <li>
-                            <a href="atletas_por_categoria.php?id_categoria=<?php echo $row_menu['id_categoria']; ?>">
+                            <a class="navbartext" href="atletas_por_categoria.php?id_categoria=<?php echo $row_menu['id_categoria']; ?>">
                                 <?php echo $row_menu['nome_categoria']; ?>
                             </a>
                         </li>
@@ -94,7 +94,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
              <li><a class="navbartext" href="parceiros_geral.php">PARCEIROS</a></li>
             <!-- Form Busca -->
              <form
-                action="atletas_busca.php"
+                action="busca_geral.php"
                 method="get"
                 name="form_busca"
                 id="form_busca"

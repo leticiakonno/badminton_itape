@@ -35,7 +35,14 @@ $totalRows  =   ($lista)->num_rows;
 <main class="container" style="width: 90%;">
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-12 "> <!-- dimensionamento -->
-        <h1 class="fundoatletas text-center titulo"><strong>Lista de Atletas</strong></h1>
+        <h1 class="fundoatletas text-center titulo">
+            <a href="index.php">
+                <button class="btn btntotal">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </button>
+            </a>
+            <strong>Lista de Atletas</strong>
+        </h1>
         <div class="btn btntotal bg-danger text-white">
             Total de Atletas:
             <small><?php echo $totalRows; ?></small>
@@ -51,7 +58,7 @@ $totalRows  =   ($lista)->num_rows;
                 <th>DESTAQUE</th>   
                 <th class="hidden-xs">DESCRIÇÃO</th>
                 <th class="hidden-xs">DATA DE NASCIMENTO</th>
-                <th class="hidden-xs">DATA DE CADASTRO</th>
+                <th class="hidden-xs hidden-sm">DATA DE CADASTRO</th>
                 <th class="hidden-xs">IMAGEM</th>
                                 <th>
                     <a 
@@ -84,7 +91,7 @@ $totalRows  =   ($lista)->num_rows;
                 </td>
                 <td class="hidden-xs"><?php echo $row['descri_atleta']; ?></td>
                 <td class="hidden-xs"><?php echo $row['data_nas_atleta']; ?></td>
-                <td class="hidden-xs"><?php echo $row['data_cad_atleta']; ?></td>
+                <td class="hidden-xs hidden-sm"><?php echo $row['data_cad_atleta']; ?></td>
                 <td class="hidden-xs">
                     <img 
                         src="../imagens/atletas/<?php echo $row['img_atleta']; ?>" 
@@ -153,6 +160,7 @@ $totalRows  =   ($lista)->num_rows;
     </div> <!-- fecha modal-dialog -->
 </div> <!-- fecha modal -->
 </div>  <!-- fecha dimensionamento -->
+<br>
 </div>
 
 
@@ -173,10 +181,11 @@ $totalRows  =   ($lista)->num_rows;
         $('#myModal').modal('show'); // abre modal
     });
 </script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>  
-
+<footer>
+    <?php include('../rodape.php'); ?>
+</footer>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>

@@ -1,78 +1,107 @@
 <?php
+// Conexão com o banco
 include("Connections/conn_atletas.php");
 
-$filtro_select = $_GET['buscar'];
+// Pega o que o usuário digitou no formulário
+$filtro = isset($_GET['buscar']) ? $_GET['buscar'] : "";
 
-// SQL UNIFICADO: Buscamos em todas as tabelas e damos nomes genéricos às colunas
-$consulta_unificada = "
-    SELECT id_atleta AS id, nome_atleta AS nome, descri_atleta AS descri, 'atletas' AS tipo, img_atleta AS imagem 
-    FROM tbatletas 
-    WHERE nome_atleta LIKE '%$filtro_select%' OR descri_atleta LIKE '%$filtro_select%'
+if ($filtro != "") {
+    // SQL unificado: busca nas duas tabelas e junta os resultados
+    $consulta = "
+        SELECT id_atleta AS id, nome_atleta AS nome, descri_atleta AS descri, img_atleta AS foto, 'atleta' AS tipo 
+        FROM tbatletas 
+        WHERE nome_atleta LIKE '%$filtro%'
+        
+        UNION 
+        
+        SELECT id_parceiro AS id, nome_parceiro AS nome, descri_parceiro AS descri, img_parceiro AS foto, 'parceiro' AS tipo 
+        FROM tbparceiros 
+        WHERE nome_parceiro LIKE '%$filtro%'
 
-    UNION
+        UNION 
+        
+        SELECT id_tecnico AS id, nome_tecnico AS nome, descri_tecnico AS descri, img_tecnico AS foto, 'tecnico' AS tipo 
+        FROM tbtecnicos 
+        WHERE nome_tecnico LIKE '%$filtro%'
+    ";
     
-    SELECT id_categoria AS id, nome_categoria AS nome, descri_categoria AS descri, 'torneios' AS tipo, img_categoria AS imagem  
-    FROM tbcategorias 
-    WHERE nome_torneio LIKE '%$filtro_select%'
-
-    UNION
-    
-    SELECT id_tecnico AS id, nome_tecnico AS nome, descri_tecnico AS descri, 'parceiros' AS tipo, img_tecnico AS imagem 
-    FROM tbtecnicos 
-    WHERE nome_parceiro LIKE '%$filtro_select%' OR descri_tecnico LIKE '%$filtro_select%'
-
-    
-    UNION
-    
-    SELECT id_parceiro AS id, nome_parceiro AS nome, descri_parceiro AS descri, 'parceiros' AS tipo, img_parceiro AS imagem 
-    FROM tbparceiros 
-    WHERE nome_parceiro LIKE '%$filtro_select%' OR descri_parceiro LIKE '%$filtro_select%'
-    
-    UNION
-    
-    SELECT id_torneio AS id, tipo_torneio AS nome, descri_torneio AS descri, 'torneios' AS tipo, img_torneio AS imagem 
-    FROM tbtorneios 
-    WHERE nome_torneio LIKE '%$filtro_select%'
-";
-
-$lista = $conn_atletas->query($consulta_unificada);
-$totalRows = $lista->num_rows;
-$row = $lista->fetch_assoc();
+    $lista = $conn_atletas->query($consulta);
+} else {
+    $totalRows = 0;
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Busca Geral - Badminton Itapetininga</title>
+    <title>Resultado da Busca</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body class="container">
     <h2>Você pesquisou por: "<?php echo $filtro_select; ?>"</h2>
     <hr>
 
-    <?php if($totalRows > 0) { ?>
-        <div class="row">
-            <?php do { 
-                // Ajustamos o link e a pasta da imagem conforme o TIPO do resultado
-                $link_detalhe = $row['tipo'] . "_detalhe.php?id_" . substr($row['tipo'], 0, -1) . "=" . $row['id'];
-                $pasta_img = ($row['tipo'] == 'parceiros') ? 'apoiadores/' : '';
-            ?>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="imagens/<?php echo $pasta_img . $row['imagem']; ?>" style="height: 15em;">
-                        <div class="caption">
-                            <h4><?php echo $row['nome']; ?></h4>
-                            <p><span class="label label-info"><?php echo ucfirst($row['tipo']); ?></span></p>
-                            <p><?php echo substr($row['descri'], 0, 100); ?>...</p>
-                            <a href="<?php echo $link_detalhe; ?>" class="btn btn-danger">Ver mais</a>
-                        </div>
+<main class="container">
+    <h2 class="breadcrumb alert-danger fundoatletas titulo">
+          <a href="javascript:window.history.go(-1)" class="btn btntotal">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    Resultados para: "<?php echo $filtro; ?>"</h3>
+    <hr>
+    </h2>
+
+    <div class="row">
+        <?php 
+        if(isset($lista) && $lista->num_rows > 0) {
+            while($row = $lista->fetch_assoc()) { 
+                // Ajusta o link e a pasta conforme o tipo
+                if($row['tipo'] == 'atleta') {
+                    $link = "atletas_detalhe.php?id_atleta=" . $row['id'];
+                    $pasta = "imagens/atletas/";
+                } else if ($row['tipo'] == 'parceiro'){
+                    $link = "parceiros_detalhe.php?id_parceiro=" . $row['id'];
+                    $pasta = "imagens/apoiadores/";
+                } else {
+                    $link = "tecnicos_detalhe.php?id_tecnico=" . $row['id'];
+                    $pasta = "imagens/tecnicos/";
+                }
+        ?>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail text-center">
+                    <br>
+                    <img src="<?php echo $pasta . $row['foto']; ?>" class="img-responsive img-rounded" style="height:20em;">
+                    <div class="caption">
+                        <h3 class=""><?php echo $row['nome']; ?></h3>
+                        <p><span class="label btnadicionar"><?php echo ucfirst($row['tipo']); ?></span></p>
+                        <a href="<?php echo $link; ?>" class="btn btntotal">
+                        <span class="hidden-xs">Ver Detalhes</span>  
+                        <span class="visible-xs glyphicon glyphicon-eye-open"></span> 
+                        </a>
                     </div>
                 </div>
-            <?php } while($row = $lista->fetch_assoc()); ?>
-        </div>
-    <?php } else { ?>
-        <div class="alert alert-warning">Nenhum resultado encontrado para sua busca.</div>
-    <?php } ?>
+            </div>
+          
+        <?php 
+            }
+        } else {
+                echo "<div class='container'>
+                <div class='alert  text-center tabela-branca' style='font-size: 24px; padding: 40px; border: 1px solid #ddd;'>
+                <span class='glyphicon glyphicon-search'></span><br>
+                <strong>Nenhum resultado encontrado.</strong>
+                    </div>
+                </div>"
+                ;
+}
+        ?>
+         </div>
+ 
+<!-- Link arquivos Bootstrap js-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>  
+</main>
+<footer>
+    <?php include('rodape.php'); ?>
+</footer>
 </body>
 </html>

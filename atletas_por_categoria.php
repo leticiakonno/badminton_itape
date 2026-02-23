@@ -51,12 +51,12 @@ $totalRows  =   ($lista)->num_rows;
     </a>
     <strong><?php echo $row['nome_categoria']; ?></strong>
 </h2>
-
-<div class="row"> <!-- div row mantém os elementos na linha -->
+<div class="fundo-index" style="padding-top: 50px;border-radius: 15px;">
+<div class="row" style="padding-left: 50px; padding-right: 50px;"> <!-- div row mantém os elementos na linha -->
 
     <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
      <?php do{ ?> <!-- abre estrutura de repetição -->
-    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-md-4"> <!-- dimensionamento -->
+    <div class="col-xs-12 col-sm-6 col-md-4"> <!-- dimensionamento -->  
         <div class="thumbnail">
             <br>
             <a 
@@ -75,7 +75,7 @@ $totalRows  =   ($lista)->num_rows;
                     <strong><?php echo $row['nome_atleta']; ?></strong>
                 </h3>
                 <p class="text-left">
-                <?php echo mb_strimwidth ($row['descri_atleta'],0,45,"...");?>
+                <?php echo mb_strimwidth ($row['descri_atleta'],0,38,"...");?>
                 </p>                                                                            <!-- mb_strimwidth diminiu o tamanho de linhas que são exibidos dentro do card de descrição -->
                 <p class="text-right">
                     <a 
@@ -93,6 +93,8 @@ $totalRows  =   ($lista)->num_rows;
     <?php }while($row=$lista->fetch_assoc()); ?> <!-- fecha estrutura de repetição -->
     <!-- Fecha thumbnail/card -->
 </div> <!-- fecha row -->
+</div>
+<br>
 <?php }; ?>
 
 <!-- Link arquivos Bootstrap js -->

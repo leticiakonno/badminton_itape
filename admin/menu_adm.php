@@ -80,7 +80,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                 </ul>
                 </li>
             <li class="dropdown">
-                <a z
+                <a 
                     class="dropdown-toggle navbartext"
                     data-toggle="dropdown"
                     role="button"
@@ -97,7 +97,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
                     </li>
                     <?php do{ ?> <!-- abre estrutura de repetição -->
                         <li>
-                            <a href="../atletas_por_categoria.php?id_categoria=<?php echo $row_menu['id_categoria']; ?>">
+                            <a class="navbartext" href="../atletas_por_categoria.php?id_categoria=<?php echo $row_menu['id_categoria']; ?>">
                                 <?php echo $row_menu['nome_categoria']; ?>
                             </a>
                         </li>
