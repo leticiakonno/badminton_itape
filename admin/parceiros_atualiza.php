@@ -1,6 +1,6 @@
 <?php
 //Incluir o Sistema de Autenticação
-include("acesso_com.php");
+include("acesso_sup.php");
 
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_atletas.php");

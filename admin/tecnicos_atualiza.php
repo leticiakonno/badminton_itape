@@ -1,6 +1,6 @@
 <?php
 //Incluir o Sistema de Autenticação
-include("acesso_com.php");
+include("acesso_sup.php");
 
 // Conexão
 include("../Connections/conn_atletas.php");

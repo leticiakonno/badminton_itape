@@ -31,7 +31,7 @@ $totalRows  =   ($lista)->num_rows;
     <div class="layout bordacontainer">
     <main class="conteudo container bordacontainer">
         <aside class="sidebarparceiros bordacontainer" id="sidebar">
-        <h2 class="text-center titulonoticia"><strong>PARCEIROS</strong></h2>
+        <h2 class="text-center titulonoticia"><strong>PARCEIROS   <i class="fa-regular fa-handshake"></i></strong></h2>
         <br>
             <div class="row">
                 <!-- abre thumbnail -->
