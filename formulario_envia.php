@@ -200,7 +200,7 @@ include("Connections/conn_atletas.php");
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-    <br>
+<br>
 <footer>
     <?php include('rodape.php'); ?>
 </footer>
