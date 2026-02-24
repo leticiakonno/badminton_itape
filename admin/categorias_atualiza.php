@@ -161,13 +161,7 @@ mysqli_select_db($conn_atletas,$database_conn);
                          <br>
                          <!-- FOTO DO USUÁRIO -->
                         <label for="img_categoria">Foto Atual:</label>
-                        <input 
-                            type="file"
-                            name="img_categoria"
-                            id="img_categoria"
-                            class="form-control"
-                            accept="image/*"
-                        >
+        
 
                         <!-- exibe foto atual -->
                         <br>
