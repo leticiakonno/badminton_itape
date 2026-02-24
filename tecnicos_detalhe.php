@@ -45,7 +45,7 @@ $totalRows  =   ($lista)->num_rows;
 <br>
     <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
      <?php do{ ?> <!-- abre estrutura de repetição -->
-    <div class="col-xs-12  col-sm-6 col-md-10 col-md-offset-1"> <!-- dimensionamento -->
+    <div class="col-xs-12  col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1"> <!-- dimensionamento -->
         <br>
         <div class="thumbnail">    
         <br>
@@ -53,7 +53,7 @@ $totalRows  =   ($lista)->num_rows;
                 src="imagens/tecnicos/<?php echo $row['img_tecnico']; ?>" 
                 alt=""
                 class="img-rounded img-responsive"
-                style="height: auto;" 
+                style="height: 600px;" 
             >                                    
             <div class="caption text-left">
                 <h3 class="text-danger titulo">
