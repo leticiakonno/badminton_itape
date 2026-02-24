@@ -87,4 +87,3 @@ include("Connections/conn_atletas.php");
     </footer>
 </body>
 </html>
-<?php mysqli_free_result($lista_menu); ?>

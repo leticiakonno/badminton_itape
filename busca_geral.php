@@ -36,21 +36,19 @@ if ($filtro != "") {
 <head>
     <meta charset="UTF-8">
     <title>Resultado da Busca</title>
+     <!-- Link CSS do Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Link para CSS Específico -->
+    <link rel="stylesheet" href="css/meu_estilo.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body class="container">
-    <h2>Você pesquisou por: "<?php echo $filtro_select; ?>"</h2>
-    <hr>
-
+ <?php include('menu_publico.php'); ?>
+<body class="fundofixo fontetabela"> 
 <main class="container">
-    <h2 class="breadcrumb alert-danger fundoatletas titulo">
-          <a href="javascript:window.history.go(-1)" class="btn btntotal">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
+    <h2 class="breadcrumb  fundoatletas titulo">
     Resultados para: "<?php echo $filtro; ?>"</h3>
     <hr>
     </h2>
-
     <div class="row">
         <?php 
         if(isset($lista) && $lista->num_rows > 0) {

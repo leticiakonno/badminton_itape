@@ -5,7 +5,7 @@
 <!-- ÁREA DE LOCALIZAÇÃO -->
  <div class="container"> 
     <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4" >
+        <div class="col-xs-12 col-sm-6 col-md-4 arealocalizacao" >
             <div class="textrodape" style="background:none; padding: 15px;">
                 <img src="imagens/logochurrascopequeno.png" alt="">
                 <br>
@@ -32,7 +32,7 @@
         </div> <!-- fecha dimensionamento / área -->
 
 <!-- ÁREA DE NAVEGAÇÃO -->
-<div class="col-xs-12 col-sm-6 col-md-4" >
+<div class="col-xs-12 col-sm-6 col-md-4 arealinks" >
     <div class="textrodape" style="background:none;">
         <h4>LINKS</h4>
         <ul class="nav nav-pills nav-stacked">
@@ -76,8 +76,8 @@
 </div> <!-- fecha dimensionamento / área -->
 
 <!-- ÁREA DE CONTATO -->
-<div class="col-xs-12 col-sm-6 col-md-4" >
-    <div class="textrodape" style="background:none;">
+<div class="col-xs-12 col-sm-6 col-md-4 areacontato" >
+    <div class="textrodape " style="background:none;">
         <h4>CONTATO</h4>
         <form 
             action="rodape_contato.php"
@@ -146,7 +146,7 @@
         </form>
     </div> <!-- fecha panel-footer --> 
 </div> <!-- fecha dimensionamento / área -->
-
+</div> <!-- fecha dimensionamento / área --> 
 <!-- ÁREA DE DESENVOLVEDOR -->
 <div class="col-xs-12" >
     <div style="background:none;">
@@ -160,8 +160,7 @@
                 www.iwanezuk.com.br
             </a>
         </h6>
-    </div> <!-- fecha panel-footer --> 
-</div> <!-- fecha dimensionamento / área -->    
+    </div> <!-- fecha panel-footer -->    
 </div> <!-- fecha painel principal do rodapé -->
 </div>
 </div>
