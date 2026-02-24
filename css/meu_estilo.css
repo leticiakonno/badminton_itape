@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-
+ 
 .fundofixo {
     background-image: url("../imagens/fundo.jpg") !important;
     background-repeat: no-repeat !important;
@@ -8,7 +8,7 @@
     background-size: cover !important;
     background-color: transparent !important;
 }
-
+ 
 .fundo2 {
     background-image: url("../imagens/moldura1.jpg") !important;
     background-repeat: no-repeat !important;
@@ -16,36 +16,36 @@
     background-size: cover !important;
     background-color: transparent !important;
 }
-
+ 
 .tabela-branca {
     background-color: rgba(255, 255, 255, 0.904);
 }
-
+ 
 .fundocategoria {
     background-color: rgba(255, 255, 255, 0.959);
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 10px;    
     color: rgba(5, 24, 109, 0.904);
-
-    
-}   
-
+ 
+   
+}  
+ 
 .btntotal {
     background-color: rgba(194, 15, 9, 0.904);
     color: rgb(255, 255, 255);
 }
-
+ 
 .btnadicionar {
     background-color: rgba(15, 55, 196, 0.904);
     color: rgb(255, 255, 255);
 }
-
+ 
 .btnalterar {
     background-color: rgba(212, 176, 15, 0.904);
     color: rgb(255, 255, 255);
 }
-
+ 
 .btnvermais{
     margin: 20px auto;   /* 'auto' nas laterais empurra o botão para o centro */
     background-color: rgba(194, 15, 9, 0.904);
@@ -54,27 +54,27 @@
     width: fit-content;  /* Faz o botão ter apenas o tamanho do texto dele */
     font-size: medium;
 }
-
-
+ 
+ 
 .btnmodal-cancelar {
     background-color: rgba(4, 110, 66, 0.904);
     color: rgb(255, 255, 255);
 }
-
+ 
 .btninvasor1{
     background-color: rgba(0, 175, 9, 0.904);
     color: rgb(255, 255, 255);
 }
-
+ 
 .btninvasor{
     background-color: rgba(168, 6, 6, 0.904);
     color: rgb(255, 255, 255);
 }
-
+ 
 .iconinvasor{
     color: rgba(168, 6, 6, 0.904);
 }
-
+ 
 .fundoatletas {
     background-color: rgba(255, 255, 255, 0.959);
     padding-top: 15px;
@@ -82,7 +82,7 @@
     border-radius: 10px;    
     color: rgba(0, 0, 54, 0.904);
 }
-
+ 
 .fundousuarios {
     background-color: rgba(255, 255, 255, 0.959);
     padding-top: 15px;
@@ -90,51 +90,51 @@
     border-radius: 10px;    
     color: rgba(0, 0, 54, 0.904);
 }
-
+ 
 .fundousuarios{
     background-color: rgba(255, 255, 255, 0.959);
     margin-top: 20px
 }
-
+ 
 .textousuario{
     font-weight: bold;
 }
-
+ 
 .icone-login {
     margin-top: 40px; /* Ajuste o valor conforme necessário */
     display: block;   /* Garante que a margem funcione corretamente */
     margin-left: auto;
     margin-right: auto;
 }
-
-
+ 
+ 
 .titulo {
     font-family: "Times-New-Roman", serif;
     font-size: 45px;
     font-style: italic;
     color: rgb(4, 4, 82);
 }
-
+ 
 .fontetabela{
     font-family: "Times-New-Roman", serif;
     font-size: 17px;
 }
-
+ 
 .tabelacenter{
     display: table-cell !important;
     text-align: center !important;
     vertical-align: middle !important;
 }
-
+ 
 table td, table th {
     vertical-align: middle !important;
     text-align: center;
 }
-
+ 
 .text{
     color: rgb(4, 4, 82);
 }
-
+ 
 .fontedestaque{
     font-family: "Times-New-Roman", sans-serif;
     font-size: 20px;
@@ -143,15 +143,15 @@ table td, table th {
     color: rgb(4, 4, 82);
     text-align: center;
 }
-
+ 
 .textrodape{
     color: rgb(249, 249, 250);
 }
-
+ 
 .texticon{
     color: rgb(160, 4, 4);
 }
-
+ 
 .categoriabusca{
     background-color: rgba(255, 255, 255, 0.959);
     padding-top: 15px;
@@ -165,19 +165,19 @@ table td, table th {
     font-style: italic;
     font-size: 20px;
 }
-
+ 
 .invasortitulo {
     color:  rgba(119, 7, 5, 0.904);
     font-style: italic;
     font-size: 50px;
 }
-
+ 
 .navbarbg{
     background-color: rgba(0, 26, 88, 0.918);
     padding-top: 15px;
     padding-bottom: 15px;
 }
-
+ 
 .navbar-brand > img {
     height: 65px;    /* ajuste aqui */
     width: auto;
@@ -185,11 +185,11 @@ table td, table th {
     margin-top: -30px; /* se precisar alinhar */
     padding-left: 40px;
 }
-
+ 
 .navbartext{
     color: rgb(220, 220, 221);
 }
-
+ 
 .adm {
     background-color: rgba(255, 255, 255, 0.959);
     padding-top: 15px;
@@ -199,8 +199,8 @@ table td, table th {
     font-size: 45px;
     font-family: "Cabin", sans-serif;
     font-weight: bold;
-
-
+ 
+ 
 }
 .btnadm {
     padding: 10px;
@@ -216,20 +216,20 @@ table td, table th {
     background-color: rgba(255, 255, 255, 0.959);
     padding-top: 15px;
     padding-bottom: 15px;
-    border-radius: 10px; 
-    font-family: "Cabin", sans-serif; 
+    border-radius: 10px;
+    font-family: "Cabin", sans-serif;
     font-size: 33px;  
     color: rgba(96, 2, 2, 0.904);
-
-    
+ 
+   
 }
 .formulario {
     padding-top: 25px;
     padding-bottom: 15px;
     border-radius: 10px;  
-    font-size: 30px; 
+    font-size: 30px;
     font-weight: bold;  
-    color: rgba(5, 24, 109, 0.904);   
+    color: rgba(5, 24, 109, 0.904);  
 }
 .formulariobusca{
     background-color: rgba(255, 255, 255, 0.959);
@@ -240,7 +240,7 @@ table td, table th {
     font-weight: bold;
     font-size: 20px;
 }
-
+ 
 .sidebar{
     flex: 1; /* Ocupa 25% da largura */
     min-width: 280px;
@@ -250,7 +250,7 @@ table td, table th {
     border-left: 4px solid #d90429; /* Uma borda com a cor do seu site */
     height: fit-content; /* Ajusta a altura conforme as notícias */
 }
-
+ 
 .sidebarparceiros{
     flex: 1; /* Ocupa 25% da largura */
     min-width: 280px;
@@ -260,14 +260,14 @@ table td, table th {
     border-left: 4px solid #d90429; /* Uma borda com a cor do seu site */
     height: fit-content; /* Ajusta a altura conforme as notícias */
 }
-
+ 
 /* Responsivo: Em celulares, a sidebar vai para baixo */
 @media (max-width: 768px) {
     .layout {
         flex-direction: column;
     }
 }
-
+ 
 .layout {
     display: flex;
     flex-wrap: wrap; /* Permite quebrar linha no telemóvel */
@@ -276,11 +276,11 @@ table td, table th {
     gap: 5px; /* Espaço entre o corpo e a sidebar */
     padding: 20px;
 }
-
+ 
 .bordacontainer{
     border-radius: 20px;
 }
-
+ 
 .historia {
         background-color: rgba(255, 255, 255, 0.959);
         padding-top: 15px;
@@ -292,15 +292,15 @@ table td, table th {
         padding: 20px;
 }
 /* IMAGEM - PADRÃO (mobile continua igual) */
-
-
+ 
+ 
 .titulonoticia{
     font-family: "Times-New-Roman", serif;
     font-size: 40px;
     font-style: italic;
     color: rgb(4, 4, 82);
-} 
-
+}
+ 
 .containerhistoria {
     display: flex;
     align-items: center;
@@ -313,21 +313,21 @@ table td, table th {
 .btnhistoria {
     background-color: rgba(194, 15, 9, 0.904);
     color: rgb(255, 255, 255);
-    display:inline-block; 
+    display:inline-block;
     padding-left: 18px;
     padding-right: 18px;
     margin-top: 10px;
 }
-
+ 
 .descrinoticia{
     font-family: "Times-New-Roman";
     font-size: 19px;
 }
-
+ 
 .line{
     line-height: 1.6;
 }
-
+ 
 .containerpri {
     display: flex;
     flex-wrap: nowrap; /* No desktop, eles ficam lado a lado */
@@ -335,89 +335,89 @@ table td, table th {
     padding-top: 20px;
     align-items: flex-start; /* Impede que a sidebar estique verticalmente */
 }
-
+ 
 .principal {
     flex: 3; /* Ocupa 75% do espaço */
     min-width: 0; /* Essencial para o flexbox não quebrar com imagens */
 }
-
+ 
 .sidebar-news {
     flex: 1; /* Ocupa 25% do espaço */
     min-width: 300px; /* Define um tamanho mínimo para não ficar espremido */
     /* REMOVIDO: width: 75% e float: left que quebravam o layout */
 }
-
+ 
 /* Isso força a linha a não deixar buracos e alinhar tudo à esquerda */
 .row {
   display: flex;
   flex-wrap: wrap;
 }
-
+ 
 /* Isso garante que o flexbox não quebre o layout do Bootstrap 3 */
 .row:before, .row:after {
   display: none !important;
 }
-
+ 
 .fundohistoria {
     background-color: rgba(255, 255, 255, 0.959);
     border-radius: 10px;    
     color: rgba(0, 0, 54, 0.904);
 }
-
+ 
 .margem{
      margin: 0;         /* Remove as margens que empurram o layout */
     width: 100%;       /* Usa a largura disponível sem transbordar */
     overflow-x: hidden; /* Garante que nada escape para os lados */
 }
-
-
+ 
+ 
 /* Garante que o container do carrossel tenha espaço para as setas */
 .meuCarrossel {
   padding: 40px 60px; /* Aumentei o padding lateral para as setas não cobrirem a foto */
   position: relative;
 }
-
+ 
 /* Estilo do Botão */
-.container-botao { 
-  text-align: center; 
+.container-botao {
+  text-align: center;
   margin: 30px 0;
-  clear: both; 
+  clear: both;
 }
-
-.btn-parceiro { 
+ 
+.btn-parceiro {
   display: inline-block;
-  padding: 15px 30px; 
+  padding: 15px 30px;
   background-color: rgba(194, 15, 9, 0.904);
-  color: #ffffff !important; 
-  border-radius: 5px; 
-  text-decoration: none; 
+  color: #ffffff !important;
+  border-radius: 5px;
+  text-decoration: none;
   font-weight: bold;
 }
-
+ 
   .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
+ 
   .swiper-slide img {
     max-width: 180px; /* Aumentar um pouco o tamanho da imagem também ajuda a preencher o espaço */
     width: 100%;
     height: auto;
   }
-
+ 
   .barcolor{
     background-color: #ffffff;
   }
-
+ 
   .margemcarrousel{
     margin-top: -20px;
   }
-
+ 
   .fundo-index{
     background-color: rgba(255, 255, 255, 0.911);
 }
-
+ 
 /* Cria uma classe para thumbnails sem borda */
 .thumbnail-sem-borda{
     border: none !important;
@@ -425,14 +425,14 @@ table td, table th {
     background-color: transparent !important;
     box-shadow: none !important;
 }
-
+ 
 /* Media Query para atingir apenas dispositivos móveis (Bootstrap 3 usa 767px como quebra) */
 @media (max-width: 767px) {
     /* Força a cor branca nos links dentro do menu colapsado */
     .navbar-nav .open .dropdown-menu > li > a {
         color: #ffffff !important;
     }
-
+ 
     /* Opcional: Cor quando o usuário passa o dedo ou clica no item (efeito hover) */
     .navbar-nav .open .dropdown-menu > li > a:hover,
     .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -440,28 +440,28 @@ table td, table th {
         background-color: transparent; /* Mantém o fundo azul do seu menu */
     }
 }
-
+ 
 /* --- AJUSTES PARA TABLET E MOBILE (Abaixo de 991px) --- */
 @media (max-width: 991px) {
     .containerpri {
         flex-wrap: wrap; /* Permite quebrar a linha */
         flex-direction: column; /* Força um embaixo do outro */
     }
-
-    .principal, 
+ 
+    .principal,
     .sidebar-news {
         width: 100% !important;
         flex: none !important;
         max-width: 100% !important;
         min-width: 100% !important;
     }
-    
+   
     .sidebar-news {
         margin-top: 40px; /* Dá um respiro entre o conteúdo e a sidebar */
     }
 }
-
-
+ 
+ 
 /* Ajuste para o Desktop */
 @media (min-width: 1200px) {
     .panel-footer .container {
@@ -470,19 +470,19 @@ table td, table th {
         padding-bottom: 30px;
     }
 }
-
+ 
 /* Garante que os títulos fiquem alinhados */
 .textrodape h4 {
     margin-bottom: 20px;
     font-weight: bold;
     color: #ffffff;
 }
-
+ 
 /* Remove a borda padrão do panel-footer do Bootstrap se necessário */
 .panel-footer {
     border: none !important;
 }
-
+ 
 /* --- Classe utilitária para limitar imagens verticais em telas grandes --- */
 .img-limitada {
     max-width: 500px; /* Define um "teto". A imagem nunca passará de 500px de largura */
@@ -491,4 +491,23 @@ table td, table th {
     margin: 20px auto; /* Centraliza a imagem horizontalmente e dá um espaço vertical */
     display: block;   /* Necessário para que o 'margin auto' funcione para centralizar */
 }
-
+ 
+@media (max-width: 767px) {
+ 
+    .arealinks {
+        order: 3;
+    }
+ 
+    .areacontato {
+        order: 2;
+    }
+ 
+}
+@media (max-width: 767px) {
+    .panel-footer .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+ 
+ 
