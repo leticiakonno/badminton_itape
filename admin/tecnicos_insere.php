@@ -67,7 +67,7 @@ if($_POST){
 <?php include("menu_adm.php"); ?>
     <main class="container">
  <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6" > <!-- abre dimensionamento -->
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-6" > <!-- abre dimensionamento -->
             <h2 class="breadcrumb fundousuarios text-center titulo">
                 <a href="tecnicos_lista.php">
                     <button class="btn btntotal bg-danger text-white">

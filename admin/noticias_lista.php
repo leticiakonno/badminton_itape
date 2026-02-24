@@ -32,7 +32,7 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
 <main class="container">
-    <div class="col-xs-12 col-sm-6 col-md-12" > <!-- abre dimensionamento -->
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0" > <!-- abre dimensionamento -->
     <h1 class="fundoatletas text-center titulo">
         <a href="index.php">
             <button class="btn btntotal">
@@ -71,7 +71,7 @@ $totalRows  =   ($lista)->num_rows;
                 <td class="hidden"><?php echo $row['id_noticia']; ?></td>
                 <td><?php echo $row['titulo_noticia']; ?></td>
                 <td class="hidden-xs"><?php echo substr($row['descri_noticia'], 0, 200) . (strlen($row['descri_noticia']) > 200 ? '...' : ''); ?></td>
-                 <td class="hidden-lg hidden-md"><?php echo substr($row['descri_noticia'], 0, 50) . (strlen($row['descri_noticia']) > 50 ? '...' : ''); ?></td>
+                 <td class="hidden-lg hidden-sm"><?php echo substr($row['descri_noticia'], 0, 50) . (strlen($row['descri_noticia']) > 50 ? '...' : ''); ?></td>
                  <td>
                     <img 
                         src="../imagens/noticias/<?php echo $row['img_noticia']; ?>" 

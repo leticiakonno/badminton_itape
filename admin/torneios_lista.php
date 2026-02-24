@@ -34,7 +34,7 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
 <main class="container">
-    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-12 " > <!-- abre dimensionamento -->
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-10 " > <!-- abre dimensionamento -->
         <h1 class="fundocategoria text-center titulo">
             <a href="index.php">
                 <button class="btn btntotal">
