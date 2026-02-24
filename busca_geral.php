@@ -35,71 +35,66 @@ if ($filtro != "") {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Resultado da Busca</title>
-     <!-- Link CSS do Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Resultado da Busca</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
- <?php include('menu_publico.php'); ?>
 <body class="fundofixo fontetabela"> 
-<main class="container">
-    <h2 class="breadcrumb  fundoatletas titulo">
-    Resultados para: "<?php echo $filtro; ?>"</h3>
-    <hr>
-    </h2>
-    <div class="row">
-        <?php 
-        if(isset($lista) && $lista->num_rows > 0) {
-            while($row = $lista->fetch_assoc()) { 
-                // Ajusta o link e a pasta conforme o tipo
-                if($row['tipo'] == 'atleta') {
-                    $link = "atletas_detalhe.php?id_atleta=" . $row['id'];
-                    $pasta = "imagens/atletas/";
-                } else if ($row['tipo'] == 'parceiro'){
-                    $link = "parceiros_detalhe.php?id_parceiro=" . $row['id'];
-                    $pasta = "imagens/apoiadores/";
-                } else {
-                    $link = "tecnicos_detalhe.php?id_tecnico=" . $row['id'];
-                    $pasta = "imagens/tecnicos/";
-                }
+    <?php include('menu_publico.php'); ?> <main class="container">
+        <h2 class="breadcrumb fundoatletas titulo">
+            Resultados para: "<?php echo $filtro; ?>"
+        </h2>
+        <hr>
+        
+        <div class="row">
+        <?php
+            if(isset($lista) && $lista->num_rows > 0) {
+                while($row = $lista->fetch_assoc()) {
+                    // Ajusta o link e a pasta conforme o tipo
+                    if($row['tipo'] == 'atleta') {
+                        $link = "atletas_detalhe.php?id_atleta=" . $row['id'];
+                        $pasta = "imagens/atletas/";
+                    } else if ($row['tipo'] == 'parceiro'){
+                        $link = "parceiros_detalhe.php?id_parceiro=" . $row['id'];
+                        $pasta = "imagens/apoiadores/";
+                    } else {
+                        $link = "tecnicos_detalhe.php?id_tecnico=" . $row['id'];
+                        $pasta = "imagens/tecnicos/";
+                    }
         ?>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center">
-                    <br>
-                    <img src="<?php echo $pasta . $row['foto']; ?>" class="img-responsive img-rounded" style="height:20em;">
-                    <div class="caption">
-                        <h3 class=""><?php echo $row['nome']; ?></h3>
-                        <p><span class="label btnadicionar"><?php echo ucfirst($row['tipo']); ?></span></p>
-                        <a href="<?php echo $link; ?>" class="btn btntotal">
-                        <span class="hidden-xs">Ver Detalhes</span>  
-                        <span class="visible-xs glyphicon glyphicon-eye-open"></span> 
-                        </a>
+                <div class="col-xs-12 col-sm-6 col-md-4"> 
+                    <div class="thumbnail text-center">
+                        <br>
+                        <img src="<?php echo $pasta . $row['foto']; ?>" class="img-responsive img-rounded" style="height:20em; margin: 0 auto;">
+                        <div class="caption">
+                            <h3><?php echo $row['nome']; ?></h3>
+                            <p><span class="label btnadicionar"><?php echo ucfirst($row['tipo']); ?></span></p>
+                            <a href="<?php echo $link; ?>" class="btn btntotal">
+                                <span class="hidden-xs">Ver Detalhes</span>  
+                                <span class="visible-xs glyphicon glyphicon-eye-open"></span> 
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-          
-        <?php 
-            }
-        } else {
+            <?php 
+                }
+            } else {
                 echo "<div class='container'>
-                <div class='alert  text-center tabela-branca' style='font-size: 24px; padding: 40px; border: 1px solid #ddd;'>
-                <span class='glyphicon glyphicon-search'></span><br>
-                <strong>Nenhum resultado encontrado.</strong>
-                    </div>
-                </div>"
-                ;
-}
-        ?>
-         </div>
- 
-<!-- Link arquivos Bootstrap js-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>  
-</main>
-<footer>
-    <?php include('rodape.php'); ?>
-</footer>
+                        <div class='alert text-center tabela-branca' style='font-size: 24px; padding: 40px; border: 1px solid #ddd;'>
+                            <span class='glyphicon glyphicon-search'></span><br>
+                            <strong>Nenhum resultado encontrado.</strong>
+                        </div>
+                      </div>"; // Adicionado o ponto e vírgula aqui
+            }
+            ?>
+        </div>
+    </main>
+
+    <footer>
+        <?php include('rodape.php'); ?>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
 </body>
 </html>
