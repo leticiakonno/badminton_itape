@@ -107,7 +107,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
 <?php include("menu_adm.php"); ?>
     <main class="container">
  <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6" > <!-- abre dimensionamento -->
+        <div class="col-xs-12 col-md-offset-3 col-md-6" > <!-- abre dimensionamento -->
             <h2 class="breadcrumb fundoatletas text-center titulo">
                 <a href="atletas_lista.php">
                     <button class="btn btntotal bg-danger text-white">

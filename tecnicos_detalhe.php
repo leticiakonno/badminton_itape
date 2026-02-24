@@ -29,7 +29,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class=" fontetabela">
+<body class="fundo2 fontetabela">
 <?php include('menu_publico.php'); ?>
 
 
@@ -45,7 +45,7 @@ $totalRows  =   ($lista)->num_rows;
 <br>
     <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
      <?php do{ ?> <!-- abre estrutura de repetição -->
-    <div class="col-xs-12  col-sm-6 col-md-4 "> <!-- dimensionamento -->
+    <div class="col-xs-12  col-sm-6 col-md-10 col-md-offset-1"> <!-- dimensionamento -->
         <br>
         <div class="thumbnail">    
         <br>
@@ -69,8 +69,8 @@ $totalRows  =   ($lista)->num_rows;
     </div> <!-- fecha dimensionamento -->
     <?php }while($row=$lista->fetch_assoc()); ?> <!-- fecha estrutura de repetição -->
     <!-- Fecha thumbnail/card -->
-
 </div> <!-- fecha row -->
+<br>
 
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

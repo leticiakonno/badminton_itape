@@ -34,7 +34,7 @@ $totalRows  =   ($lista)->num_rows;
 <!--main>h1-->
 <main class="container" style="width: 90%;">
     <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-12 "> <!-- dimensionamento -->
+        <div class="col-xs-12 col-sm-8 col-sm-offset-1 col-md-12 "> <!-- dimensionamento -->
         <h1 class="fundoatletas text-center titulo">
             <a href="index.php">
                 <button class="btn btntotal">
@@ -57,7 +57,7 @@ $totalRows  =   ($lista)->num_rows;
                 <th>CATEGORIA</th>
                 <th>DESTAQUE</th>   
                 <th class="hidden-xs">DESCRIÇÃO</th>
-                <th class="hidden-xs">DATA DE NASCIMENTO</th>
+                <th class="hidden-xs hidden-sm">DATA DE NASCIMENTO</th>
                 <th class="hidden-xs hidden-sm">DATA DE CADASTRO</th>
                 <th class="hidden-xs">IMAGEM</th>
                                 <th>
@@ -90,7 +90,7 @@ $totalRows  =   ($lista)->num_rows;
                      ?>
                 </td>
                 <td class="hidden-xs"><?php echo $row['descri_atleta']; ?></td>
-                <td class="hidden-xs"><?php echo $row['data_nas_atleta']; ?></td>
+                <td class="hidden-xs hidden-sm"><?php echo $row['data_nas_atleta']; ?></td>
                 <td class="hidden-xs hidden-sm"><?php echo $row['data_cad_atleta']; ?></td>
                 <td class="hidden-xs">
                     <img 
