@@ -39,7 +39,8 @@ if ($filtro != "") {
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body class="container">
-    <h2>Você pesquisou por: "<?php echo $filtro_select; ?>"</h2>
+    <?php include('menu_publico.php'); ?>
+    <h2>Você pesquisou por: "<?php echo $filtro; ?>"</h2>
     <hr>
 
 <main class="container">

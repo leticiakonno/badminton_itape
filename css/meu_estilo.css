@@ -492,3 +492,20 @@ table td, table th {
     display: block;   /* Necessário para que o 'margin auto' funcione para centralizar */
 }
 
+@media (max-width: 767px) {
+
+    .arealinks {
+        order: 3;
+    }
+
+    .areacontato {
+        order: 2;
+    }
+
+}
+@media (max-width: 767px) {
+    .panel-footer .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
