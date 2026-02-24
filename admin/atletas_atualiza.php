@@ -2,7 +2,7 @@
 //Incluir o Sistema de Autenticação
 include("acesso_sup.php");
 
-// Incluir o arquivo e fazer a conexão
+// Incluir o arquivo e fazer a conexão //
 include("../Connections/conn_atletas.php");
 
 // Variáveis Globais
@@ -84,6 +84,7 @@ $totalRows      =   ($lista)->num_rows;
 mysqli_select_db($conn_atletas,$database_conn);
 
 // Selecionar os dados da chave estrangeira
+//aaaaaaaaaaaaaaaaaaa
 $tabela_fk      =   "tbcategorias";
 $ordenar_por    =   "nome_categoria ASC";
 $consulta_fk    =   "
@@ -278,51 +279,45 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                         <!-- fecha textarea descri_atleta -->
                         <br>
 
-                        <!-- Dados da imagem_produto ATUAL -->                        
-                        <label for="">Imagem ATUAL:</label>
-                        <br>
-                        <img 
-                            src="../imagens/<?php echo $row['img_atleta']; ?>" 
-                            alt=""
-                            class="img_responsive"
-                            style="max-width:40%"
-                        >
-                        <br>
+                       
 
-                        <!-- type="hidden" campo oculto somente para guardar dados -->
-                        <!-- guardamos o nome da imagem caso não seja alterada -->
-                        <input 
-                            type="hidden"
-                            name="img_atleta_atual"
-                            id="img_atleta_atual"
-                            value="<?php echo $row['img_atleta']; ?>"
-                        >
-                        <br>
-
-                        <!-- file imagem_produto -->
-                        <label for="img_atleta">NOVA Imagem:</label>
+                        <!-- file img_atleta -->
+                        <label for="img_atleta">Imagem Atual:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-picture"></span>
                             </span>
-                            <!-- Exibir a imagem a ser inserida -->
+                            <!-- Exibir a imagem atual do banco -->
+                            <?php if(!empty($row['img_atleta'])): ?>
                             <img 
-                                src="" 
-                                alt=""
-                                name="imagem"
-                                id="imagem"
+                                src="../imagens/atletas/<?php echo $row['img_atleta']; ?>" 
+                                alt="Imagem atual do atleta"
+                                name="imagem_atual"
+                                id="imagem_atual"
                                 class="img-responsive"
                                 style="max-height: 150px;"
                             >
+                            <?php else: ?>
+                            <p class="text-muted">Nenhuma imagem cadastrada</p>
+                            <?php endif; ?>
+                        </div>
+                        
+                        <label for="img_atleta">Nova Imagem (opcional):</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-upload"></span>
+                            </span>
                             <input 
                                 type="file" 
-                                name="imagem_produto" 
-                                id="imagem_produto"
+                                name="img_atleta" 
+                                id="img_atleta"
                                 class="form-control"
                                 accept="image/*"
                             >
+
+                       
                         </div> <!-- fecha input-group -->
-                        <!-- fecha file imagem_produto -->
+                        <!-- fecha file img_atleta -->
                         <br>
 
                          <!-- btn enviar -->

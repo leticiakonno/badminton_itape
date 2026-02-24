@@ -34,17 +34,16 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
 <main class="container">
-    <div class="col-xs-12  col-sm-6 col-md-12 " > <!-- abre dimensionamento -->
-            <h1 class="fundocategoria text-center titulo">
-                <a href="index.php">
-                    <button class="btn btntotal">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </button>
-                </a>
-                <strong><i>Lista de Notícias de Torneios</i></strong>
-            </h1>
-            <br>
-            <div class="btn btntotal bg-primary text-white">
+    <div class="col-xs-12 col-sm-8  col-md-12" > <!-- abre dimensionamento -->
+    <h1 class="fundoatletas categoriageral text-center titulo">
+        <a href="index.php">
+            <button class="btn btntotal">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </button>
+        </a>
+        <strong><i>Lista de Notícias de Torneios </i></strong>
+    </h1>
+            <div class=" btn btntotal bg-primary text-white">
                 Total de Notícias:
                 <small><?php echo $totalRows; ?></small>
             </div>
