@@ -105,7 +105,7 @@ $row = $lista->fetch_assoc();
                 <a href="torneios_noticia.php?categoria=<?php echo $row['categoria']; ?>" class="btn btn-default">
                     <span class="glyphicon glyphicon-list"></span> Ver mais notícias <?php echo ucfirst($row['categoria']); ?>
                 </a>
-                <a href="javascript:window.history.go(-2)" class="btn btn-danger">
+                <a href="javascript:window.history.go(-2)" class="btn btntotal">
                     <span class="glyphicon glyphicon-home"></span> Voltar para Torneios
                 </a>
             </p>
