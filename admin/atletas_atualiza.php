@@ -84,6 +84,7 @@ $totalRows      =   ($lista)->num_rows;
 mysqli_select_db($conn_atletas,$database_conn);
 
 // Selecionar os dados da chave estrangeira
+//aaaaaaaaaaaaaaaaaaa
 $tabela_fk      =   "tbcategorias";
 $ordenar_por    =   "nome_categoria ASC";
 $consulta_fk    =   "
