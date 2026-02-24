@@ -21,7 +21,7 @@ $totalRows  =   ($lista)->num_rows;
 
     <main class="conteudo container bordacontainer">
         <aside class="sidebar bordacontainer" id="sidebar">
-            <h2 class="text-center titulonoticia"><strong>FIQUE POR DENTRO!</strong></h2>
+            <h2 class="text-center titulonoticia"><strong>FIQUE POR DENTRO!  <i class="fa-regular fa-newspaper"></i></strong></h2>
             <br>
             <div class="row">
             <!-- abre thumbnail -->
