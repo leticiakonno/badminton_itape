@@ -15,12 +15,12 @@ $row_menu        =   $lista_menu->fetch_assoc();
 $totalRows_menu  =   ($lista_menu)->num_rows;
 ?>
 
-<body>
+<body style="padding-top: 100px !important;s">
 <!-- Abre a barra de navegação -->
-<nav class="navbar navbar navbarbg">
+<nav class="navbar navbar navbarbg navbar-fixed-top">
 <div class="container-fluid">
     <div class="navbar-header"> <!-- Agrupamento MOBILE -->
-        <a href="index.php" class="navbar-brand center ">
+        <a href="index.php" class="navbar-brand center">
         <img src="imagens/logobadminton.png" alt="Logo" class="logo">
         </a>
         <button
