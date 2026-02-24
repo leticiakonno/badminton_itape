@@ -32,12 +32,11 @@ $totalRows = $lista->num_rows;
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notícias do Torneio</title>
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-
 <body class="fundo3 fontetabela">
 
 <?php include('menu_publico.php'); ?>
