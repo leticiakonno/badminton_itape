@@ -5,7 +5,7 @@ include("Connections/conn_atletas.php");
 // Consulta para trazer o banco de dados e SE necessário filtrar
 $tabela_destaque        =   "vw_tbatletas";
 $campo_filtro_destaque  =   "destaque_atleta";
-$ordenar_por_destaque   =   "descri_atleta ASC";
+$ordenar_por_destaque   =   "descri_atleta DESC";
 $filtro_select_destaque =   "Sim";
 $consulta_destaque      =   "
                             SELECT   *
