@@ -252,4 +252,3 @@ document.querySelector('form').addEventListener('submit', function(e) {
 
 </body>
 </html>
-<?php mysqli_free_result($lista_menu); ?>

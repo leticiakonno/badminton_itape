@@ -22,7 +22,7 @@ if($_POST){
     // Campo para filtrar o registro (WHERE)
     $filtro_update      =   $_POST['id_categoria'];
 
-    
+     // aaaaaaaaaaaa
      // *** BUSCAR FOTO ATUAL ***
     $consulta_atual = "SELECT img_categoria FROM $tabela WHERE $campo_filtro = '$filtro_update'";
     $resultado_atual = $conn_atletas->query($consulta_atual);
