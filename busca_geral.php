@@ -46,9 +46,6 @@ if ($filtro != "") {
 <body class="fundofixo fontetabela"> 
 <main class="container">
     <h2 class="breadcrumb  fundoatletas titulo">
-          <a href="javascript:window.history.go(-1)" class="btn btntotal">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
     Resultados para: "<?php echo $filtro; ?>"</h3>
     <hr>
     </h2>

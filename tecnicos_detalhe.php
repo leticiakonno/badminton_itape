@@ -41,7 +41,7 @@ $totalRows  =   ($lista)->num_rows;
     </a>
     <strong><?php echo $row['nome_tecnico']; ?></strong>
 </h2>
-<div class="row fundo-index"> <!-- div row mantém os elementos na linha -->
+<div class="row"> <!-- div row mantém os elementos na linha -->
 <br>
     <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
      <?php do{ ?> <!-- abre estrutura de repetição -->
