@@ -39,7 +39,7 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
 <br>
     <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
      <?php do{ ?> <!-- abre estrutura de repetição -->
-    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-md-4"> <!-- dimensionamento -->
+    <div class="col-xs-12 col-sm-6 col-md-4"> <!-- dimensionamento -->  
         <br>
         <div class="thumbnail ">
             <br>
@@ -61,7 +61,7 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
                     <strong><?php echo $row_destaque['nome_categoria']; ?></strong>
                     </p>
                 <p class="text-left">
-                <?php echo mb_strimwidth ($row_destaque['descri_atleta'],0,45,"...");?>
+                <?php echo mb_strimwidth ($row_destaque['descri_atleta'],0,30,"...");?>
                 </p>   
                 <p class="text-right">        
                     <a 

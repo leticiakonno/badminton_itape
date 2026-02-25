@@ -29,7 +29,13 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo fontetabela">
 <?php include('menu_publico.php'); ?>
     <main class="container">
-    <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre os nossos parceiros:</strong></h2>
+    <h2 class="fundocategoria categoriageral text-center titulo">
+        <a href="index.php" >
+        <button class="btn btntotal bg-danger text-white">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </button>
+    </a>
+        <strong>Saiba mais sobre os nossos parceiros:</strong></h2>
     <br><br>
     <div class="fundo-index" style="padding-top: 50px;border-radius: 15px;">
     <div class="row" style="padding-left: 50px; padding-right: 50px;"> 
