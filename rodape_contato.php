@@ -18,7 +18,7 @@
         <div class="jumbotron fundoatletas">
             <h1><strong><i>Agradecemos seu contato!</i> </strong></h1>
             <?php
-                $destino        =   "leiko_konno@hotmail.com";
+                $destino        =   "leticia.konno@hotmail.com";
                 $nome_contato   =   $_POST['nome_contato'];
                 $email_contato  =   $_POST['email_contato'];
                 $msg_contato    =   "Mensagem de:".$nome_contato."\n".$_POST['comentarios_contato'];
