@@ -49,8 +49,7 @@ $totalRows  =   ($lista)->num_rows;
             <img 
                 src="imagens/atletas/<?php echo $row['img_atleta']; ?>" 
                 alt=""
-                class="img-rounded img-responsive"
-                style="height: auto;" 
+                class="img-rounded img-responsive img-limitada1"
             >                                    
             <div class="caption text-left">
                 <h3 class="text-danger titulo">

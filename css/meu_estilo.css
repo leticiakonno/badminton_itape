@@ -510,4 +510,22 @@ table td, table th {
     }
 }
  
- 
+ /* Controla a imagem dos técnicos para não deformar */
+.img-limitada1 {
+    width: 50% !important;
+    height: auto !important; /* Altura fixa no desktop para padronizar */
+    object-fit: cover !important; /* Corta as bordas mas NÃO achata a imagem */
+    object-position: top; /* Garante que o rosto do técnico apareça primeiro no corte */
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 767px) {
+    .img-limitada1 {
+        height: auto !important; /* No celular, deixa a altura livre para não cortar ninguém */
+        width: 100% !important;
+    }
+    
+    .titulo {
+        font-size: 26px !important; /* Ajusta o título para não vazar */
+    }
+}
