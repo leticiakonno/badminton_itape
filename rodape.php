@@ -62,7 +62,7 @@
                 </li>
                 <li>
                     <a href="historia.php" class="textrodape">
-                        <span class="glyphicon glyphicon-book">&nbsp;CONTATO</span>
+                        <span class="glyphicon glyphicon-book">&nbsp;HISTÓRIA</span>
                     </a>
                 </li>
                 <li>
