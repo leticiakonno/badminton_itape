@@ -33,7 +33,7 @@ $totalRows  =   ($lista)->num_rows;
 <?php include('menu_publico.php'); ?>
 <main class="container">
     <h2 class=" categoriageral nomeatleta titulo">
-    <a href="javascript:window.history.go(-1)" class="btn btntotal">
+    <a href="categorias_geral.php" class="btn btntotal">
     <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
     <strong><?php echo $row['nome_categoria']; ?></strong>

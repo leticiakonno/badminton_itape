@@ -32,13 +32,17 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
 <body class="fundofixo fontetabela">
 <?php include('menu_publico.php'); ?>
 <main class="container">
-<i><h2 class="fundoatletas titulo text-center"><strong>DESTAQUES</strong></h2></i>
-<div class="row"> <!-- div row mantém os elementos na linha -->
+<i><h2 class="fundoatletas titulo text-center"><strong>TALENTOS</strong></h2></i>
+ <br><br>
+    <div class="fundo-index" style="padding-top: 50px;border-radius: 15px;">
+    <div class="row" style="padding-left: 50px; padding-right: 50px;">  
 <br>
     <!-- Abre thumbnail/card (card no bootstrap em inglês) -->
      <?php do{ ?> <!-- abre estrutura de repetição -->
-    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-md-4"> <!-- dimensionamento -->
-        <div class="thumbnail">
+    <div class="col-xs-12 col-sm-6 col-md-4"> <!-- dimensionamento -->  
+        <br>
+        <div class="thumbnail ">
+            <br>
             <a 
                 href="atletas_detalhe.php?id_atleta=<?php echo $row_destaque['id_atleta']; ?>"
             >
@@ -57,7 +61,7 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
                     <strong><?php echo $row_destaque['nome_categoria']; ?></strong>
                     </p>
                 <p class="text-left">
-                <?php echo mb_strimwidth ($row_destaque['descri_atleta'],0,45,"...");?>
+                <?php echo mb_strimwidth ($row_destaque['descri_atleta'],0,30,"...");?>
                 </p>   
                 <p class="text-right">        
                     <a 
@@ -75,6 +79,8 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
     <?php }while($row_destaque=$lista_destaque->fetch_assoc()); ?> <!-- fecha estrutura de repetição -->
     <!-- Fecha thumbnail/card -->
 </div> <!-- fecha row -->
+</div>
+<br>
      </main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

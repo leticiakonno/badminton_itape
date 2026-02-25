@@ -28,16 +28,24 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo fontetabela">
 <?php include('menu_publico.php'); ?>
-<main>
-    <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre as categorias:</strong></h2>
+<main class="container">
+    <h2 class="fundocategoria categoriageral text-center titulo">
+    <a href="index.php" >
+        <button class="btn btntotal bg-danger text-white">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </button>
+    </a>
+    <strong>Saiba mais sobre as categorias:</strong>
+    </h2>
     <br><br>
     <div class="container">
+    
     <!-- abre thumbnail -->
     <?php do{ ?>
         <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
             <div class="thumbnail" style="width: 36rem;">
                 <a 
-                href="categorias_detalhe.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
+                href="atletas_por_categoria.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
             >
                 <img 
                     src="imagens/categorias/<?php echo $row['img_categoria']; ?>" 
@@ -51,7 +59,7 @@ $totalRows  =   ($lista)->num_rows;
                 <p class="text-center"><?php echo $row['descri_categoria']; ?></p>
                 <p>
                     <a 
-                        href="categorias_detalhe.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
+                        href="atletas_por_categoria.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
                         class="btn btntotal" 
                         role="button"
                     >

@@ -46,8 +46,10 @@ $totalRows  =   ($lista)->num_rows;
 <!-- Mostrar se os NÃO registros retornarem VAZIOS -->
 <?php if($totalRows>0){ ?>
     <h2 class="breadcrumb alert-danger fundoatletas titulo">
-    <a href="javascritp:window.history.go(-1)" class="btn btntotal">
-        <span class="glyphicon glyphicon-chevron-left"></span>
+    <a href="categorias_geral.php" >
+        <button class="btn btntotal bg-danger text-white    ">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </button>
     </a>
     <strong><?php echo $row['nome_categoria']; ?></strong>
 </h2>
