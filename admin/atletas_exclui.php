@@ -13,6 +13,19 @@ $tabela_delete  =   "tbatletas";
 $id_tabela_del  =   "id_atleta";
 $id_filtro_del  =   $_GET['id_atleta'];
 
+// Primeiro, buscar a imagem para excluir do diretório
+$consulta_imagem = "SELECT img_atleta FROM $tabela_delete WHERE $id_tabela_del = $id_filtro_del";
+$resultado_imagem = $conn_atletas->query($consulta_imagem);
+$dados_imagem = $resultado_imagem->fetch_assoc();
+
+// Excluir imagem do diretório se existir
+if (!empty($dados_imagem['img_atleta'])) {
+    $imagem_path = "../imagens/atletas/" . $dados_imagem['img_atleta'];
+    if (file_exists($imagem_path)) {
+        unlink($imagem_path);
+    }
+}
+
 // SQL para exclusão
 $deleteSQL  =   "
                 DELETE

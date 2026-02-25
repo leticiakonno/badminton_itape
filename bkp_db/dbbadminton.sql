@@ -83,8 +83,8 @@
     -- Estrutura da tabela técnicos
     CREATE TABLE tbtecnicos(
     id_tecnico INT(11) NOT NULL,
-    nome_tecnico VARCHAR(20) NOT NULL,
-    nivel_tecnico VARCHAR(20) NOT NULL,
+    nome_tecnico VARCHAR(50) NOT NULL,
+    nivel_tecnico VARCHAR(50) NOT NULL,
     descri_tecnico VARCHAR(500) NOT NULL,
     img_tecnico VARCHAR(50) NOT NULL
     )ENGINE=InnoDB DEFAULT CHARSET=utf8;

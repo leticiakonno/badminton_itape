@@ -42,9 +42,15 @@ if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
         }
         
         $destino = "../imagens/atletas/" . $nomeArquivo;
-        move_uploaded_file($tempArquivo, $destino);
         
-        $foto_usuario = $nomeArquivo; // Atualiza com nova foto
+        // Excluir imagem antiga se existir
+        if (!empty($img_atleta) && file_exists("../imagens/atletas/" . $img_atleta)) {
+            unlink("../imagens/atletas/" . $img_atleta);
+        }
+        
+        if (move_uploaded_file($tempArquivo, $destino)) {
+            $img_atleta = $nomeArquivo; // Atualiza com nova foto
+        }
     }
  
     // Consulta SQL para ATUALIZAÇÃO dos dados
