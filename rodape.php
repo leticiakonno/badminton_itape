@@ -48,7 +48,7 @@
             </li>
             <li>
                 <a href="atletas_geral.php" class="textrodape">
-                <span> <i class="fa-solid fa-star"></i>&nbsp;ATLETAS</span>
+                <span class="glyphicon glyphicon-sunglasses">&nbsp;ATLETAS</span>
                 </a>
             </li>
             <li>
