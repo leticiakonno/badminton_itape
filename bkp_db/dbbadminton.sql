@@ -1,24 +1,24 @@
     -- Backup Geral do banco de dados dbbadminton
     -- Excluir o usuário dbbadminton caso ele exista
-    DROP USER IF EXISTS 'iwanez83_ti19'@'localhost';
+    DROP USER IF EXISTS 'iwanez83_dbbadminton'@'localhost';
     
     -- Criar o usuário dbbadminton se ele não existir
-    CREATE USER IF NOT EXISTS 'iwanez83_ti19'@'localhost'
+    CREATE USER IF NOT EXISTS 'iwanez83_dbbadminton'@'localhost'
         IDENTIFIED BY 'badmintonitape';
-    GRANT ALL PRIVILEGES ON *.* TO 'iwanez83_ti19'@'localhost'
+    GRANT ALL PRIVILEGES ON *.* TO 'iwanez83_dbbadminton'@'localhost'
         WITH GRANT OPTION;
         FLUSH PRIVILEGES;
     
     -- Excluir o banco de dados dbbadminton caso ele exista
-    DROP DATABASE IF EXISTS iwanez83_ti19;
+    DROP DATABASE IF EXISTS iwanez83_dbbadminton;
     
     -- Criar o banco de dados dbbadminton se ele não existir
-    CREATE DATABASE IF NOT EXISTS iwanez83_ti19
+    CREATE DATABASE IF NOT EXISTS iwanez83_dbbadminton
         DEFAULT CHARACTER SET utf8
         COLLATE utf8_general_ci;
     
     -- Usamos o banco de dados dbbadminton
-    USE iwanez83_ti19;
+    USE iwanez83_dbbadminton;
 
     -- Estruta da tabela tbcategorias
     CREATE TABLE tbcategorias(

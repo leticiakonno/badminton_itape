@@ -1,8 +1,8 @@
 <?php
 // Definindo variáveis para conexão
 $hostname_conn  =   "localhost";
-$database_conn  =   "iwanez83_ti19";
-$username_conn  =   "iwanez83_ti19";
+$database_conn  =   "iwanez83_dbbadminton";
+$username_conn  =   "iwanez83_dbbadminton";
 $password_conn  =   "badmintonitape";
 $charset_conn   =   "utf8";
 
