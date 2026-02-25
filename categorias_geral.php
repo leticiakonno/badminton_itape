@@ -32,12 +32,13 @@ $totalRows  =   ($lista)->num_rows;
     <h2 class="fundocategoria categoriageral text-center titulo"><strong>Saiba mais sobre as categorias:</strong></h2>
     <br><br>
     <div class="container">
+    
     <!-- abre thumbnail -->
     <?php do{ ?>
         <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
             <div class="thumbnail" style="width: 36rem;">
                 <a 
-                href="categorias_detalhe.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
+                href="atletas_por_categoria.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
             >
                 <img 
                     src="imagens/categorias/<?php echo $row['img_categoria']; ?>" 
@@ -51,7 +52,7 @@ $totalRows  =   ($lista)->num_rows;
                 <p class="text-center"><?php echo $row['descri_categoria']; ?></p>
                 <p>
                     <a 
-                        href="categorias_detalhe.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
+                        href="atletas_por_categoria.php?id_categoria=<?php echo $row['id_categoria']; ?>" 
                         class="btn btntotal" 
                         role="button"
                     >
