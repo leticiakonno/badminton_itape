@@ -34,7 +34,7 @@ $totalRows  =   ($lista)->num_rows;
 <!--main>h1-->
 <main class="container" style="width: 90%;">
     <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-1 col-md-12 "> <!-- dimensionamento -->
+        <div class="col-xs-12 col-sm-8 col-sm-offset-1 col-md-12 col-md-offset-0"> <!-- dimensionamento -->
         <h1 class="fundoatletas text-center titulo">
             <a href="index.php">
                 <button class="btn btntotal">
