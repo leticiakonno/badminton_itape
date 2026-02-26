@@ -529,3 +529,10 @@ table td, table th {
         font-size: 26px !important; /* Ajusta o título para não vazar */
     }
 }
+
+.video-noticia {
+    width: 30%;
+    max-width: 600px;
+    margin: auto;   /* isso centraliza */
+    display: block;
+}

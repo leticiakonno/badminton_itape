@@ -150,7 +150,7 @@
 --
 
 INSERT INTO tb_torneios_noticias (id_noticia_torneio, titulo, resumo, conteudo, categoria, imagem, data_publicacao, status) VALUES
-(1, 'Tiago Matiazzo brilha e leva dois ouros', 'Atleta de Badminton Tiago Matiazzo garante dois ouros por Itapetininga no Campeonato Brasileiro.', 'O atleta sub-11 de badminton Tiago Matiazzo, que representa Itapetininga, conquistou duas medalhas de ouro na \r\n         1ª etapa 2026 do Campeonato Brasileiro do Circuito Nacional de Badminton</a>, \r\n        realizada em Curitiba. Ele venceu todos os jogos e foi campeão nas categorias simples e dupla.', 'nacional', 'not01.webp', '2026-02-09 19:39:43', 'ativo'),
+(1, 'Tiago Matiazzo brilha e leva dois ouros', 'Atleta de Badminton Tiago Matiazzo garante dois ouros por Itapetininga no Campeonato Brasileiro.', 'O atleta sub-11 de badminton Tiago Matiazzo, que representa Itapetininga, conquistou duas medalhas de ouro na \r\n         1ª etapa 2026 do Campeonato Brasileiro do Circuito Nacional de Badminton, \r\n        realizada em Curitiba. Ele venceu todos os jogos e foi campeão nas categorias simples e dupla. /r/n/r/n “Realmente o Tiago estava bem preparado e é um orgulho para Itapetininga. Ele venceu em todas e subir ao pódio duas vezes com ouro é uma sensação indescritível. Em nome de toda a equipe, posso dizer. Gratidão”, destacou a professora Leiko. Parabéns, Thiago!', 'nacional', 'not01.webp', '2026-02-09 19:39:43', 'ativo'),
 (2, 'Itapetininga no Brasileiro de Badminton', 'Atletas de Badminton representam Itapetininga no Campeonato Brasileiro do Circuito Nacional em Curitiba', 'Curitiba abre oficialmente a 1ª temporada 2026 do Campeonato Brasileiro do Circuito Nacional de Badminton e Itapetininga marca presença com a participação de atletas da cidade que competem com os melhores do Brasil. As competições vão ser realizadas no Ginásio do Clube Curitibano, entre os dias 4 e 8 de fevereiro.\r\n\r\nSob a coordenação da professora Leiko Konno, os atletas representam o município em uma competição de alto nível, que soma 531 atletas, sendo 325 homens e 206 mulheres de 71 clubes, vindos de 17 estados brasileiros.\r\n\r\nItapetininga será representada pelos atletas:\r\n\r\n \r\n\r\nSub 11 – Tiago Matiazzo\r\n\r\nSub 17 – Theo Maezeki\r\n\r\nSub 17 – Larissa Ueno\r\n\r\nSub 23 – Julio Paiva\r\n\r\nSub 23 – Milena Ueno\r\n\r\nO evento conta com a parceria do Comitê Olímpico do Brasil (COB), Comitê Brasileiro de Clubes (CBC), Federação Paranaense de Badminton (BFP), Ludi Sports, Dainanox, Centro Cultural da Ásia em São Paulo – Yawen e do próprio Clube Curitibano, que sediará as disputas.\r\n\r\n', 'nacional', 'not02.webp', '2026-02-09 21:35:01', 'ativo'),
 (3, 'Itapetininga conquista 12 pódios', 'Atletas de Badminton de Itapetininga conquistam 12 pódios na última Etapa Estadual em Campinas', 'A equipe de Badminton de Itapetininga, coordenada pela técnica e professora Leiko Konno, subiu ao pódio 12 vezes e trouxe para a cidade 12 medalhas, entre ouro, prata e bronze.\r\n\r\nAs conquistam foram no último fim de semana na última Etapa Estadual que foi realizada na Sociedade Hípica de Campinas. A Secretaria de Esporte, Lazer e Juventude de Itapetininga incentiva com apoio a equipe de Badminton.\r\n\r\nOuro\r\n\r\nTiago Matiazzo – Dupla Mista sub 11\r\n\r\nPrata\r\n\r\nCatarina Takashi – Dupla Feminina sub 11\r\n\r\nAylla Maeseki – Dupla Feminina sub 13\r\n\r\nMarina Mori – Dupla Feminina sub 13\r\n\r\nVitor Takashi – Dupla Masculina sub 13\r\n\r\nBronze\r\n\r\nTheo Maeseki - Simples sub 15\r\n\r\nTiago Matiazzo - Simples sub 11\r\n\r\nVitor Takashi - Simples Masculino sub 13\r\n\r\nLarissa Ueno - Simples Feminino sub 17\r\n\r\nCristiane Matiazzo – Dupla Feminina C\r\n\r\nVinicius Lima – Dupla Masculina sub 09\r\n\r\nPedro Lanas – Dupla Masculina B\r\n\r\n“Muito feliz com os resultados conquistados em nossa última etapa. Levantamos o nome de Itapetininga 12 vezes no pódio e voltamos para casa com a certeza de que mostramos o nosso melhor”, destacou a professora, Leiko Konno.', 'estadual', 'not03.webp', '2026-02-09 21:37:42', 'ativo'),
 (4, 'Itapetininga na última Etapa Estadual', 'Atletas de Badminton de Itapetininga participam da última Etapa Estadual em Campinas neste fim de semana', 'A equipe de Badminton de Itapetininga, coordenada pela técnica e professora Leiko Konno, participa neste sábado, dia 15, e no domingo, dia 16, da última Etapa Estadual que será realizada na Sociedade Hípica de Campinas.\r\n\r\n“Nossos atletas que treinam regularmente e se aperfeiçoam a cada dia, vão participar dessa última etapa nas categorias sub 9, sub 11, sub 13, sub 15, sub 17 a aberto C. Estamos muito confiantes e nossa meta é trazer para Itapetininga excelentes resultados”, destacou a professora, Leiko Konno.', 'estadual', 'not04.webp', '2026-02-09 21:40:29', 'ativo'),
@@ -184,30 +184,14 @@ INSERT INTO tb_torneios_noticias (id_noticia_torneio, titulo, resumo, conteudo, 
         id_noticia INT(11) NOT NULL,
         titulo_noticia VARCHAR(500) NOT NULL,
         descri_noticia VARCHAR(1000000) NOT NULL,
-        img_noticia VARCHAR(50) NOT NULL
+        img_noticia VARCHAR(50) NULL,
+        video_noticia VARCHAR(255) NULL
     )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
     -- Extraindo dados da tabela tbnoticias
-    INSERT INTO tbnoticias (id_noticia,titulo_noticia,descri_noticia,img_noticia) VALUES
-    (1,'Pioneira do Badminton em Itapetininga é citada em livro histórico da cidade','Badminton de Itapetininga: O Legado de Leiko Konno Eternizado em Livro
-    \r\n\r\nA história do esporte em Itapetininga ganha um registro oficial e emocionante. A treinadora Leiko Konno, reconhecida como a pioneira do badminton na cidade, celebrou recentemente sua inclusão no livro "Itapetininga: Entre Memoriais e Registros", de autoria de Milton Cardoso.
-    
-   \r\n\r\nUm Reconhecimento Além das Quadras\r\n\r\n
-    Em um relato sensível, Leiko expressou a honra de ver a trajetória do badminton local — um trabalho iniciado com pioneirismo e dedicação — impressa nas páginas da história itapetiningana. Para a treinadora, o projeto vai muito além da prática esportiva: trata-se de um projeto social que transformou e continua transformando muitas vidas na comunidade.
-    
-    \r\n\r\n"Ver a nossa trajetória de pioneirismo no Badminton impressa nessas páginas é uma honra que não cabe no peito. Mais do que esporte, este projeto social transformou e continua transformando muitas vidas." — Leiko Konno.
-    
-  \r\n\r\nSuperando Obstáculos
-    O reconhecimento vem como uma validação de anos de esforço. Leiko destacou que, apesar da indiferença e dos duros obstáculos enfrentados ao longo da jornada, ver esse legado documentado confirma que o caminho escolhido foi o correto. Graças ao trabalho de resgate histórico, a dedicação de todos os envolvidos no projeto agora está eternizada para as futuras gerações.
-    
-    \r\n\r\nDestaques da publicação:
-    
-    \r\n\r\nPioneirismo: Registro oficial do início da modalidade em Itapetininga.
-    
-    \r\n\r\nValor Social: O impacto do esporte como ferramenta de transformação de vida.
-    
-    \nHistória Viva: A garantia de que o legado não será esquecido pelos anos que virão.', 'noticia1.jpg'),
-    (2,'Atletas de badminton conquistam 14 medalhas em etapa Estadual no Sesi de Votorantim','Os atletas de Badminton de Itapetininga conquistaram 14 medalhas de ouro, prata e bronze, neste último fim de semana na 4ª Etapa Estadual de Badminton (categorias Aberta e Jovens) e na 2ª Etapa Estadual Parabadminton (pontos válidos para o RK nacional). As competições foram realizadas no SESI de Votorantim.
+    INSERT INTO tbnoticias (id_noticia,titulo_noticia,descri_noticia,img_noticia,video_noticia) VALUES
+
+    (1,'Atletas de badminton conquistam 14 medalhas em etapa Estadual no Sesi de Votorantim','Os atletas de Badminton de Itapetininga conquistaram 14 medalhas de ouro, prata e bronze, neste último fim de semana na 4ª Etapa Estadual de Badminton (categorias Aberta e Jovens) e na 2ª Etapa Estadual Parabadminton (pontos válidos para o RK nacional). As competições foram realizadas no SESI de Votorantim.
     
    \r\n\r\nItapetininga contou com os atletas Vinícius, Catarina, Tiago, Vitor, Aylla, Marina, Theo, Pedro, Larissa, Milena, Julio, Douglas, Cristiane e Eduardo, nas categorias sub 9, sub 11, sub 13, sub 15, sub 17, sub 19 e Aberta C e D, sob a coordenação da técnica e professora Leiko Konno que conta com apoio da Secretaria de Esporte, Lazer e Juventude.
     
@@ -239,12 +223,33 @@ INSERT INTO tb_torneios_noticias (id_noticia_torneio, titulo, resumo, conteudo, 
     
     \r\n\r\nJulio Paiva - Dupla Masculina
     
-    \r\n\r\nCristiane Matiazzo - Dupla Feminina', 'noticia2.jpeg'),
-    (3,'Atletas de Badminton conquistam o título de Heptacampeão para Itapetininga nos Jogos Regionais','Ouro para as equipes masculina e feminina de Badminton de Itapetininga em todas as categorias, em três dias de provas nos Jogos Regionais. Os atletas venceram na categoria Simples feminina e masculina, na categoria Dupla feminina e masculina e na categoria Equipe feminina e masculina.
+    \r\n\r\nCristiane Matiazzo - Dupla Feminina', 'noticia2.jpeg',''),
+    (2,'Atletas de Badminton conquistam o título de Heptacampeão para Itapetininga nos Jogos Regionais','Ouro para as equipes masculina e feminina de Badminton de Itapetininga em todas as categorias, em três dias de provas nos Jogos Regionais. Os atletas venceram na categoria Simples feminina e masculina, na categoria Dupla feminina e masculina e na categoria Equipe feminina e masculina.
 
     Sob a coordenação da professora Leiko Konno, os atletas Julio Jun Kano Paiva, Pedro Otávio Lima dos Santos, Theo Maeseki Shimatsu, Vitor Eli de Lima Takashi, Aylla Maeseki Shihammatsu, Gabriella Oliveira Cavalcante Santos, Larissa Naomi Takamori Ueno, Marina Akemi Mori de Souza Correia, Milena Namie Takamori Ueno. A técnica contou com os auxiliares Letícia Konno e Isabela Galvão.
 
-    “Fomos novamente campeões nos Jogos Regionais de Itapetininga. Conquistamos o sétimo título para o município. Treinamos bastante e mostramos muita garra e técnica. Uma experiência marcante”, destacou a técnica Leiko Konno.', 'noticia3.jpeg');
+    “Fomos novamente campeões nos Jogos Regionais de Itapetininga. Conquistamos o sétimo título para o município. Treinamos bastante e mostramos muita garra e técnica. Uma experiência marcante”, destacou a técnica Leiko Konno.', 'noticia3.jpeg',''),
+    (3,'Pioneira do Badminton em Itapetininga é citada em livro histórico da cidade','Badminton de Itapetininga: O Legado de Leiko Konno Eternizado em Livro
+    \r\n\r\nA história do esporte em Itapetininga ganha um registro oficial e emocionante. A treinadora Leiko Konno, reconhecida como a pioneira do badminton na cidade, celebrou recentemente sua inclusão no livro "Itapetininga: Entre Memoriais e Registros", de autoria de Milton Cardoso.
+    
+   \r\n\r\nUm Reconhecimento Além das Quadras\r\n\r\n
+    Em um relato sensível, Leiko expressou a honra de ver a trajetória do badminton local — um trabalho iniciado com pioneirismo e dedicação — impressa nas páginas da história itapetiningana. Para a treinadora, o projeto vai muito além da prática esportiva: trata-se de um projeto social que transformou e continua transformando muitas vidas na comunidade.
+    
+    \r\n\r\n"Ver a nossa trajetória de pioneirismo no Badminton impressa nessas páginas é uma honra que não cabe no peito. Mais do que esporte, este projeto social transformou e continua transformando muitas vidas." — Leiko Konno.
+    
+  \r\n\r\nSuperando Obstáculos
+    O reconhecimento vem como uma validação de anos de esforço. Leiko destacou que, apesar da indiferença e dos duros obstáculos enfrentados ao longo da jornada, ver esse legado documentado confirma que o caminho escolhido foi o correto. Graças ao trabalho de resgate histórico, a dedicação de todos os envolvidos no projeto agora está eternizada para as futuras gerações.
+    
+    \r\n\r\nDestaques da publicação:
+    
+    \r\n\r\nPioneirismo: Registro oficial do início da modalidade em Itapetininga.
+    
+    \r\n\r\nValor Social: O impacto do esporte como ferramenta de transformação de vida.
+    
+    \nHistória Viva: A garantia de que o legado não será esquecido pelos anos que virão.', 'noticia1.jpg',''),
+    (4, 'Atleta de Badminton Tiago Matiazzo garante dois ouros por Itapetininga no Campeonato Brasileiro.', 'O atleta sub-11 de badminton Tiago Matiazzo, que representa Itapetininga, conquistou duas medalhas de ouro na \r\n         1ª etapa 2026 do Campeonato Brasileiro do Circuito Nacional de Badminton, \r\n        realizada em Curitiba. Ele venceu todos os jogos e foi campeão nas categorias simples e dupla. /r/n/r/n “Realmente o Tiago estava bem preparado e é um orgulho para Itapetininga. Ele venceu em todas e subir ao pódio duas vezes com ouro é uma sensação indescritível. Em nome de toda a equipe, posso dizer. Gratidão”, destacou a professora Leiko. Parabéns, Thiago!' , 'not01.webp',''),
+    (5, 'Daichi Inoue - Treinador Japonês intergra equipe técnica', 'Daichi Inoue, professor de badminton de 34 anos vindo do Japão através do programa JICA. Ele compartilha sua experiência de 20 anos jogando badminton desde criança e suas expectativas para os próximos dois anos em Itapetininga, onde espera usar seu conhecimento para fortalecer a equipe local.','','daichi.mp4');
+
 
     -- ------ CHAVES ------
     ALTER TABLE tbatletas

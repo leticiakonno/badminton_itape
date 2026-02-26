@@ -18,6 +18,8 @@
         <li data-target="#banners" data-slide-to="0" class="active"></li>
         <li data-target="#banners" data-slide-to="1"></li>
         <li data-target="#banners" data-slide-to="2"></li>
+        <li data-target="#banners" data-slide-to="3"></li>
+        <li data-target="#banners" data-slide-to="4"></li>
     </ol>
 
     <!-- imagens -->
@@ -39,6 +41,19 @@
             <img src="imagens/carroussel.png" alt=""  class="center-block">
             </a>
         </div> <!-- fecha item -->
+
+        <div class="item">
+            <a href="torneios_noticias_detalhe.php?id=1">
+            <img src="imagens/banner4.png" alt=""  class="center-block">
+            </a>
+        </div> <!-- fecha item -->
+
+        <div class="item">
+            <a href="noticias_detalhe.php?id_noticia=5">
+            <img src="imagens/banner5.png" alt=""  class="center-block">
+            </a>
+        </div> <!-- fecha item -->
+    </div>
 
         <!-- botões de navegação -->
         <a 
