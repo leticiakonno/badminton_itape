@@ -45,13 +45,7 @@ $totalRows  =   ($lista)->num_rows;
     <div class="col-sm-12"> <!-- dimensionamento -->
         <div class="thumbnail">
             <br>
-            <img 
-                src="imagens/noticias/<?php echo $row['img_noticia']; ?>" 
-                alt=""
-                class="img-rounded img-responsive"
-                width="600px"
-            >
-        
+       
             <?php if(!empty($row['video_noticia'])) { ?>
                 <video class="video-noticia" controls>
                     <source src="imagens/noticias/daichi.mp4" type="video/mp4">
@@ -63,6 +57,15 @@ $totalRows  =   ($lista)->num_rows;
                 <p class="descrinoticia line">
                     <?php echo $row['descri_noticia']; ?>
             </div> <!-- fecha caption -->
+            
+            <img 
+                src="imagens/noticias/<?php echo $row['img_noticia']; ?>" 
+                alt=""
+                class="img-rounded img-responsive"
+                width="600px"
+                height="auto"
+            >
+            <br>
         </div> <!-- fecha thumbnail -->
     </div> <!-- fecha dimensionamento -->
     <?php }while($row=$lista->fetch_assoc()); ?> 
