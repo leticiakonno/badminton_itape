@@ -19,20 +19,26 @@ if($_POST){
     $id_categoria_atleta      =   $_POST['id_categoria_atleta'];
 
 
-    // Guardar o nome da imagem no banco e o arquivo no diretório
+  // Guardar o nome da imagem no banco e o arquivo no diretório
    $img_atleta = ""; // variavel que VAI para o banco!
 
     if(isset($_FILES['img_atleta']) && $_FILES['img_atleta']['error'] == 0){
+        $nomeArquivo = time() . "_" . $_FILES['img_atleta']['name'];
+        $tempArquivo = $_FILES['img_atleta']['tmp_name'];
 
-        $img_atleta = $_FILES['img_atleta']['name'];
-        $tmp_img      = $_FILES['img_atleta']['tmp_name'];
+        // Criar pasta se não existir
+        if (!is_dir('../imagens/atletas/')) {
+            mkdir('../imagens/atletas/', 0777, true);
+        }
 
-        // Caminho final
-        $destino      = "../imagens/" . $img_atleta;
+        $destino = "../imagens/atletas/" . $nomeArquivo;
 
-        // Move arquivo
-        move_uploaded_file($tmp_img, $destino);
+        if (move_uploaded_file($tempArquivo, $destino)) {
+            $img_atleta = $nomeArquivo;
+        }
     }
+
+
 
     // Variáveis para acrescentar dados no banco
     $tabela_insert  =   "tbatletas";

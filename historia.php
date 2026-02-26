@@ -20,8 +20,14 @@ include("Connections/conn_atletas.php");
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0">
                 <div class="form-container tabela-branca" style="border-radius:10px; padding:20px;">
 
-                    <h2 class="fundoatletas titulo text-center">
-                        <strong>Saiba mais sobre nossa história:</strong>
+                    <h2 class="fundoatletas titulo text-center" style="position: relative; padding: 10px 50px;">
+                    <a href="index.php" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">
+                        <button class="btn btntotal bg-danger text-white" style="width: 40px; height: 40px; padding: 0;">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </button>
+                    </a>
+    
+                    <strong>Saiba mais sobre nossa história:</strong>
                     </h2>
                     <hr>
 

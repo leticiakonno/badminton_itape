@@ -5,61 +5,51 @@ include("acesso_com.php");
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_atletas.php");
 
-if($_POST){
+if ($_POST) {
     // Selecionar o banco de dados (USE)
-    mysqli_select_db($conn_atletas,$database_conn);
-
-        // Guardar o nome da imagem no banco e o arquivo no diretório
-    if($_FILES['img_categoria']['name']){
-        $nome_img   =   $_FILES['img_categoria']['name'];
-        $tmp_img    =   $_FILES['img_categoria']['tmp_name'];
-        $dir_img    =   "../imagens/categoria/".$nome_img;
-        move_uploaded_file($tmp_img,$dir_img);
-    }else{
-        $nome_img=$_POST['img_categoria_atual'];
-    };
-
-    // Variáveis para acrescentar dados no banco
-    $tabela_insert  =   "tbcategorias";
-    $campos_insert  =   "
-                            nome_categoria,
-                            descri_categoria,
-                            img_categoria
-                        ";
+    mysqli_select_db($conn_atletas, $database_conn);
 
     // Receber os dados do formulário
-    // Organizar os campos na mesma ordem
-    $nome_categoria      =   $_POST['nome_categoria'];
-    $descri_categoria     =   $_POST['descri_categoria'];
-    $img_categoria        =   $nome_img;
+    $nome_categoria  = $_POST['nome_categoria'];
+    $descri_categoria = $_POST['descri_categoria'];
 
-    // Reunir os valores a serem inseridos
-    $valores_insert =   "
-                        '$nome_categoria',
-                        '$descri_categoria',
-                        '$img_categoria'
-                        ";
+    // Upload da imagem
+    $img_categoria = ""; // valor padrão
 
-    // Consulta SQL para inserção dos dados
-    $insertSQL  =   "
-                    INSERT INTO ".$tabela_insert."
-                        (".$campos_insert.")
-                    VALUES
-                        (".$valores_insert.");
-                    ";
-    $resultado  =   $conn_atletas->query($insertSQL);
+    if (isset($_FILES['img_categoria']) && $_FILES['img_categoria']['error'] == 0) {
+        $nomeArquivo = time() . "_" . $_FILES['img_categoria']['name'];
+        $tempArquivo = $_FILES['img_categoria']['tmp_name'];
 
-    // Após a ação a página será redirecionada
-    $destino    =   "categorias_lista.php";
-    if(mysqli_insert_id($conn_atletas)){
+        // Criar pasta se não existir
+        if (!is_dir('../imagens/categorias/')) {
+            mkdir('../imagens/categorias/', 0777, true);
+        }
+
+        $destino = "../imagens/categorias/" . $nomeArquivo;
+
+        if (move_uploaded_file($tempArquivo, $destino)) {
+            $img_categoria = $nomeArquivo;
+        }
+    }
+
+    // Inserção no banco
+    $insertSQL = "
+        INSERT INTO tbcategorias (nome_categoria, descri_categoria, img_categoria)
+        VALUES ('$nome_categoria', '$descri_categoria', '$img_categoria')
+    ";
+
+    $resultado = $conn_atletas->query($insertSQL);
+
+    // Redirecionamento
+    $destino = "categorias_lista.php";
+    if (mysqli_insert_id($conn_atletas)) {
         header("Location: $destino");
-    }else{
-        header("Location: $destino");
-    };
-};
+        exit;
+    }
+}
 
 // Selecionar o banco de dados (USE)
-mysqli_select_db($conn_atletas,$database_conn);
+mysqli_select_db($conn_atletas, $database_conn);
 ?>
 
 <!DOCTYPE html>
@@ -72,111 +62,118 @@ mysqli_select_db($conn_atletas,$database_conn);
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
+    <style>
+        #preview {
+            max-height: 150px;
+            margin-bottom: 10px;
+            display: none;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
 <main class="container">
-<div class="row">
-    <div class="col-xs-12 col-sm-offset-2 col-sm-8 " > <!-- abre dimensionamento -->
-        <h2 class="fundocategoria text-center titulo">
-            <a href="categorias_lista.php">
-                <button class="btn btntotal">
-                    <span class="glyphicon glyphicon-chevron-left"></span>  
-                </button>
-            </a>
-                Inserir Categoria 
+    <div class="row">
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+            <h2 class="fundocategoria text-center titulo">
+                <a href="categorias_lista.php">
+                    <button class="btn btntotal">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </button>
+                </a>
+                Inserir Categoria
             </h2>
             <br>
-            <div class="thumbnail"> <!--abrir thumbnail-->
+            <div class="thumbnail">
                 <div class="alert alert">
-                    <form 
-                        action="categorias_insere.php"
-                        enctype="multipart/form-data"
-                        method="post"
-                        id="form_insere_categoria"  
-                        name="form_insere_categoria"
-                    >
-                        <!-- text nome_categoria -->
+                    <form action="categorias_insere.php"
+                          enctype="multipart/form-data"
+                          method="post"
+                          id="form_insere_categoria"
+                          name="form_insere_categoria">
+                        <!-- nome_categoria -->
                         <label for="nome_categoria">Nome:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-th-large"></span>
                             </span>
-                            <input 
-                                type="text" 
-                                name="nome_categoria" 
-                                id="nome_categoria"
-                                class="form-control"
-                                autofocus
-                                maxlength="15"
-                                required
-                                placeholder="Digite o nome da categoria."
-                            >
-                        </div> <!-- fecha input-group -->
-                        <!-- fecha text nome_categoria -->
+                            <input type="text"
+                                   name="nome_categoria"
+                                   id="nome_categoria"
+                                   class="form-control"
+                                   autofocus
+                                   maxlength="15"
+                                   required
+                                   placeholder="Digite o nome da categoria.">
+                        </div>
                         <br>
 
-                         <!-- textarea descri_categoria -->
+                        <!-- descri_categoria -->
                         <label for="descri_categoria">Descrição da categoria:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-align-justify"></span>
                             </span>
-                            <textarea 
-                                name="descri_categoria" 
-                                id="descri_categoria"
-                                class="form-control"
-                                placeholder="Digite a descrição da categoria."
-                                cols="30"
-                                rows="8"
-                            ></textarea>
-                        </div> <!-- fecha input-group -->
-                        <!-- fecha textarea descri_categoria -->
+                            <textarea name="descri_categoria"
+                                      id="descri_categoria"
+                                      class="form-control"
+                                      placeholder="Digite a descrição da categoria."
+                                      cols="30"
+                                      rows="8"></textarea>
+                        </div>
                         <br>
-                         <!-- file img_atleta -->
-                         <label for="img_categoria">Imagem:</label>
+
+                        <!-- img_categoria com pré-visualização -->
+                        <label for="img_categoria">Imagem:</label>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-picture"></span>
                             </span>
-                            <!-- Exibir a imagem a ser inserida -->
-                            <img 
-                                src="" 
-                                alt=""
-                                name="imagem"
-                                id="imagem"
-                                class="img-responsive"
-                                style="max-height: 150px;"
-                            >
-                            <input 
-                                type="file" 
-                                name="img_categoria" 
-                                id="img_categoria"
-                                class="form-control"
-                                accept="image/*"
-                            >
-                        </div> <!-- fecha input-group -->
-                        <!-- fecha file imagem_produto -->
+                            <img src="#"
+                                 alt="Prévia da imagem"
+                                 id="preview"
+                                 class="img-responsive">
+                            <input type="file"
+                                   name="img_categoria"
+                                   id="img_categoria"
+                                   class="form-control"
+                                   accept="image/*"
+                                   onchange="previewImage(event)">
+                        </div>
                         <br>
 
-                        <!-- btn enviar -->
-                        <input 
-                            type="submit" 
-                            value="Cadastrar"
-                            name="enviar"
-                            id="enviar"
-                            role="button"
-                            class="btn btntotal btn-block"
-                        >
+                        <!-- botão enviar -->
+                        <input type="submit"
+                               value="Cadastrar"
+                               name="enviar"
+                               id="enviar"
+                               role="button"
+                               class="btn btntotal btn-block">
                     </form>
-                </div> <!-- fecha alert alert-warning  -->
-            </div> <!-- thumbnail -->
-        </div> <!-- dimensionamento -->
-    </div> <!-- fecha row -->
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
+
+<script>
+function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var output = document.getElementById('preview');
+        output.src = reader.result;
+        output.style.display = 'block';
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>    
+<script src="../js/bootstrap.min.js"></script>
 <footer>
     <?php include('../rodape.php'); ?>
 </footer>
