@@ -31,7 +31,7 @@
         </div> <!-- fecha item -->
 
         <div class="item">
-            <a href="noticias_detalhe.php?id_noticia=1">
+            <a href="noticias_detalhe.php?id_noticia=3">
             <img src="imagens/banner2.png" alt=""  class="center-block">
             </a>
 
@@ -43,7 +43,7 @@
         </div> <!-- fecha item -->
 
         <div class="item">
-            <a href="torneios_noticias_detalhe.php?id=1">
+            <a href="noticias_detalhe.php?id_noticia=4">
             <img src="imagens/banner4.png" alt=""  class="center-block">
             </a>
         </div> <!-- fecha item -->

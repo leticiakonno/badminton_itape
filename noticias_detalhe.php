@@ -51,10 +51,14 @@ $totalRows  =   ($lista)->num_rows;
                 class="img-rounded img-responsive"
                 width="600px"
             >
-            <video class="video-noticia" controls>
-                 <source src="imagens/noticias/daichi.mp4" type="video/mp4" style="">
-            </video>
-            <br>
+        
+            <?php if(!empty($row['video_noticia'])) { ?>
+                <video class="video-noticia" controls>
+                    <source src="imagens/noticias/daichi.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                </video>
+            <?php } ?>
+
             <div class="caption text-center">
                 <p class="descrinoticia line">
                     <?php echo $row['descri_noticia']; ?>
