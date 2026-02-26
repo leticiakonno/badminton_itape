@@ -15,7 +15,7 @@
 <?php include('menu_publico.php'); ?>
 <main class="container">
     <section>
-        <div class="jumbotron fundoatletas">
+        <div class="jumbotron fundoatletas text-center">
             <h1><strong><i>Agradecemos seu contato!</i> </strong></h1>
                 <?php
                 $destino = "leticia.konno@hotmail.com";
@@ -38,7 +38,7 @@
                 $msg_contato .= "Mensagem:\n" . $comentarios_contato;
 
                 // Cabeçalhos para evitar Spam e permitir resposta direta
-                $headers  = "From: Leticia Dev <contato@seudominio.com>\r\n"; // Use um e-mail do seu domínio
+                $headers  = "From: " . $nome_formulario . " "; // Use um e-mail do seu domínio
                 $headers .= "Reply-To: " . $email_formulario . "\r\n";
                 $headers .= "X-Mailer: PHP/" . phpversion();
 
@@ -59,6 +59,7 @@
                 </h5>
             </div> <!-- fecha text-center -->
         </div> <!-- fecha jumbotron -->
+        </div> <!--dimensionament0-->
     </section>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
