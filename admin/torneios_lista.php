@@ -1,5 +1,5 @@
 <?php
-// Incluindo o sistema de identificação
+/// Incluindo o sistema de identificação
 include("acesso_com.php");
 
 // Incluir o arquivo e fazer a conexão
