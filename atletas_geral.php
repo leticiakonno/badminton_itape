@@ -32,7 +32,13 @@ $totalRows  =   ($lista)->num_rows;
 <?php include('menu_publico.php'); ?> 
 
 <main class="container ">
-    <h2 class="fundoatletas  text-center titulo"><strong>ATLETAS</strong></h2>
+    <h2 class="fundocategoria categoriageral text-center titulo" style="position: relative; padding: 10px 50px;">
+                    <a href="index.php" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">
+                        <button class="btn btntotal bg-danger text-white" style="width: 40px; height: 40px; padding: 0;">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </button>
+                    </a>
+        <strong>ATLETAS</strong></h2>
     <br><br>
     <div class="fundo-index" style="padding-top: 50px;border-radius: 15px;">
     <div class="row" style="padding-left: 50px; padding-right: 50px;">        <!-- abre thumbnail -->
