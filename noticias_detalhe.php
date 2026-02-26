@@ -48,13 +48,14 @@ $totalRows  =   ($lista)->num_rows;
             <img 
                 src="imagens/noticias/<?php echo $row['img_noticia']; ?>" 
                 alt=""
-                class="img-rounded"
-                width="800px"
+                class="img-rounded img-responsive"
+                width="600px"
             >
+            <video class="video-noticia" controls>
+                 <source src="imagens/noticias/daichi.mp4" type="video/mp4" style="">
+            </video>
+            <br>
             <div class="caption text-center">
-                <h3 class="titulo">
-                    <strong><?php echo $row['titulo_noticia']; ?></strong>
-                </h3>
                 <p class="descrinoticia line">
                     <?php echo $row['descri_noticia']; ?>
             </div> <!-- fecha caption -->
