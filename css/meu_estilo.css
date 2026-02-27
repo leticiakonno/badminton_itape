@@ -109,14 +109,14 @@
  
  
 .titulo {
-    font-family: "Times-New-Roman", serif;
+    font-family: "Cabin", sans-serif;
     font-size: 45px;
     font-style: italic;
     color: rgb(4, 4, 82);
 }
  
 .fontetabela{
-    font-family: "Times-New-Roman", serif;
+    font-family: "Cabin", sans-serif;
     font-size: 17px;
 }
  
@@ -136,7 +136,7 @@ table td, table th {
 }
  
 .fontedestaque{
-    font-family: "Times-New-Roman", sans-serif;
+    font-family: "Cabin", sans-serif;
     font-size: 20px;
 }
 .nomeatleta{
@@ -295,7 +295,7 @@ table td, table th {
  
  
 .titulonoticia{
-    font-family: "Times-New-Roman", serif;
+    font-family: "Cabin", sans-serif;
     font-size: 40px;
     font-style: italic;
     color: rgb(4, 4, 82);
@@ -320,7 +320,7 @@ table td, table th {
 }
  
 .descrinoticia{
-    font-family: "Times-New-Roman";
+    font-family: "Cabin", sans-serif;
     font-size: 19px;
 }
  

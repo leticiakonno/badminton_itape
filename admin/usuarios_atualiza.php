@@ -86,6 +86,7 @@ $totalRows = $lista->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuários Atualiza</title>
+    <link rel="icon" type="image/png" href="../imagens/logobadminton.png">
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->

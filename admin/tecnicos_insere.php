@@ -53,6 +53,7 @@ if ($_POST) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Técnicos Insere</title>
+    <link rel="icon" type="image/png" href="../imagens/logobadminton.png">
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->

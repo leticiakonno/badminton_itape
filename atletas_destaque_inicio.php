@@ -47,7 +47,7 @@ $totalRows_destaque      =   ($lista_destaque)->num_rows;
                     <strong><?php echo $row_destaque['nome_categoria']; ?></strong>
                     </p>
                 <p class="text-left">
-                <?php echo mb_strimwidth ($row_destaque['descri_atleta'],0,45,"...");?>
+                <?php echo mb_strimwidth ($row_destaque['descri_atleta'],0,40,"...");?>
                 </p>   
                 <p class="text-right">        
                     <a 

@@ -40,7 +40,7 @@ $totalRows  =   ($lista)->num_rows;
                             <strong><?php echo $row['tipo_torneio']; ?></strong>
                         </h5>
                         <p class="text-center" style="min-height: 80px;">
-                            <?php echo substr($row['descri_torneio'], 0, 100) . '...'; ?>
+                            <?php echo substr($row['descri_torneio'], 0, 70) . '...'; ?>
                         </p>
                         <p>
                             <?php

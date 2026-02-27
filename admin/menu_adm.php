@@ -22,6 +22,7 @@ $totalRows_menu  =   ($lista_menu)->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo</title>
+    <link rel="icon" type="image/png" href="../imagens/logobadminton.png">
 <!-- o menu publico é o unico que fica com o CSS, Bootstrap e JS ativados-->
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">

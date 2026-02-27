@@ -152,7 +152,7 @@
             <h6 class="textrodape text-center">
                 Developed by 
                 <a href="https://iwanezuk.com.br/l2m/letkonno" target="_blank">Leticia Konno</a>, 
-                <a href="https://iwanezuk.com.br/l2m/leticia-eduarda" target="_blank">Leticia Eduarda</a>e 
+                <a href="https://iwanezuk.com.br/l2m/leticia-eduarda" target="_blank">Leticia Eduarda</a> e 
                 <a href= "https://iwanezuk.com.br/l2m/mavelyn" target="_blank">Mavelyn Leme</a>&trade; 2026
                 <br>
                 <a href="https://www.iwanezuk.com.br" target="_blank">

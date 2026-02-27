@@ -41,7 +41,7 @@ if (isset($_POST['salvar'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inserir Notícia de Torneio</title>
-
+    <link rel="icon" type="image/png" href="../imagens/logobadminton.png">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>

@@ -42,7 +42,7 @@ $totalRows  =   ($lista)->num_rows;
                     <strong><?php echo $row['nivel_tecnico']; ?></strong>
                     </p>
                     <p class="text-left">
-                        <?php echo mb_strimwidth ($row['descri_tecnico'],0,45,"...");?>
+                        <?php echo mb_strimwidth ($row['descri_tecnico'],0,80,"...");?>
                     </p>
                     <p class="text-right">
                         <a 
