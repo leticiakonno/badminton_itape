@@ -9,7 +9,7 @@ include("Connections/conn_atletas.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>História do Badminton em Itapetininga</title>
-    <link rel="icon" type="image/png" href="/imagens/logobadminton.png">
+    <link rel="icon" type="image/png" href="imagens/logobadminton.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>

@@ -21,7 +21,7 @@ $totalRows  =   ($lista)->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parceiros</title>
-    <link rel="icon" type="image/png" href="/imagens/logobadminton.png">
+    <link rel="icon" type="image/png" href="imagens/logobadminton.png">
 </head>
 <body class="fundofixo fontetabela">
         <main class="container">

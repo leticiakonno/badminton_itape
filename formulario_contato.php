@@ -6,7 +6,7 @@
     <!-- Após 15 segundos a página sera redirecionada para index.php -->
     <meta http-equiv="refresh" content="15;URL=index.php">
     <title>Verificação do Formulário</title>
-    <link rel="icon" type="image/png" href="/imagens/logobadminton.png">
+    <link rel="icon" type="image/png" href="imagens/logobadminton.png">
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
