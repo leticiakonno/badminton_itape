@@ -32,7 +32,7 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
 <?php include("menu_adm.php"); ?>
 <main class="container">
-    <h1 class="fundoatletas text-center titulo">
+    <h1 class="fundoatletas text-center titulo" style="position: relative; padding: 10px 50px;">
             <a href="index.php" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">
                 <button class="btn btntotal bg-danger text-white" style="width: 40px; height: 40px; padding: 0;">
                     <span class="glyphicon glyphicon-chevron-left"></span>

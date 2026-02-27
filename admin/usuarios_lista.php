@@ -33,7 +33,7 @@ $totalRows  =   ($lista)->num_rows;
 <?php include("menu_adm.php"); ?>
 <main class="container">
     <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8" > <!-- abre dimensionamento -->
-            <h1 class="fundocategoria text-center titulo">
+            <h1 class="fundocategoria text-center titulo" style="position: relative; padding: 10px 50px;">
                 <a href="index.php" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">
                     <button class="btn btntotal bg-danger text-white" style="width: 40px; height: 40px; padding: 0;">
                         <span class="glyphicon glyphicon-chevron-left"></span>
