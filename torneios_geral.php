@@ -18,10 +18,10 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="icon" type="image/png" href="imagens/logobadminton.png">
 </head>
 <body class="fundofixo fontetabela">
-    <main class="container">
+    <main class="">
     <h2 class="fundocategoria categoriageral text-center titulo"><strong>TRAJETÓRIA DE CAMPEÕES   <i class="fa-solid fa-medal"></i></strong></h2>
     <br><br>
-    <div class="container">
+    <div class="">
         <div class="row">
             <!-- abre thumbnail -->
             <?php do{ ?>

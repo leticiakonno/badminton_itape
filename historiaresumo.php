@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="imagens/logobadminton.png">
 </head>
     <body class="fundofixo fontetabela">
-        <main class="container">
+        <main class="">
             <div class="row">
                 <div class="col-xs-12" > <!-- abre dimensionamento -->
                     <div class="form-container titulo fundohistoria">

@@ -17,8 +17,9 @@
     <!-- CARROUSSEL -->
     <?php include('carroussel.php'); ?>
 
-<main class="containerpri fundo-index container-fluid" style="overflow-x: hidden;">
-    <div class="principal">
+<main class=" fundo-index container-fluid" style="padding-left: 15px;">
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-8"> <!--dimensionamento -->
     <!-- Torneios -->
     <a name="torneios" ></a>
     <hr>
@@ -48,7 +49,7 @@
         <?php include('historiaresumo.php'); ?>
     </div>
 
-    <aside class="sidebar-news">
+    <div class="col-sm-12 col-md-4 col-lg-4">
      <!-- Notícias -->
     <a name="noticias" ></a>
     <hr>
@@ -59,7 +60,8 @@
     <hr>
     <?php include ('parceiros_geral_inicio.php')?>
     <br>
-    </aside>   
+   </div>   
+   </div>
 </main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

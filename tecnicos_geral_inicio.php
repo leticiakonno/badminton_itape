@@ -19,7 +19,7 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="icon" type="image/png" href="imagens/logobadminton.png">
 </head>
 <body class="fundofixo fontetabela">
-    <main class="container">
+    <main class="">
     <h2 class="fundoatletas titulo text-center"><strong>NOSSOS MENTORES   <span class="glyphicon glyphicon-flash"></span></i></strong></h2>
     <br>
     <div class="row">
