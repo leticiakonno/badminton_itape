@@ -33,11 +33,11 @@ $totalRows  =   ($lista)->num_rows;
 <?php include("menu_adm.php"); ?>
 <main class="container">
     <h1 class="fundoatletas text-center titulo">
-        <a href="index.php">
-            <button class="btn btntotal">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </button>
-        </a>
+            <a href="index.php" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">
+                <button class="btn btntotal bg-danger text-white" style="width: 40px; height: 40px; padding: 0;">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </button>
+            </a>
         <strong><i>Lista de Parceiros</i></strong>
     </h1>
                 <div class=" btn btntotal bg-primary text-white">

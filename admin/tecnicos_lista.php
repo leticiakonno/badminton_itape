@@ -35,8 +35,8 @@ $totalRows  =   ($lista)->num_rows;
 <main class="container" style="width: 90%;">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1" > <!-- abre dimensionamento -->
         <h1 class="fundocategoria text-center titulo">
-            <a href="index.php">
-                <button class="btn btntotal">
+            <a href="index.php" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">
+                <button class="btn btntotal bg-danger text-white" style="width: 40px; height: 40px; padding: 0;">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </button>
             </a>
