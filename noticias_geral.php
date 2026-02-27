@@ -15,7 +15,9 @@ $lista      =   $conn_atletas->query($consulta);
 $row        =   $lista->fetch_assoc();
 $totalRows  =   ($lista)->num_rows;
 ?>
-
+<head>
+    <link rel="icon" type="image/png" href="/imagens/logobadminton.png">
+</head>
 <body class="fundofixo fontetabela">
     <div class="layout bordacontainer">
 

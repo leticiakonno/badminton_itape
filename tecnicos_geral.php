@@ -20,7 +20,8 @@ $totalRows  =   ($lista)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Técnicos Geral</title>
+    <link rel="icon" type="image/png" href="/imagens/logobadminton.png">
     <!-- não esquecer de comentar o JS e CSS para não dar conflito no index -->
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css"> 
